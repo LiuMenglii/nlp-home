@@ -54,11 +54,11 @@ const homePubs = [...featured, ...others].slice(0, 8);
     )
   }
 
-  <section class="section" aria-labelledby="home-people-title">
+  <section class="section" aria-labelledby="home-team-title">
     <SectionHeading
-      title="People"
-      id="home-people-title"
-      link={{ href: withBase('/people/'), label: 'View all' }}
+      title="Team"
+      id="home-team-title"
+      link={{ href: withBase('/team/'), label: 'View all' }}
     />
     <div class="teacher-grid">
       {teachers.map((teacher) => (

@@ -2,86 +2,132 @@
 import site from '../data/site.json';
 import SectionHeading from './SectionHeading.astro';
 
-const { targets, skills, email, emailSubject } = site.admissions;
-const mailto = `mailto:${email}?subject=${encodeURIComponent(emailSubject)}`;
+// FR-003：Join Us 区块 = 一句英文申请说明（mailto 不带 subject）+ 四项带图标的能力要点。
+// 图标为内联 SVG（字形与原站一致：Coding→code、Math→book、Logic→bolt、English→users），
+// 零运行时依赖（Constitution IV）。样式对齐原站 value-icon：sky 底色圆角方块 + 描边图形。
+const { apply, skills, email } = site.admissions;
+
+const skillIcons: Record<string, string> = {
+  Coding:
+    '<path d="m9 7-5 5 5 5"/><path d="m15 7 5 5-5 5"/>',
+  Math:
+    '<path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>',
+  Logic:
+    '<path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/>',
+  English:
+    '<circle cx="9" cy="8" r="3.5"/><path d="M3.5 20c0-3 2.4-5.5 5.5-5.5s5.5 2.5 5.5 5.5"/><path d="M16 5.7a3.5 3.5 0 0 1 0 6.6"/><path d="M17.8 15.1c1.7.9 2.7 2.4 2.7 4.9"/>',
+};
 ---
 
 <section class="section" aria-labelledby="admissions-title">
-  <SectionHeading title="Join Us · 招募" id="admissions-title" />
+  <SectionHeading title="Join Us" id="admissions-title" />
   <div class="card admissions-card">
-    {
-      targets && (
-        <div class="admissions-targets">
-          <h3>面向对象</h3>
-          <p>{targets}</p>
-        </div>
-      )
-    }
-    {
-      skills.length > 0 && (
-        <div class="admissions-skills">
-          <h3>我们期待你具备</h3>
-          <ul>
-            {skills.map((s) => (
-              <li>{s}</li>
-            ))}
-          </ul>
-        </div>
-      )
-    }
-    <p class="admissions-contact">
-      有意向的同学请发送邮件（主题格式：<code>{emailSubject}</code>）：
-      <a class="contact-link" href={mailto}>{email}</a>
+    <p class="admissions-apply">
+      {apply} <a class="contact-link" href={`mailto:${email}`}>{email}</a>
     </p>
+    <ul class="skill-grid">
+      {
+        skills.map((skill) => (
+          <li class="skill">
+            <span class="skill-mark" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                set:html={skillIcons[skill] ?? ''}
+              />
+            </span>
+            <span class="skill-label">{skill}</span>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </section>
 
 <style>
   .admissions-card {
     display: grid;
-    gap: 20px;
+    gap: 24px;
   }
 
-  h3 {
-    font-size: 1.1rem;
-    color: var(--blue-deep);
-    margin-bottom: 8px;
-  }
-
-  .admissions-targets p {
+  .admissions-apply {
     margin: 0;
-    white-space: pre-line;
-  }
-
-  .admissions-skills ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .admissions-skills li {
-    background: #ffffff;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 4px 16px;
-    font-size: 1rem;
-  }
-
-  .admissions-contact {
-    margin: 0;
-  }
-
-  .admissions-contact code {
-    background: var(--sky);
-    border-radius: 4px;
-    padding: 2px 6px;
-    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--ink);
   }
 
   .contact-link {
+    font-weight: 700;
+    color: var(--blue-deep);
+  }
+
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .skill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .skill:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .skill-mark {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--sky);
+    color: var(--blue-deep);
+  }
+
+  .skill-mark svg {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .skill-label {
+    color: var(--ink);
+    font-size: 1rem;
     font-weight: 600;
+  }
+
+  @media (max-width: 480px) {
+    .skill-grid {
+      column-gap: 12px;
+    }
+
+    .skill {
+      gap: 8px;
+    }
+
+    .skill-mark {
+      width: 36px;
+      height: 36px;
+      flex-basis: 36px;
+    }
+
+    .skill-mark svg {
+      width: 22px;
+      height: 22px;
+    }
   }
 </style>

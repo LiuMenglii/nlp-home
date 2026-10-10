@@ -2,11 +2,19 @@
   "groupName": "G3 CIGMA",
   "fullName": "认知智能生成研究组 · Cognitive Intelligence with Generative and Multimodal Algorithms",
   "institute": "中国科学院信息工程研究所 / Institute of Information Engineering, CAS",
-  "directions": ["自然语言处理", "多媒体大数据分析", "大模型高效应用"],
+  "directions": [
+    "Natural Language Processing",
+    "Multimodal Big Data Analysis",
+    "Efficient LLM Applications"
+  ],
   "admissions": {
-    "targets": "面向保研/统考的硕士、博士研究生，同时欢迎优秀本科生来组实习",
-    "skills": ["Coding", "Math", "Logic", "English"],
-    "email": "linzheng@iie.ac.cn",
-    "emailSubject": "XXX-学校-毕业时间-保研/实习申请"
+    "apply": "To apply for graduate studies or an internship, please submit your résumé to:",
+    "skills": [
+      "Coding",
+      "Math",
+      "Logic",
+      "English"
+    ],
+    "email": "linzheng@iie.ac.cn"
   }
 }

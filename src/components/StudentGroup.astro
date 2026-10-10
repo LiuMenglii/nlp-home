@@ -23,7 +23,7 @@ const levelLabel = { phd: '博士', master: '硕士' } as const;
   {
     phd.length > 0 ? (
       <div class="student-group">
-        <h3>博士生</h3>
+        <h3>PhD Candidates</h3>
         <ul>
           {phd.map((s) => (
             <li>
@@ -34,7 +34,7 @@ const levelLabel = { phd: '博士', master: '硕士' } as const;
               ) : (
                 <span>{s.data.name}</span>
               )}
-              {s.data.grade && <span class="grade">{s.data.grade} 级</span>}
+              {s.data.grade && <span class="grade">Since {s.data.grade}</span>}
               {s.data.note && <span class="note">{s.data.note}</span>}
             </li>
           ))}
@@ -42,8 +42,8 @@ const levelLabel = { phd: '博士', master: '硕士' } as const;
       </div>
     ) : (
       <div class="student-group">
-        <h3>博士生</h3>
-        <p class="empty">在读博士生名单待更新</p>
+        <h3>PhD Candidates</h3>
+        <p class="empty">PhD candidates coming soon.</p>
       </div>
     )
   }
@@ -51,7 +51,7 @@ const levelLabel = { phd: '博士', master: '硕士' } as const;
   {
     master.length > 0 ? (
       <div class="student-group">
-        <h3>硕士生</h3>
+        <h3>Master's Students</h3>
         <ul>
           {master.map((s) => (
             <li>
@@ -62,7 +62,7 @@ const levelLabel = { phd: '博士', master: '硕士' } as const;
               ) : (
                 <span>{s.data.name}</span>
               )}
-              {s.data.grade && <span class="grade">{s.data.grade} 级</span>}
+              {s.data.grade && <span class="grade">Since {s.data.grade}</span>}
               {s.data.note && <span class="note">{s.data.note}</span>}
             </li>
           ))}
@@ -70,8 +70,8 @@ const levelLabel = { phd: '博士', master: '硕士' } as const;
       </div>
     ) : (
       <div class="student-group">
-        <h3>硕士生</h3>
-        <p class="empty">在读硕士生名单待更新</p>
+        <h3>Master's Students</h3>
+        <p class="empty">Master's students coming soon.</p>
       </div>
     )
   }

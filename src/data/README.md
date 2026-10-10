@@ -6,10 +6,10 @@
 
 | 文件 | 内容 | 对应页面 |
 |------|------|----------|
-| `site.json` | 组名、研究所、研究方向、招募信息 | 主页 Hero / 招募区块、页脚 |
-| `teachers.json` | 教师团队（5 位） | 主页 People、人员页 |
-| `students.json` | 在读学生 | 人员页 |
-| `graduates.json` | 毕业生去向 | 人员页 |
+| `site.json` | 组名、研究所、研究方向、招募信息（英文申请文案 `admissions.apply` + 四项能力 + 邮箱） | 主页 Hero / Join Us 区块、页脚 |
+| `teachers.json` | 教师团队（5 位） | 主页 Team、Team 页 |
+| `students.json` | 在读学生 | Team 页 |
+| `graduates.json` | 毕业生去向 | Team 页 |
 | `publications.json` | 论文全列表 | 主页 Publications、发表页 |
 | `gallery.json` | 组内活动照片（≤12 张） | 主页 Gallery |
 | `../content/news/*.md` | 新闻（一文件一条） | 新闻列表/详情、主页新闻概览 |
@@ -60,7 +60,7 @@ summary: "一句话摘要（不超过 200 字符），显示在列表页和主�
 - 教师信息改动 `teachers.json`：`name`、`title`（英文职称）、`advisorRole`（`"phd"` 博导 / `"master"` 硕导）、`directions`（英文研究方向，至少 1 项）、`email`、`homepage`（https 链接或 `null`）、`photo`、`bio`。
 - 学生入学/毕业：在 `students.json` 增删条目，字段为 `name`、`level`（`"phd"` / `"master"`）、`grade`（入学年份字符串，如 `"2025"`）、`url`（个人主页或 GitHub，可 `null`）、`note`。
 - 学生毕业：从 `students.json` 移除，并在 `graduates.json` 添加 `name`、`destination`（去向单位中文名）、`degree`（`"phd"` / `"master"`）、`year`（毕业年份，可 `null`）。
-- 空数组 `[]` 合法：对应分组会显示"名单待更新"占位文案。
+- 空数组 `[]` 合法：对应分组会显示英文占位文案（"coming soon"）。
 
 ### 更换 / 新增照片
 

@@ -14,22 +14,24 @@ const graduates = (await getCollection('graduates')).sort((a, b) =>
   (b.data.year ?? 0) - (a.data.year ?? 0) || a.id.localeCompare(b.id),
 );
 
-const degreeLabel = { phd: '博士', master: '硕士' } as const;
+// T046：可见 UI 标签英文化（学位标签 PhD/Master，毕业生年份无中文后缀）
+const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
 ---
 
-<BaseLayout title={`People · ${site.groupName}`}>
-  <section class="section" aria-labelledby="people-title">
-    <SectionHeading title="People" id="people-title" />
+<BaseLayout title={`Team · ${site.groupName}`}>
+  <section class="section" aria-labelledby="team-title">
+    <SectionHeading title="Team" id="team-title" />
 
-    <h3 class="group-title">教师</h3>
+    <h3 class="group-title">Faculty</h3>
     <div class="teacher-grid">
       {teachers.map((teacher) => <TeacherCard teacher={teacher} detailed />)}
     </div>
 
-    <h3 class="group-title">在读学生</h3>
-    <StudentGroup students={students} />
+    <div class="student-section">
+      <StudentGroup students={students} />
+    </div>
 
-    <h3 class="group-title">毕业生去向</h3>
+    <h3 class="group-title">Graduates</h3>
     {
       graduates.length > 0 ? (
         <ul class="graduate-list">
@@ -38,14 +40,14 @@ const degreeLabel = { phd: '博士', master: '硕士' } as const;
               <span class="grad-name">{g.data.name}</span>
               <span class="grad-meta">
                 {degreeLabel[g.data.degree]}
-                {g.data.year ? ` · ${g.data.year} 届` : ''}
+                {g.data.year ? ` · ${g.data.year}` : ''}
               </span>
               <span class="grad-dest">{g.data.destination}</span>
             </li>
           ))}
         </ul>
       ) : (
-        <p class="empty">毕业生去向待更新</p>
+        <p class="empty">Graduates coming soon.</p>
       )
     }
   </section>
@@ -66,6 +68,10 @@ const degreeLabel = { phd: '博士', master: '硕士' } as const;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 16px;
+  }
+
+  .student-section {
+    margin-top: 40px;
   }
 
   .graduate-list {

@@ -57,7 +57,7 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 
 ### Implementation for User Story 1
 
-- [x] T008 [P] [US1] Create 真实 src/data/site.json — 内容取自原站 https://iienlp.github.io/ 与仓库根本地参考《2026年招生介绍-G3.pptx》（PPT 仅为参考资料、已入 .gitignore；data-model §7）：groupName（G3 CIGMA，已确认）、institute（中国科学院信息工程研究所 / Institute of Information Engineering, CAS）、directions（自然语言处理、多媒体大数据分析、大模型高效应用）、admissions.targets（面向对象，中文关键信息保留 FR-016）、admissions.skills（Coding/Math/Logic/English）、admissions.email（<linzheng@iie.ac.cn>）、admissions.emailSubject（"XXX-学校-毕业时间-保研/实习申请"格式）
+- [x] T008 [P] [US1] Create 真实 src/data/site.json — 内容取自原站 https://iienlp.github.io/ 与仓库根本地参考《2026年招生介绍-G3.pptx》（PPT 仅为参考资料、已入 .gitignore；data-model §7）：groupName（G3 CIGMA，已确认）、institute（中国科学院信息工程研究所 / Institute of Information Engineering, CAS）、directions（英文：Natural Language Processing、Multimodal Big Data Analysis、Efficient LLM Applications）、admissions.targets（面向对象，中文关键信息保留 FR-016）、admissions.skills（Coding/Math/Logic/English）、admissions.email（<linzheng@iie.ac.cn>）、admissions.emailSubject（"XXX-学校-毕业时间-保研/实习申请"格式）
 - [x] T009 [P] [US1] Create 真实 src/data/teachers.json — 5 位老师（FR-015，PPT 口径：林政-研究员/博导/NLP·多模态、王伟平-研究员/博导/大数据AI·数据安全（信工所副所长写入其 bio 字段）、付鹏-副研究员/硕导/NLP·大模型高效应用、吴大衍-副研究员/硕导/CV·多模态、谷井子-高级工程师/硕导/CV·多模态检索生成）；职称与研究方向用英文展示（FR-016）；email/homepage 从 UCAS 主页补充；photo 授权前用原站素材（存 public/）或占位图
 - [x] T010 [P] [US1] Create Gallery 素材 — 从原站 Gallery 收集组内活动照片，精选 8–12 张存入 public/gallery/（JPEG、单张 ≤500KB、长边 ≤2000px、文件名小写字母+连字符），创建 src/data/gallery.json（每张：src/caption 必填、date 可选）
 - [x] T011 [P] [US1] Create src/data/publications.json 代表性子集 — 从 <https://people.ucas.ac.cn/~linzheng> 与 <https://people.ucas.ac.cn/~dayan> 选取 8–12 篇代表性论文（优先 CCF-A），标注 `featured: true`（主页区块按时间降序取 featured 前 8 条、不足按时间最新补齐——时间即 year 字段，data-model §1 派生规则）；全量聚合在 T022 完成
@@ -249,4 +249,15 @@ US2 / US3 / US4 在 US1 完成后可由不同实施者并行（不同页面与�
 - 每个故事完成后在 Checkpoint 停下独立验证，再进入下一优先级
 - 每个任务或逻辑分组完成后小步提交（Constitution V）
 - 避免事项：模糊任务、同文件并行冲突、破坏故事独立性的跨故事依赖
+
+***
+
+## Phase 9: Convergence
+
+**Purpose**: 落实 2026-10-10 spec 澄清（Join Us 英文化/无邮件主题/四能力图标、People→Team 及 /team/ URL）后存量代码的差距修复
+
+- [x] T043 重写 src/components/Admissions.astro 与 src/data/site.json admissions 为旧站结构英文文案 per FR-003/FR-016/US1-AC2 (contradicts) — 一句英文申请说明（"To apply for graduate studies or an internship, please submit your résumé to: linzheng@iie.ac.cn"，mailto 链接不带 subject 参数）+ skills 四项能力要点；移除中文三段式（面向对象/我们期待你具备/邮件主题格式）及 emailSubject、targets 字段；SectionHeading 改为 "Join Us"（去掉 "· 招募"）；同步更新 data-model.md §7（admissions 字段：英文申请文案 + skills + email）、contracts/routes.md 外链契约（mailto 不再带默认主题）、quickstart.md 主页清单（招募区块与 mailto 校验项）、src/data/README.md 字段说明
+- [x] T044 为四项能力要点（Coding / Math / Logic / English）配图标，与原站一致 per FR-003 (missing) — 图标字形：Coding→code、Math→book、Logic→bolt、English→users；以内联 SVG 实现，保持运行时零依赖（Constitution IV）
+- [x] T045 重命名 src/pages/people.astro → src/pages/team.astro 并全站替换 People→Team per FR-005/FR-009 (contradicts) — 页面标题 `Team · ${site.groupName}`、SectionHeading "Team"、Navbar 标签 Team 且 href withBase('/team/')、主页人员区块标题 "Team" 与 "View all" → /team/；同步 contracts/routes.md（/team/ 路由、Navbar 四项含 Team）与 src/data/README.md 中 "主页 People、人员页" 引用
+- [x] T046 Team 页可见 UI 标签英文化 per FR-016/US4 (partial) — 小节标题对齐原站 Team 页：在读学生分组 → PhD Candidates / Master's Students、毕业生去向 → Graduates（教师区标题可用 Faculty）；学位标签（博士/硕士 → PhD/Master）、"X 届 / X 级" 后缀与空态占位文案（"毕业生去向待更新"、"在读博士/硕士生名单待更新"）改为英文；涉及 src/pages/team.astro（T045 后）与 src/components/StudentGroup.astro
 
