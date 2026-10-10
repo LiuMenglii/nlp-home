@@ -152,7 +152,7 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 - [x] T039 [P] 全站导航与外链验证（SC-001/SC-003）— 从四个页面各出发一次，1 次点击可达其余三页；外链（老师主页/论文链接）抽查 ≥20 条全部可达
 - [x] T040 [P] 性能核查（SC-002 方向性目标）— DevTools Network：除 Gallery lightbox 小脚本外无其他 JS；public/gallery/ 图片符合 ≤500KB 约定；主页典型宽带下 3 秒内首屏
 - [ ] T041 部署与 CI 门禁验证（FR-013）— GitHub 仓库 Settings → Pages → Source 设为 GitHub Actions；确认 astro.config.mjs 的 site/base 与实际仓库一致；push main → Actions 全绿 → 访问 https://<org>.github.io/<repo>/ 线上抽查；再按 quickstart.md「CI 门禁验证」：故意删除某论文 venue 字段并推送 → 构建失败、部署未执行、线上保持上一正常版本 → 恢复后推送部署成功
-- [ ] T042 运行 quickstart.md 完整验证 — 按 specs/001-homepage-rebuild/quickstart.md 全清单逐项验证并勾选（覆盖 SC-001–SC-006 与全部边缘用例）
+- [x] T042 运行 quickstart.md 完整验证 — 按 specs/001-homepage-rebuild/quickstart.md 全清单逐项验证并勾选（覆盖 SC-001–SC-006 与全部边缘用例）
 
 ***
 
