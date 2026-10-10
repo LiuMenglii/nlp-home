@@ -1,0 +1,128 @@
+/* ============================================================
+   G3 CIGMA 全局样式 — nlp-home-simple 色板（specs/001-homepage-rebuild）
+   ============================================================ */
+
+:root {
+  /* 色板 */
+  --ink: #102b4e;
+  --ink-soft: #47627d;
+  --blue: #1b78bf;
+  --blue-deep: #07548f;
+  --sky: #eaf5fc;
+  --sky-soft: #f5faff;
+  --line: #cfe1ee;
+
+  /* 字体：Inter 优先，系统字体回退 */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', sans-serif;
+
+  /* 内容容器 */
+  --container: 1180px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 18px; /* 正文基础字号 ≥18px（FR-019） */
+  line-height: 1.65;
+  color: var(--ink);
+  background: #ffffff;
+  overflow-x: hidden; /* 流式自适应，无横向溢出（FR-014） */
+}
+
+/* ---------- 布局容器 ---------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-inline: 16px;
+  }
+}
+
+/* ---------- 区块与卡片 ---------- */
+
+.section {
+  margin-block: 56px;
+}
+
+.card {
+  background: var(--sky-soft);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* ---------- 排版 ---------- */
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--ink);
+  line-height: 1.25;
+  margin-block: 0 0.5em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin-block: 0 1em;
+}
+
+a {
+  color: var(--blue-deep);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+/* ---------- 图片与无障碍 ---------- */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
