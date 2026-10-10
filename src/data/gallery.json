@@ -1,6 +1,53 @@
 [
   {
-    "src": "seed-placeholder.jpg",
-    "caption": "Seed placeholder photo (replaced with real gallery photos in T010)"
+    "src": "ccac-2024.jpg",
+    "caption": "CCAC 2024 · 江西南昌"
+  },
+  {
+    "src": "yssnlp-2024.jpg",
+    "caption": "YSSNLP 2024 · 云南昆明"
+  },
+  {
+    "src": "machine-reading-challenge-1.jpg",
+    "caption": "第一届机器阅读挑战赛"
+  },
+  {
+    "src": "machine-reading-challenge-2.jpg",
+    "caption": "第二届机器阅读挑战赛"
+  },
+  {
+    "src": "emnlp-2019.jpg",
+    "caption": "EMNLP 2019"
+  },
+  {
+    "src": "cikm-2019.jpg",
+    "caption": "CIKM 2019"
+  },
+  {
+    "src": "teachers-day-2024.jpg",
+    "caption": "2024 教师节",
+    "date": "2024-09-10"
+  },
+  {
+    "src": "team-building-2024.jpg",
+    "caption": "2024 团建",
+    "date": "2024-06-23"
+  },
+  {
+    "src": "team-building-2023.jpg",
+    "caption": "2023 团建",
+    "date": "2023-05-20"
+  },
+  {
+    "src": "iie-10th-anniversary.jpg",
+    "caption": "所庆十周年"
+  },
+  {
+    "src": "aerial-activity.jpg",
+    "caption": "航拍活动"
+  },
+  {
+    "src": "yanqi-lake-library.jpg",
+    "caption": "雁栖湖图书馆"
   }
 ]

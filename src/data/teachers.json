@@ -3,10 +3,50 @@
     "name": "林政",
     "title": "Professor",
     "advisorRole": "phd",
-    "directions": ["Natural Language Processing", "Multimodal Learning"],
+    "directions": ["Natural Language Processing", "Multimodal Analysis"],
     "email": "linzheng@iie.ac.cn",
+    "homepage": "https://people.ucas.ac.cn/~linzheng",
+    "photo": null,
+    "bio": "Professor at IIE, CAS and chair professor at UCAS. Author of two monographs and 100+ CCF-A/B publications, with repeated national first-place finishes in machine reading comprehension and sentiment analysis evaluations (2018/2019/2024/2025)."
+  },
+  {
+    "name": "王伟平",
+    "title": "Professor",
+    "advisorRole": "phd",
+    "directions": ["Big Data AI", "Data Security"],
+    "email": "wangweiping@iie.ac.cn",
     "homepage": null,
     "photo": null,
-    "bio": null
+    "bio": "Professor at IIE, CAS and Vice Director of the institute. Has led 30+ major national R&D and information-security engineering projects, with 100+ publications in venues such as TPAMI, TPDS, NeurIPS, CVPR and ICDE."
+  },
+  {
+    "name": "付鹏",
+    "title": "Associate Professor",
+    "advisorRole": "master",
+    "directions": ["Natural Language Processing", "Efficient LLM Applications"],
+    "email": "fupeng@iie.ac.cn",
+    "homepage": null,
+    "photo": null,
+    "bio": "Associate Professor at IIE, CAS. 30+ publications in ACL, AAAI, IJCAI, EMNLP, TASLP and ACM MM; first place in the national 'Military Intelligence – Machine Reading' challenge in 2018 and 2019."
+  },
+  {
+    "name": "吴大衍",
+    "title": "Associate Professor",
+    "advisorRole": "master",
+    "directions": ["Computer Vision", "Multimodal Big Data Analysis"],
+    "email": "wudayan@iie.ac.cn",
+    "homepage": "https://people.ucas.ac.cn/~dayan",
+    "photo": null,
+    "bio": "Associate Professor at IIE, CAS. 30+ publications in CVPR, SIGIR, IJCAI, AAAI, ACM MM, TCSVT and TOMM; recipient of the 2020 First Prize of the Ministry of Education Science and Technology Progress Award."
+  },
+  {
+    "name": "谷井子",
+    "title": "Senior Engineer",
+    "advisorRole": "master",
+    "directions": ["Computer Vision", "Multimodal Retrieval", "Multimodal Generation"],
+    "email": "gujingzi@iie.ac.cn",
+    "homepage": null,
+    "photo": null,
+    "bio": "Senior Engineer at IIE, CAS. 20+ publications in CVPR, ACM MM, ECCV, ICME and ICASSP, with multiple granted invention patents."
   }
 ]

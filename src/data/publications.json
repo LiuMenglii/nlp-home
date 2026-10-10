@@ -1,22 +1,764 @@
 [
   {
-    "title": "[Seed] Placeholder publication with CCF rating and link",
-    "venue": "ACL 2024",
-    "year": 2024,
+    "title": "Breaking the Trade-Off Between Faithfulness and Expressiveness for Large Language Models",
+    "venue": "AAAI",
+    "year": 2026,
+    "ccf": "A"
+  },
+  {
+    "title": "Test-time Prompt Intervention",
+    "venue": "AAAI",
+    "year": 2026,
+    "ccf": "A"
+  },
+  {
+    "title": "VecInfer: Efficient LLM Inference with Low-Bit KV Cache via Outlier-Suppressed Vector Quantization",
+    "venue": "ACL",
+    "year": 2026,
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2401.00001",
     "featured": true
   },
   {
-    "title": "[Seed] Placeholder publication without CCF rating",
-    "venue": "Findings of NAACL 2024",
-    "year": 2024,
-    "url": "https://arxiv.org/abs/2401.00002"
+    "title": "Blink: Dynamic Visual Token Resolution for Enhanced Multimodal Understanding",
+    "venue": "CVPR",
+    "year": 2026,
+    "ccf": "A",
+    "featured": true
   },
   {
-    "title": "[Seed] Placeholder publication without URL",
-    "venue": "IEEE TPAMI",
+    "title": "Advantageous Parameter Expansion Training Makes Better Large Language Models",
+    "venue": "EMNLP",
+    "year": 2026
+  },
+  {
+    "title": "Mindscape-Aware Retrieval Augmented Generation for Improved Long Context Understanding",
+    "venue": "EMNLP",
+    "year": 2026
+  },
+  {
+    "title": "Query-focused and Memory-aware Reranker for Long Context Processing",
+    "venue": "EMNLP",
+    "year": 2026
+  },
+  {
+    "title": "CoRe-MoE: Compact Reusable MoE for Continual Multimodal Instruction Tuning",
+    "venue": "Findings of EMNLP",
+    "year": 2026
+  },
+  {
+    "title": "IRIS: Iterative Refinement of Internal States for Safer Language Models",
+    "venue": "Findings of EMNLP",
+    "year": 2026
+  },
+  {
+    "title": "Dynamic Early Exit in Reasoning Models",
+    "venue": "ICLR",
+    "year": 2026,
+    "ccf": "A",
+    "featured": true
+  },
+  {
+    "title": "DualECot: Toward Explainable Emotion Causality Analysis in Conversations",
+    "venue": "IEEE Transactions on Audio, Speech and Language Processing",
+    "year": 2026,
+    "ccf": "B"
+  },
+  {
+    "title": "Absorbing Gradient Conflicts: Modeling Semantic Variance via Kent Distributions for Cross-Modal Hashing",
+    "venue": "IJCAI",
+    "year": 2026
+  },
+  {
+    "title": "Causal Path Alignment: Anchoring the Optimization Trajectory for Controllable In-Parameter Knowledge Editing",
+    "venue": "IJCAI",
+    "year": 2026
+  },
+  {
+    "title": "Online Self-Calibration Against Hallucination in Vision-Language Models",
+    "venue": "IJCAI",
+    "year": 2026
+  },
+  {
+    "title": "System 1&2 Synergy via Dynamic Model Interpolation",
+    "venue": "IJCAI",
+    "year": 2026
+  },
+  {
+    "title": "Co-Evolving Policy Distillation",
+    "venue": "NeurIPS",
+    "year": 2026,
+    "ccf": "A"
+  },
+  {
+    "title": "Harnessing Streaming Video in the Wild",
+    "venue": "NeurIPS",
+    "year": 2026,
+    "ccf": "A"
+  },
+  {
+    "title": "Self-Distilled RLVR",
+    "venue": "NeurIPS",
+    "year": 2026,
+    "ccf": "A"
+  },
+  {
+    "title": "ExDR: Explanation-driven Dynamic Retrieval Enhancement for Multimodal Fake News Detection",
+    "venue": "SIGIR",
+    "year": 2026,
+    "ccf": "A"
+  },
+  {
+    "title": "LWGR: Lagrangian-Constrained Personalized World Knowledge for Generative Recommendation",
+    "venue": "SIGIR",
+    "year": 2026,
+    "ccf": "A"
+  },
+  {
+    "title": "Multimodal Hypothetical Summary for Retrieval-based Multi-image Question Answering",
+    "venue": "AAAI",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "Relation Also Knows: Rethinking the Recall and Editing of Factual Associations in Auto-Regressive Transformer Language Models",
+    "venue": "AAAI",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "Trust-GRS: A Trustworthy Training Framework for Graph Neural Network Based Recommender Systems against Shilling Attacks",
+    "venue": "AAAI",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "Adapt Once, Thrive with Updates: Transferable Parameter-Efficient Fine-Tuning on Evolving Base Models",
+    "venue": "ACL",
+    "year": 2025,
+    "ccf": "A",
+    "featured": true
+  },
+  {
+    "title": "BeamLoRA: Beam-Constraint Low-Rank Adaptation",
+    "venue": "ACL",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "DIVE into MoE: Diversity-Enhanced Reconstruction of Large Language Models from Dense into Mixture-of-Experts",
+    "venue": "ACL",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "PIG: Privacy Jailbreak Attack on LLMs via Gradient-based Iterative In-Context Optimization",
+    "venue": "ACL",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "Mitigating the Evolving Semantic Entanglement in Continual Learning of Vision-Language Models",
+    "venue": "ACM MM",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "Sibyl: Empowering Empathetic Dialogue Generation in Large Language Models via Sensible and Visionary Commonsense Inference",
+    "venue": "COLING",
+    "year": 2025
+  },
+  {
+    "title": "NeuS-PIR: Learning Relightable Neural Surface using Pre-Integrated Rendering",
+    "venue": "CVMJ",
+    "year": 2025
+  },
+  {
+    "title": "CBP-Tuning: Efficient Local Customization for Black-box Large Language Models",
+    "venue": "EMNLP",
+    "year": 2025
+  },
+  {
+    "title": "Weights-Rotated Preference Optimization for Large Language Models",
+    "venue": "EMNLP",
+    "year": 2025
+  },
+  {
+    "title": "TableDreamer: Progressive and Weakness-guided Data Synthesis from Scratch for Table Instruction Tuning",
+    "venue": "Findings of ACL",
+    "year": 2025
+  },
+  {
+    "title": "TailorKV: A Hybrid Framework for Long-Context Inference via Tailored KV Cache Optimization",
+    "venue": "Findings of ACL",
+    "year": 2025
+  },
+  {
+    "title": "AutoPrompt: Automated Red-Teaming of Text-to-Image Models via LLM-Diven Adversarial Prompts",
+    "venue": "ICCV",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "TextSafety: Visual Text Vanishing via Hierarchical Context-Aware Interaction Reconstruction",
+    "venue": "IEEE TRANSACTIONS ON INFORMATION FORENSICS AND SECURITY",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "Categorical Attention: Fine-grained Language-guided Noise Filtering Network for Occluded Person Re-Identification",
+    "venue": "IJCAI",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "Endogenous Recovery via Within-modality Prototypes for Incomplete Multimodal Hashing",
+    "venue": "IJCAI",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "Boundary-aware Prototype Augmentation and Dual-level Knowledge Distillation for non-exemplar class-incremental hashing",
+    "venue": "Knowledge-Based Systems",
+    "year": 2025
+  },
+  {
+    "title": "NeedleInATable: Exploring Long-Context Capability of Large Language Models towards Long-Structured Tables",
+    "venue": "NeurIPS",
+    "year": 2025,
+    "ccf": "A",
+    "featured": true
+  },
+  {
+    "title": "Incorporating Communication Style and Interaction of Speakers for Sarcasm Explanation in Dialogue",
+    "venue": "SIGIR",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "Two-stage Adversarial Training for Deep Hashing via Representation Distillation",
+    "venue": "SIGIR",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "Bridging the Gap: Aligning Language Model Generation with Structured Information Extraction via Controllable State Transition",
+    "venue": "WWW",
+    "year": 2025,
+    "ccf": "A"
+  },
+  {
+    "title": "Object Attribute Matters in Visual Question Answering",
+    "venue": "AAAI",
+    "year": 2024,
+    "ccf": "A",
+    "featured": true
+  },
+  {
+    "title": "Pairwise-Label-Based Deep Incremental Hashing with Simultaneous Code Expansion",
+    "venue": "AAAI",
+    "year": 2024,
+    "ccf": "A"
+  },
+  {
+    "title": "Multimodal Table Understanding",
+    "venue": "ACL",
+    "year": 2024,
+    "ccf": "A",
+    "featured": true
+  },
+  {
+    "title": "Disrupting Diffusion: Token-Level Attention Erasure Attack against Diffusion-based Customization",
+    "venue": "ACM MM",
+    "year": 2024,
+    "ccf": "A"
+  },
+  {
+    "title": "Towards Flexible Evaluation for Generative Visual Question Answering",
+    "venue": "ACM MM",
+    "year": 2024,
+    "ccf": "A"
+  },
+  {
+    "title": "Central similarity consistency hashing for asymmetric image retrieval",
+    "venue": "CVMJ",
+    "year": 2024
+  },
+  {
+    "title": "A Pedestrian is Worth One Prompt: Towards Language Guidance Person Re-Identification",
+    "venue": "CVPR",
+    "year": 2024,
+    "ccf": "A",
+    "featured": true
+  },
+  {
+    "title": "Prediction Exposes Your Face: Black-box Model Inversion via Prediction Alignment",
+    "venue": "ECCV",
+    "year": 2024,
+    "ccf": "B"
+  },
+  {
+    "title": "Light-PEFT: Lightening Parameter-Efficient Fine-Tuning via Early Pruning",
+    "venue": "Findings of ACL",
+    "year": 2024,
+    "featured": true
+  },
+  {
+    "title": "Pruning Large Language Models to Intra-module Low-rank Structure with Transitional Activations",
+    "venue": "Findings of ACL",
+    "year": 2024,
+    "featured": true
+  },
+  {
+    "title": "Towards One-to-Many Visual Question Answering",
+    "venue": "Findings of EMNLP",
+    "year": 2024
+  },
+  {
+    "title": "Exploiting Vision-Language Model for Visible-Infrared Person Re-identification via Textual Modality Alignment",
+    "venue": "ICME",
+    "year": 2024
+  },
+  {
+    "title": "Privacy-Preserving Replay and Adaptive Relation Distillation for Camera Incremental Person Re-Identification. ICME",
+    "venue": "ICME",
+    "year": 2024
+  },
+  {
+    "title": "SD4Privacy: Exploiting Stable Diffusion for Protecting Facial Privacy",
+    "venue": "ICME",
+    "year": 2024
+  },
+  {
+    "title": "From Data to Optimization: Data-Free Deep Incremental Hashing with Data Disambiguation and Adaptive Proxies",
+    "venue": "TCSVT",
+    "year": 2024,
+    "ccf": "B"
+  },
+  {
+    "title": "文本后门攻击与防御综述",
+    "venue": "计算机研究与发展",
     "year": 2023,
     "ccf": "A"
+  },
+  {
+    "title": "A Gradient Control Method for Backdoor Attacks on Parameter-Efficient Tuning",
+    "venue": "ACL",
+    "year": 2023,
+    "ccf": "A"
+  },
+  {
+    "title": "Combo of Thinking and Observing for Outside-Knowledge VQA",
+    "venue": "ACL",
+    "year": 2023,
+    "ccf": "A"
+  },
+  {
+    "title": "DiffusEmp: A Diffusion Model-Based Framework with Multi-Grained Control for Empathetic Response Generation",
+    "venue": "ACL",
+    "year": 2023,
+    "ccf": "A"
+  },
+  {
+    "title": "Divide, Conquer, and Combine: Mixture of Semantic-Independent Experts for Zero-Shot Dialogue State Tracking",
+    "venue": "ACL",
+    "year": 2023,
+    "ccf": "A"
+  },
+  {
+    "title": "IM-TQA: A Chinese Table Question Answering Dataset with Implicit and Multi-type Table Structures",
+    "venue": "ACL",
+    "year": 2023,
+    "ccf": "A"
+  },
+  {
+    "title": "Retrieve-and-Sample: Document-level Event Argument Extraction via Hybrid Retrieval Augmentation",
+    "venue": "ACL",
+    "year": 2023,
+    "ccf": "A"
+  },
+  {
+    "title": "Handling Label Uncertainty for Camera Incremental Person Re-Identification",
+    "venue": "ACM MM",
+    "year": 2023,
+    "ccf": "A"
+  },
+  {
+    "title": "Dual Alignment Unsupervised Domain Adaptation for Video-Text Retrieval",
+    "venue": "CVPR",
+    "year": 2023,
+    "ccf": "A"
+  },
+  {
+    "title": "Compressing and Debiasing Vision-Language Pre-Trained Models for Visual Question Answering",
+    "venue": "EMNLP",
+    "year": 2023
+  },
+  {
+    "title": "Multi-level Adaptive Contrastive Learning for Knowledge Internalization in Dialogue Generation",
+    "venue": "EMNLP",
+    "year": 2023
+  },
+  {
+    "title": "Maximum Entropy Loss, the Silver Bullet Targeting Backdoor Attacks in Pre-trained Language Models",
+    "venue": "Findings of ACL",
+    "year": 2023
+  },
+  {
+    "title": "Question-Interlocutor Scope Realized Graph Modeling over Key Utterances for Dialogue Reading Comprehension",
+    "venue": "Findings of ACL",
+    "year": 2023
+  },
+  {
+    "title": "An Empirical Study of Instruction-tuning Large Language Models in Chinese",
+    "venue": "Findings of EMNLP",
+    "year": 2023
+  },
+  {
+    "title": "Chain-of-Thought Reasoning in Tabular Language Models",
+    "venue": "Findings of EMNLP",
+    "year": 2023
+  },
+  {
+    "title": "SERI: SkEtching-Reasoning-Integrating Progressive Workflow for Empathetic Response Generation",
+    "venue": "ICASSP",
+    "year": 2023
+  },
+  {
+    "title": "Towards Polymorphic Adversarial Examples Generation for Short Text",
+    "venue": "ICASSP",
+    "year": 2023
+  },
+  {
+    "title": "AREA: Adaptive Reweighting via Effective Area for Long-Tailed Classification",
+    "venue": "ICCV",
+    "year": 2023,
+    "ccf": "A"
+  },
+  {
+    "title": "Explainable Hyperbolic Temporal Point Process for User-Item Interaction Sequence Generation",
+    "venue": "TOIS",
+    "year": 2023,
+    "ccf": "A"
+  },
+  {
+    "title": "Multi-Aspect Heterogeneous Graph Augmentation",
+    "venue": "WWW",
+    "year": 2023,
+    "ccf": "A"
+  },
+  {
+    "title": "Imagine by Reasoning: A Reasoning-Based Implicit Semantic Data Augmentation for Long-Tailed Classification",
+    "venue": "AAAI",
+    "year": 2022,
+    "ccf": "A"
+  },
+  {
+    "title": "Neural Label Search for Zero-Shot Multi-Lingual Extractive Summarization",
+    "venue": "ACL",
+    "year": 2022,
+    "ccf": "A"
+  },
+  {
+    "title": "Attack is the Best Defense: Towards Preemptive-Protection Person Re-Identification",
+    "venue": "ACM MM",
+    "year": 2022,
+    "ccf": "A"
+  },
+  {
+    "title": "Camera-specific Informative Data Augmentation Module for Unbalanced Person Re-identification",
+    "venue": "ACM MM",
+    "year": 2022,
+    "ccf": "A"
+  },
+  {
+    "title": "Detach and Attach: Stylized Image Captioning without Paired Stylized Dataset",
+    "venue": "ACM MM",
+    "year": 2022,
+    "ccf": "A"
+  },
+  {
+    "title": "Efficient Hash Code Expansion by Recycling Old Bits",
+    "venue": "ACM MM",
+    "year": 2022,
+    "ccf": "A"
+  },
+  {
+    "title": "CLIO: Role-interactive Multi-event Head Attention Network for Document-level Event Extraction",
+    "venue": "COLING",
+    "year": 2022
+  },
+  {
+    "title": "Slot Dependency Modeling for Zero-Shot Cross-Domain Dialogue State Tracking",
+    "venue": "COLING",
+    "year": 2022
+  },
+  {
+    "title": "TAKE: Topic-shift Aware Knowledge sElection for Dialogue Generation",
+    "venue": "COLING",
+    "year": 2022
+  },
+  {
+    "title": "Target Really Matters: Target-aware Contrastive Learning and Consistency Regularization for Few-shot Stance Detection",
+    "venue": "COLING",
+    "year": 2022
+  },
+  {
+    "title": "COST-EFF: Collaborative Optimization of Spatial and Temporal Efficiency with Slenderized Multi-exit Language Models",
+    "venue": "EMNLP",
+    "year": 2022
+  },
+  {
+    "title": "Empathetic Dialogue Generation via Sensitive Emotion Recognition and Sensible Knowledge Selection",
+    "venue": "Findings of EMNLP",
+    "year": 2022
+  },
+  {
+    "title": "Language Prior Is Not the Only Shortcut: A Benchmark for Shortcut Learning in VQA",
+    "venue": "Findings of EMNLP",
+    "year": 2022
+  },
+  {
+    "title": "Towards Robust Visual Question Answering: Making the Most of Biased Samples via Contrastive Learning",
+    "venue": "Findings of EMNLP",
+    "year": 2022
+  },
+  {
+    "title": "Connecting Targets via Latent Topics and Contrastive Learning: A Unified Framework for Robust Zero-shot and Few-shot Stance Detection",
+    "venue": "ICASSP",
+    "year": 2022
+  },
+  {
+    "title": "Cross-Target Stance Detection via Refined Meta-Learning",
+    "venue": "ICASSP",
+    "year": 2022
+  },
+  {
+    "title": "Deep Piecewise Hashing for Efficient Hamming Space Retrieval",
+    "venue": "ICASSP",
+    "year": 2022,
+    "ccf": "B"
+  },
+  {
+    "title": "Neutral Utterances are Also Causes: Enhancing Conversational Causal Emotion Entailment with Social Commonsense Knowledge",
+    "venue": "IJCAI",
+    "year": 2022,
+    "ccf": "A"
+  },
+  {
+    "title": "Learning to Win Lottery Tickets in BERT Transfer via Task-agnostic Mask Training",
+    "venue": "NAACL",
+    "year": 2022
+  },
+  {
+    "title": "A Win-win Deal: Towards Sparse and Robust Pre-trained Language Models",
+    "venue": "NeurIPS",
+    "year": 2022,
+    "ccf": "A"
+  },
+  {
+    "title": "Deep Uncoupled Discrete Hashing via Similarity Matrix Decomposition",
+    "venue": "TOMM",
+    "year": 2022,
+    "ccf": "B"
+  },
+  {
+    "title": "ROSITA: Refined BERT Compression with Integrated Technique",
+    "venue": "AAAI",
+    "year": 2021,
+    "ccf": "A"
+  },
+  {
+    "title": "Check It Again: Progressive Visual Question Answering via Visual Entailment",
+    "venue": "ACL",
+    "year": 2021,
+    "ccf": "A"
+  },
+  {
+    "title": "Marginal Utility Diminishes: Exploring the Minimum Knowledge for BERT Knowledge Distillation",
+    "venue": "ACL",
+    "year": 2021,
+    "ccf": "A"
+  },
+  {
+    "title": "Mask is All You Need: Rethinking Mask R-CNN for Dense and Arbitrary-Shaped Scene Text Detection",
+    "venue": "ACM MM",
+    "year": 2021,
+    "ccf": "A"
+  },
+  {
+    "title": "MACROBERT: Maximizing Certified Region of BERT to Adversarial Word Substitutions",
+    "venue": "DASFAA",
+    "year": 2021
+  },
+  {
+    "title": "Enhanching Zero-shot and Few-shot Stance Detection with Commonsense Knowledge Graph",
+    "venue": "Findings of ACL",
+    "year": 2021,
+    "ccf": "A"
+  },
+  {
+    "title": "Past, Present, and Future: Conversational Emotion Recognition through Structural Modeling of Psychological Knowledge",
+    "venue": "Findings of EMNLP",
+    "year": 2021
+  },
+  {
+    "title": "Addressing Extraction and Generation Separately:  Key phrase Prediction with Pre-trained Language Models",
+    "venue": "IEEE Transactions on Audio, Speech and Language Processing",
+    "year": 2021
+  },
+  {
+    "title": "Sarcasm Detection with Commonsense Knowledge",
+    "venue": "IEEE Transactions on Audio, Speech and Language Processing",
+    "year": 2021
+  },
+  {
+    "title": "Learning Class-Transductive Intent Representations for Zero-shot IntentDetection",
+    "venue": "IJCAI",
+    "year": 2021,
+    "ccf": "A"
+  },
+  {
+    "title": "Rescuing Deep Hashing from Dead Bits Problem",
+    "venue": "IJCAI",
+    "year": 2021,
+    "ccf": "A"
+  },
+  {
+    "title": "Binary Neural Network Hashing for Image Retrieval",
+    "venue": "SIGIR",
+    "year": 2021,
+    "ccf": "A"
+  },
+  {
+    "title": "智能回复系统研究综述",
+    "venue": "信息安全学报",
+    "year": 2020
+  },
+  {
+    "title": "Joint Character-Level Word Embedding and Adversarial Stability Training to Defend Adversarial Text",
+    "venue": "AAAI",
+    "year": 2020,
+    "ccf": "A"
+  },
+  {
+    "title": "Asymmetric Deep Hashing for Efficient Hash Code Compression",
+    "venue": "ACM MM",
+    "year": 2020,
+    "ccf": "A"
+  },
+  {
+    "title": "Deep Unsupervised Hybrid-similarity Hadamard Hashing",
+    "venue": "ACM MM",
+    "year": 2020,
+    "ccf": "A"
+  },
+  {
+    "title": "Modeling the Incongruity between Sentence Snippets for Sarcasm Detection",
+    "venue": "ECAI",
+    "year": 2020
+  },
+  {
+    "title": "Modeling Intra and Inter-modality Incongruity for Multi-Modal Sarcasm Detection",
+    "venue": "Findings of EMNLP",
+    "year": 2020
+  },
+  {
+    "title": "Deep Discrete Attention Guided Hashing for Face Image Retrieval",
+    "venue": "ICMR",
+    "year": 2020,
+    "ccf": "B"
+  },
+  {
+    "title": "Deep Semantic-Alignment Hashing for Unsupervised Cross-Modal Retrieval",
+    "venue": "ICMR",
+    "year": 2020,
+    "ccf": "B"
+  },
+  {
+    "title": "Generating Paraphrase with Topic as Prior Knowledge",
+    "venue": "CIKM",
+    "year": 2019
+  },
+  {
+    "title": "Deep Incremental Hashing Network for Efficient Image Retrieval",
+    "venue": "CVPR",
+    "year": 2019,
+    "ccf": "A"
+  },
+  {
+    "title": "Ranking and Sampling in Open-Domain Question Answering",
+    "venue": "EMNLP",
+    "year": 2019
+  },
+  {
+    "title": "文本情绪分析综述",
+    "venue": "计算机研究与发展",
+    "year": 2018,
+    "ccf": "A"
+  },
+  {
+    "title": "Learning Sentiment-Specific Word Embedding via Global Sentiment Representation",
+    "venue": "AAAI",
+    "year": 2018,
+    "ccf": "A"
+  },
+  {
+    "title": "Deep Uniqueness-aware Hashing for Fine-grained Multi-label Image Retrieval",
+    "venue": "ICASSP",
+    "year": 2018,
+    "ccf": "B"
+  },
+  {
+    "title": "Deep Index-Compatible Hashing for Fast Image Retrieval",
+    "venue": "IEEE ICME",
+    "year": 2018,
+    "ccf": "B"
+  },
+  {
+    "title": "Deep Supervised Hashing for Multi-Label and Large-Scale Image Retrieval",
+    "venue": "ICMR",
+    "year": 2017,
+    "ccf": "B"
+  },
+  {
+    "title": "一种面向大规模社会信息网络的多层社区发现算法",
+    "venue": "计算机学报",
+    "year": 2016,
+    "ccf": "A"
+  },
+  {
+    "title": "An Unsupervised Cross-Lingual Topic Model Framework for Sentiment Classification,",
+    "venue": "IEEE/ACM Transactions on Audio, Speech and Language Processing",
+    "year": 2016
+  },
+  {
+    "title": "A Word Vector and Matrix Factorization Based Method for Opinion Lexicon Extraction",
+    "venue": "WWW",
+    "year": 2015
+  },
+  {
+    "title": "A Cross-Lingual Joint  Aspect/Sentiment Model for Sentiment Analysis",
+    "venue": "CIKM",
+    "year": 2014
+  },
+  {
+    "title": "Effective and efficient?bilingual sentiment lexicon extraction using collocation alignment",
+    "venue": "CIKM",
+    "year": 2012
+  },
+  {
+    "title": "Towards jointly extracting aspects and aspect-specific sentiment knowledge",
+    "venue": "CIKM",
+    "year": 2012
+  },
+  {
+    "title": "Find me opinion sources in blogosphere: a unified framework for opinionated blog feed retrieval",
+    "venue": "WSDM",
+    "year": 2012
+  },
+  {
+    "title": "Language-independent sentiment classification using three common words",
+    "venue": "CIKM",
+    "year": 2011
   }
 ]
