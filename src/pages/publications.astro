@@ -1,0 +1,91 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../components/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import PublicationItem from '../components/PublicationItem.astro';
+import site from '../data/site.json';
+
+// 全列表：year 降序分组；组内按标题字母序保证稳定输出
+const publications = (await getCollection('publications')).sort(
+  (a, b) => b.data.year - a.data.year || a.data.title.localeCompare(b.data.title),
+);
+
+const years = [...new Set(publications.map((p) => p.data.year))].sort(
+  (a, b) => b - a,
+);
+const byYear = new Map<number, typeof publications>(
+  years.map((y) => [y, publications.filter((p) => p.data.year === y)]),
+);
+---
+
+<BaseLayout title={`Publications · ${site.groupName}`}>
+  <section class="section" aria-labelledby="pubs-title">
+    <SectionHeading title="Publications" id="pubs-title" />
+
+    <nav class="year-nav" aria-label="按年份跳转">
+      {
+        years.map((y) => (
+          <a class="year-chip" href={`#year-${y}`}>
+            {y}
+            <span class="year-count">{byYear.get(y)!.length}</span>
+          </a>
+        ))
+      }
+    </nav>
+
+    {
+      years.map((y) => (
+        <section class="year-group" id={`year-${y}`} aria-labelledby={`year-${y}-heading`}>
+          <h3 id={`year-${y}-heading`}>{y}</h3>
+          <div class="year-list">
+            {byYear.get(y)!.map((pub) => (
+              <PublicationItem pub={pub} />
+            ))}
+          </div>
+        </section>
+      ))
+    }
+  </section>
+</BaseLayout>
+
+<style>
+  .year-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  .year-chip {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 4px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--sky-soft);
+    color: var(--blue-deep);
+    font-size: 0.95rem;
+  }
+
+  .year-chip:hover {
+    border-color: var(--blue);
+    background: var(--sky);
+  }
+
+  .year-count {
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+
+  .year-group {
+    scroll-margin-top: 84px; /* sticky navbar 高度偏移，锚点不藏于导航下 */
+    margin-bottom: 36px;
+  }
+
+  .year-group h3 {
+    margin: 0 0 8px;
+    font-size: 1.3rem;
+    color: var(--blue-deep);
+  }
+</style>

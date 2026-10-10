@@ -85,7 +85,7 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 ### Implementation for User Story 2
 
 - [ ] T022 [P] [US2] 全量聚合 src/data/publications.json — 从 https://people.ucas.ac.cn/~linzheng（111 篇）与 https://people.ucas.ac.cn/~dayan（32 篇）抓取论文列表：按标题忽略大小写去重（FR-010）；CCF 评级以 UCAS 主页标注为准（论文发表时的评级；Workshop/poster/short paper 不计入）；预印本与正式版并存以正式版信息为准（标题/venue/年份）；url arXiv 优先、回退 DOI/出版方/scholar、均无则省略（纯文本）；保留 T011 已有 featured 标记；每条书目事实与正式发表版本（DOI / 会议论文集 / 期刊页面）核对，无法核实的条目标记并提请课题组负责人确认，确认后方可上线（FR-010 上线门禁）
-- [ ] T023 [P] [US2] Create src/pages/publications.astro — 全列表按 year 降序分组 + 年份锚点导航（分组标题 `id="year-{yyyy}"`，纯 HTML 锚点零 JS，research §7）；复用 SectionHeading/PublicationItem/CCFBadge；满足 SC-003：100% 条目含标题+venue、有评级条目 100% 显示徽标
+- [x] T023 [P] [US2] Create src/pages/publications.astro — 全列表按 year 降序分组 + 年份锚点导航（分组标题 `id="year-{yyyy}"`，纯 HTML 锚点零 JS，research §7）；复用 SectionHeading/PublicationItem/CCFBadge；满足 SC-003：100% 条目含标题+venue、有评级条目 100% 显示徽标
 - [ ] T024 [US2] 发表页验证（src/pages/publications.astro）— 条目数与去重合集一致；无 CCF 条目无徽标但标题/venue 完整；无 url 条目为纯文本；年份锚点跳转可用；随机抽检 ≥20 条外链可达（主流浏览器可正常打开，SC-003）；无"未核对即上线"条目（FR-010 上线门禁：无法核实条目须已经课题组负责人确认）；四档视口无布局破损
 
 **Checkpoint**: 主页 + 发表页均可独立工作
