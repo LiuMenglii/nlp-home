@@ -59,7 +59,7 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 
 - [x] T008 [P] [US1] Create 真实 src/data/site.json — 内容取自原站 https://iienlp.github.io/ 与仓库根本地参考《2026年招生介绍-G3.pptx》（PPT 仅为参考资料、已入 .gitignore；data-model §7）：groupName（G3 CIGMA，已确认）、institute（中国科学院信息工程研究所 / Institute of Information Engineering, CAS）、directions（自然语言处理、多媒体大数据分析、大模型高效应用）、admissions.targets（面向对象，中文关键信息保留 FR-016）、admissions.skills（Coding/Math/Logic/English）、admissions.email（<linzheng@iie.ac.cn>）、admissions.emailSubject（"XXX-学校-毕业时间-保研/实习申请"格式）
 - [x] T009 [P] [US1] Create 真实 src/data/teachers.json — 5 位老师（FR-015，PPT 口径：林政-研究员/博导/NLP·多模态、王伟平-研究员/博导/大数据AI·数据安全（信工所副所长写入其 bio 字段）、付鹏-副研究员/硕导/NLP·大模型高效应用、吴大衍-副研究员/硕导/CV·多模态、谷井子-高级工程师/硕导/CV·多模态检索生成）；职称与研究方向用英文展示（FR-016）；email/homepage 从 UCAS 主页补充；photo 授权前用原站素材（存 public/）或占位图
-- [ ] T010 [P] [US1] Create Gallery 素材 — 从原站 Gallery 收集组内活动照片，精选 8–12 张存入 public/gallery/（JPEG、单张 ≤500KB、长边 ≤2000px、文件名小写字母+连字符），创建 src/data/gallery.json（每张：src/caption 必填、date 可选）
+- [x] T010 [P] [US1] Create Gallery 素材 — 从原站 Gallery 收集组内活动照片，精选 8–12 张存入 public/gallery/（JPEG、单张 ≤500KB、长边 ≤2000px、文件名小写字母+连字符），创建 src/data/gallery.json（每张：src/caption 必填、date 可选）
 - [x] T011 [P] [US1] Create src/data/publications.json 代表性子集 — 从 <https://people.ucas.ac.cn/~linzheng> 与 <https://people.ucas.ac.cn/~dayan> 选取 8–12 篇代表性论文（优先 CCF-A），标注 `featured: true`（主页区块按时间降序取 featured 前 8 条、不足按时间最新补齐——时间即 year 字段，data-model §1 派生规则）；全量聚合在 T022 完成
 - [x] T012 [P] [US1] Create src/components/SectionHeading.astro — 区块标题组件（主页六区块与各内页共用）
 - [x] T013 [P] [US1] Create src/components/Hero.astro — 介绍区块：组名、所属研究所、研究方向总结（读 site.json，FR-002）
