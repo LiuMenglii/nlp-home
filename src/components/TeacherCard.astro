@@ -17,7 +17,7 @@ const { name, title, directions, email, homepage, photo, bio } = teacher.data;
     <img
       class="teacher-photo"
       src={withBase(photo)}
-      alt={`${name} 照片`}
+      alt={`${name} photo`}
       width="160"
       height="200"
       loading="lazy"
@@ -26,7 +26,7 @@ const { name, title, directions, email, homepage, photo, bio } = teacher.data;
   <div class="teacher-info">
     <h3>{name}</h3>
     <p class="teacher-title">{title}</p>
-    <ul class="teacher-directions" aria-label="研究方向">
+    <ul class="teacher-directions" aria-label="Research directions">
       {directions.map((d) => <li>{d}</li>)}
     </ul>
     {detailed && bio && <p class="teacher-bio">{bio}</p>}

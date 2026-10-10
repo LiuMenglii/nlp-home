@@ -20,7 +20,7 @@ const photos = (await getCollection('gallery')).sort((a, b) =>
             class="gallery-thumb"
             data-gallery-src={withBase(`/gallery/${photo.data.src}`)}
             data-gallery-caption={photo.data.caption}
-            aria-label={`查看大图：${photo.data.caption}`}
+            aria-label={`View larger image: ${photo.data.caption}`}
           >
             <img
               src={withBase(`/gallery/${photo.data.src}`)}
@@ -40,7 +40,7 @@ const photos = (await getCollection('gallery')).sort((a, b) =>
           type="button"
           class="gallery-close"
           data-gallery-close
-          aria-label="关闭大图"
+          aria-label="Close image"
         >
           ×
         </button>

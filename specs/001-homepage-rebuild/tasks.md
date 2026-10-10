@@ -261,3 +261,15 @@ US2 / US3 / US4 在 US1 完成后可由不同实施者并行（不同页面与�
 - [x] T045 重命名 src/pages/people.astro → src/pages/team.astro 并全站替换 People→Team per FR-005/FR-009 (contradicts) — 页面标题 `Team · ${site.groupName}`、SectionHeading "Team"、Navbar 标签 Team 且 href withBase('/team/')、主页人员区块标题 "Team" 与 "View all" → /team/；同步 contracts/routes.md（/team/ 路由、Navbar 四项含 Team）与 src/data/README.md 中 "主页 People、人员页" 引用
 - [x] T046 Team 页可见 UI 标签英文化 per FR-016/US4 (partial) — 小节标题对齐原站 Team 页：在读学生分组 → PhD Candidates / Master's Students、毕业生去向 → Graduates（教师区标题可用 Faculty）；学位标签（博士/硕士 → PhD/Master）、"X 届 / X 级" 后缀与空态占位文案（"毕业生去向待更新"、"在读博士/硕士生名单待更新"）改为英文；涉及 src/pages/team.astro（T045 后）与 src/components/StudentGroup.astro
 
+***
+
+## Phase 10: Convergence
+
+**Purpose**: 2026-10-10 第二轮收敛——Phase 9（T043–T046）已逐项核验落实；同日用户澄清（FR-016 仅约束站点自身固定文案，新闻/Gallery 等维护者添加内容语言不限）后 T047/T048 作废；保留图片素材、站点语言元数据与核对文档的差距修复
+
+- [x] T047 作废 per FR-016（2026-10-10 澄清）(contradicts→resolved) — 澄清明确：新闻等需要维护添加的文案不受语言限制，"站点内容以英文为主"仅指站点本身的文案内容；原"新闻全部改英文"任务基于对 FR-016 的过宽解读，无需执行，新闻语言由维护者自定
+- [x] T048 作废 per FR-016（2026-10-10 澄清）(partial→resolved) — Gallery caption 属维护者添加内容，语言不受限制；原"caption 改英文"任务作废，中文说明（如 "2024 教师节"）符合澄清后的规范，无需执行
+- [x] T049 为 5 位老师补充照片 per spec Assumptions（图片素材）/T009 (partial) — teachers.json photo 当前全为 null 且 public/ 下无任何老师照片，spec 约定"获得授权前使用占位图或原站已有素材"；从原站（iienlp.github.io）收集老师照片存入 public/teachers/（JPEG、压缩至 ≤500KB）或使用占位图，并填充各老师 photo 字段（TeacherCard 已支持渲染）— 已核验原站无老师照片（Team 页仅学生头像与通用图），按 spec 用姓氏占位图（public/teachers/*.svg）填充 5 位老师 photo 字段；UCAS 官方主页均有照片可选用，已记入 content-review.md §5 待授权后替换
+- [x] T050 修正站点语言元数据与残留中文 UI 字符串 per FR-016 (partial) — BaseLayout `<html lang="zh-CN">` 改为 `lang="en"`（站点自身固定文案以英文为主；新闻/Gallery 等维护性内容语言不限，人名/去向单位等为局部中文）；CCFBadge title 悬停提示（"中国计算机学会（CCF）X 类"）改英文；Gallery aria-label（"查看大图/关闭大图"）、TeacherCard alt（"照片"）与 aria-label（"研究方向"）、Hero aria-label（"研究方向"）改英文；删除 StudentGroup.astro 中未使用的中文 levelLabel 死代码 — 另修复任务未列到的 publications.astro 年份锚点导航 aria-label（"按年份跳转"→"Jump to year"）；构建产物已验证
+- [x] T051 更新 content-review.md §5 招募文案核对项 per T043/SC-005 (partial) — 该条仍引用 T043 已移除的 `site.json admissions.targets` 旧中文文案（"面向保研/统考的硕士、博士研究生……"），负责人被要求确认的是已不存在的字段内容；改为引用现行英文 admissions.apply 文案或删除该核对项 — 已改为引用现行 admissions.apply 英文文案与联系邮箱；同节补充教师照片授权核对项（T049）
+

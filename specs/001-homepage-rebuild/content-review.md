@@ -65,5 +65,6 @@
 
 ## 5. 其他
 
-- 招生文案（site.json `admissions.targets`）："面向保研/统考的硕士、博士研究生，同时欢迎优秀本科生来组实习" — 依据原站 "graduate studies or an internship" 与邮件主题格式，请确认表述。
+- 招募文案（site.json `admissions.apply`）："To apply for graduate studies or an internship, please submit your résumé to: linzheng@iie.ac.cn"（mailto 不带默认主题；能力要点 Coding / Math / Logic / English）— 口径取自原站招募横幅，请确认表述与联系邮箱。
+- 教师照片：当前为占位图（`public/teachers/*.svg`，spec 约定授权前不用真实照片）。5 位老师的 UCAS 官方主页均有照片可选；获得授权后替换 `public/teachers/` 下文件并同步 `teachers.json` 的 `photo` 字段即可。
 - Gallery 12 张照片取自原站（压缩至 ≤500KB、长边 ≤2000px），舍弃了 3 张聚餐/生日题材照片；新闻日期中月份精度不足者按当月 1 日填写。

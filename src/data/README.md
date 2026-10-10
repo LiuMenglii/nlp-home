@@ -58,6 +58,7 @@ summary: "一句话摘要（不超过 200 字符），显示在列表页和主�
 ### 成员变动（teachers / students / graduates）
 
 - 教师信息改动 `teachers.json`：`name`、`title`（英文职称）、`advisorRole`（`"phd"` 博导 / `"master"` 硕导）、`directions`（英文研究方向，至少 1 项）、`email`、`homepage`（https 链接或 `null`）、`photo`、`bio`。
+- 更换老师照片：把图片（建议 JPEG，≤500KB）放入 `public/teachers/`，再更新 `teachers.json` 对应条目的 `photo`（`/teachers/文件名` 路径）；当前为占位图，待课题组提供授权照片后替换。
 - 学生入学/毕业：在 `students.json` 增删条目，字段为 `name`、`level`（`"phd"` / `"master"`）、`grade`（入学年份字符串，如 `"2025"`）、`url`（个人主页或 GitHub，可 `null`）、`note`。
 - 学生毕业：从 `students.json` 移除，并在 `graduates.json` 添加 `name`、`destination`（去向单位中文名）、`degree`（`"phd"` / `"master"`）、`year`（毕业年份，可 `null`）。
 - 空数组 `[]` 合法：对应分组会显示英文占位文案（"coming soon"）。

@@ -22,7 +22,7 @@ const byYear = new Map<number, typeof publications>(
   <section class="section" aria-labelledby="pubs-title">
     <SectionHeading title="Publications" id="pubs-title" />
 
-    <nav class="year-nav" aria-label="按年份跳转">
+    <nav class="year-nav" aria-label="Jump to year">
       {
         years.map((y) => (
           <a class="year-chip" href={`#year-${y}`}>
