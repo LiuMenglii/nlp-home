@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string;
+  id?: string;
+  link?: { href: string; label: string };
+}
+
+const { title, id, link } = Astro.props;
+---
+
+<div class="section-heading">
+  <h2 id={id}>{title}</h2>
+  {
+    link && (
+      <a class="view-all" href={link.href}>
+        {link.label} <span aria-hidden="true">→</span>
+      </a>
+    )
+  }
+</div>
+
+<style>
+  .section-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 24px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px;
+    margin-bottom: 28px;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.55rem;
+    color: var(--ink);
+  }
+
+  .view-all {
+    font-size: 1rem;
+    color: var(--blue-deep);
+    white-space: nowrap;
+  }
+</style>

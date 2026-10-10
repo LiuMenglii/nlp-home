@@ -1,10 +1,92 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../components/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Admissions from '../components/Admissions.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import NewsCard from '../components/NewsCard.astro';
+import TeacherCard from '../components/TeacherCard.astro';
+import PublicationItem from '../components/PublicationItem.astro';
+import Gallery from '../components/Gallery.astro';
+import { withBase } from '../utils';
+import site from '../data/site.json';
+
+// 新闻概览：date 倒序前 5 条（空 → 隐藏区块）
+const news = (await getCollection('news')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+const latestNews = news.slice(0, 5);
+
+// 人员区块：teachers.json 数组顺序
+const teachers = (await getCollection('teachers')).sort((a, b) =>
+  a.id.localeCompare(b.id),
+);
+
+// 代表性 publications：featured 按时间降序取前 8 条，不足按时间最新补齐
+const publications = await getCollection('publications');
+const byTimeDesc = (
+  a: (typeof publications)[number],
+  b: (typeof publications)[number],
+) => b.data.year - a.data.year || a.id.localeCompare(b.id);
+const featured = publications.filter((p) => p.data.featured).sort(byTimeDesc);
+const others = publications.filter((p) => !p.data.featured).sort(byTimeDesc);
+const homePubs = [...featured, ...others].slice(0, 8);
 ---
 
-<BaseLayout title="G3 CIGMA">
-  <section class="section">
-    <h1>G3 CIGMA</h1>
-    <p>Placeholder page — homepage sections are assembled in T020.</p>
+<BaseLayout title={`${site.groupName} · ${site.institute}`}>
+  <Hero />
+  <Admissions />
+
+  {
+    latestNews.length > 0 && (
+      <section class="section" aria-labelledby="home-news-title">
+        <SectionHeading
+          title="News"
+          id="home-news-title"
+          link={{ href: withBase('/news/'), label: 'View all' }}
+        />
+        <div class="home-news-list">
+          {latestNews.map((entry) => (
+            <NewsCard entry={entry} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section" aria-labelledby="home-people-title">
+    <SectionHeading
+      title="People"
+      id="home-people-title"
+      link={{ href: withBase('/people/'), label: 'View all' }}
+    />
+    <div class="teacher-grid">
+      {teachers.map((teacher) => (
+        <TeacherCard teacher={teacher} />
+      ))}
+    </div>
   </section>
+
+  <section class="section" aria-labelledby="home-pubs-title">
+    <SectionHeading
+      title="Publications"
+      id="home-pubs-title"
+      link={{ href: withBase('/publications/'), label: 'View all' }}
+    />
+    <div class="home-pub-list">
+      {homePubs.map((pub) => (
+        <PublicationItem pub={pub} />
+      ))}
+    </div>
+  </section>
+
+  <Gallery />
 </BaseLayout>
+
+<style>
+  .teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+  }
+</style>

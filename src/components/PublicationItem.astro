@@ -1,0 +1,92 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import CCFBadge from './CCFBadge.astro';
+
+interface Props {
+  pub: CollectionEntry<'publications'>;
+}
+
+const { pub } = Astro.props;
+const { title, venue, year, ccf, url } = pub.data;
+---
+
+<article class="pub-item">
+  <div class="pub-main">
+    <span class="pub-title">
+      {
+        url ? (
+          <a href={url} target="_blank" rel="noopener">
+            {title}
+          </a>
+        ) : (
+          title
+        )
+      }
+    </span>
+    <span class="pub-venue">{venue}{year ? ` · ${year}` : ''}</span>
+  </div>
+  <div class="pub-side">
+    <CCFBadge rating={ccf ?? null} />
+    {
+      url && (
+        <a class="pub-link" href={url} target="_blank" rel="noopener">
+          Link <span aria-hidden="true">↗</span>
+        </a>
+      )
+    }
+  </div>
+</article>
+
+<style>
+  .pub-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 4px 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .pub-item:first-of-type {
+    border-top: 1px solid var(--line);
+  }
+
+  .pub-main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 12px;
+    min-width: 0;
+  }
+
+  .pub-title {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .pub-title a {
+    color: var(--ink);
+  }
+
+  .pub-title a:hover {
+    color: var(--blue-deep);
+  }
+
+  .pub-venue {
+    color: var(--ink-soft);
+    font-size: 1rem;
+  }
+
+  .pub-side {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pub-link {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+</style>

@@ -1,0 +1,115 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../utils';
+
+interface Props {
+  teacher: CollectionEntry<'teachers'>;
+  /** full = 人员页完整信息（email/bio）；compact = 主页概览卡片 */
+  detailed?: boolean;
+}
+
+const { teacher, detailed = false } = Astro.props;
+const { name, title, directions, email, homepage, photo, bio } = teacher.data;
+---
+
+<article class="teacher-card card">
+  {photo && (
+    <img
+      class="teacher-photo"
+      src={withBase(photo)}
+      alt={`${name} 照片`}
+      width="160"
+      height="200"
+      loading="lazy"
+    />
+  )}
+  <div class="teacher-info">
+    <h3>{name}</h3>
+    <p class="teacher-title">{title}</p>
+    <ul class="teacher-directions" aria-label="研究方向">
+      {directions.map((d) => <li>{d}</li>)}
+    </ul>
+    {detailed && bio && <p class="teacher-bio">{bio}</p>}
+    <div class="teacher-links">
+      {
+        detailed && email && (
+          <a href={`mailto:${email}`}>
+            {email}
+          </a>
+        )
+      }
+      {
+        homepage && (
+          <a href={homepage} target="_blank" rel="noopener">
+            Homepage <span aria-hidden="true">↗</span>
+          </a>
+        )
+      }
+    </div>
+  </div>
+</article>
+
+<style>
+  .teacher-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  .teacher-photo {
+    flex-shrink: 0;
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin: 0 0 4px;
+  }
+
+  .teacher-title {
+    color: var(--blue-deep);
+    margin: 0 0 10px;
+    font-size: 1rem;
+  }
+
+  .teacher-directions {
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .teacher-directions li {
+    background: var(--sky);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  .teacher-bio {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+  }
+
+  .teacher-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 640px) {
+    .teacher-card {
+      flex-direction: column;
+    }
+  }
+</style>

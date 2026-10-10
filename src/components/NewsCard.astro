@@ -1,0 +1,74 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../utils';
+
+interface Props {
+  entry: CollectionEntry<'news'>;
+}
+
+const { entry } = Astro.props;
+const { title, date, summary } = entry.data;
+const dateStr = date.toISOString().slice(0, 10);
+---
+
+<article class="news-card">
+  <a class="news-card-link" href={withBase(`/news/${entry.id}/`)}>
+    <time datetime={date.toISOString()}>{dateStr}</time>
+    <div class="news-card-body">
+      <h3>{title}</h3>
+      <p>{summary}</p>
+    </div>
+  </a>
+</article>
+
+<style>
+  .news-card {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .news-card:first-of-type {
+    border-top: 1px solid var(--line);
+  }
+
+  .news-card-link {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
+    padding: 18px 8px;
+  }
+
+  .news-card-link:hover {
+    background: var(--sky-soft);
+    text-decoration: none;
+  }
+
+  time {
+    color: var(--ink-soft);
+    font-size: 1rem;
+    padding-top: 4px;
+    white-space: nowrap;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    margin: 0 0 6px;
+    color: var(--ink);
+  }
+
+  .news-card-link:hover h3 {
+    color: var(--blue-deep);
+  }
+
+  p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 1rem;
+  }
+
+  @media (max-width: 640px) {
+    .news-card-link {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+  }
+</style>

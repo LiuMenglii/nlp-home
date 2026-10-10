@@ -1,0 +1,41 @@
+---
+interface Props {
+  rating?: 'A' | 'B' | 'C' | null;
+}
+
+const { rating } = Astro.props;
+---
+
+{
+  rating && (
+    <span class={`ccf-badge ccf-${rating}`} title={`中国计算机学会（CCF）${rating} 类`}>
+      CCF-{rating}
+    </span>
+  )
+}
+
+<style>
+  .ccf-badge {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 1px 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    background: var(--ink-soft);
+    white-space: nowrap;
+  }
+
+  .ccf-A {
+    background: var(--blue-deep);
+  }
+
+  .ccf-B {
+    background: var(--blue);
+  }
+
+  .ccf-C {
+    background: var(--ink-soft);
+  }
+</style>

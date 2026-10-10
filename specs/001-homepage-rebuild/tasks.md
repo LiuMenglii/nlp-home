@@ -40,10 +40,10 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 
 **⚠️ CRITICAL**: 本阶段完成前不得开始任何用户故事
 
-- [ ] T004 Create src/content.config.ts — 六个 collection（loader + Zod schema，字段约束按 data-model.md）：news（glob loader `**/*.md` base `./src/content/news`；title 非空、date `z.coerce.date()`、summary 非空 ≤200 字符、cover 可选）；publications（file loader `src/data/publications.json`；title 非空、venue 非空、year int 1980–2100、ccf enum A/B/C 可空、url https:// 开头可空、featured 缺省 false、authors 可选）；teachers（name/title 非空、advisorRole enum phd|master、directions ≥1 项、email 邮箱格式可空、homepage https 可空、photo/bio 可空）；students（name 非空、level enum phd|master、grade/url/note 可空）；graduates（name/destination 非空、degree enum phd|master、year int 可空）；gallery（src 为 public/gallery/ 下文件名、禁止 `/` 与 `..`、caption 非空、date 可选；src 构建期存在性校验——`z.refine` + `fs.existsSync('public/gallery/' + src)`，引用缺失文件即构建报错并定位到具体文件与字段，不渲染裂图（spec 边缘用例）；条目 >12 构建报错，FR-017）
-- [ ] T005 Create 最小合法种子数据（保证 `npm run build` 通过）：src/data/site.json、src/data/teachers.json、src/data/students.json、src/data/graduates.json、src/data/publications.json（2–3 条样本，覆盖含 ccf+url / 无 ccf / 无 url 三种形态）、src/data/gallery.json（1–2 条占位，指向 public/gallery/ 占位 JPEG）、src/content/news/ 1 条样本 .md（frontmatter: title/date/summary）——种子条目在后续故事阶段被真实内容替换
-- [ ] T006 [P] Create src/components/Navbar.astro — sticky 顶部导航，固定四项 Home / News / People / Publications（contracts/routes.md，SC-001）；窄屏（375px）下不横向溢出
-- [ ] T007 Create src/components/BaseLayout.astro — HTML 骨架（语义化结构 FR-014）+ meta + 引入 src/styles/global.css 与 Navbar + footer（组名/研究所/联系邮箱）；四个页面共用
+- [x] T004 Create src/content.config.ts — 六个 collection（loader + Zod schema，字段约束按 data-model.md）：news（glob loader `**/*.md` base `./src/content/news`；title 非空、date `z.coerce.date()`、summary 非空 ≤200 字符、cover 可选）；publications（file loader `src/data/publications.json`；title 非空、venue 非空、year int 1980–2100、ccf enum A/B/C 可空、url https:// 开头可空、featured 缺省 false、authors 可选）；teachers（name/title 非空、advisorRole enum phd|master、directions ≥1 项、email 邮箱格式可空、homepage https 可空、photo/bio 可空）；students（name 非空、level enum phd|master、grade/url/note 可空）；graduates（name/destination 非空、degree enum phd|master、year int 可空）；gallery（src 为 public/gallery/ 下文件名、禁止 `/` 与 `..`、caption 非空、date 可选；src 构建期存在性校验——`z.refine` + `fs.existsSync('public/gallery/' + src)`，引用缺失文件即构建报错并定位到具体文件与字段，不渲染裂图（spec 边缘用例）；条目 >12 构建报错，FR-017）
+- [x] T005 Create 最小合法种子数据（保证 `npm run build` 通过）：src/data/site.json、src/data/teachers.json、src/data/students.json、src/data/graduates.json、src/data/publications.json（2–3 条样本，覆盖含 ccf+url / 无 ccf / 无 url 三种形态）、src/data/gallery.json（1–2 条占位，指向 public/gallery/ 占位 JPEG）、src/content/news/ 1 条样本 .md（frontmatter: title/date/summary）——种子条目在后续故事阶段被真实内容替换
+- [x] T006 [P] Create src/components/Navbar.astro — sticky 顶部导航，固定四项 Home / News / People / Publications（contracts/routes.md，SC-001）；窄屏（375px）下不横向溢出
+- [x] T007 Create src/components/BaseLayout.astro — HTML 骨架（语义化结构 FR-014）+ meta + 引入 src/styles/global.css 与 Navbar + footer（组名/研究所/联系邮箱）；四个页面共用
 
 **Checkpoint**: Foundation ready — `npm run build` 通过，用户故事实现可以开始
 
@@ -61,15 +61,15 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 - [ ] T009 [P] [US1] Create 真实 src/data/teachers.json — 5 位老师（FR-015，PPT 口径：林政-研究员/博导/NLP·多模态、王伟平-研究员/博导/大数据AI·数据安全（信工所副所长写入其 bio 字段）、付鹏-副研究员/硕导/NLP·大模型高效应用、吴大衍-副研究员/硕导/CV·多模态、谷井子-高级工程师/硕导/CV·多模态检索生成）；职称与研究方向用英文展示（FR-016）；email/homepage 从 UCAS 主页补充；photo 授权前用原站素材（存 public/）或占位图
 - [ ] T010 [P] [US1] Create Gallery 素材 — 从原站 Gallery 收集组内活动照片，精选 8–12 张存入 public/gallery/（JPEG、单张 ≤500KB、长边 ≤2000px、文件名小写字母+连字符），创建 src/data/gallery.json（每张：src/caption 必填、date 可选）
 - [ ] T011 [P] [US1] Create src/data/publications.json 代表性子集 — 从 <https://people.ucas.ac.cn/~linzheng> 与 <https://people.ucas.ac.cn/~dayan> 选取 8–12 篇代表性论文（优先 CCF-A），标注 `featured: true`（主页区块按时间降序取 featured 前 8 条、不足按时间最新补齐——时间即 year 字段，data-model §1 派生规则）；全量聚合在 T022 完成
-- [ ] T012 [P] [US1] Create src/components/SectionHeading.astro — 区块标题组件（主页六区块与各内页共用）
-- [ ] T013 [P] [US1] Create src/components/Hero.astro — 介绍区块：组名、所属研究所、研究方向总结（读 site.json，FR-002）
-- [ ] T014 [P] [US1] Create src/components/Admissions.astro — 招募区块：面向对象 + 技能要点 + 联系邮箱（mailto 带 emailSubject 默认主题；中文关键信息保留，FR-003/FR-016）
-- [ ] T015 [P] [US1] Create src/components/NewsCard.astro — 新闻概览条目：日期 + 标题/摘要，链接 /news/{id}/（FR-004；新闻列表页复用）
-- [ ] T016 [P] [US1] Create src/components/TeacherCard.astro — 老师卡片：照片/姓名/职称/研究方向；区块含"View all"入口 → /people/，老师外部主页链接 target="_blank" rel="noopener"（contracts/routes.md）
-- [ ] T017 [P] [US1] Create src/components/CCFBadge.astro — CCF-A/B/C 徽标；无评级不渲染（边缘用例）
-- [ ] T018 [P] [US1] Create src/components/PublicationItem.astro — 论文条目：标题 + venue + CCFBadge + 链接（展示文字统一 "Link"，target="_blank" rel="noopener"）；url 为空 → 纯文本不可点击（FR-006/FR-011 边缘用例）
-- [ ] T019 [P] [US1] Create src/components/Gallery.astro — 缩略图网格 + 原生 `<dialog>` lightbox（~30 行 vanilla JS、事件委托：点击缩略图 → `showModal()` 填充大图与 caption；Esc / 关闭按钮 / 点击遮罩三种关闭，FR-017）；collection 为空 → 区块整体不渲染（边缘用例）；caption 兼作缩略图 alt
-- [ ] T020 [US1] Create src/pages/index.astro — 按 FR-001 顺序组装六区块：Hero → Admissions → 新闻概览（date 倒序前 5 条；空 → 隐藏区块）→ 人员（5 位老师 TeacherCard）→ 代表性 publications（featured 按时间降序取前 8 条 + "View all" → /publications/）→ Gallery（页面底部，publications 之后）
+- [x] T012 [P] [US1] Create src/components/SectionHeading.astro — 区块标题组件（主页六区块与各内页共用）
+- [x] T013 [P] [US1] Create src/components/Hero.astro — 介绍区块：组名、所属研究所、研究方向总结（读 site.json，FR-002）
+- [x] T014 [P] [US1] Create src/components/Admissions.astro — 招募区块：面向对象 + 技能要点 + 联系邮箱（mailto 带 emailSubject 默认主题；中文关键信息保留，FR-003/FR-016）
+- [x] T015 [P] [US1] Create src/components/NewsCard.astro — 新闻概览条目：日期 + 标题/摘要，链接 /news/{id}/（FR-004；新闻列表页复用）
+- [x] T016 [P] [US1] Create src/components/TeacherCard.astro — 老师卡片：照片/姓名/职称/研究方向；区块含"View all"入口 → /people/，老师外部主页链接 target="_blank" rel="noopener"（contracts/routes.md）
+- [x] T017 [P] [US1] Create src/components/CCFBadge.astro — CCF-A/B/C 徽标；无评级不渲染（边缘用例）
+- [x] T018 [P] [US1] Create src/components/PublicationItem.astro — 论文条目：标题 + venue + CCFBadge + 链接（展示文字统一 "Link"，target="_blank" rel="noopener"）；url 为空 → 纯文本不可点击（FR-006/FR-011 边缘用例）
+- [x] T019 [P] [US1] Create src/components/Gallery.astro — 缩略图网格 + 原生 `<dialog>` lightbox（~30 行 vanilla JS、事件委托：点击缩略图 → `showModal()` 填充大图与 caption；Esc / 关闭按钮 / 点击遮罩三种关闭，FR-017）；collection 为空 → 区块整体不渲染（边缘用例）；caption 兼作缩略图 alt
+- [x] T020 [US1] Create src/pages/index.astro — 按 FR-001 顺序组装六区块：Hero → Admissions → 新闻概览（date 倒序前 5 条；空 → 隐藏区块）→ 人员（5 位老师 TeacherCard）→ 代表性 publications（featured 按时间降序取前 8 条 + "View all" → /publications/）→ Gallery（页面底部，publications 之后）
 - [ ] T021 [US1] 主页验证（src/pages/index.astro）— 六区块顺序与内容完整；mailto 默认主题正确；老师外链/arXiv 外链新标签打开；lightbox 三种关闭方式均有效；四档视口（375 / 768 / 1024 / ≥1280px）无布局破损（判定标准：元素重叠、文字截断、内容溢出容器、非预期换行，SC-006）、无横向溢出
 
 **Checkpoint**: 主页六区块 MVP 完成，可独立验证并部署演示

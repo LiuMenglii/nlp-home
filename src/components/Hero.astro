@@ -1,0 +1,60 @@
+---
+import site from '../data/site.json';
+---
+
+<section class="section hero" aria-labelledby="hero-title">
+  <p class="hero-kicker">{site.fullName}</p>
+  <h1 id="hero-title">{site.groupName}</h1>
+  <p class="hero-institute">{site.institute}</p>
+  <ul class="hero-directions" aria-label="研究方向">
+    {site.directions.map((d) => <li>{d}</li>)}
+  </ul>
+</section>
+
+<style>
+  .hero {
+    background: linear-gradient(180deg, var(--sky) 0%, #ffffff 100%);
+    border-bottom: 1px solid var(--line);
+    margin-block: 0;
+    margin-top: -8px;
+    padding-block: 72px 56px;
+    text-align: center;
+  }
+
+  .hero-kicker {
+    color: var(--ink-soft);
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    margin-bottom: 12px;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-institute {
+    color: var(--ink-soft);
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+  }
+
+  .hero-directions {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-directions li {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--blue-deep);
+    padding: 6px 18px;
+    font-size: 1rem;
+  }
+</style>
