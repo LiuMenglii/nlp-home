@@ -1,0 +1,12 @@
+[
+  {
+    "name": "林政",
+    "title": "Professor",
+    "advisorRole": "phd",
+    "directions": ["Natural Language Processing", "Multimodal Learning"],
+    "email": "linzheng@iie.ac.cn",
+    "homepage": null,
+    "photo": null,
+    "bio": null
+  }
+]

@@ -28,9 +28,9 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 
 **Purpose**: 项目初始化与基础结构
 
-- [ ] T001 Initialize Astro ^7.x 项目（`npm create astro@latest`，minimal 模板、TypeScript strict、零前端框架）：仓库根 package.json（scripts: dev/build/preview/check；devDeps: `@astrojs/check` + `typescript`）、astro.config.mjs（`site: 'https://<org>.github.io'` + `base: '/<repo>'`，仓库名未定时先占位、T041 部署时确认）、tsconfig.json、.gitignore（node_modules/dist/.astro + 排除 2026年招生介绍-G3.pptx）、public/favicon.svg；specs/ 随仓库管理；2026年招生介绍-G3.pptx 仅为制作网页的本地参考资料，MUST NOT 提交至 git（写入本任务的 .gitignore 排除项）
-- [ ] T002 [P] Create .github/workflows/deploy.yml — CI 部署门禁（FR-013）：触发 push main + workflow_dispatch；permissions contents:read / pages:write / id-token:write；步骤 checkout@v6 → setup-node + `npm ci` + `npx astro check`（类型与 schema 校验，失败即中止）→ withastro/action@v6（构建并上传）→ deploy-pages；校验或构建任一失败则不部署，线上保留上一正常版本
-- [ ] T003 [P] Create src/styles/global.css — CSS 变量色板（nlp-home-simple：`--ink #102b4e`、`--ink-soft #47627d`、`--blue #1b78bf`、`--blue-deep #07548f`、`--sky #eaf5fc`、`--sky-soft #f5faff`、`--line #cfe1ee`）、Inter 字体栈（系统回退）、1180px 内容容器、卡片式区块基础样式、正文基础字号 ≥18px（参考站 body 字号，FR-019）、流式自适应基础（无横向溢出，FR-014）
+- [x] T001 Initialize Astro ^7.x 项目（`npm create astro@latest`，minimal 模板、TypeScript strict、零前端框架）：仓库根 package.json（scripts: dev/build/preview/check；devDeps: `@astrojs/check` + `typescript`）、astro.config.mjs（`site: 'https://<org>.github.io'` + `base: '/<repo>'`，仓库名未定时先占位、T041 部署时确认）、tsconfig.json、.gitignore（node_modules/dist/.astro + 排除 2026年招生介绍-G3.pptx）、public/favicon.svg；specs/ 随仓库管理；2026年招生介绍-G3.pptx 仅为制作网页的本地参考资料，MUST NOT 提交至 git（写入本任务的 .gitignore 排除项）
+- [x] T002 [P] Create .github/workflows/deploy.yml — CI 部署门禁（FR-013）：触发 push main + workflow_dispatch；permissions contents:read / pages:write / id-token:write；步骤 checkout@v6 → setup-node + `npm ci` + `npx astro check`（类型与 schema 校验，失败即中止）→ withastro/action@v6（构建并上传）→ deploy-pages；校验或构建任一失败则不部署，线上保留上一正常版本
+- [x] T003 [P] Create src/styles/global.css — CSS 变量色板（nlp-home-simple：`--ink #102b4e`、`--ink-soft #47627d`、`--blue #1b78bf`、`--blue-deep #07548f`、`--sky #eaf5fc`、`--sky-soft #f5faff`、`--line #cfe1ee`）、Inter 字体栈（系统回退）、1180px 内容容器、卡片式区块基础样式、正文基础字号 ≥18px（参考站 body 字号，FR-019）、流式自适应基础（无横向溢出，FR-014）
 
 ***
 

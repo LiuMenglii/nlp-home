@@ -1,0 +1,22 @@
+[
+  {
+    "title": "[Seed] Placeholder publication with CCF rating and link",
+    "venue": "ACL 2024",
+    "year": 2024,
+    "ccf": "A",
+    "url": "https://arxiv.org/abs/2401.00001",
+    "featured": true
+  },
+  {
+    "title": "[Seed] Placeholder publication without CCF rating",
+    "venue": "Findings of NAACL 2024",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2401.00002"
+  },
+  {
+    "title": "[Seed] Placeholder publication without URL",
+    "venue": "IEEE TPAMI",
+    "year": 2023,
+    "ccf": "A"
+  }
+]

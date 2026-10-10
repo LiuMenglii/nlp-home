@@ -1,0 +1,184 @@
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
+import { glob, file } from 'astro/loaders';
+import { existsSync, readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+
+// 路径锚定到本文件所在位置（src/），不受运行时 cwd 影响
+const GALLERY_ASSET_DIR = fileURLToPath(new URL('../public/gallery/', import.meta.url));
+const GALLERY_DATA_FILE = fileURLToPath(new URL('./data/gallery.json', import.meta.url));
+
+/**
+ * file loader 要求每个数组元素带 id/slug 字段，而维护者数据契约（contracts/data-files.md）
+ * 不含 id。这里通过自定义 parser 解析 JSON 数组并自动注入「前缀-序号」形式的 entry id。
+ *
+ * JSON 语法错误若直接 throw 会被 loader 捕获后仅打印日志、构建继续（静默丢数据），
+ * 因此解析失败时返回一个携带 `_jsonParseError` 的错误载体条目，交由下方各 schema 的
+ * `_jsonParseError` 字段校验失败使构建报错——保证任何数据文件损坏都阻塞构建。
+ */
+function jsonArrayParser(fileName: string, prefix: string) {
+  return (text: string): Array<Record<string, unknown>> => {
+    let data: unknown;
+    try {
+      data = JSON.parse(text);
+    } catch (e) {
+      return [
+        {
+          id: `${prefix}-parse-error`,
+          _jsonParseError: `src/data/${fileName} 不是合法 JSON：${(e as Error).message}`,
+        },
+      ];
+    }
+    if (!Array.isArray(data)) {
+      return [
+        {
+          id: `${prefix}-parse-error`,
+          _jsonParseError: `src/data/${fileName} 顶层必须是数组，实际为 ${typeof data}`,
+        },
+      ];
+    }
+    return data.map((item, i) => {
+      const raw =
+        item && typeof item === 'object' && !Array.isArray(item)
+          ? (item as Record<string, unknown>)
+          : {};
+      return { ...raw, id: `${prefix}-${String(i + 1).padStart(3, '0')}` };
+    });
+  };
+}
+
+/** 错误载体字段：正常条目无此字段（校验通过），存在即携带错误信息使构建失败 */
+const jsonParseErrorField = {
+  _jsonParseError: z
+    .string()
+    .optional()
+    .superRefine((val, ctx) => {
+      if (val !== undefined) {
+        ctx.addIssue({ code: 'custom', message: val });
+      }
+    }),
+};
+
+/** HTTPS 外链校验（Constitution：外部链接 MUST 使用 HTTPS） */
+const httpsUrl = z
+  .url()
+  .refine((v) => v.startsWith('https://'), { message: '外部链接必须以 https:// 开头' })
+  .optional()
+  .nullable();
+
+const news = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
+  schema: z.object({
+    title: z.string().min(1),
+    date: z.coerce.date(),
+    summary: z.string().min(1).max(200),
+    cover: z.string().optional(),
+  }),
+});
+
+const publications = defineCollection({
+  loader: file('src/data/publications.json', {
+    parser: jsonArrayParser('publications.json', 'pub'),
+  }),
+  schema: z.object({
+    title: z.string().min(1),
+    venue: z.string().min(1),
+    year: z.number().int().min(1980).max(2100),
+    ccf: z.enum(['A', 'B', 'C']).optional().nullable(),
+    url: httpsUrl,
+    featured: z.boolean().optional().default(false),
+    authors: z.array(z.string()).optional(),
+    ...jsonParseErrorField,
+  }),
+});
+
+const teachers = defineCollection({
+  loader: file('src/data/teachers.json', {
+    parser: jsonArrayParser('teachers.json', 'tea'),
+  }),
+  schema: z.object({
+    name: z.string().min(1),
+    title: z.string().min(1),
+    advisorRole: z.enum(['phd', 'master']),
+    directions: z.array(z.string()).min(1),
+    email: z.email().optional().nullable(),
+    homepage: httpsUrl,
+    photo: z.string().optional().nullable(),
+    bio: z.string().optional().nullable(),
+    ...jsonParseErrorField,
+  }),
+});
+
+const students = defineCollection({
+  loader: file('src/data/students.json', {
+    parser: jsonArrayParser('students.json', 'stu'),
+  }),
+  schema: z.object({
+    name: z.string().min(1),
+    level: z.enum(['phd', 'master']),
+    grade: z.string().optional().nullable(),
+    url: httpsUrl,
+    note: z.string().optional().nullable(),
+    ...jsonParseErrorField,
+  }),
+});
+
+const graduates = defineCollection({
+  loader: file('src/data/graduates.json', {
+    parser: jsonArrayParser('graduates.json', 'gra'),
+  }),
+  schema: z.object({
+    name: z.string().min(1),
+    destination: z.string().min(1),
+    degree: z.enum(['phd', 'master']),
+    year: z.number().int().optional().nullable(),
+    ...jsonParseErrorField,
+  }),
+});
+
+const gallery = defineCollection({
+  loader: file('src/data/gallery.json', {
+    parser: jsonArrayParser('gallery.json', 'gal'),
+  }),
+  schema: z
+    .object({
+      // src 必须是 public/gallery/ 下已存在的文件名（构建期存在性校验，
+      // 缺失即构建报错并定位文件与字段，不渲染裂图 —— spec 边缘用例）
+      src: z
+        .string()
+        .min(1)
+        .superRefine((val, ctx) => {
+          if (val.includes('/') || val.includes('..')) {
+            ctx.addIssue({
+              code: 'custom',
+              message: `src "${val}" 必须是 public/gallery/ 目录下的文件名（禁止 "/" 与 ".."）`,
+            });
+          } else if (!existsSync(GALLERY_ASSET_DIR + val)) {
+            ctx.addIssue({
+              code: 'custom',
+              message: `src "${val}" 在 public/gallery/ 中不存在——请先放入图片文件，再修改 src/data/gallery.json`,
+            });
+          }
+        }),
+      caption: z.string().min(1),
+      date: z.string().optional().nullable(),
+      ...jsonParseErrorField,
+    })
+    .superRefine((_entry, ctx) => {
+      // FR-017：Gallery 精选 8–12 张，超过 12 条由 schema 强制构建报错
+      let raw: unknown;
+      try {
+        raw = JSON.parse(readFileSync(GALLERY_DATA_FILE, 'utf-8'));
+      } catch {
+        raw = undefined;
+      }
+      if (Array.isArray(raw) && raw.length > 12) {
+        ctx.addIssue({
+          code: 'custom',
+          message: `FR-017：src/data/gallery.json 共 ${raw.length} 条，超过上限 12 条，请精选后删除多余的 ${raw.length - 12} 条`,
+        });
+      }
+    }),
+});
+
+export const collections = { news, publications, teachers, students, graduates, gallery };

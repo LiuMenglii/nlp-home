@@ -1,0 +1,11 @@
+{
+  "groupName": "G3 CIGMA",
+  "institute": "中国科学院信息工程研究所 / Institute of Information Engineering, CAS",
+  "directions": ["自然语言处理", "多媒体大数据分析", "大模型高效应用"],
+  "admissions": {
+    "targets": "",
+    "skills": ["Coding", "Math", "Logic", "English"],
+    "email": "linzheng@iie.ac.cn",
+    "emailSubject": "XXX-学校-毕业时间-保研/实习申请"
+  }
+}

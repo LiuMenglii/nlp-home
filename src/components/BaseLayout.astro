@@ -1,0 +1,67 @@
+---
+import Navbar from './Navbar.astro';
+import site from '../data/site.json';
+import { withBase } from '../utils';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = `${site.groupName}, ${site.institute}`,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navbar />
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-name">{site.groupName}</p>
+        <p class="footer-institute">{site.institute}</p>
+        <p class="footer-contact">
+          Contact:
+          <a href={`mailto:${site.admissions.email}`}>{site.admissions.email}</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .site-footer {
+    margin-top: 72px;
+    border-top: 1px solid var(--line);
+    background: var(--sky-soft);
+    padding-block: 32px;
+    color: var(--ink-soft);
+  }
+
+  .site-footer p {
+    margin: 0 0 6px;
+  }
+
+  .footer-name {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .footer-institute,
+  .footer-contact {
+    font-size: 0.95rem;
+  }
+</style>

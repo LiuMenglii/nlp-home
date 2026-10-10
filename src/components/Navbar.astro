@@ -1,0 +1,92 @@
+---
+import { withBase, normalizePath } from '../utils';
+
+const items = [
+  { label: 'Home', href: withBase('/') },
+  { label: 'News', href: withBase('/news/') },
+  { label: 'People', href: withBase('/people/') },
+  { label: 'Publications', href: withBase('/publications/') },
+];
+
+const current = normalizePath(Astro.url.pathname);
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={withBase('/')}>G3 CIGMA</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        {
+          items.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                aria-current={current === normalizePath(item.href) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #ffffff;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 24px;
+    padding-block: 12px;
+  }
+
+  .brand {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--blue-deep);
+    letter-spacing: 0.02em;
+  }
+
+  .brand:hover {
+    color: var(--blue);
+    text-decoration: none;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list a {
+    display: inline-block;
+    padding: 6px 2px;
+    font-size: 1rem;
+    color: var(--ink-soft);
+  }
+
+  .nav-list a:hover {
+    color: var(--blue-deep);
+    text-decoration: none;
+  }
+
+  .nav-list a[aria-current='page'] {
+    color: var(--blue-deep);
+    font-weight: 600;
+    box-shadow: inset 0 -2px 0 var(--blue);
+  }
+</style>
