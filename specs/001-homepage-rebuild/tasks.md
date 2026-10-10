@@ -100,9 +100,9 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 
 ### Implementation for User Story 3
 
-- [ ] T025 [P] [US3] Create src/pages/news/index.astro — 概要列表按 date 倒序（复用 NewsCard）；空态显示 "No news yet." 友好占位（contracts/routes.md 空态契约）
-- [ ] T026 [P] [US3] Create src/pages/news/[id].astro — getStaticPaths ← news collection；渲染 title/date + Markdown 正文；正文配图用相对路径（缺失构建报错，FR-018）；简讯类直接渲染原文（FR-007/FR-008）
-- [ ] T027 [P] [US3] Create 初始新闻内容 src/content/news/*.md — 自原站新闻条目与近两年论文成果整理 10–20 条（frontmatter：title、date=发布日期手动填写、summary ≤200 字符）；至少含 1 条简讯类 + 1 条含配图类（覆盖边缘用例）；文件名即 slug、不与既有重名
+- [x] T025 [P] [US3] Create src/pages/news/index.astro — 概要列表按 date 倒序（复用 NewsCard）；空态显示 "No news yet." 友好占位（contracts/routes.md 空态契约）
+- [x] T026 [P] [US3] Create src/pages/news/[id].astro — getStaticPaths ← news collection；渲染 title/date + Markdown 正文；正文配图用相对路径（缺失构建报错，FR-018）；简讯类直接渲染原文（FR-007/FR-008）
+- [x] T027 [P] [US3] Create 初始新闻内容 src/content/news/*.md — 自原站新闻条目与近两年论文成果整理 10–20 条（frontmatter：title、date=发布日期手动填写、summary ≤200 字符）；至少含 1 条简讯类 + 1 条含配图类（覆盖边缘用例）；文件名即 slug、不与既有重名
 - [ ] T028 [US3] 新闻验证（src/pages/news/）— 列表按时间倒序；条目点入详情后标题/日期/正文与列表一致；简讯详情无空白；含图新闻图片正常显示；主页新闻概览同步展示前 5 条；四档视口无布局破损
 
 **Checkpoint**: 主页 + 发表页 + 新闻（列表/详情）均可独立工作

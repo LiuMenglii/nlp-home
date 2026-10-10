@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../components/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import NewsCard from '../../components/NewsCard.astro';
+import site from '../../data/site.json';
+
+// FR-007：按发布日期倒序
+const news = (await getCollection('news')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+---
+
+<BaseLayout title={`News · ${site.groupName}`}>
+  <section class="section" aria-labelledby="news-title">
+    <SectionHeading title="News" id="news-title" />
+
+    {
+      news.length > 0 ? (
+        <div class="news-list">
+          {news.map((entry) => (
+            <NewsCard entry={entry} />
+          ))}
+        </div>
+      ) : (
+        <p class="empty">No news yet.</p>
+      )
+    }
+  </section>
+</BaseLayout>
+
+<style>
+  .empty {
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+  }
+</style>

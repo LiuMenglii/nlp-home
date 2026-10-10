@@ -1,0 +1,75 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../components/BaseLayout.astro';
+import { withBase } from '../../utils';
+import site from '../../data/site.json';
+
+export async function getStaticPaths() {
+  const news = await getCollection('news');
+  return news.map((entry) => ({
+    params: { id: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, date } = entry.data;
+const dateStr = date.toISOString().slice(0, 10);
+---
+
+<BaseLayout title={`${title} · ${site.groupName}`}>
+  <article class="section news-article">
+    <header>
+      <h1>{title}</h1>
+      <time datetime={date.toISOString()}>{dateStr}</time>
+    </header>
+    <div class="news-body">
+      <Content />
+    </div>
+    <p class="back"><a href={withBase('/news/')}>← All news</a></p>
+  </article>
+</BaseLayout>
+
+<style>
+  header {
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    margin: 0 0 8px;
+    font-size: 1.9rem;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  time {
+    color: var(--ink-soft);
+    font-size: 1rem;
+  }
+
+  .news-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--ink);
+  }
+
+  .news-body :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+
+  .news-body :global(h2) {
+    margin-top: 32px;
+  }
+
+  .back {
+    margin-top: 40px;
+  }
+
+  .back a {
+    color: var(--blue-deep);
+  }
+</style>
