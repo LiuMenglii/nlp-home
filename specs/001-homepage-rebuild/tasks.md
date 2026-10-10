@@ -135,9 +135,9 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 
 ### Implementation for User Story 5
 
-- [ ] T034 [US5] 维护流程验证（SC-004）— 在 src/data/publications.json 追加一条测试论文 → `npm run build` → 发表页出现该条目 → `git status` 确认仅数据文件变更（src/components/、src/pages/、src/styles/、astro.config.mjs、deploy.yml 零改动）→ 移除测试数据
-- [ ] T035 [US5] 新闻维护验证 — 新建一条测试新闻 src/content/news/test-item.md → `npm run build` → 新闻列表与主页新闻概览同步出现该条目 → 移除测试文件
-- [ ] T036 [US5] 边缘用例验证 — ① 清空 src/data/gallery.json → 构建后主页 Gallery 区块隐藏、不留空白区块 → 恢复；② src/data/gallery.json 填入 13 条 → 构建报错（上限 12 由 schema 强制，FR-017）→ 恢复；③ 删除 src/data/publications.json 某条的 venue 字段 → 构建失败且错误定位到具体文件与字段名（spec 边缘用例"构建阶段明确报错"）→ 恢复；④ src/data/gallery.json 某条 src 填入 public/gallery/ 中不存在的文件名 → 构建失败且错误定位到具体文件与字段名（不渲染裂图，spec 边缘用例）→ 恢复
+- [x] T034 [US5] 维护流程验证（SC-004）— 在 src/data/publications.json 追加一条测试论文 → `npm run build` → 发表页出现该条目 → `git status` 确认仅数据文件变更（src/components/、src/pages/、src/styles/、astro.config.mjs、deploy.yml 零改动）→ 移除测试数据
+- [x] T035 [US5] 新闻维护验证 — 新建一条测试新闻 src/content/news/test-item.md → `npm run build` → 新闻列表与主页新闻概览同步出现该条目 → 移除测试文件
+- [x] T036 [US5] 边缘用例验证 — ① 清空 src/data/gallery.json → 构建后主页 Gallery 区块隐藏、不留空白区块 → 恢复；② src/data/gallery.json 填入 13 条 → 构建报错（上限 12 由 schema 强制，FR-017）→ 恢复；③ 删除 src/data/publications.json 某条的 venue 字段 → 构建失败且错误定位到具体文件与字段名（spec 边缘用例"构建阶段明确报错"）→ 恢复；④ src/data/gallery.json 某条 src 填入 public/gallery/ 中不存在的文件名 → 构建失败且错误定位到具体文件与字段名（不渲染裂图，spec 边缘用例）→ 恢复
 - [ ] T037 [US5] Create 维护者文档 src/data/README.md（Constitution II / FR-020）— 面向不熟悉前端的维护者：字段约定（对齐 data-model.md 各节）、常见更新流程（新增论文/新闻/成员变动/更换照片，对齐 contracts/data-files.md 映射表与示例）、图片资产约定（JPEG ≤500KB/长边 ≤2000px/Gallery ≤12 张）、本地构建与推送部署流程（CI 门禁：构建失败不上线）
 
 **Checkpoint**: 内容与展示分离（Constitution II / FR-012 / SC-004）经端到端验证成立
