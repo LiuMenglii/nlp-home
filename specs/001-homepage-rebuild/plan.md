@@ -89,7 +89,7 @@ nlp-home/
 │   │   ├── Navbar.astro      # sticky 顶部导航（四页互通，SC-001）
 │   │   ├── Hero.astro        # 主页介绍区块（组名/研究所/研究方向）
 │   │   ├── SectionHeading.astro
-│   │   ├── Admissions.astro  # 招募区块（中文关键信息保留）
+│   │   ├── Admissions.astro  # 招募区块（英文申请说明 + 四能力图标）
 │   │   ├── NewsCard.astro    # 新闻概览条目（日期+标题/摘要）
 │   │   ├── TeacherCard.astro # 老师卡片（人员页详情/主页区块共用）
 │   │   ├── StudentGroup.astro# 在读学生分组列表
@@ -101,7 +101,7 @@ nlp-home/
 │   │   ├── news/
 │   │   │   ├── index.astro   # 新闻列表（时间倒序）
 │   │   │   └── [id].astro    # 新闻详情（getStaticPaths ← news collection）
-│   │   ├── people.astro      # 人员页（老师详情+在读学生分组+毕业生去向）
+│   │   ├── team.astro        # Team 页（老师详情+在读学生分组+毕业生去向，/team/）
 │   │   └── publications.astro# 发表页（全列表，按年份分组+年份锚点导航）
 │   └── styles/
 │       └── global.css        # CSS 变量（nlp-home-simple 色板）+ 布局 + 公共样式

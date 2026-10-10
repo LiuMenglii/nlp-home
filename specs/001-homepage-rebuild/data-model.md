@@ -129,11 +129,10 @@ file loader collection：`gallery`。
 |------|------|------|
 | `groupName` | string | 课题组名称（G3 CIGMA，2026-10-10 确认） |
 | `institute` | string | 所属研究所（中国科学院信息工程研究所 / Institute of Information Engineering, CAS） |
-| `directions` | string[] | 研究方向总结（自然语言处理、多媒体大数据分析、大模型高效应用） |
-| `admissions.targets` | string | 招募面向对象（中文关键信息，FR-016） |
-| `admissions.skills` | string[] | 技能要点（Coding/Math/Logic/English） |
-| `admissions.email` | string | linzheng@iie.ac.cn（mailto 链接） |
-| `admissions.emailSubject` | string | 邮件主题格式（"XXX-学校-毕业时间-保研/实习申请"） |
+| `directions` | string[] | 研究方向总结（英文展示：Natural Language Processing、Multimodal Big Data Analysis、Efficient LLM Applications） |
+| `admissions.apply` | string | 英文申请说明（"To apply for graduate studies or an internship, please submit your résumé to:"，FR-003；邮箱以 mailto 链接紧随其后展示，不带 subject 参数） |
+| `admissions.skills` | string[] | 能力要点（Coding/Math/Logic/English，模板内置内联 SVG 图标：code/book/bolt/users，FR-003） |
+| `admissions.email` | string | linzheng@iie.ac.cn（mailto 链接，不带 subject 参数） |
 
 **说明**: 单对象 JSON、更新频率极低（组名/邮箱级别），直接 `import site from '../data/site.json'` 使用；字段约定在文件内以 JSON 无注释的替代方式（README 或 data-model 本节）说明。展示错误风险由模板直接引用字段即可见，不需构建期强制。
 
