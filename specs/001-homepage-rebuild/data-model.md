@@ -128,6 +128,7 @@ file loader collection：`gallery`。
 | 字段 | 类型 | 说明 |
 |------|------|------|
 | `groupName` | string | 课题组名称（G3 CIGMA，2026-10-10 确认） |
+| `fullName` | string | 研究组标识（当前 "iie-CIGMA"，2026-10-10 确认；主页 Hero 区块 kicker 展示） |
 | `institute` | string | 所属研究所（中国科学院信息工程研究所 / Institute of Information Engineering, CAS） |
 | `directions` | string[] | 研究方向总结（英文展示：Natural Language Processing、Multimodal Big Data Analysis、Efficient LLM Applications） |
 | `admissions.apply` | string | 英文申请说明（"To apply for graduate studies or an internship, please submit your résumé to:"，FR-003；邮箱以 mailto 链接紧随其后展示，不带 subject 参数） |

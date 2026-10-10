@@ -24,7 +24,7 @@
 | 链接源 | 目标 | 行为 |
 |--------|------|------|
 | 老师外部个人主页（`teachers.homepage`） | UCAS 等权威主页 | `target="_blank" rel="noopener"`，https 强制（schema 校验） |
-| 论文条目（`publications.url`） | arXiv 优先，回退 DOI/出版方/scholar | `target="_blank" rel="noopener"`；url 为空 → 不可点击纯文本 |
+| 论文条目（`publications.url`） | arXiv 优先，回退 DOI/出版方/scholar | `target="_blank" rel="noopener"`；url 为空 → 不可点击纯文本；除统一 "Link" 展示文字外，条目标题在有 url 时也渲染为指向同一目标的外链（2026-10-10 评审确认保留） |
 | 招募邮箱（`site.admissions.email`） | `mailto:` | 不带 subject 参数（FR-003） |
 
 ## 空态契约（spec 边缘用例）

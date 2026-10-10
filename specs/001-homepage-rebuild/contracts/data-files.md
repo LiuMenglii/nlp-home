@@ -14,7 +14,7 @@
 | 老师信息变动 | `src/data/teachers.json` | 改对应条目 |
 | 学生入学/毕业 | `src/data/students.json` / `src/data/graduates.json` | 追加或移动条目 |
 | 更换活动照片 | `public/gallery/*.jpg` + `src/data/gallery.json` | 丢图片 + 改清单 |
-| 招募信息/组名 | `src/data/site.json` | 改字段值 |
+| 招募信息/组名 | `src/data/site.json` | 改字段值（`groupName`、`fullName`、`institute`、`directions`、`admissions`，字段约定见 data-model.md §7） |
 
 ## 新增一条论文（示例）
 

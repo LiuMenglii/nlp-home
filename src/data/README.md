@@ -6,7 +6,7 @@
 
 | 文件 | 内容 | 对应页面 |
 |------|------|----------|
-| `site.json` | 组名、研究所、研究方向、招募信息（英文申请文案 `admissions.apply` + 四项能力 + 邮箱） | 主页 Hero / Join Us 区块、页脚 |
+| `site.json` | 组名（`groupName`）、研究组标识（`fullName`，当前 "iie-CIGMA"）、研究所、研究方向、招募信息（英文申请文案 `admissions.apply` + 四项能力 + 邮箱） | 主页 Hero / Join Us 区块、页脚 |
 | `teachers.json` | 教师团队（5 位） | 主页 Team、Team 页 |
 | `students.json` | 在读学生 | Team 页 |
 | `graduates.json` | 毕业生去向 | Team 页 |

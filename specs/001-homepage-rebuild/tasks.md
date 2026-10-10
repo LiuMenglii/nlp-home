@@ -273,3 +273,13 @@ US2 / US3 / US4 在 US1 完成后可由不同实施者并行（不同页面与�
 - [x] T050 修正站点语言元数据与残留中文 UI 字符串 per FR-016 (partial) — BaseLayout `<html lang="zh-CN">` 改为 `lang="en"`（站点自身固定文案以英文为主；新闻/Gallery 等维护性内容语言不限，人名/去向单位等为局部中文）；CCFBadge title 悬停提示（"中国计算机学会（CCF）X 类"）改英文；Gallery aria-label（"查看大图/关闭大图"）、TeacherCard alt（"照片"）与 aria-label（"研究方向"）、Hero aria-label（"研究方向"）改英文；删除 StudentGroup.astro 中未使用的中文 levelLabel 死代码 — 另修复任务未列到的 publications.astro 年份锚点导航 aria-label（"按年份跳转"→"Jump to year"）；构建产物已验证
 - [x] T051 更新 content-review.md §5 招募文案核对项 per T043/SC-005 (partial) — 该条仍引用 T043 已移除的 `site.json admissions.targets` 旧中文文案（"面向保研/统考的硕士、博士研究生……"），负责人被要求确认的是已不存在的字段内容；改为引用现行英文 admissions.apply 文案或删除该核对项 — 已改为引用现行 admissions.apply 英文文案与联系邮箱；同节补充教师照片授权核对项（T049）
 
+***
+
+## Phase 11: Convergence
+
+**Purpose**: 第四轮收敛评估（对照 spec/plan/tasks/constitution 全量核查 74 项：FR-001–FR-020、SC-001–SC-006、US1–US5 验收标准、边缘用例、plan/research 技术决策、宪法 I–V）。功能与数据层面满足全部要求（missing 0、CRITICAL/HIGH/MEDIUM 0，构建期边缘用例经临时副本实测通过），仅存 3 项 LOW 级文档口径与超范围项。
+
+- [x] T052 补登记 site.json `fullName` 字段约定 per data-model §7 / Constitution II (partial) — Hero.astro 副标题使用 `site.fullName`（site.json 第 3 行），但该字段未出现在 data-model.md §7 字段表、contracts/data-files.md 与 src/data/README.md 的任何字段约定中，维护者无据可查；在三处维护者契约中补齐该字段（含义：组名全称中英文对照，Hero 区块 kicker 展示） — 已按 2026-10-10 用户决策将 fullName 值更新为 "iie-CIGMA"（Hero kicker 展示），并在 data-model.md §7、contracts/data-files.md、src/data/README.md 三处契约补登记字段约定
+- [x] T053 更新 checklists/requirements.md Notes 中 FR-016 的过时口径 per FR-016（2026-10-10 澄清）(contradicts) — requirements.md Notes 仍写"FR-016 = 英文为主、招募区块保留中文关键信息"，与现行口径（站点固定文案以英文为主、招募区块为英文申请文案、维护者添加内容不限语言）相反；为该历史记录标注已被 2026-10-10 澄清取代，避免误导后续评审 — 已在 Notes 中标注该历史口径已被 2026-10-10 澄清取代，并指向 spec.md FR-016 现行口径
+- [x] T054 评审 PublicationItem.astro 论文标题外链的超范围实现 per FR-011 (unrequested) — 论文条目在统一 "Link" 展示文字之外，标题本身也渲染为外链（PublicationItem.astro 第 15–25 行），超出 spec/T018 "展示文字统一 Link" 的口径（无害交互增强、无 MUST NOT 违反）；确认保留（在 contracts/routes.md 外链契约补记该交互）或移除标题链接，二选一并记录结论 — 已按 2026-10-10 用户决策确认保留，并在 contracts/routes.md 外链契约表补记该交互
+
