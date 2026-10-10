@@ -15,7 +15,7 @@
     "advisorRole": "phd",
     "directions": ["Big Data AI", "Data Security"],
     "email": "wangweiping@iie.ac.cn",
-    "homepage": "https://people.ucas.ac.cn/~0012246",
+    "homepage": "https://people.ucas.edu.cn/~0012246",
     "photo": null,
     "bio": "Professor at IIE, CAS and Vice Director of the institute. Has led 30+ major national R&D and information-security engineering projects, with 100+ publications in venues such as TPAMI, TPDS, NeurIPS, CVPR and ICDE."
   },
@@ -25,7 +25,7 @@
     "advisorRole": "master",
     "directions": ["Natural Language Processing", "Efficient LLM Applications"],
     "email": "fupeng@iie.ac.cn",
-    "homepage": "https://fupeng.ac.cn/",
+    "homepage": "https://people.ucas.ac.cn/~fupeng",
     "photo": null,
     "bio": "Associate Professor at IIE, CAS. 30+ publications in ACL, AAAI, IJCAI, EMNLP, TASLP and ACM MM; first place in the national 'Military Intelligence – Machine Reading' challenge in 2018 and 2019."
   },
@@ -45,7 +45,7 @@
     "advisorRole": "master",
     "directions": ["Computer Vision", "Multimodal Retrieval", "Multimodal Generation"],
     "email": "gujingzi@iie.ac.cn",
-    "homepage": "https://people.ucas.ac.cn/~gujingzi",
+    "homepage": "https://people.ucas.ac.cn/~0082145",
     "photo": null,
     "bio": "Senior Engineer at IIE, CAS. 20+ publications in CVPR, ACM MM, ECCV, ICME and ICASSP, with multiple granted invention patents."
   }
