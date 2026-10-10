@@ -70,7 +70,7 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 - [x] T018 [P] [US1] Create src/components/PublicationItem.astro — 论文条目：标题 + venue + CCFBadge + 链接（展示文字统一 "Link"，target="_blank" rel="noopener"）；url 为空 → 纯文本不可点击（FR-006/FR-011 边缘用例）
 - [x] T019 [P] [US1] Create src/components/Gallery.astro — 缩略图网格 + 原生 `<dialog>` lightbox（~30 行 vanilla JS、事件委托：点击缩略图 → `showModal()` 填充大图与 caption；Esc / 关闭按钮 / 点击遮罩三种关闭，FR-017）；collection 为空 → 区块整体不渲染（边缘用例）；caption 兼作缩略图 alt
 - [x] T020 [US1] Create src/pages/index.astro — 按 FR-001 顺序组装六区块：Hero → Admissions → 新闻概览（date 倒序前 5 条；空 → 隐藏区块）→ 人员（5 位老师 TeacherCard）→ 代表性 publications（featured 按时间降序取前 8 条 + "View all" → /publications/）→ Gallery（页面底部，publications 之后）
-- [ ] T021 [US1] 主页验证（src/pages/index.astro）— 六区块顺序与内容完整；mailto 默认主题正确；老师外链/arXiv 外链新标签打开；lightbox 三种关闭方式均有效；四档视口（375 / 768 / 1024 / ≥1280px）无布局破损（判定标准：元素重叠、文字截断、内容溢出容器、非预期换行，SC-006）、无横向溢出
+- [x] T021 [US1] 主页验证（src/pages/index.astro）— 六区块顺序与内容完整；mailto 默认主题正确；老师外链/arXiv 外链新标签打开；lightbox 三种关闭方式均有效；四档视口（375 / 768 / 1024 / ≥1280px）无布局破损（判定标准：元素重叠、文字截断、内容溢出容器、非预期换行，SC-006）、无横向溢出
 
 **Checkpoint**: 主页六区块 MVP 完成，可独立验证并部署演示
 
@@ -86,7 +86,7 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 
 - [x] T022 [P] [US2] 全量聚合 src/data/publications.json — 从 https://people.ucas.ac.cn/~linzheng（111 篇）与 https://people.ucas.ac.cn/~dayan（32 篇）抓取论文列表：按标题忽略大小写去重（FR-010）；CCF 评级以 UCAS 主页标注为准（论文发表时的评级；Workshop/poster/short paper 不计入）；预印本与正式版并存以正式版信息为准（标题/venue/年份）；url arXiv 优先、回退 DOI/出版方/scholar、均无则省略（纯文本）；保留 T011 已有 featured 标记；每条书目事实与正式发表版本（DOI / 会议论文集 / 期刊页面）核对，无法核实的条目标记并提请课题组负责人确认，确认后方可上线（FR-010 上线门禁）
 - [x] T023 [P] [US2] Create src/pages/publications.astro — 全列表按 year 降序分组 + 年份锚点导航（分组标题 `id="year-{yyyy}"`，纯 HTML 锚点零 JS，research §7）；复用 SectionHeading/PublicationItem/CCFBadge；满足 SC-003：100% 条目含标题+venue、有评级条目 100% 显示徽标
-- [ ] T024 [US2] 发表页验证（src/pages/publications.astro）— 条目数与去重合集一致；无 CCF 条目无徽标但标题/venue 完整；无 url 条目为纯文本；年份锚点跳转可用；随机抽检 ≥20 条外链可达（主流浏览器可正常打开，SC-003）；无"未核对即上线"条目（FR-010 上线门禁：无法核实条目须已经课题组负责人确认）；四档视口无布局破损
+- [x] T024 [US2] 发表页验证（src/pages/publications.astro）— 条目数与去重合集一致；无 CCF 条目无徽标但标题/venue 完整；无 url 条目为纯文本；年份锚点跳转可用；随机抽检 ≥20 条外链可达（主流浏览器可正常打开，SC-003）；无"未核对即上线"条目（FR-010 上线门禁：无法核实条目须已经课题组负责人确认）；四档视口无布局破损
 
 **Checkpoint**: 主页 + 发表页均可独立工作
 
@@ -103,7 +103,7 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 - [x] T025 [P] [US3] Create src/pages/news/index.astro — 概要列表按 date 倒序（复用 NewsCard）；空态显示 "No news yet." 友好占位（contracts/routes.md 空态契约）
 - [x] T026 [P] [US3] Create src/pages/news/[id].astro — getStaticPaths ← news collection；渲染 title/date + Markdown 正文；正文配图用相对路径（缺失构建报错，FR-018）；简讯类直接渲染原文（FR-007/FR-008）
 - [x] T027 [P] [US3] Create 初始新闻内容 src/content/news/*.md — 自原站新闻条目与近两年论文成果整理 10–20 条（frontmatter：title、date=发布日期手动填写、summary ≤200 字符）；至少含 1 条简讯类 + 1 条含配图类（覆盖边缘用例）；文件名即 slug、不与既有重名
-- [ ] T028 [US3] 新闻验证（src/pages/news/）— 列表按时间倒序；条目点入详情后标题/日期/正文与列表一致；简讯详情无空白；含图新闻图片正常显示；主页新闻概览同步展示前 5 条；四档视口无布局破损
+- [x] T028 [US3] 新闻验证（src/pages/news/）— 列表按时间倒序；条目点入详情后标题/日期/正文与列表一致；简讯详情无空白；含图新闻图片正常显示；主页新闻概览同步展示前 5 条；四档视口无布局破损
 
 **Checkpoint**: 主页 + 发表页 + 新闻（列表/详情）均可独立工作
 
@@ -121,7 +121,7 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 - [x] T030 [P] [US4] Create src/components/StudentGroup.astro — 在读学生按 level 分博士生/硕士生两组、组内按 grade 降序（data-model §4）
 - [x] T031 [US4] Create src/pages/people.astro — 老师详情区（复用 TeacherCard 展示完整信息：姓名、职称（英文）、研究方向（英文）、email、个人主页 target="_blank" rel="noopener"、bio）+ StudentGroup 在读学生分组 + 毕业生去向列表（FR-009/FR-015/FR-016）；students/graduates 为空时对应分组显示友好占位文案（spec 边缘用例）
 - [ ] T032 [P] [US4] 老师信息核对 src/data/teachers.json（Constitution I / SC-005）— 5 位老师与 UCAS 主页（https://people.ucas.ac.cn/~linzheng、https://people.ucas.ac.cn/~dayan 等）及所方官方介绍逐字段核对并修正；联系邮箱真实可用；上线前交课题组老师审阅全站内容（审阅记录不展示在页面上）
-- [ ] T033 [US4] 人员页验证（src/pages/people.astro）— 5 位老师信息完整且与权威来源一致；学生分组正确；毕业生去向展示；外部主页新标签打开；四档视口无布局破损
+- [x] T033 [US4] 人员页验证（src/pages/people.astro）— 5 位老师信息完整且与权威来源一致；学生分组正确；毕业生去向展示；外部主页新标签打开；四档视口无布局破损
 
 **Checkpoint**: 四个主要页面全部交付，全站导航闭环
 
