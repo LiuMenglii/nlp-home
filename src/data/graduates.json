@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "name": "佀庆一",
+    "destination": "京东（大模型）",
+    "degree": "phd",
+    "year": 2024
+  },
+  {
+    "name": "杨泽娴",
+    "destination": "福州大学",
+    "degree": "phd",
+    "year": 2025
+  },
+  {
+    "name": "谭宇彤",
+    "destination": "米哈游",
+    "degree": "master",
+    "year": null
+  },
+  {
+    "name": "温哲",
+    "destination": "工商银行",
+    "degree": "master",
+    "year": null
+  },
+  {
+    "name": "刘源鑫",
+    "destination": "北京大学（攻读博士）",
+    "degree": "master",
+    "year": 2021
+  }
+]

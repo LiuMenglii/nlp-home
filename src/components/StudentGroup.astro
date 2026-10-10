@@ -1,0 +1,130 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  students: CollectionEntry<'students'>[];
+}
+
+const { students } = Astro.props;
+
+// data-model §4：按 level 分组，组内按 grade 降序（无年级排最后）
+const byLevel = (level: 'phd' | 'master') =>
+  students
+    .filter((s) => s.data.level === level)
+    .sort((a, b) => (b.data.grade ?? '').localeCompare(a.data.grade ?? ''));
+
+const phd = byLevel('phd');
+const master = byLevel('master');
+
+const levelLabel = { phd: '博士', master: '硕士' } as const;
+---
+
+<div class="student-groups">
+  {
+    phd.length > 0 ? (
+      <div class="student-group">
+        <h3>博士生</h3>
+        <ul>
+          {phd.map((s) => (
+            <li>
+              {s.data.url ? (
+                <a href={s.data.url} target="_blank" rel="noopener">
+                  {s.data.name}
+                </a>
+              ) : (
+                <span>{s.data.name}</span>
+              )}
+              {s.data.grade && <span class="grade">{s.data.grade} 级</span>}
+              {s.data.note && <span class="note">{s.data.note}</span>}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ) : (
+      <div class="student-group">
+        <h3>博士生</h3>
+        <p class="empty">在读博士生名单待更新</p>
+      </div>
+    )
+  }
+
+  {
+    master.length > 0 ? (
+      <div class="student-group">
+        <h3>硕士生</h3>
+        <ul>
+          {master.map((s) => (
+            <li>
+              {s.data.url ? (
+                <a href={s.data.url} target="_blank" rel="noopener">
+                  {s.data.name}
+                </a>
+              ) : (
+                <span>{s.data.name}</span>
+              )}
+              {s.data.grade && <span class="grade">{s.data.grade} 级</span>}
+              {s.data.note && <span class="note">{s.data.note}</span>}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ) : (
+      <div class="student-group">
+        <h3>硕士生</h3>
+        <p class="empty">在读硕士生名单待更新</p>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .student-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+  }
+
+  h3 {
+    margin: 0 0 12px;
+    font-size: 1.25rem;
+    color: var(--blue-deep);
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+  }
+
+  li:first-of-type {
+    border-top: 1px solid var(--line);
+  }
+
+  a {
+    color: var(--ink);
+  }
+
+  a:hover {
+    color: var(--blue-deep);
+  }
+
+  .grade,
+  .note {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  .empty {
+    color: var(--ink-soft);
+  }
+</style>

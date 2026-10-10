@@ -1,0 +1,103 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../components/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import TeacherCard from '../components/TeacherCard.astro';
+import StudentGroup from '../components/StudentGroup.astro';
+import site from '../data/site.json';
+
+const teachers = (await getCollection('teachers')).sort((a, b) =>
+  a.id.localeCompare(b.id),
+);
+const students = await getCollection('students');
+const graduates = (await getCollection('graduates')).sort((a, b) =>
+  (b.data.year ?? 0) - (a.data.year ?? 0) || a.id.localeCompare(b.id),
+);
+
+const degreeLabel = { phd: '博士', master: '硕士' } as const;
+---
+
+<BaseLayout title={`People · ${site.groupName}`}>
+  <section class="section" aria-labelledby="people-title">
+    <SectionHeading title="People" id="people-title" />
+
+    <h3 class="group-title">教师</h3>
+    <div class="teacher-grid">
+      {teachers.map((teacher) => <TeacherCard teacher={teacher} detailed />)}
+    </div>
+
+    <h3 class="group-title">在读学生</h3>
+    <StudentGroup students={students} />
+
+    <h3 class="group-title">毕业生去向</h3>
+    {
+      graduates.length > 0 ? (
+        <ul class="graduate-list">
+          {graduates.map((g) => (
+            <li>
+              <span class="grad-name">{g.data.name}</span>
+              <span class="grad-meta">
+                {degreeLabel[g.data.degree]}
+                {g.data.year ? ` · ${g.data.year} 届` : ''}
+              </span>
+              <span class="grad-dest">{g.data.destination}</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="empty">毕业生去向待更新</p>
+      )
+    }
+  </section>
+</BaseLayout>
+
+<style>
+  .group-title {
+    margin: 40px 0 16px;
+    font-size: 1.35rem;
+    color: var(--ink);
+  }
+
+  .group-title:first-of-type {
+    margin-top: 0;
+  }
+
+  .teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+  }
+
+  .graduate-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .graduate-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .graduate-list li:first-child {
+    border-top: 1px solid var(--line);
+  }
+
+  .grad-name {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .grad-meta,
+  .grad-dest {
+    color: var(--ink-soft);
+  }
+
+  .empty {
+    color: var(--ink-soft);
+  }
+</style>

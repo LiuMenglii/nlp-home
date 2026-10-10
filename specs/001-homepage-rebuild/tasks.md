@@ -117,9 +117,9 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 
 ### Implementation for User Story 4
 
-- [ ] T029 [P] [US4] Create src/data/students.json 与 src/data/graduates.json — 名单取原站 Team 页与课题组提供名单：在读学生（name、level phd|master、grade、url/note 可选）；毕业生（name、destination 去向单位名用中文展示 FR-016、degree phd|master、year 可选；收录人数不设上限）
-- [ ] T030 [P] [US4] Create src/components/StudentGroup.astro — 在读学生按 level 分博士生/硕士生两组、组内按 grade 降序（data-model §4）
-- [ ] T031 [US4] Create src/pages/people.astro — 老师详情区（复用 TeacherCard 展示完整信息：姓名、职称（英文）、研究方向（英文）、email、个人主页 target="_blank" rel="noopener"、bio）+ StudentGroup 在读学生分组 + 毕业生去向列表（FR-009/FR-015/FR-016）；students/graduates 为空时对应分组显示友好占位文案（spec 边缘用例）
+- [x] T029 [P] [US4] Create src/data/students.json 与 src/data/graduates.json — 名单取原站 Team 页与课题组提供名单：在读学生（name、level phd|master、grade、url/note 可选）；毕业生（name、destination 去向单位名用中文展示 FR-016、degree phd|master、year 可选；收录人数不设上限）
+- [x] T030 [P] [US4] Create src/components/StudentGroup.astro — 在读学生按 level 分博士生/硕士生两组、组内按 grade 降序（data-model §4）
+- [x] T031 [US4] Create src/pages/people.astro — 老师详情区（复用 TeacherCard 展示完整信息：姓名、职称（英文）、研究方向（英文）、email、个人主页 target="_blank" rel="noopener"、bio）+ StudentGroup 在读学生分组 + 毕业生去向列表（FR-009/FR-015/FR-016）；students/graduates 为空时对应分组显示友好占位文案（spec 边缘用例）
 - [ ] T032 [P] [US4] 老师信息核对 src/data/teachers.json（Constitution I / SC-005）— 5 位老师与 UCAS 主页（https://people.ucas.ac.cn/~linzheng、https://people.ucas.ac.cn/~dayan 等）及所方官方介绍逐字段核对并修正；联系邮箱真实可用；上线前交课题组老师审阅全站内容（审阅记录不展示在页面上）
 - [ ] T033 [US4] 人员页验证（src/pages/people.astro）— 5 位老师信息完整且与权威来源一致；学生分组正确；毕业生去向展示；外部主页新标签打开；四档视口无布局破损
 

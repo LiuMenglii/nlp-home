@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "name": "李江楠",
+    "level": "phd",
+    "grade": null,
+    "url": "https://github.com/LeqsNaN",
+    "note": null
+  },
+  {
+    "name": "张瀚文",
+    "level": "phd",
+    "grade": "2020",
+    "url": "https://github.com/Heaven-zhw",
+    "note": null
+  },
+  {
+    "name": "季慧山",
+    "level": "phd",
+    "grade": "2021",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "郑明钰",
+    "level": "phd",
+    "grade": "2021",
+    "url": "https://github.com/SpursGoZmy",
+    "note": null
+  },
+  {
+    "name": "杨晨旭",
+    "level": "phd",
+    "grade": "2022",
+    "url": "https://iie-ycx.github.io/",
+    "note": null
+  },
+  {
+    "name": "刘曦雨",
+    "level": "phd",
+    "grade": "2022",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "顾佴彬",
+    "level": "phd",
+    "grade": "2022",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "刘正宵",
+    "level": "phd",
+    "grade": null,
+    "url": "https://github.com/jluliuzx",
+    "note": null
+  }
+]
