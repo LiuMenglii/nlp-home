@@ -138,7 +138,7 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 - [x] T034 [US5] 维护流程验证（SC-004）— 在 src/data/publications.json 追加一条测试论文 → `npm run build` → 发表页出现该条目 → `git status` 确认仅数据文件变更（src/components/、src/pages/、src/styles/、astro.config.mjs、deploy.yml 零改动）→ 移除测试数据
 - [x] T035 [US5] 新闻维护验证 — 新建一条测试新闻 src/content/news/test-item.md → `npm run build` → 新闻列表与主页新闻概览同步出现该条目 → 移除测试文件
 - [x] T036 [US5] 边缘用例验证 — ① 清空 src/data/gallery.json → 构建后主页 Gallery 区块隐藏、不留空白区块 → 恢复；② src/data/gallery.json 填入 13 条 → 构建报错（上限 12 由 schema 强制，FR-017）→ 恢复；③ 删除 src/data/publications.json 某条的 venue 字段 → 构建失败且错误定位到具体文件与字段名（spec 边缘用例"构建阶段明确报错"）→ 恢复；④ src/data/gallery.json 某条 src 填入 public/gallery/ 中不存在的文件名 → 构建失败且错误定位到具体文件与字段名（不渲染裂图，spec 边缘用例）→ 恢复
-- [ ] T037 [US5] Create 维护者文档 src/data/README.md（Constitution II / FR-020）— 面向不熟悉前端的维护者：字段约定（对齐 data-model.md 各节）、常见更新流程（新增论文/新闻/成员变动/更换照片，对齐 contracts/data-files.md 映射表与示例）、图片资产约定（JPEG ≤500KB/长边 ≤2000px/Gallery ≤12 张）、本地构建与推送部署流程（CI 门禁：构建失败不上线）
+- [x] T037 [US5] Create 维护者文档 src/data/README.md（Constitution II / FR-020）— 面向不熟悉前端的维护者：字段约定（对齐 data-model.md 各节）、常见更新流程（新增论文/新闻/成员变动/更换照片，对齐 contracts/data-files.md 映射表与示例）、图片资产约定（JPEG ≤500KB/长边 ≤2000px/Gallery ≤12 张）、本地构建与推送部署流程（CI 门禁：构建失败不上线）
 
 **Checkpoint**: 内容与展示分离（Constitution II / FR-012 / SC-004）经端到端验证成立
 
@@ -148,9 +148,9 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 
 **Purpose**: 跨故事收口验证与部署
 
-- [ ] T038 [P] 全站响应式审查 — 主页 / 新闻列表 / 新闻详情 / 人员 / 发表页 × 四档视口（375 / 768 / 1024 / ≥1280px）逐页核查：无布局破损（元素重叠、文字截断、内容溢出容器、非预期换行）、无横向溢出、导航可用（FR-014/SC-006）
-- [ ] T039 [P] 全站导航与外链验证（SC-001/SC-003）— 从四个页面各出发一次，1 次点击可达其余三页；外链（老师主页/论文链接）抽查 ≥20 条全部可达
-- [ ] T040 [P] 性能核查（SC-002 方向性目标）— DevTools Network：除 Gallery lightbox 小脚本外无其他 JS；public/gallery/ 图片符合 ≤500KB 约定；主页典型宽带下 3 秒内首屏
+- [x] T038 [P] 全站响应式审查 — 主页 / 新闻列表 / 新闻详情 / 人员 / 发表页 × 四档视口（375 / 768 / 1024 / ≥1280px）逐页核查：无布局破损（元素重叠、文字截断、内容溢出容器、非预期换行）、无横向溢出、导航可用（FR-014/SC-006）
+- [x] T039 [P] 全站导航与外链验证（SC-001/SC-003）— 从四个页面各出发一次，1 次点击可达其余三页；外链（老师主页/论文链接）抽查 ≥20 条全部可达
+- [x] T040 [P] 性能核查（SC-002 方向性目标）— DevTools Network：除 Gallery lightbox 小脚本外无其他 JS；public/gallery/ 图片符合 ≤500KB 约定；主页典型宽带下 3 秒内首屏
 - [ ] T041 部署与 CI 门禁验证（FR-013）— GitHub 仓库 Settings → Pages → Source 设为 GitHub Actions；确认 astro.config.mjs 的 site/base 与实际仓库一致；push main → Actions 全绿 → 访问 https://<org>.github.io/<repo>/ 线上抽查；再按 quickstart.md「CI 门禁验证」：故意删除某论文 venue 字段并推送 → 构建失败、部署未执行、线上保持上一正常版本 → 恢复后推送部署成功
 - [ ] T042 运行 quickstart.md 完整验证 — 按 specs/001-homepage-rebuild/quickstart.md 全清单逐项验证并勾选（覆盖 SC-001–SC-006 与全部边缘用例）
 
