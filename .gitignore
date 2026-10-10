@@ -1,0 +1,24 @@
+# 构建产物
+dist/
+
+# 生成的类型
+.astro/
+
+# 依赖
+node_modules/
+
+# 日志
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 环境变量
+.env
+.env.production
+
+# 系统文件
+.DS_Store
+
+# 本地参考资料（仅用于制作网页，MUST NOT 提交至 git）
+2026年招生介绍-G3.pptx
