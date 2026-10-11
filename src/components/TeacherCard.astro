@@ -12,49 +12,58 @@ const { teacher, detailed = false } = Astro.props;
 const { name, title, directions, email, homepage, photo, bio } = teacher.data;
 ---
 
-<article class="teacher-card card">
-  {photo && (
-    <img
-      class="teacher-photo"
-      src={withBase(photo)}
-      alt={`${name} photo`}
-      width="160"
-      height="200"
-      loading="lazy"
-    />
-  )}
-  <div class="teacher-info">
-    <h3>{name}</h3>
-    <p class="teacher-title">{title}</p>
-    <ul class="teacher-directions" aria-label="Research directions">
-      {directions.map((d) => <li>{d}</li>)}
-    </ul>
-    {detailed && bio && <p class="teacher-bio">{bio}</p>}
-    <div class="teacher-links">
-      {
-        detailed && email && (
-          <a href={`mailto:${email}`}>
-            {email}
-          </a>
-        )
-      }
-      {
-        homepage && (
-          <a href={homepage} target="_blank" rel="noopener">
-            Homepage <span aria-hidden="true">↗</span>
-          </a>
-        )
-      }
+<article class:list={['teacher-card', 'card', { 'teacher-card--detailed': detailed }]}>
+  <div class="teacher-head">
+    {photo && (
+      <img
+        class="teacher-photo"
+        src={withBase(photo)}
+        alt={`${name} photo`}
+        width="160"
+        height="200"
+        loading="lazy"
+      />
+    )}
+    <div class="teacher-identity">
+      <h3>{name}</h3>
+      <p class="teacher-title">{title}</p>
+      <ul class="teacher-directions" aria-label="Research directions">
+        {directions.map((d) => <li>{d}</li>)}
+      </ul>
     </div>
+  </div>
+  {detailed && bio && <p class="teacher-bio">{bio}</p>}
+  <div class="teacher-links">
+    {
+      detailed && email && (
+        <a href={`mailto:${email}`}>
+          {email}
+        </a>
+      )
+    }
+    {
+      homepage && (
+        <a href={homepage} target="_blank" rel="noopener">
+          Homepage <span aria-hidden="true">↗</span>
+        </a>
+      )
+    }
   </div>
 </article>
 
 <style>
+  /* 上下结构：上方图片 + 姓名与研究方向，下方详细介绍文字 */
   .teacher-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    height: 100%;
+  }
+
+  .teacher-head {
     display: flex;
     gap: 20px;
     align-items: flex-start;
-    height: 100%;
   }
 
   .teacher-photo {
@@ -64,6 +73,10 @@ const { name, title, directions, email, homepage, photo, bio } = teacher.data;
     object-fit: cover;
     border-radius: 8px;
     border: 1px solid var(--line);
+  }
+
+  .teacher-identity {
+    min-width: 0;
   }
 
   h3 {
@@ -94,10 +107,20 @@ const { name, title, directions, email, homepage, photo, bio } = teacher.data;
     color: var(--ink-soft);
   }
 
+  /* 介绍卡片（Team 页）：研究方向单行不换行 */
+  .teacher-card--detailed .teacher-directions {
+    flex-wrap: nowrap;
+  }
+
+  .teacher-card--detailed .teacher-directions li {
+    white-space: nowrap;
+  }
+
   .teacher-bio {
     font-size: 1rem;
     color: var(--ink-soft);
-    margin: 0 0 10px;
+    margin: 0;
+    max-width: 80ch;
   }
 
   .teacher-links {
@@ -105,11 +128,17 @@ const { name, title, directions, email, homepage, photo, bio } = teacher.data;
     flex-wrap: wrap;
     gap: 6px 18px;
     font-size: 1rem;
+    margin-top: auto;
   }
 
   @media (max-width: 640px) {
-    .teacher-card {
+    .teacher-head {
       flex-direction: column;
+    }
+
+    /* 窄屏下单行会横向溢出（FR-014），恢复换行 */
+    .teacher-card--detailed .teacher-directions {
+      flex-wrap: wrap;
     }
   }
 </style>
