@@ -105,14 +105,7 @@ const { name, title, directions, email, homepage, photo, bio } = teacher.data;
     padding: 2px 8px;
     font-size: 0.9rem;
     color: var(--ink-soft);
-  }
-
-  /* 介绍卡片（Team 页）：研究方向单行不换行 */
-  .teacher-card--detailed .teacher-directions {
-    flex-wrap: nowrap;
-  }
-
-  .teacher-card--detailed .teacher-directions li {
+    /* 单个方向标签内部不断行；标签之间由容器自然换行（一行 2–3 个） */
     white-space: nowrap;
   }
 
@@ -134,11 +127,6 @@ const { name, title, directions, email, homepage, photo, bio } = teacher.data;
   @media (max-width: 640px) {
     .teacher-head {
       flex-direction: column;
-    }
-
-    /* 窄屏下单行会横向溢出（FR-014），恢复换行 */
-    .teacher-card--detailed .teacher-directions {
-      flex-wrap: wrap;
     }
   }
 </style>
