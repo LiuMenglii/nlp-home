@@ -151,7 +151,7 @@ description: "Task list for 学术主页重建（Homepage Rebuild）"
 - [x] T038 [P] 全站响应式审查 — 主页 / 新闻列表 / 新闻详情 / 人员 / 发表页 × 四档视口（375 / 768 / 1024 / ≥1280px）逐页核查：无布局破损（元素重叠、文字截断、内容溢出容器、非预期换行）、无横向溢出、导航可用（FR-014/SC-006）
 - [x] T039 [P] 全站导航与外链验证（SC-001/SC-003）— 从四个页面各出发一次，1 次点击可达其余三页；外链（老师主页/论文链接）抽查 ≥20 条全部可达
 - [x] T040 [P] 性能核查（SC-002 方向性目标）— DevTools Network：除 Gallery lightbox 小脚本外无其他 JS；public/gallery/ 图片符合 ≤500KB 约定；主页典型宽带下 3 秒内首屏
-- [ ] T041 部署与 CI 门禁验证（FR-013）— GitHub 仓库 Settings → Pages → Source 设为 GitHub Actions；确认 astro.config.mjs 的 site/base 与实际仓库一致；push main → Actions 全绿 → 访问 https://<org>.github.io/<repo>/ 线上抽查；再按 quickstart.md「CI 门禁验证」：故意删除某论文 venue 字段并推送 → 构建失败、部署未执行、线上保持上一正常版本 → 恢复后推送部署成功
+- [x] T041 部署与 CI 门禁验证（FR-013）— GitHub 仓库 Settings → Pages → Source 设为 GitHub Actions；确认 astro.config.mjs 的 site/base 与实际仓库一致；push main → Actions 全绿 → 访问 https://<org>.github.io/<repo>/ 线上抽查；再按 quickstart.md「CI 门禁验证」：故意删除某论文 venue 字段并推送 → 构建失败、部署未执行、线上保持上一正常版本 → 恢复后推送部署成功 — 已按 2026-10-11 用户决策在个人测试仓库 LiuMenglii/nlp-home 完成全部验证：Pages Source=GitHub Actions（API 启用）、site 改为 liumenglii.github.io（base /nlp-home 不变）、三次运行实测（正常推送 success 部署上线 / 破坏数据 failure 且 build+deploy 均 skipped、线上保持上一正常版本 / 恢复推送 success 重新部署）；线上抽查四主页面+14 条新闻详情+Gallery/教师图片全部 200 且导航完整；官方账号审批通过后迁移仅需将 site 改回 https://iienlp.github.io 并推送官方仓库
 - [x] T042 运行 quickstart.md 完整验证 — 按 specs/001-homepage-rebuild/quickstart.md 全清单逐项验证并勾选（覆盖 SC-001–SC-006 与全部边缘用例）
 
 ***
