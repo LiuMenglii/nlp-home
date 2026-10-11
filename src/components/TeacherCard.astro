@@ -105,7 +105,15 @@ const { name, title, directions, email, homepage, photo, bio } = teacher.data;
     padding: 2px 8px;
     font-size: 0.9rem;
     color: var(--ink-soft);
-    /* 单个方向标签内部不断行；标签之间由容器自然换行（一行 2–3 个） */
+  }
+
+  /* 介绍卡片（Team 页）：研究方向每行一个，单个标签不断行 */
+  .teacher-card--detailed .teacher-directions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .teacher-card--detailed .teacher-directions li {
     white-space: nowrap;
   }
 
