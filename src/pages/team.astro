@@ -66,8 +66,9 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
 
   .teacher-grid {
     display: grid;
-    /* 桌面每行 2 张卡片；窄于 ~900px 自动降为单列（min 420px 保证研究方向标签不溢出） */
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    /* 桌面每行 2 张卡片；min(420px, 100%) 保证轨道最小宽度永不超过容器宽度——
+       宽视口（≥~900px）维持两列，窄视口自动降为恰好贴合容器的单列，全宽度区间连续自适应 */
+    grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
     gap: 16px;
   }
 

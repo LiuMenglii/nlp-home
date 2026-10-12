@@ -56,9 +56,9 @@
 
 ### Implementation for User Story 1
 
-- [ ] T006 [P] [US1] 修复 `src/pages/team.astro` 中 `.teacher-grid` 的最小列宽：`grid-template-columns` 由 `repeat(auto-fill, minmax(420px, 1fr))` 改为 `repeat(auto-fill, minmax(min(420px, 100%), 1fr))`，并同步更新其上方注释（R1：`min(420px, 100%)` 保证轨道最小宽度永不超过容器宽度——宽视口 ≥~900px 维持两列、窄视口自动降为恰好贴合容器的单列，全部宽度区间连续自适应）
-- [ ] T007 [P] [US1] 移除 `src/components/TeacherCard.astro` 中 `.teacher-card--detailed .teacher-directions li` 的 `white-space: nowrap` 规则（R1：该 nowrap 是当初 420px 最小列宽的溢出成因，修复后标签允许换行，消除移动端最后一个溢出隐患，满足 FR-005 收纳规则）
-- [ ] T008 [US1] 按 quickstart.md §1 手动验收（375px 与 768px 视口，`npm run dev` 打开 /team/）：每张教师卡片完整落在可视宽度内（照片、姓名、职称、研究方向标签、邮箱、Homepage 链接右缘无截断）；整页从上到下（Faculty → 在读学生 → Graduates）无横向滚动条、无内容被裁切；无布局破损（元素重叠 / 文字截断 / 内容溢出容器 / 非预期换行）
+- [x] T006 [P] [US1] 修复 `src/pages/team.astro` 中 `.teacher-grid` 的最小列宽：`grid-template-columns` 由 `repeat(auto-fill, minmax(420px, 1fr))` 改为 `repeat(auto-fill, minmax(min(420px, 100%), 1fr))`，并同步更新其上方注释（R1：`min(420px, 100%)` 保证轨道最小宽度永不超过容器宽度——宽视口 ≥~900px 维持两列、窄视口自动降为恰好贴合容器的单列，全部宽度区间连续自适应）
+- [x] T007 [P] [US1] 移除 `src/components/TeacherCard.astro` 中 `.teacher-card--detailed .teacher-directions li` 的 `white-space: nowrap` 规则（R1：该 nowrap 是当初 420px 最小列宽的溢出成因，修复后标签允许换行，消除移动端最后一个溢出隐患，满足 FR-005 收纳规则）
+- [x] T008 [US1] 按 quickstart.md §1 手动验收（375px 与 768px 视口，`npm run dev` 打开 /team/）：每张教师卡片完整落在可视宽度内（照片、姓名、职称、研究方向标签、邮箱、Homepage 链接右缘无截断）；整页从上到下（Faculty → 在读学生 → Graduates）无横向滚动条、无内容被裁切；无布局破损（元素重叠 / 文字截断 / 内容溢出容器 / 非预期换行）
 
 **Checkpoint**: 移动端缺陷已修复，US1 可独立验收（SC-002）
 
