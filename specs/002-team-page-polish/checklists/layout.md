@@ -15,19 +15,19 @@
 - [x] CHK003 - <768px 视口下 Graduates 的降级行为（列对齐不再要求、降级为紧凑流式且不溢出）是否有明确要求，而非留白未定义？\[Completeness, Spec §FR-003, §Assumptions]
 - [x] CHK004 - 共享组件 TeacherCard 同时服务 Team 页与主页：回归约束（主页四档视口无新增布局破损）是否作为正式需求（FR-009）写入而非仅实现注意事项？\[Completeness, Spec §FR-009, §Edge Cases]
 - [x] CHK005 - 重排版后信息不丢失的要求（FR-007）是否覆盖三类人员的全部既有字段（教师 7 项 / 学生 4 项 / 毕业生 4 项），与 data-model.md 字段表逐项对得上？\[Completeness, Spec §FR-007, data-model.md]
-- [x] CHK006 - 范围边界（仅 Team 页改动、主页仅回归验证、数据层零改动）是否在 spec/plan 中显式声明，足以防止实现期范围蔓延？\[Completeness, Spec §Assumptions, Plan §Scale/Scope]
+- [x] CHK006 - 范围边界（仅 Team 页改动、主页仅回归验证、数据层仅限 FR-006 授权的最小字段调整）是否在 spec/plan 中显式声明，足以防止实现期范围蔓延？\[Completeness, Spec §Assumptions, Plan §Scale/Scope]
 
 ## 需求清晰性（Clarity）
 
-- [x] CHK007 - "大片空白"是否被量化为可测口径（内容右端连续空白：1024px–<1280px 档 > 区域宽度 50%、≥1280px 档 > 320px 即不达标；两端分布行中间间隙 > 区域宽度 62.5% / 400px 即不达标），而非依赖主观判断？\[Clarity, Spec §FR-004]
+- [x] CHK007 - "大片空白"是否被量化为可测口径（内容右端连续空白：<1280px 各档（含 375 / 768 / 1024px）> 区域宽度 50%、≥1280px 档 > 320px 即不达标；两端分布行中间间隙 > 区域宽度 62.5% / 400px 即不达标），而非依赖主观判断？\[Clarity, Spec §FR-004]
 - [x] CHK008 - "排列对齐"是否被定义为可验证判定（同类字段的起始位置跨行一致），而非模糊的"整齐"？\[Clarity, Spec §FR-003]
-- [x] CHK009 - "布局破损"是否显式沿用 001 的四项判定口径（元素重叠 / 文字截断 / 内容溢出容器 / 非预期换行）？\[Clarity, Spec §FR-001]
+- [x] CHK009 - "布局破损"是否显式沿用 001 的四项判定口径并新增"内容横向超出页面（视口）宽度范围"（五项：元素重叠 / 文字截断 / 内容溢出容器 / 非预期换行 / 内容横向超出页面宽度范围）？\[Clarity, Spec §FR-001]
 - [x] CHK010 - 移动端"完整显示"是否同时排除两种失效模式（内容被裁切不可见、出现横向滚动）？\[Clarity, Spec §FR-001, FR-002]
-- [x] CHK011 - 各行为阈值（列对齐 ≥768px、空白判定 ≥1024px、卡片头纵向堆叠 ≤640px、容器 padding 切换 ≤480px）是否互不冲突且无二义？\[Clarity, Spec §FR-003/FR-004, Contract §1]
+- [x] CHK011 - 各行为阈值（列对齐 ≥768px、空白判定四档全视口、卡片头纵向堆叠 ≤640px、容器 padding 切换 ≤480px）是否互不冲突且无二义？\[Clarity, Spec §FR-003/FR-004, Contract §1]
 
 ## 需求一致性（Consistency）
 
-- [x] CHK012 - spec 的视口阈值与 contracts/team-layout.md 的视口行为矩阵、quickstart.md 的验证矩阵三处是否一致（同一阈值同一行为）？——待同步（2026-10-12）：spec 口径经本次澄清更新（对齐扩展至全视口、空白判定扩展至四档、新增 GitHub 标签与数据层最小调整），contract/quickstart/plan/tasks 需同步刷新后方可勾选。\[Consistency, Contract §1, quickstart.md §验证矩阵]
+- [x] CHK012 - spec 的视口阈值与 contracts/team-layout.md 的视口行为矩阵、quickstart.md 的验证矩阵三处是否一致（同一阈值同一行为）？——已同步（2026-10-12）：spec 口径经本次澄清更新（对齐扩展至全视口、空白判定扩展至四档、新增 GitHub 标签与数据层最小调整），contract / quickstart / plan / tasks / data-model 已于 2026-10-12 完成 rev2 同步刷新，复核通过。\[Consistency, Contract §1, quickstart.md §验证矩阵]
 - [x] CHK013 - 空白判定口径是否同等适用于学生条目与教师卡片方向区（单一口径无双标，右端与中间间隙分档口径见 FR-004）？\[Consistency, Spec §FR-004]
 - [x] CHK014 - "零数据改动"（FR-006）与对齐方案依赖现有数据取值（固定列宽按最宽现值设计）之间的关系是否已声明，未来新增更长姓名/单位名时列宽口径是否有据可依？——已裁决（2026-10-12）：声明列对齐判定与具体数据取值无关——更长姓名/单位名（如上线前导入完整名单后）按列内换行收纳、不破坏跨行对齐，写入 FR-003 与 Assumptions；数据层零改动口径同步调整为"仅限 GitHub 字段所需最小调整"（FR-006）。\[Consistency, Spec §FR-006, data-model.md, research.md §R2]
 - [x] CHK015 - 优先级定级（移动端缺陷 P1 高于视觉对齐 P2/P3）与各故事"Why this priority"的理由是否自洽、可被评审者复述？——已复核（2026-10-12）：US1 P1（功能缺陷阻断信息获取）> US2/US3 P2（核心信息可读 + 用户首要诉求 / 观感）> US4 P3（观感且颗粒度最细），定级逻辑与理由一致、可复述。\[Consistency, Spec §US-1–US-4]
@@ -62,6 +62,7 @@
 - `checklists/requirements.md` has a separate built-in lifecycle maintained by `/speckit-specify` and `/speckit-clarify`
 - CHK023 与 CHK025 已于 2026-10-11 澄清会话裁决并固化到 spec（见 spec.md Clarifications 与 Assumptions）：CHK023 不引入语义化 HTML/无障碍要求；CHK025 两端分布为合规形态，中间间隙按右端口径 1.25 倍（62.5% / 400px）判定并写入 FR-004
 - CHK014/CHK015/CHK016/CHK024 已于 2026-10-12 澄清会话裁决/复核并固化到 spec（见 spec.md Clarifications Session 2026-10-12）：CHK014 声明列对齐与数据取值无关；CHK015 优先级自洽；CHK016 移除主观表述并新增 SC-006；CHK024 阈值可调口径显式记录。同批答复还包括：对齐扩展至全视口、空白判定扩展至四档、GitHub↗ 标签（新增 FR-010/SC-006 与 `github` 字段）、布局破损新增第 5 项口径、改动范围纳入主页教师卡片
-- CHK012 保持未勾选——2026-10-12 澄清扩大了验收口径（全视口对齐、四档空白判定、GitHub 标签、数据层最小调整），contracts/team-layout.md、quickstart.md、plan.md、tasks.md、data-model.md 需同步刷新后方可复核勾选
+- CHK012 已复核勾选（保留 [x]）——2026-10-12 澄清扩大了验收口径（全视口对齐、四档空白判定、GitHub 标签、数据层最小调整）；contracts/team-layout.md、quickstart.md、plan.md、tasks.md、data-model.md 已于 2026-10-12 完成 rev2 同步刷新，勾选条件满足
+- CHK006 / CHK007 / CHK009 / CHK011 文字口径已于 2026-10-12 对齐 rev2 spec（数据层最小调整、空白判定四档、布局破损五项）——仅修订表述，勾选标记未变
 - Items are numbered sequentially for easy reference
 
