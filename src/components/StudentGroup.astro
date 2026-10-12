@@ -109,7 +109,10 @@ const master = byLevel('master');
     flex-wrap: wrap;
     align-items: baseline;
     gap: 4px 10px;
-    padding: 8px 0;
+    /* 两端分布 + 两侧内收（FR-004 / T006）：姓名自分组左缘内收、Since/备注自分组右缘内收，
+       行内容两侧各收拢 44px（按四档视口 375/768/1024/≥1280px 实测校准的定值）——
+       两端分布行的中间间隙满足分档阈值，收拢产生的两端空白仍在右端口径内 */
+    padding: 8px 44px;
     border-bottom: 1px solid var(--line);
     color: var(--ink);
   }
@@ -132,7 +135,7 @@ const master = byLevel('master');
     font-size: 0.95rem;
   }
 
-  /* 两端分布（FR-004）：姓名居左，Since/备注推至行右端、贴合分组列右缘；
+  /* 两端分布（FR-004）：姓名居左，Since/备注推至行内收拢后的右缘；
      无年级条目仅左侧姓名，行内布局保持整齐 */
   .grade {
     margin-left: auto;
