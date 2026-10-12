@@ -32,6 +32,11 @@ const master = byLevel('master');
               ) : (
                 <span>{s.data.name}</span>
               )}
+              {s.data.github && (
+                <a class="github-link" href={s.data.github} target="_blank" rel="noopener">
+                  GitHub <span aria-hidden="true">↗</span>
+                </a>
+              )}
               {s.data.grade && <span class="grade">Since {s.data.grade}</span>}
               {s.data.note && <span class="note">{s.data.note}</span>}
             </li>
@@ -59,6 +64,11 @@ const master = byLevel('master');
                 </a>
               ) : (
                 <span>{s.data.name}</span>
+              )}
+              {s.data.github && (
+                <a class="github-link" href={s.data.github} target="_blank" rel="noopener">
+                  GitHub <span aria-hidden="true">↗</span>
+                </a>
               )}
               {s.data.grade && <span class="grade">Since {s.data.grade}</span>}
               {s.data.note && <span class="note">{s.data.note}</span>}
@@ -120,6 +130,21 @@ const master = byLevel('master');
   .note {
     color: var(--ink-soft);
     font-size: 0.95rem;
+  }
+
+  /* 两端分布（FR-004）：姓名居左，Since/备注推至行右端、贴合分组列右缘；
+     无年级条目仅左侧姓名，行内布局保持整齐 */
+  .grade {
+    margin-left: auto;
+  }
+
+  /* GitHub↗ 标签复用站点链接色板（区别于姓名链接的 ink 色） */
+  .github-link {
+    color: var(--blue-deep);
+  }
+
+  .github-link:hover {
+    color: var(--blue);
   }
 
   .empty {

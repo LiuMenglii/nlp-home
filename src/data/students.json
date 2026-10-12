@@ -3,14 +3,16 @@
     "name": "李江楠",
     "level": "phd",
     "grade": null,
-    "url": "https://github.com/LeqsNaN",
+    "url": null,
+    "github": "https://github.com/LeqsNaN",
     "note": null
   },
   {
     "name": "张瀚文",
     "level": "phd",
     "grade": "2020",
-    "url": "https://github.com/Heaven-zhw",
+    "url": null,
+    "github": "https://github.com/Heaven-zhw",
     "note": null
   },
   {
@@ -24,7 +26,8 @@
     "name": "郑明钰",
     "level": "phd",
     "grade": "2021",
-    "url": "https://github.com/SpursGoZmy",
+    "url": null,
+    "github": "https://github.com/SpursGoZmy",
     "note": null
   },
   {
@@ -52,7 +55,8 @@
     "name": "刘正宵",
     "level": "phd",
     "grade": null,
-    "url": "https://github.com/jluliuzx",
+    "url": null,
+    "github": "https://github.com/jluliuzx",
     "note": null
   }
 ]
