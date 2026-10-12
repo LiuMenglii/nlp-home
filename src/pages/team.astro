@@ -42,7 +42,14 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
                 {degreeLabel[g.data.degree]}
                 {g.data.year ? ` · ${g.data.year}` : ''}
               </span>
-              <span class="grad-dest">{g.data.destination}</span>
+              <span class="grad-dest">
+                {g.data.destination}
+                {g.data.github && (
+                  <a href={g.data.github} target="_blank" rel="noopener">
+                    GitHub <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+              </span>
             </li>
           ))}
         </ul>
@@ -83,12 +90,26 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
   }
 
   .graduate-list li {
-    display: flex;
-    flex-wrap: wrap;
+    /* ≥768px 三列对齐（FR-003）：前两列为与内容无关的固定轨道宽——姓名列按 ≤4 汉字 + 余量、
+       学位·年份列按最宽现值 "Master · 2025" + 余量，第 3 列 minmax(0,1fr) 弹性吸收剩余宽度
+       并允许长去向在列内换行；year 为空的行第 2 列仅显示学位、轨道仍占位，跨行对齐不受影响 */
+    display: grid;
+    grid-template-columns: 4.5em 6.5em minmax(0, 1fr);
     align-items: baseline;
-    gap: 4px 12px;
+    column-gap: 12px;
     padding: 10px 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  @media (max-width: 767.98px) {
+    /* <768px 降级为紧凑流式（FR-003）：三个字段各占一行，同类字段起始位置跨行一致，不溢出 */
+    .graduate-list li {
+      display: block;
+    }
+
+    .graduate-list li > span {
+      display: block;
+    }
   }
 
   .graduate-list li:first-child {
@@ -103,6 +124,10 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
   .grad-meta,
   .grad-dest {
     color: var(--ink-soft);
+  }
+
+  .grad-dest a {
+    margin-left: 8px;
   }
 
   .empty {
