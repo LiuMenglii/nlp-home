@@ -105,8 +105,8 @@
 
 ### Implementation for User Story 4
 
-- [ ] T016 [US4] 移除 `src/components/TeacherCard.astro` 中 detailed 模式的纵向堆叠覆写 `.teacher-card--detailed .teacher-directions { flex-direction: column; align-items: flex-start; }`（及"研究方向每行一个"配套注释），使方向标签恢复组件默认的横向流式换行、自然填满卡片信息列（R4：与主页 compact 卡片同构；`white-space: nowrap` 已在 T007 移除，本任务为纯删码）。保持 FR-005 收纳规则：优先整标签换行（标签内文字不断开），仅当单个标签宽度超过卡片可用宽度时该标签内文字换行，任何情况下不溢出、不截断。依赖 T007（同文件 `TeacherCard.astro` 同一 scoped 样式块内的两处删除，T016 在 T007 之后执行避免冲突）
-- [ ] T017 [US4] 按 quickstart.md §4 手动验收（四档视口 375 / 768 / 1024 / ≥1280px）：研究方向标签横向流式排布（优先整标签换行、单标签超长时标签内文字换行），标签区域右侧连续空白满足 FR-004 分档阈值；可临时注释某教师 `photo` 字段于本地验证缺图卡片头排布正常（**验证后还原，数据文件最终零改动**）
+- [x] T016 [US4] 移除 `src/components/TeacherCard.astro` 中 detailed 模式的纵向堆叠覆写 `.teacher-card--detailed .teacher-directions { flex-direction: column; align-items: flex-start; }`（及"研究方向每行一个"配套注释），使方向标签恢复组件默认的横向流式换行、自然填满卡片信息列（R4：与主页 compact 卡片同构；`white-space: nowrap` 已在 T007 移除，本任务为纯删码）。保持 FR-005 收纳规则：优先整标签换行（标签内文字不断开），仅当单个标签宽度超过卡片可用宽度时该标签内文字换行，任何情况下不溢出、不截断。依赖 T007（同文件 `TeacherCard.astro` 同一 scoped 样式块内的两处删除，T016 在 T007 之后执行避免冲突）
+- [x] T017 [US4] 按 quickstart.md §4 手动验收（四档视口 375 / 768 / 1024 / ≥1280px）：研究方向标签横向流式排布（优先整标签换行、单标签超长时标签内文字换行），标签区域右侧连续空白满足 FR-004 分档阈值；可临时注释某教师 `photo` 字段于本地验证缺图卡片头排布正常（**验证后还原，数据文件最终零改动**）。验收注记（2026-10-12）：四档全部通过——computed `flex-direction: row` + `wrap`、整标签换行、零截断零溢出、页面 overflowX=0；右侧连续空白实测最大值 375px 档 93px（31.6% < 50%）、768px 档 0px、1024px 档 89px（30.6% < 50%）、1280px 档 167px（< 320px 像素口径）；缺图测试（临时移除林政 `photo` 后还原，`teachers.json` 最终与 HEAD 字节一致）：无图卡片头在 375/768px 下 identity 区域完整在卡片边界内、无溢出无破损
 
 **Checkpoint**: 教师卡片空白消除，US4 可独立验收（SC-004 教师卡片部分）
 
