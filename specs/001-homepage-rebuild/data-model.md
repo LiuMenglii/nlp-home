@@ -94,6 +94,7 @@ file loader collection：`students`。
 | `level` | enum `"phd"\|"master"` | ✓ | — | 分组键（博士生/硕士生两组渲染） |
 | `grade` | string | ✗ | — | 年级（如 "2024级"） |
 | `url` | string (url) | ✗ | https | 个人主页（可选） |
+| `github` | string (url) | ✗ | https | GitHub 个人页链接（非空时姓名后渲染 `GitHub↗` 独立标签；GitHub 链接 MUST NOT 存于 `url`） |
 | `note` | string | ✗ | — | 备注（可选） |
 
 **派生规则**: 渲染时按 `level` 分两组，组内按 `grade` 降序。
@@ -108,6 +109,7 @@ file loader collection：`graduates`。
 | `destination` | string | ✓ | 非空 | 去向（升学单位或就业单位） |
 | `degree` | enum `"phd"\|"master"` | ✓ | — | 学位类别（可选分组展示） |
 | `year` | number | ✗ | int | 毕业年份（可选排序） |
+| `github` | string (url) | ✗ | https | GitHub 个人页链接（非空时去向文字后渲染 `GitHub↗` 独立标签） |
 
 ## 6. GalleryPhoto（活动照片）— `src/data/gallery.json` + `public/gallery/`
 
