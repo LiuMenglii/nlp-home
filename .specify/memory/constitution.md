@@ -1,22 +1,3 @@
-<!--
-=== SYNC IMPACT REPORT（临时审阅材料，确认修订后、提交前请删除本段） ===
-Version change: 1.0.0 → 1.0.1（PATCH：措辞澄清，非原则删除或重定义）
-Modified principles: 无（五项核心原则 I–V 未改动）
-Modified sections: 内容与数据约束——成员信息知情同意条款：将"课题组提供收录名单"
-  确立为既定知情同意渠道（课题组向站点维护者提供名单，即视为名单内成员已完成
-  知情同意，无需另行逐一征询个人同意）
-Added sections: 无
-Removed sections: 无（同时移除上一版遗留未删的旧 SYNC IMPACT REPORT 注释块）
-Follow-up TODOs: 无
-修订理由: /speckit-analyze 发现 C1——spec 001-homepage-rebuild 2026-10-10 澄清
-  （用户决策："学生/毕业生信息收录不需要知情同意流程，名单由课题组提供，视同已同意"）
-  与本章程"收录 MUST 经当事人知情同意"字面冲突；本次修订将该决策正式化为章程条款，
-  消除静默偏离。修订经课题组维护负责人（用户）指令确认，符合 Governance 修订程序。
-版本判定: PATCH——"MUST 经知情同意""MUST NOT 包含敏感个人数据"两项约束保留，
-  仅澄清知情同意的实现渠道，不构成原则删除或重定义。
-=== END SYNC IMPACT REPORT ===
--->
-
 # NLP-HOME Constitution
 
 ## Core Principles
@@ -46,7 +27,7 @@ Follow-up TODOs: 无
 - 页面视觉风格 MUST 保持简洁、学术化：以可读性和信息传达为第一优先级，MUST NOT 追求炫酷动效
   或过度装饰。
 - MUST NOT 引入重量级前端框架或运行时依赖，除非有明确需求并在变更说明中陈述理由。
-- 页面 MUST 在主流浏览器与移动端正常浏览，并保持基础无障碍性（语义化 HTML、足够的对比度）。
+- 页面 MUST 在主流浏览器与移动端正常浏览。
 
 ### V. 最小复杂度（YAGNI）
 
@@ -82,4 +63,4 @@ Follow-up TODOs: 无
   PATCH——措辞澄清、笔误修正。
 - 所有变更与审查 MUST 核对本文档的合规性；无法用简单方案解释的复杂度 MUST 在 PR 中给出书面理由。
 
-**Version**: 1.0.1 | **Ratified**: 2026-10-09 | **Last Amended**: 2026-10-10
+**Version**: 2.0.0 | **Ratified**: 2026-10-09 | **Last Amended**: 2026-10-11
