@@ -3,13 +3,15 @@
     "name": "佀庆一",
     "destination": "京东（大模型）",
     "degree": "phd",
-    "year": 2024
+    "year": 2024,
+    "url": "https://phoebussi.github.io/"
   },
   {
     "name": "杨泽娴",
     "destination": "福州大学",
     "degree": "phd",
-    "year": 2025
+    "year": 2025,
+    "url": "https://ccds.fzu.edu.cn/info/1204/11629.htm"
   },
   {
     "name": "谭宇彤",
@@ -27,6 +29,7 @@
     "name": "刘源鑫",
     "destination": "北京大学（攻读博士）",
     "degree": "master",
-    "year": 2021
+    "year": 2021,
+    "url": "https://llyx97.github.io/"
   }
 ]
