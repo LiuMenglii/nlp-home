@@ -10,9 +10,19 @@ const teachers = (await getCollection('teachers')).sort((a, b) =>
   a.id.localeCompare(b.id),
 );
 const students = await getCollection('students');
-const graduates = (await getCollection('graduates')).sort((a, b) =>
-  (b.data.year ?? 0) - (a.data.year ?? 0) || a.id.localeCompare(b.id),
-);
+// FR-012 渲染排序：毕业年份降序 → 同年份 PhD 在 Master 前 → 无年份条目最后（组内 PhD 在前）
+// → 同排序键以 file loader 注入的零填充 id（gra-001…）字典序 tiebreak（id 序 = 数据文件条目序）
+const degreeOrder = { phd: 0, master: 1 } as const;
+const graduates = (await getCollection('graduates')).sort((a, b) => {
+  const yearA = a.data.year ?? null;
+  const yearB = b.data.year ?? null;
+  if ((yearA === null) !== (yearB === null)) return yearA === null ? 1 : -1;
+  if (yearA !== null && yearB !== null && yearA !== yearB) return yearB - yearA;
+  if (a.data.degree !== b.data.degree) {
+    return degreeOrder[a.data.degree] - degreeOrder[b.data.degree];
+  }
+  return a.id.localeCompare(b.id);
+});
 
 // T046：可见 UI 标签英文化（学位标签 PhD/Master，毕业生年份无中文后缀）
 const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
@@ -38,12 +48,20 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
           {graduates.map((g) => (
             <li>
               <span class="grad-name">{g.data.name}</span>
-              <span class="grad-meta">
-                {degreeLabel[g.data.degree]}
-                {g.data.year ? ` · ${g.data.year}` : ''}
-              </span>
-              <span class="grad-dest">
-                {g.data.destination}
+              <span class="grad-degree">{degreeLabel[g.data.degree]}</span>
+              <span class:list={['grad-year', { 'is-empty': !g.data.year }]}>{g.data.year ?? ''}</span>
+              <span class="grad-dest">{g.data.destination}</span>
+              <span
+                class:list={[
+                  'grad-links',
+                  { 'is-empty': !g.data.url && !g.data.github },
+                ]}
+              >
+                {g.data.url && (
+                  <a href={g.data.url} target="_blank" rel="noopener">
+                    Homepage <span aria-hidden="true">↗</span>
+                  </a>
+                )}
                 {g.data.github && (
                   <a href={g.data.github} target="_blank" rel="noopener">
                     GitHub <span aria-hidden="true">↗</span>
@@ -87,28 +105,47 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
     list-style: none;
     margin: 0;
     padding: 0;
+    /* 满宽列表（2026-10-12 第三轮用户裁定）：铺满内容区，避免右侧无意义空白
+       与因空间不足导致的文字换行；<768px 降级规则见下方媒体查询 */
   }
 
   .graduate-list li {
-    /* ≥768px 三列对齐（FR-003）：前两列为与内容无关的固定轨道宽——姓名列按 ≤4 汉字 + 余量、
-       学位·年份列按最宽现值 "Master · 2025" + 余量，第 3 列 minmax(0,1fr) 弹性吸收剩余宽度
-       并允许长去向在列内换行；year 为空的行第 2 列仅显示学位、轨道仍占位，跨行对齐不受影响 */
+    /* ≥768px 五列混合对齐（FR-003 / 2026-10-12 第三轮用户裁定）：
+       姓名/学位/年份固定轨道左对齐；去向列 minmax(0,1fr) 弹性吸收且居中
+       （左右留大间距，容纳较长去向名称；更长内容列内换行收纳）；
+       链接列固定轨道、标签右对齐贴行右缘 padding。
+       固定宽禁用 max-content——后者随各行内容变宽、破坏跨行对齐；
+       year 为空的行第 3 列留空占位（空 span 仍占据轨道） */
     display: grid;
-    grid-template-columns: 4.5em 6.5em minmax(0, 1fr);
+    grid-template-columns: 4.5em 4em 3em minmax(0, 1fr) 11.5em;
     align-items: baseline;
-    column-gap: 12px;
-    padding: 10px 0;
+    /* 字段间隙适当加大（用户裁定） */
+    column-gap: 16px;
+    /* 左右 padding 对称（用户裁定：姓名距表格左缘＝标签距表格右缘）；
+       44px 左侧与学生条目收拢后的左起始节奏一致（契约 §3） */
+    padding: 10px 44px;
     border-bottom: 1px solid var(--line);
   }
 
   @media (max-width: 767.98px) {
-    /* <768px 降级为紧凑流式（FR-003）：三个字段各占一行，同类字段起始位置跨行一致，不溢出 */
+    /* <768px 降级为紧凑流式（FR-003）：五字段逐行堆叠，同类字段起始位置跨行一致，不溢出；
+       字段缺失的空行（无年份 / 无链接标签）不渲染；有标签的链接行右对齐贴右缘（第三轮裁定） */
     .graduate-list li {
       display: block;
     }
 
     .graduate-list li > span {
       display: block;
+    }
+
+    /* 链接行：标签保持横向并列（flex 负责标签间距与换行），右对齐贴行右缘 */
+    .graduate-list li > .grad-links {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .graduate-list li > .is-empty {
+      display: none;
     }
   }
 
@@ -121,13 +158,25 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
     color: var(--ink);
   }
 
-  .grad-meta,
+  .grad-degree,
+  .grad-year,
   .grad-dest {
     color: var(--ink-soft);
   }
 
-  .grad-dest a {
-    margin-left: 8px;
+  /* 去向列居中（2026-10-12 第三轮用户裁定）：各行中心点在同一直线上，
+     左右留大间距——部分去向名称较长，更长内容在列内换行收纳（FR-003） */
+  .grad-dest {
+    text-align: center;
+  }
+
+  /* 链接列（FR-011）：Homepage↗ / GitHub↗ 标签并列于独立末列，
+     右对齐贴行右缘（第三轮裁定），间距沿用 .teacher-links 的 gap 语义 */
+  .grad-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    justify-content: flex-end;
   }
 
   .empty {
