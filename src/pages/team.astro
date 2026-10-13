@@ -117,10 +117,12 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
        固定宽禁用 max-content——后者随各行内容变宽、破坏跨行对齐；
        year 为空的行第 3 列留空占位（空 span 仍占据轨道） */
     display: grid;
-    grid-template-columns: 4.5em 4em 3em minmax(0, 1fr) 11.5em;
+    /* 链接列收窄为 Homepage↗ 实际文本宽（实测约 106px ≈ 5.9em，取 6.5em 留少量余量；
+       2026-10-13 用户裁定：列宽与文字宽度大致相同），释放的宽度并入下方 column-gap */
+    grid-template-columns: 4.5em 4em 3em minmax(0, 1fr) 6.5em;
     align-items: baseline;
-    /* 字段间隙适当加大（用户裁定） */
-    column-gap: 16px;
+    /* 字段间隙加大（用户裁定）：链接列收窄释放的宽度全部转为列间距 */
+    column-gap: 38px;
     /* 左右 padding 对称（用户裁定：姓名距表格左缘＝标签距表格右缘）；
        44px 左侧与学生条目收拢后的左起始节奏一致（契约 §3） */
     padding: 10px 44px;
@@ -129,7 +131,8 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
 
   @media (max-width: 767.98px) {
     /* <768px 降级为紧凑流式（FR-003）：五字段逐行堆叠，同类字段起始位置跨行一致，不溢出；
-       字段缺失的空行（无年份 / 无链接标签）不渲染；有标签的链接行右对齐贴右缘（第三轮裁定） */
+       字段缺失的空行（无年份 / 无链接标签）不渲染；去向行左对齐、有标签的链接行右对齐贴右缘
+       （契约 §2：堆叠态去向行保持左对齐，2026-10-13 修复居中泄漏） */
     .graduate-list li {
       display: block;
     }
@@ -165,9 +168,13 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
   }
 
   /* 去向列居中（2026-10-12 第三轮用户裁定）：各行中心点在同一直线上，
-     左右留大间距——部分去向名称较长，更长内容在列内换行收纳（FR-003） */
-  .grad-dest {
-    text-align: center;
+     左右留大间距——部分去向名称较长，更长内容在列内换行收纳（FR-003）。
+     仅 ≥768px 五列形态生效；<768px 降级为堆叠态时去向行保持左对齐（契约 §2），
+     否则该居中会泄漏进降级态，造成姓名/学位/年份左对齐、去向居中、标签右对齐的错乱 */
+  @media (min-width: 768px) {
+    .grad-dest {
+      text-align: center;
+    }
   }
 
   /* 链接列（FR-011）：Homepage↗ / GitHub↗ 标签并列于独立末列，
