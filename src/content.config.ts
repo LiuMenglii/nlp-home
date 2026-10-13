@@ -133,6 +133,7 @@ const graduates = defineCollection({
     destination: z.string().min(1),
     degree: z.enum(['phd', 'master']),
     year: z.number().int().optional().nullable(),
+    url: httpsUrl,
     github: httpsUrl,
     ...jsonParseErrorField,
   }),

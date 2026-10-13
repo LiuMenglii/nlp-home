@@ -120,6 +120,8 @@ const { name, title, directions, email, homepage, photo, bio } = teacher.data;
     gap: 6px 18px;
     font-size: 1rem;
     margin-top: auto;
+    /* 收缩为内容宽度（消除拉伸至卡片全宽后链接内容右侧的连续空白，FR-004） */
+    align-self: flex-start;
   }
 
   @media (max-width: 640px) {
