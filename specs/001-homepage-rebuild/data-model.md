@@ -109,7 +109,10 @@ file loader collection：`graduates`。
 | `destination` | string | ✓ | 非空 | 去向（升学单位或就业单位） |
 | `degree` | enum `"phd"\|"master"` | ✓ | — | 学位类别（可选分组展示） |
 | `year` | number | ✗ | int | 毕业年份（可选排序） |
-| `github` | string (url) | ✗ | https | GitHub 个人页链接（非空时去向文字后渲染 `GitHub↗` 独立标签） |
+| `url` | string (url) | ✗ | https | 个人主页（可选，与学生字段命名一致；非空时于链接列渲染 `Homepage↗` 独立标签） |
+| `github` | string (url) | ✗ | https | GitHub 个人页链接（非空时于链接列集中渲染 `GitHub↗` 独立标签） |
+
+**派生规则**: 渲染时按 FR-012 排序——毕业年份降序 → 同年份 PhD 在 Master 前 → 无年份条目最后、组内 PhD 在前 → 同排序键按数据文件条目顺序稳定排列；与 graduates.json 条目顺序无关。
 
 ## 6. GalleryPhoto（活动照片）— `src/data/gallery.json` + `public/gallery/`
 
