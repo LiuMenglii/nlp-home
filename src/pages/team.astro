@@ -91,10 +91,23 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
 
   .teacher-grid {
     display: grid;
-    /* 桌面每行 2 张卡片；min(420px, 100%) 保证轨道最小宽度永不超过容器宽度——
-       宽视口（≥~900px）维持两列，窄视口自动降为恰好贴合容器的单列，全宽度区间连续自适应 */
-    grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
+    /* 003 FR-002 显式分档列数：≥1280px 每行 3 张；768–<1280px 每行 2 张；
+       576–<768px 与 <576px 每行 1 张。断点数值以 spec FR-001 为唯一规范源，
+       半开区间 .98px 写法保证边界紧下方即切换；minmax(0,1fr) 保证同行卡片等宽 */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
+  }
+
+  @media (max-width: 1279.98px) {
+    .teacher-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .teacher-grid {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
   }
 
   .student-section {
@@ -123,28 +136,44 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
     align-items: baseline;
     /* 字段间隙加大（用户裁定）：链接列收窄释放的宽度全部转为列间距 */
     column-gap: 38px;
-    /* 左右 padding 对称（用户裁定：姓名距表格左缘＝标签距表格右缘）；
-       44px 左侧与学生条目收拢后的左起始节奏一致（契约 §3） */
-    padding: 10px 44px;
+    /* 左右 padding 对称（002 用户裁定：姓名距表格左缘＝标签距表格右缘）；
+       003 FR-007 自 44px 统一收窄为 24px——与在读学生条目（StudentGroup）同一固定内距，
+       使两列表姓名左边缘落在同一竖直线（跨区块列对齐） */
+    padding: 10px 24px;
     border-bottom: 1px solid var(--line);
   }
 
   @media (max-width: 767.98px) {
-    /* <768px 降级为紧凑流式（FR-003）：五字段逐行堆叠，同类字段起始位置跨行一致，不溢出；
-       字段缺失的空行（无年份 / 无链接标签）不渲染；去向行左对齐、有标签的链接行右对齐贴右缘
-       （契约 §2：堆叠态去向行保持左对齐，2026-10-13 修复居中泄漏） */
+    /* <768px 三段式（003 FR-006 / CHK010）：
+       第 1 行：姓名居左；学位 margin-left:auto 推向行右端（文字右对齐），
+       年份紧随学位之后（flex item 默认收缩自适应 → 容器宽＝数字宽、右对齐贴行右缘），
+       学位与年份之间隔 column-gap（≈一个词空格）；
+       第 2 行：去向 flex: 0 0 100% 占整宽、左对齐；
+       第 3 行：链接标签占整宽、左对齐（见下方 .grad-links 规则）。
+       字段缺失的空行（无年份 / 无链接标签）经 .is-empty 不渲染、行自动塌缩（FR-008） */
     .graduate-list li {
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      column-gap: 0.25em;
+      row-gap: 0;
     }
 
-    .graduate-list li > span {
-      display: block;
+    .grad-degree {
+      margin-left: auto;
     }
 
-    /* 链接行：标签保持横向并列（flex 负责标签间距与换行），右对齐贴行右缘 */
+    .grad-dest {
+      flex: 0 0 100%;
+    }
+
+    /* 链接行（003 2026-10-15 裁定）：标签保持横向并列（flex 负责间距与换行）、左对齐，
+       沿用既有高特异度选择器原地改写 flex-end → flex-start 并补 flex: 0 0 100%，
+       不另设低特异度 .grad-links 规则（单一规则来源，不依赖声明顺序） */
     .graduate-list li > .grad-links {
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
+      flex: 0 0 100%;
     }
 
     .graduate-list li > .is-empty {
