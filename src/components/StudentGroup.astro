@@ -88,7 +88,11 @@ const master = byLevel('master');
 <style>
   .student-groups {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* 003 FR-010 / SC-003：轨道最小宽度不得超出容器——320px 档内容区仅 288px，
+       原 minmax(320px, 1fr) 迫使轨道为 320px 宽，整组向右溢出 16px（验收实测定位）；
+       min(320px, 100%) 保证轨道永不超过容器（沿用 team.astro 既有写法）。
+       视口 ≥352px（容器 ≥320px）时行为与原来完全一致，2 列阈值不变，无回归 */
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
     gap: 32px;
   }
 
@@ -109,10 +113,10 @@ const master = byLevel('master');
     flex-wrap: wrap;
     align-items: baseline;
     gap: 4px 10px;
-    /* 两端分布 + 两侧内收（FR-004 / T006）：姓名自分组左缘内收、Since/备注自分组右缘内收，
-       行内容两侧各收拢 44px（按四档视口 375/768/1024/≥1280px 实测校准的定值）——
-       两端分布行的中间间隙满足分档阈值，收拢产生的两端空白仍在右端口径内 */
-    padding: 8px 44px;
+    /* 两端分布 + 两侧内收（002 FR-004 / T006）：姓名自分组左缘内收、Since/备注自分组右缘内收；
+       003 FR-007 左右内距自 44px 统一收窄为 24px（左右对称）——与毕业生条目同一固定内距，
+       本组件即跨区块列对齐基准（两列表姓名左边缘同线，验收 getBoundingClientRect().left 差值 ≤1px） */
+    padding: 8px 24px;
     border-bottom: 1px solid var(--line);
     color: var(--ink);
   }

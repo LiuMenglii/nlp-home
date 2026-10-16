@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 // 路径锚定到本文件所在位置（src/），不受运行时 cwd 影响
 const GALLERY_ASSET_DIR = fileURLToPath(new URL('../public/gallery/', import.meta.url));
 const GALLERY_DATA_FILE = fileURLToPath(new URL('./data/gallery.json', import.meta.url));
+const TEACHER_ASSET_DIR = fileURLToPath(new URL('../public/teachers/', import.meta.url));
 
 /**
  * file loader 要求每个数组元素带 id/slug 字段，而维护者数据契约（contracts/data-files.md）
@@ -96,17 +97,45 @@ const teachers = defineCollection({
   loader: file('src/data/teachers.json', {
     parser: jsonArrayParser('teachers.json', 'tea'),
   }),
-  schema: z.object({
-    name: z.string().min(1),
-    title: z.string().min(1),
-    advisorRole: z.enum(['phd', 'master']),
-    directions: z.array(z.string()).min(1),
-    email: z.email().optional().nullable(),
-    homepage: httpsUrl,
-    photo: z.string().optional().nullable(),
-    bio: z.string().optional().nullable(),
-    ...jsonParseErrorField,
-  }),
+  schema: z
+    .object({
+      name: z.string().min(1),
+      title: z.string().min(1),
+      advisorRole: z.enum(['phd', 'master']),
+      directions: z.array(z.string()).min(1),
+      email: z.email().optional().nullable(),
+      homepage: httpsUrl,
+      photo: z.string().optional().nullable(),
+      bio: z.string().optional().nullable(),
+      ...jsonParseErrorField,
+    })
+    .superRefine((teacher, ctx) => {
+      // 003 FR-016：photo 非空时必须是 public/teachers/ 下已存在的文件（构建期存在性校验，
+      // 缺失即构建报错并定位数据文件、教师姓名与缺失路径，不渲染破图上线）。
+      // photo 为空/未定义不校验（缺照片为合法展示状态）；字段定义不变（FR-015 显式例外）。
+      // 注：zod 4.6.5 字段级 superRefine 的 ctx 无 parent，故采用对象级校验以同时取 name 与 photo
+      const photo = teacher.photo;
+      if (!photo) return;
+      if (!photo.startsWith('/teachers/')) {
+        ctx.addIssue({
+          code: 'custom',
+          message: `src/data/teachers.json 教师「${teacher.name}」的 photo "${photo}" 必须以 /teachers/ 开头（指向 public/teachers/ 下的文件）`,
+        });
+        return;
+      }
+      const fileName = photo.slice('/teachers/'.length);
+      if (fileName.includes('/') || fileName.includes('..')) {
+        ctx.addIssue({
+          code: 'custom',
+          message: `src/data/teachers.json 教师「${teacher.name}」的 photo "${photo}" 必须是 public/teachers/ 目录下的文件名（禁止 "/" 与 ".."）`,
+        });
+      } else if (!existsSync(TEACHER_ASSET_DIR + fileName)) {
+        ctx.addIssue({
+          code: 'custom',
+          message: `src/data/teachers.json 教师「${teacher.name}」的 photo "${photo}" 在 public/teachers/ 中不存在——请先放入图片文件，再修改 src/data/teachers.json`,
+        });
+      }
+    }),
 });
 
 const students = defineCollection({
