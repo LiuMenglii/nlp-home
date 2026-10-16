@@ -1,7 +1,7 @@
 [
   {
     "name": "佀庆一",
-    "destination": "京东（大模型）",
+    "destination": "华为天才少年 → 京东大模型",
     "degree": "phd",
     "year": 2024,
     "url": "https://phoebussi.github.io/"
@@ -27,9 +27,63 @@
   },
   {
     "name": "刘源鑫",
-    "destination": "北京大学（攻读博士）",
+    "destination": "北京大学 → 小米mimo",
     "degree": "master",
     "year": 2021,
     "url": "https://llyx97.github.io/"
+  },
+  {
+    "name": "许同学",
+    "destination": "腾讯微信 → 拼多多",
+    "degree": "master",
+    "year": null
+  },
+  {
+    "name": "刘同学",
+    "destination": "蚂蚁金服",
+    "degree": "phd",
+    "year": null
+  },
+  {
+    "name": "李同学",
+    "destination": "腾讯微信",
+    "degree": "phd",
+    "year": null
+  },
+  {
+    "name": "王同学",
+    "destination": "华为鸿蒙",
+    "degree": "master",
+    "year": null
+  },
+  {
+    "name": "王同学",
+    "destination": "腾讯混元大模型",
+    "degree": "master",
+    "year": null
+  },
+  {
+    "name": "陈同学",
+    "destination": "字节跳动",
+    "degree": "master",
+    "year": null
+  },
+  {
+    "name": "申同学",
+    "destination": "小米mimo",
+    "degree": "master",
+    "year": null
+  },
+  {
+    "name": "赵同学",
+    "destination": "小红书大模型",
+    "degree": "master",
+    "year": null
+  },
+  {
+    "name": "郑同学",
+    "destination": "蚂蚁基座大模型",
+    "degree": "phd",
+    "year": null
   }
 ]
