@@ -9,6 +9,64 @@ const GALLERY_ASSET_DIR = fileURLToPath(new URL('../public/gallery/', import.met
 const GALLERY_DATA_FILE = fileURLToPath(new URL('./data/gallery.json', import.meta.url));
 const TEACHER_ASSET_DIR = fileURLToPath(new URL('../public/teachers/', import.meta.url));
 
+// 004 FR-011：站点品牌数据校验（显式例外）。site.json 非 collection（001 §7 约定），
+// 故在本配置模块加载期直接校验——astro check / astro build 载入本文件时即执行，
+// 任一违反立即抛错中断构建，不静默渲染裂图或空名称站点。
+const SITE_DATA_FILE = fileURLToPath(new URL('./data/site.json', import.meta.url));
+const SITE_ASSET_DIR = fileURLToPath(new URL('../public/', import.meta.url));
+
+function validateSiteBrand(): void {
+  let siteBrand: Record<string, unknown>;
+  try {
+    siteBrand = JSON.parse(readFileSync(SITE_DATA_FILE, 'utf-8')) as Record<string, unknown>;
+  } catch (e) {
+    throw new Error(
+      `src/data/site.json 无法读取或不是合法 JSON：${(e as Error).message}`,
+    );
+  }
+
+  // (a) 静态资源字段：MUST 为以 "/" 开头、无 ".." 的站内绝对路径，且文件存在于 public/
+  for (const field of ['logo', 'favicon']) {
+    const value = siteBrand[field];
+    if (typeof value !== 'string' || value.length === 0) {
+      throw new Error(
+        `src/data/site.json 的 "${field}" 字段缺失或为空——请提供站内绝对路径（如 "/logo.svg"）`,
+      );
+    }
+    if (!value.startsWith('/') || value.includes('..')) {
+      throw new Error(
+        `src/data/site.json 的 "${field}" 值 "${value}" 必须是以 "/" 开头且不含 ".." 的站内绝对路径`,
+      );
+    }
+    const targetPath = SITE_ASSET_DIR + value.slice(1);
+    if (!existsSync(targetPath)) {
+      throw new Error(
+        `src/data/site.json 的 "${field}" 值 "${value}" 指向的文件不存在（目标路径 ${targetPath}）——请先放入 public/ 下的文件，再修改 src/data/site.json`,
+      );
+    }
+  }
+
+  // (b) 品牌命名字段：MUST 存在且为非空字符串（groupName/navBrand 任一为空即失败，
+  // 因完整主名称由 ${groupName} ${navBrand} 组合派生）
+  for (const field of [
+    'instituteZh',
+    'lab',
+    'groupName',
+    'alias',
+    'fullName',
+    'navBrand',
+  ]) {
+    const value = siteBrand[field];
+    if (typeof value !== 'string' || value.trim().length === 0) {
+      throw new Error(
+        `src/data/site.json 的 "${field}" 字段缺失或为空字符串——全站命名展示位由该字段派生，请补齐后再构建`,
+      );
+    }
+  }
+}
+
+validateSiteBrand();
+
 /**
  * file loader 要求每个数组元素带 id/slug 字段，而维护者数据契约（contracts/data-files.md）
  * 不含 id。这里通过自定义 parser 解析 JSON 数组并自动注入「前缀-序号」形式的 entry id。

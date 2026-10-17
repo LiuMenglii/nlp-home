@@ -18,7 +18,7 @@ const { title, date } = entry.data;
 const dateStr = date.toISOString().slice(0, 10);
 ---
 
-<BaseLayout title={`${title} · ${site.groupName}`}>
+<BaseLayout title={`${title} · ${site.groupName} ${site.navBrand}`}>
   <article class="section news-article">
     <header>
       <h1>{title}</h1>
