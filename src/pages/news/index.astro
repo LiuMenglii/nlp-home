@@ -11,7 +11,7 @@ const news = (await getCollection('news')).sort(
 );
 ---
 
-<BaseLayout title={`News · ${site.groupName}`}>
+<BaseLayout title={`News · ${site.groupName} ${site.navBrand}`}>
   <section class="section" aria-labelledby="news-title">
     <SectionHeading title="News" id="news-title" />
 

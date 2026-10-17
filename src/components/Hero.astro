@@ -3,9 +3,9 @@ import site from '../data/site.json';
 ---
 
 <section class="section hero" aria-labelledby="hero-title">
-  <p class="hero-kicker">{site.fullName}</p>
-  <h1 id="hero-title">{site.groupName}</h1>
-  <p class="hero-institute">{site.institute}</p>
+  <p class="hero-affil">{site.instituteZh} · {site.lab}</p>
+  <h1 id="hero-title">{site.groupName} {site.navBrand}</h1>
+  <p class="hero-alias">{site.alias} · {site.fullName}</p>
   <ul class="hero-directions" aria-label="Research directions">
     {site.directions.map((d) => <li>{d}</li>)}
   </ul>
@@ -21,9 +21,10 @@ import site from '../data/site.json';
     text-align: center;
   }
 
-  .hero-kicker {
+  /* 四层命名体系：① 机构从属链（次要）→ ② 主名称 → ③ 别名·英文全称 → ④ 方向标签 */
+  .hero-affil {
     color: var(--ink-soft);
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 12px;
   }
 
@@ -33,10 +34,12 @@ import site from '../data/site.json';
     letter-spacing: 0.01em;
   }
 
-  .hero-institute {
+  /* 长命名词间断行（自然空格断行 + overflow-wrap 兜底；不使用 word-break:break-all / 连字符断词） */
+  .hero-alias {
     color: var(--ink-soft);
     font-size: 1.1rem;
     margin-bottom: 28px;
+    overflow-wrap: break-word;
   }
 
   .hero-directions {

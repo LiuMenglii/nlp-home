@@ -1,5 +1,6 @@
 ---
 import { withBase, normalizePath } from '../utils';
+import site from '../data/site.json';
 
 const items = [
   { label: 'Home', href: withBase('/') },
@@ -13,7 +14,10 @@ const current = normalizePath(Astro.url.pathname);
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href={withBase('/')}>G3 CIGMA</a>
+    <a class="brand" href={withBase('/')}>
+      <img class="brand-logo" src={withBase(site.logo)} alt="" width={32} height={32} />
+      <span class="brand-text">{site.navBrand}</span>
+    </a>
     <nav aria-label="Main navigation">
       <ul class="nav-list">
         {
@@ -52,10 +56,26 @@ const current = normalizePath(Astro.url.pathname);
   }
 
   .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
+    white-space: nowrap;
     font-weight: 700;
     font-size: 1.15rem;
     color: var(--blue-deep);
     letter-spacing: 0.02em;
+  }
+
+  /* 等高对齐（CHK040 修订口径）：logo 渲染高度 = "CIGMA" 文字行盒高度（均 1.2em，随字号等比缩放） */
+  .brand-logo {
+    height: 1.2em;
+    width: auto;
+    display: block;
+  }
+
+  .brand-text {
+    line-height: 1.2;
   }
 
   .brand:hover {
