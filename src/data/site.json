@@ -1,6 +1,12 @@
 {
-  "groupName": "G3 CIGMA",
-  "fullName": "iie-CIGMA",
+  "instituteZh": "中国科学院信息工程研究所",
+  "lab": "第六研究室/智能认知安全研究室",
+  "groupName": "认知智能生成课题组",
+  "alias": "G3课题组",
+  "fullName": "Cognitive Intelligence with Generative and Multimodal Algorithms",
+  "navBrand": "CIGMA",
+  "logo": "/logo.svg",
+  "favicon": "/favicon.svg",
   "institute": "中国科学院信息工程研究所 / Institute of Information Engineering, CAS",
   "directions": [
     "Natural Language Processing",

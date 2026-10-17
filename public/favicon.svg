@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#1b78bf" />
-  <text x="32" y="42" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" text-anchor="middle">G3</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -21 160 160">
+  <!-- 同源简化 favicon：仅保留 logo 的三色 chevron 主体（方形 viewBox 垂直居中、留少量内边距） -->
+  <path fill="#037ec2" d="M70 19 L110 19 140 59 110 99 70 99 100 59 Z" />
+  <path fill="#28ae6c" d="M30 19 L70 19 100 59 70 99 30 99 60 59 Z" />
+  <path fill="#f7941d" d="M30 19 L60 59 30 99 0 59 Z" />
 </svg>

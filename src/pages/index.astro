@@ -33,7 +33,7 @@ const others = publications.filter((p) => !p.data.featured).sort(byTimeDesc);
 const homePubs = [...featured, ...others].slice(0, 8);
 ---
 
-<BaseLayout title={`${site.groupName} · ${site.institute}`}>
+<BaseLayout title={`${site.groupName} - ${site.instituteZh}`}>
   <Hero />
   <Admissions />
 

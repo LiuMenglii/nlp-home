@@ -6,7 +6,7 @@
 
 | 文件 | 内容 | 对应页面 |
 |------|------|----------|
-| `site.json` | 组名（`groupName`）、研究组标识（`fullName`，当前 "iie-CIGMA"）、研究所、研究方向、招募信息（英文申请文案 `admissions.apply` + 四项能力 + 邮箱） | 主页 Hero / Join Us 区块、页脚 |
+| `site.json` | 站点品牌与命名信息（字段说明见下文「修改课题组名称 / 品牌信息」） | 顶栏品牌区、主页 Hero、页脚、标签页标题/描述、favicon |
 | `teachers.json` | 教师团队（5 位） | 主页 Team、Team 页 |
 | `students.json` | 在读学生 | Team 页 |
 | `graduates.json` | 毕业生去向 | Team 页 |
@@ -54,6 +54,24 @@ summary: "一句话摘要（不超过 200 字符），显示在列表页和主�
 
 - `date` 为发布日期，列表按它倒序排列；主页自动展示最新 5 条。
 - 配图必须与 .md 文件放在同一目录（`src/content/news/`）并用相对路径引用；文件缺失会导致构建失败（防止裂图）。
+
+### 修改课题组名称 / 品牌信息（site.json）
+
+| 字段 | 含义 |
+|------|------|
+| `instituteZh` | 机构中文名（中国科学院信息工程研究所），用于主页名栏机构从属链行与主页标题 |
+| `lab` | 研究室归属（第六研究室/智能认知安全研究室），与 `instituteZh` 以 "·" 连接为名栏从属链行 |
+| `groupName` | 课题组**中文名称**（不含品牌字），如「认知智能生成课题组」 |
+| `alias` | 课题组别名（G3课题组），展示于主页名栏 |
+| `fullName` | 课题组**英文全称**（Cognitive Intelligence with Generative and Multimodal Algorithms） |
+| `navBrand` | 顶栏品牌文字（CIGMA） |
+| `logo` / `favicon` | logo 与 favicon 的站内绝对路径（如 `/logo.svg`、`/favicon.svg`），文件必须已放入 `public/` |
+| `institute` | 研究所中英文全称（页脚研究所行与 meta 描述） |
+| `directions` | 研究方向标签（主页名栏） |
+| `admissions` | Join Us 招募信息（英文申请文案 `admissions.apply` + 四项能力 + 邮箱） |
+
+- 完整主名称（如「认知智能生成课题组 CIGMA」）由 `${groupName} ${navBrand}` 在各展示位（名栏主标题、页脚名称行、其余页标签标题）**组合派生**，因此**不设** `groupNameZh` 等冗余字段——改名只需改上表字段，全站自动生效。
+- `logo` / `favicon` 指向 `public/` 中不存在的文件，或任一命名字段（`instituteZh`/`lab`/`groupName`/`alias`/`fullName`/`navBrand`）缺失/为空，都会**让构建失败**并指明字段与目标路径。
 
 ### 成员变动（teachers / students / graduates）
 
