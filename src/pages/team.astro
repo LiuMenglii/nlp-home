@@ -28,7 +28,7 @@ const graduates = (await getCollection('graduates')).sort((a, b) => {
 const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
 ---
 
-<BaseLayout title={`Team · ${site.groupName}`}>
+<BaseLayout title={`Team · ${site.groupName} ${site.navBrand}`}>
   <section class="section" aria-labelledby="team-title">
     <SectionHeading title="Team" id="team-title" />
 
