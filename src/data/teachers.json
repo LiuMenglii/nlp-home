@@ -10,16 +10,6 @@
     "bio": "Professor at IIE, CAS and chair professor at UCAS. Author of two monographs and 100+ CCF-A/B publications, with repeated national first-place finishes in machine reading comprehension and sentiment analysis evaluations (2018/2019/2024/2025)."
   },
   {
-    "name": "王伟平",
-    "title": "Professor",
-    "advisorRole": "phd",
-    "directions": ["Big Data AI", "Data Security"],
-    "email": "wangweiping@iie.ac.cn",
-    "homepage": "https://people.ucas.edu.cn/~0012246",
-    "photo": "/teachers/wang-weiping.svg",
-    "bio": "Professor at IIE, CAS and Vice Director of the institute. Has led 30+ major national R&D and information-security engineering projects, with 100+ publications in venues such as TPAMI, TPDS, NeurIPS, CVPR and ICDE."
-  },
-  {
     "name": "付鹏",
     "title": "Associate Professor",
     "advisorRole": "master",

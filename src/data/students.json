@@ -40,15 +40,23 @@
   {
     "name": "刘曦雨",
     "level": "phd",
-    "grade": "2022",
+    "grade": null,
     "url": null,
+    "scholar": "https://scholar.google.com/citations?user=94lNc6oAAAAJ&hl=zh-CN",
     "note": null
   },
   {
     "name": "顾佴彬",
     "level": "phd",
     "grade": "2022",
-    "url": null,
+    "url": "https://gccnlp.github.io/",
+    "note": null
+  },
+  {
+    "name": "李雨晴",
+    "level": "phd",
+    "grade": "2022",
+    "url": "https://qdcassie-li.github.io/",
     "note": null
   },
   {
