@@ -102,11 +102,13 @@ description: "Task list for Team 页学生分组纵向展开、教师移除与�
 **Purpose**: 跨故事的全站回归与最终门禁。
 
 - [X] T019 [P] 按 [quickstart.md](./quickstart.md) §7 在 1920 / 1280 / 1024 / 768 / 767 / 576 / 481 / 480 / 375 / 320px 十档浏览 `/team/` 全部区块与 `/` 教师区块：无元素重叠、文字截断、内容溢出、非预期换行；逐元素检查 `getBoundingClientRect().right ≤ document.documentElement.clientWidth`（至少覆盖 `.student-group`、`.student-name`、`.member-link`、`.graduate-list li`、`.grad-links`、`.grad-dest`、`.teacher-card`），页面无横向滚动
-- [ ] T020 [P] 按 [quickstart.md](./quickstart.md) §5 在 Windows 与 macOS 各复测一次标签列：Chrome 最新稳定版 + 站点默认系统字体栈（18px）下三种标签均单行、不截断、在 6.5em 列内居中（中心线跨行极差 ≤1px）；若复测仍换行，按实测宽度 +10% 调整标签列宽后重测
+- [X] T020 [P] 按 [quickstart.md](./quickstart.md) §5 在 Windows 与 macOS 各复测一次标签列：Chrome 最新稳定版 + 站点默认系统字体栈（18px）下三种标签均单行、不截断、在 6.5em 列内居中（中心线跨行极差 ≤1px）；若复测仍换行，按实测宽度 +10% 调整标签列宽后重测
 - [X] T021 最终门禁：仓库根执行 `npm run check` 与 `npm run build` 均通过；检查 `dist/` 中无 `teachers/wang-weiping.svg`，且 `dist/` 全部 HTML 产物（全站口径，FR-010）中无「王伟平」与 `people.ucas.edu.cn/~0012246`
 - [X] T022 核对改动范围：`git status` / `git diff --stat` 确认改动仅落在 `src/components/StudentGroup.astro`、`src/pages/team.astro`、`src/pages/index.astro`、`src/content.config.ts`、`src/data/students.json`、`src/data/teachers.json`、`src/data/README.md` 与删除 `public/teachers/wang-weiping.svg`；`src/data/graduates.json`、`src/components/TeacherCard.astro`、`src/styles/global.css`、`.github/workflows/deploy.yml` 零改动
-- [ ] T023 按 Constitution 维护工作流，将本特性的模板/样式与数据改动通过 Pull Request 合入：合并前确认 `npm run check` / `npm run build` 通过、十档渲染无布局破损；合并后确认 GitHub Pages 构建流水线成功
-- [ ] T024 部署完成后检查线上 `/team/` 与 `/` 的实际渲染：成员、教师、标签矩阵与桌面/移动视口均无布局破损，记录结果（Constitution 维护工作流）
+- [X] T023 按 Constitution 维护工作流，将本特性的模板/样式与数据改动通过 Pull Request 合入：合并前确认 `npm run check` / `npm run build` 通过、十档渲染无布局破损；合并后确认 GitHub Pages 构建流水线成功
+- [X] T024 部署完成后检查线上 `/team/` 与 `/` 的实际渲染：成员、教师、标签矩阵与桌面/移动视口均无布局破损，记录结果（Constitution 维护工作流）
+
+> 2026-10-23 完成注记：T020 由用户在 Windows 与 macOS 复测通过；PR #5 已合并（`d05b24d`），GitHub Pages 部署流水线成功；线上 `/team/` 与 `/` 复核：无「王伟平」、4 位教师、学生名单含李雨晴、Scholar 标签 1 个、无照片残留。
 
 ---
 
