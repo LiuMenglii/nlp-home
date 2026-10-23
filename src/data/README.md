@@ -7,7 +7,7 @@
 | 文件 | 内容 | 对应页面 |
 |------|------|----------|
 | `site.json` | 站点品牌与命名信息（字段说明见下文「修改课题组名称 / 品牌信息」） | 顶栏品牌区、主页 Hero、页脚、标签页标题/描述、favicon |
-| `teachers.json` | 教师团队（5 位） | 主页 Team、Team 页 |
+| `teachers.json` | 教师团队（4 位） | 主页 Team、Team 页 |
 | `students.json` | 在读学生 | Team 页 |
 | `graduates.json` | 毕业生去向 | Team 页 |
 | `publications.json` | 论文全列表 | 主页 Publications、发表页 |
@@ -77,8 +77,10 @@ summary: "一句话摘要（不超过 200 字符），显示在列表页和主�
 
 - 教师信息改动 `teachers.json`：`name`、`title`（英文职称）、`advisorRole`（`"phd"` 博导 / `"master"` 硕导）、`directions`（英文研究方向，至少 1 项）、`email`、`homepage`（https 链接或 `null`）、`photo`、`bio`。
 - 更换老师照片：把图片（建议 JPEG，≤500KB）放入 `public/teachers/`，再更新 `teachers.json` 对应条目的 `photo`（`/teachers/文件名` 路径）；当前为占位图，待课题组提供授权照片后替换。
-- 学生入学/毕业：在 `students.json` 增删条目，字段为 `name`、`level`（`"phd"` / `"master"`）、`grade`（入学年份字符串，如 `"2025"`）、`url`（个人主页或 GitHub，可 `null`）、`note`。
-- 学生毕业：从 `students.json` 移除，并在 `graduates.json` 添加 `name`、`destination`（去向单位中文名）、`degree`（`"phd"` / `"master"`）、`year`（毕业年份，可 `null`）。
+- 学生入学/毕业：在 `students.json` 增删条目，字段为 `name`、`level`（`"phd"` / `"master"`）、`grade`（入学年份字符串，如 `"2025"`）、`url`（个人主页）、`github`（GitHub 主页）、`scholar`（Google Scholar 主页）、`note`。
+- `url` / `github` / `scholar` 分别渲染为成员行内的 **Homepage** / **GitHub** / **Scholar** 标签；三者**三选一（至多填一个）**，同时填写两个及以上会让 `npm run check` 与 `npm run build` 失败并指出数据文件、成员姓名与全部冲突字段；三者皆空则不显示标签。
+- 学生毕业：从 `students.json` 移除，并在 `graduates.json` 添加 `name`、`destination`（去向单位中文名）、`degree`（`"phd"` / `"master"`）、`year`（毕业年份，可 `null`）、`url` / `github` / `scholar`（三选一，同上，均可省略）。
+- 成员姓名最多 4 个汉字（两类名单的姓名列按 5em 固定宽度设计）；更长的姓名需要另开变更调整列宽。
 - 空数组 `[]` 合法：对应分组会显示英文占位文案（"coming soon"）。
 
 ### 更换 / 新增照片

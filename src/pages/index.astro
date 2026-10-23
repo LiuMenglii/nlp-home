@@ -86,10 +86,10 @@ const homePubs = [...featured, ...others].slice(0, 8);
 <style>
   .teacher-grid {
     display: grid;
-    /* 003 FR-012：与 Team 页同一组显式分档（≥1280px 每行 3 张 / 768–<1280px 每行 2 张 /
-       <768px 每行 1 张），修复原 auto-fill(320px) 在 1040–1279px 区间的越档 3 列，两页分栏一致；
-       卡片头部行为随共享 TeacherCard.astro 改动自动一致 */
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* 003 FR-012：与 Team 页同一组显式分档（≥1280px 每行 2 张 / 768–<1280px 每行 2 张 /
+       <768px 每行 1 张）；007 FR-009 将 ≥1280px 由 3 张改为 2 张，两页 4 位教师均呈 2×2；
+       卡片头部行为随共享 TeacherCard.astro 自动一致 */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
   }
 

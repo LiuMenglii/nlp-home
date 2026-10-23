@@ -125,6 +125,30 @@ const httpsUrl = z
   .optional()
   .nullable();
 
+/**
+ * 007 FR-014：成员链接字段三选一（url / github / scholar 至多一个非空）。
+ * 非空字段 ≥2 时构建失败，错误信息同时给出数据文件、成员姓名与按 url → github → scholar
+ * 顺序排列的全部冲突字段；三者皆空合法（不渲染标签）。解析错误载体在基础字段校验阶段失败，
+ * 此处以 !entry.name 防御后跳过。
+ */
+function singleLinkRefiner(dataFile: string) {
+  return (
+    entry: { name?: string; url?: string | null; github?: string | null; scholar?: string | null },
+    ctx: z.RefinementCtx,
+  ) => {
+    if (!entry.name) return;
+    const conflicts: string[] = [];
+    if (entry.url) conflicts.push('url');
+    if (entry.github) conflicts.push('github');
+    if (entry.scholar) conflicts.push('scholar');
+    if (conflicts.length < 2) return;
+    ctx.addIssue({
+      code: 'custom',
+      message: `${dataFile} 成员「${entry.name}」同时填写了 ${conflicts.join('、')} —— 每人至多填写一个链接字段（url / github / scholar 三选一）`,
+    });
+  };
+}
+
 const news = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
   schema: z.object({
@@ -224,30 +248,36 @@ const students = defineCollection({
   loader: file('src/data/students.json', {
     parser: jsonArrayParser('students.json', 'stu'),
   }),
-  schema: z.object({
-    name: z.string().min(1),
-    level: z.enum(['phd', 'master']),
-    grade: z.string().optional().nullable(),
-    url: httpsUrl,
-    github: httpsUrl,
-    note: z.string().optional().nullable(),
-    ...jsonParseErrorField,
-  }),
+  schema: z
+    .object({
+      name: z.string().min(1),
+      level: z.enum(['phd', 'master']),
+      grade: z.string().optional().nullable(),
+      url: httpsUrl,
+      github: httpsUrl,
+      scholar: httpsUrl,
+      note: z.string().optional().nullable(),
+      ...jsonParseErrorField,
+    })
+    .superRefine(singleLinkRefiner('src/data/students.json')),
 });
 
 const graduates = defineCollection({
   loader: file('src/data/graduates.json', {
     parser: jsonArrayParser('graduates.json', 'gra'),
   }),
-  schema: z.object({
-    name: z.string().min(1),
-    destination: z.string().min(1),
-    degree: z.enum(['phd', 'master']),
-    year: z.number().int().optional().nullable(),
-    url: httpsUrl,
-    github: httpsUrl,
-    ...jsonParseErrorField,
-  }),
+  schema: z
+    .object({
+      name: z.string().min(1),
+      destination: z.string().min(1),
+      degree: z.enum(['phd', 'master']),
+      year: z.number().int().optional().nullable(),
+      url: httpsUrl,
+      github: httpsUrl,
+      scholar: httpsUrl,
+      ...jsonParseErrorField,
+    })
+    .superRefine(singleLinkRefiner('src/data/graduates.json')),
 });
 
 const gallery = defineCollection({

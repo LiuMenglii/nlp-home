@@ -54,7 +54,7 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
               <span
                 class:list={[
                   'grad-links',
-                  { 'is-empty': !g.data.url && !g.data.github },
+                  { 'is-empty': !g.data.url && !g.data.github && !g.data.scholar },
                 ]}
               >
                 {g.data.url && (
@@ -65,6 +65,11 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
                 {g.data.github && (
                   <a href={g.data.github} target="_blank" rel="noopener">
                     GitHub <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+                {g.data.scholar && (
+                  <a href={g.data.scholar} target="_blank" rel="noopener">
+                    Scholar <span aria-hidden="true">↗</span>
                   </a>
                 )}
               </span>
@@ -91,10 +96,10 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
 
   .teacher-grid {
     display: grid;
-    /* 003 FR-002 显式分档列数：≥1280px 每行 3 张；768–<1280px 每行 2 张；
-       576–<768px 与 <576px 每行 1 张。断点数值以 spec FR-001 为唯一规范源，
+    /* 003 FR-002 显式分档列数；007 FR-009 将 ≥1280px 每行 3 张改为 2 张，
+       使 4 位教师呈 2×2（768–<1280px 既有 2 列、<768px 既有 1 列不变）。
        半开区间 .98px 写法保证边界紧下方即切换；minmax(0,1fr) 保证同行卡片等宽 */
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
   }
 
@@ -126,13 +131,14 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
     /* ≥768px 五列混合对齐（FR-003 / 2026-10-12 第三轮用户裁定）：
        姓名/学位/年份固定轨道左对齐；去向列 minmax(0,1fr) 弹性吸收且居中
        （左右留大间距，容纳较长去向名称；更长内容列内换行收纳）；
-       链接列固定轨道、标签右对齐贴行右缘 padding。
+       链接列固定 6.5em 轨道、标签在列内居中（007 FR-019）。
        固定宽禁用 max-content——后者随各行内容变宽、破坏跨行对齐；
        year 为空的行第 3 列留空占位（空 span 仍占据轨道） */
     display: grid;
-    /* 链接列收窄为 Homepage↗ 实际文本宽（实测约 106px ≈ 5.9em，取 6.5em 留少量余量；
-       2026-10-13 用户裁定：列宽与文字宽度大致相同），释放的宽度并入下方 column-gap */
-    grid-template-columns: 4.5em 4em 3em minmax(0, 1fr) 6.5em;
+    /* 007 FR-019：首列姓名由 4.5em 调整为 5em（两类名单统一），标签列沿用 6.5em
+       （Homepage↗ 实测 106.11px，留约 10% 余量；2026-10-13 用户裁定：列宽与文字宽度大致相同），
+       去向列相应收窄 0.5em；其余轨道与 38px 列距不变 */
+    grid-template-columns: 5em 4em 3em minmax(0, 1fr) 6.5em;
     align-items: baseline;
     /* 字段间隙加大（用户裁定）：链接列收窄释放的宽度全部转为列间距 */
     column-gap: 38px;
@@ -206,13 +212,14 @@ const degreeLabel = { phd: 'PhD', master: 'Master' } as const;
     }
   }
 
-  /* 链接列（FR-011）：Homepage↗ / GitHub↗ 标签并列于独立末列，
-     右对齐贴行右缘（第三轮裁定），间距沿用 .teacher-links 的 gap 语义 */
+  /* 链接列（FR-011 / 007 FR-019）：Homepage↗ / GitHub↗ / Scholar↗ 标签位于固定末列，
+     ≥768px 在 6.5em 列内居中（<768px 由下方高特异度规则恢复左对齐），
+     间距沿用 .teacher-links 的 gap 语义 */
   .grad-links {
     display: flex;
     flex-wrap: wrap;
     gap: 6px 18px;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .empty {

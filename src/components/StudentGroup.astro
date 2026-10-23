@@ -15,6 +15,16 @@ const byLevel = (level: 'phd' | 'master') =>
 
 const phd = byLevel('phd');
 const master = byLevel('master');
+
+// 007 FR-012：每人至多一个链接标签，按 url → github → scholar 取第一个非空字段
+const linkOf = (s: CollectionEntry<'students'>) =>
+  s.data.url
+    ? { href: s.data.url, label: 'Homepage' }
+    : s.data.github
+      ? { href: s.data.github, label: 'GitHub' }
+      : s.data.scholar
+        ? { href: s.data.scholar, label: 'Scholar' }
+        : null;
 ---
 
 <div class="student-groups">
@@ -23,24 +33,21 @@ const master = byLevel('master');
       <div class="student-group">
         <h3>PhD Candidates</h3>
         <ul>
-          {phd.map((s) => (
-            <li>
-              {s.data.url ? (
-                <a href={s.data.url} target="_blank" rel="noopener">
-                  {s.data.name}
-                </a>
-              ) : (
-                <span>{s.data.name}</span>
-              )}
-              {s.data.github && (
-                <a class="github-link" href={s.data.github} target="_blank" rel="noopener">
-                  GitHub <span aria-hidden="true">↗</span>
-                </a>
-              )}
-              {s.data.grade && <span class="grade">Since {s.data.grade}</span>}
-              {s.data.note && <span class="note">{s.data.note}</span>}
-            </li>
-          ))}
+          {phd.map((s) => {
+            const link = linkOf(s);
+            return (
+              <li>
+                <span class="student-name">{s.data.name}</span>
+                {link && (
+                  <a class="member-link" href={link.href} target="_blank" rel="noopener">
+                    {link.label} <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+                {s.data.grade && <span class="grade">Since {s.data.grade}</span>}
+                {s.data.note && <span class="note">{s.data.note}</span>}
+              </li>
+            );
+          })}
         </ul>
       </div>
     ) : (
@@ -56,24 +63,21 @@ const master = byLevel('master');
       <div class="student-group">
         <h3>Master's Students</h3>
         <ul>
-          {master.map((s) => (
-            <li>
-              {s.data.url ? (
-                <a href={s.data.url} target="_blank" rel="noopener">
-                  {s.data.name}
-                </a>
-              ) : (
-                <span>{s.data.name}</span>
-              )}
-              {s.data.github && (
-                <a class="github-link" href={s.data.github} target="_blank" rel="noopener">
-                  GitHub <span aria-hidden="true">↗</span>
-                </a>
-              )}
-              {s.data.grade && <span class="grade">Since {s.data.grade}</span>}
-              {s.data.note && <span class="note">{s.data.note}</span>}
-            </li>
-          ))}
+          {master.map((s) => {
+            const link = linkOf(s);
+            return (
+              <li>
+                <span class="student-name">{s.data.name}</span>
+                {link && (
+                  <a class="member-link" href={link.href} target="_blank" rel="noopener">
+                    {link.label} <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+                {s.data.grade && <span class="grade">Since {s.data.grade}</span>}
+                {s.data.note && <span class="note">{s.data.note}</span>}
+              </li>
+            );
+          })}
         </ul>
       </div>
     ) : (
@@ -88,11 +92,10 @@ const master = byLevel('master');
 <style>
   .student-groups {
     display: grid;
-    /* 003 FR-010 / SC-003：轨道最小宽度不得超出容器——320px 档内容区仅 288px，
-       原 minmax(320px, 1fr) 迫使轨道为 320px 宽，整组向右溢出 16px（验收实测定位）；
-       min(320px, 100%) 保证轨道永不超过容器（沿用 team.astro 既有写法）。
-       视口 ≥352px（容器 ≥320px）时行为与原来完全一致，2 列阈值不变，无回归 */
-    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+    /* 007 FR-001～FR-003：PhD Candidates 与 Master's Students 在所有视口上下排列、
+       各占内容区整行（不再按 320px 阈值并排）；minmax(0, 1fr) 保证轨道不超出容器，
+       320px 档亦不横向溢出 */
+    grid-template-columns: minmax(0, 1fr);
     gap: 32px;
   }
 
@@ -125,12 +128,21 @@ const master = byLevel('master');
     border-top: 1px solid var(--line);
   }
 
-  a {
-    color: var(--ink);
+  /* 007 FR-013 / FR-019：姓名纯文本（非链接），固定 5em 轨道（按最多 4 个汉字设计） */
+  .student-name {
+    flex: 0 0 5em;
   }
 
-  a:hover {
+  /* 007 FR-012 / FR-018：唯一链接标签固定在 6.5em 列内居中，
+     沿用站点链接色板（--blue-deep，hover --blue） */
+  .member-link {
+    flex: 0 0 6.5em;
+    text-align: center;
     color: var(--blue-deep);
+  }
+
+  .member-link:hover {
+    color: var(--blue);
   }
 
   .grade,
@@ -145,13 +157,18 @@ const master = byLevel('master');
     margin-left: auto;
   }
 
-  /* GitHub↗ 标签复用站点链接色板（区别于姓名链接的 ink 色） */
-  .github-link {
-    color: var(--blue-deep);
-  }
+  /* 007 FR-019：视口 <480px 堆叠态——姓名恢复自适应宽度，标签独占一行并左对齐；
+     DOM 顺序不变，标签以 order 后置，行序为「姓名与年级 → 备注 → 标签」 */
+  @media (max-width: 479.98px) {
+    .student-name {
+      flex: 0 0 auto;
+    }
 
-  .github-link:hover {
-    color: var(--blue);
+    .member-link {
+      order: 9;
+      flex: 0 0 100%;
+      text-align: left;
+    }
   }
 
   .empty {
