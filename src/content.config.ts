@@ -139,16 +139,40 @@ const publications = defineCollection({
   loader: file('src/data/publications.json', {
     parser: jsonArrayParser('publications.json', 'pub'),
   }),
-  schema: z.object({
-    title: z.string().min(1),
-    venue: z.string().min(1),
-    year: z.number().int().min(1980).max(2100),
-    ccf: z.enum(['A', 'B', 'C']).optional().nullable(),
-    url: httpsUrl,
-    featured: z.boolean().optional().default(false),
-    authors: z.array(z.string()).optional(),
-    ...jsonParseErrorField,
-  }),
+  schema: z
+    .object({
+      title: z.string().min(1),
+      venue: z.string().min(1),
+      year: z.number().int().min(1980).max(2100),
+      // 006 FR-011：组内排序用的时间锚点（YYYY-MM-DD）；无链接条目可缺省。
+      // 除格式外还需是合法日历日期——round-trip 拒绝 2026-02-30 这类被 Date 自动进位的值。
+      date: z
+        .string()
+        .regex(/^\d{4}-\d{2}-\d{2}$/, 'date 必须为 YYYY-MM-DD 格式')
+        .refine(
+          (s) => {
+            const t = new Date(`${s}T00:00:00Z`);
+            return !Number.isNaN(t.getTime()) && t.toISOString().slice(0, 10) === s;
+          },
+          { message: 'date 必须是合法日历日期（如 2026-02-30 不合法）' },
+        )
+        .optional(),
+      ccf: z.enum(['A', 'B', 'C']).optional().nullable(),
+      url: httpsUrl,
+      featured: z.boolean().optional().default(false),
+      authors: z.array(z.string()).optional(),
+      ...jsonParseErrorField,
+    })
+    .superRefine((pub, ctx) => {
+      // FR-011：有链接的条目 MUST 有 date，无链接条目 MUST 留空（仅允许缺省）
+      if (pub.url && !pub.date) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['date'],
+          message: `有 url 的条目 "${pub.title}" 必须填写 date（YYYY-MM-DD）`,
+        });
+      }
+    }),
 });
 
 const teachers = defineCollection({
