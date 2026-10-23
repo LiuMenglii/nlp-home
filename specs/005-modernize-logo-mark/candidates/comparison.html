@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>005 图标现代化 · 迭代 3 三版候选并排对比页</title>
+<style>
+  :root {
+    --ink: #1f2933;
+    --ink-soft: #52606d;
+    --line: #e3e7ea;
+    --bg: #f6f7f8;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 16px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 40px 32px 56px;
+  }
+  h1 {
+    margin: 0 0 6px;
+    font-size: 1.55rem;
+    letter-spacing: 0.01em;
+  }
+  .subtitle { margin: 0 0 20px; color: var(--ink-soft); font-size: 0.95rem; }
+  .badge {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 2px 8px;
+    border: 1px solid #c9d4dd;
+    border-radius: 3px;
+    background: #eef2f5;
+    color: #33475b;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    vertical-align: 2px;
+  }
+  h2 {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+  }
+  .note, .criteria {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+  }
+  .criteria ol, .note ul { margin: 0; padding-left: 20px; }
+  .criteria li, .note li { margin: 5px 0; }
+  .note p { margin: 0 0 8px; }
+  .note p:last-child { margin-bottom: 0; }
+  .meta { color: var(--ink-soft); }
+  .board {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 330px 186px 106px 200px 174px;
+    align-items: stretch;
+    min-width: 996px;
+    border-top: 1px solid var(--line);
+  }
+  .row:first-child { border-top: 0; }
+  .row.head {
+    background: #f0f2f4;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--ink-soft);
+  }
+  .row.head > div { padding: 10px 14px; }
+  .row.head .c-size span { display: block; font-weight: 400; letter-spacing: 0; }
+  .label { padding: 18px 18px 18px 20px; border-right: 1px solid var(--line); }
+  .label .code {
+    display: inline-block;
+    min-width: 30px;
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .label .name { font-weight: 600; }
+  .label .lever { margin: 6px 0 8px; color: var(--ink-soft); font-size: 0.86rem; line-height: 1.5; }
+  .label .specs { margin: 0; color: var(--ink-soft); font-size: 0.78rem; line-height: 1.55; }
+  .label .specs b { color: var(--ink); font-weight: 600; }
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 10px;
+    border-right: 1px solid var(--line);
+  }
+  .cell:last-child { border-right: 0; }
+  .cell16 { flex-direction: column; gap: 6px; }
+  .cap {
+    color: var(--ink-soft);
+    font-size: 0.7rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 10px;
+    background: #ffffff;
+    border-bottom: 1px solid #cfd6dc;
+  }
+  svg.ic { display: block; flex: 0 0 auto; }
+  .s128 { width: 170.67px; height: 128px; }
+  .s64 { width: 85.33px; height: 64px; }
+  .s22 { width: 29.33px; height: 22px; }
+  .s16 { width: 21.33px; height: 16px; }
+  footer {
+    margin-top: 20px;
+    color: var(--ink-soft);
+    font-size: 0.8rem;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>课题组图标现代化 · 三版候选并排对比</h1>
+  <p class="subtitle"><span class="badge">迭代 3</span>FR-009 评审用页面（本地打开）· 现状 + 候选 A / B / C · 四档尺寸渲染 · 零 JS、零外部请求、不进入站点构建</p>
+
+  <section class="note">
+    <h2>本轮迭代做了什么（2026-10-20）</h2>
+    <p>维护者指出：迭代 2 的三版都把「大脑电路」符号去掉了——认知/大脑是课题组标识里不可替代的一元，只留文 + 笔会把意象变成「翻译 / 写作工具」。本轮按维护者选定的「文 / 脑 / 笔 各占一带」重做：</p>
+    <ul>
+      <li><b>三个白色辅助符号全部保留</b>：文（橙带）、脑（绿带）、笔（蓝带），与现状的符号—色带对应一致；每个符号完整落在单一色带内。</li>
+      <li><b>大脑符号同语义重绘</b>：不搬回 004 的 74 条命令电路碎线，改为 <b>20.6×15.0 单位单线脑形</b>——深中央裂、左右半球、底部小凹，2.8 单位圆头笔画；64px 以上可辨，22px 下为干净点缀。</li>
+      <li><b>色带节奏</b>：60/40/40 → <b>54/42/44 · 46/42/52 · 42/42/56</b>（绿带统一 42 单位以容纳脑符号；蓝带逐版加重）。</li>
+      <li><b>分界折线</b>：53.1° → <b>56.0° / 60.1° / 62.3°</b>；<b>圆角</b> r=5 / r=6 / 非对称 r=9·5·3。</li>
+      <li><b>统一笔画</b>：A/B 2.8、C 3.0（同一版内三符号同宽，极差 0%）；文 17.2×18.3、脑 20.6×15.0、笔 18.7×18.4（光学尺寸按符号密度分级，笔画宽度不变）。</li>
+      <li><b>色彩</b>：A 逐字保留；B 三色 <b>+10% 相对明度</b>；C <b>−12% 相对明度</b>（色相锁定、饱和度基本不变，全部在 ≤20% 放宽口径内）。</li>
+      <li><b>右下尖角</b>保留并随新色带移位，圆角 r=2.5 / 3 / 3；画布仍 <code>viewBox="0 19 140 105"</code>（4:3，宽高比变化 0%）。</li>
+    </ul>
+  </section>
+
+  <section class="criteria">
+    <h2>评审口径：SC-001 身份不变量清单</h2>
+    <ol>
+      <li>三枚向右延展的箭头形色块：数量 <b>3</b>，顺序<b>橙 → 绿 → 蓝</b>，方向<b>向右</b>，整体横向构图。</li>
+      <li>白色辅助符号 <b>1–3 个</b>（本页三版均为 3 个：橙带「文」+ 绿带「脑」+ 蓝带「笔」），语义可读、完整位于单一色带内、无堆叠。</li>
+      <li>右下蓝色箭头尖角点缀仍在（本轮重绘/移位，未删除）。</li>
+      <li>三色色相不变、明度/饱和度偏移 ≤20%、无渐变；画布宽高比相对现状变化 ≤20%（三版均保持 140×105，变化 0%）。</li>
+      <li>无新增无关图形、文字或装饰；整体扁平（无渐变 / 阴影 / 发光 / 3D / 纹理 / 动效）。</li>
+      <li>新旧并排可辨认为<b>同一标识</b>（SC-006 由未参与设计的实验室老师对选定版单独评审）。</li>
+    </ol>
+  </section>
+
+  <section class="note">
+    <h2>尺寸关注点与评审时点</h2>
+    <ul>
+      <li><b>128px / 64px（≥64px 档）</b>：保留的三个白色符号主形态可逐个辨认（脑符号以中央裂与两半球辨识）；圆角与尖角清晰、无变形。</li>
+      <li><b>22px 高（顶栏实际高度）</b>：三色边界清晰；白色符号为均匀、有意的点缀——无糊块、脏边、锯齿、裁切。</li>
+      <li><b>16px 高</b>：橙 / 绿 / 蓝可相互区分，向右箭头轮廓可辨。</li>
+    </ul>
+    <p class="meta">16px 说明：favicon 将按选定版派生，此列为<b>完整图标缩至 16px 的等比模拟</b>，非 favicon 资产。</p>
+    <p class="meta">候选阶段对 SC-002（小尺寸干净）与 SC-003（视觉一致性）仅作目视定性判断；两者的量化验收只针对选定版执行。</p>
+  </section>
+
+  <div class="board">
+    <div class="row head">
+      <div>版本 / 杠杆与口径</div>
+      <div class="c-size">128px<span>放大查看</span></div>
+      <div class="c-size">64px<span>≥64px 档</span></div>
+      <div class="c-size">22px 高<span>白底顶栏模拟条</span></div>
+      <div class="c-size">16px 高<span>等比模拟（非 favicon）</span></div>
+    </div>
+
+    <div class="row">
+      <div class="label">
+        <div class="code">现状</div>
+        <div class="name">HEAD 版（基线）</div>
+        <p class="lever">三个白色符号：文A、大脑电路、钢笔；分界 53.1°、节奏 60/40/40、外轮廓锐利；22px 顶栏下白色糊成一片、钢笔近乎消失。</p>
+        <p class="specs"><b>宽高比 Δ</b> 0% · <b>色偏 Δ</b> 0% · <b>符号</b> 3 · <b>圆角</b> 锐利 · <b>节奏</b> 60/40/40 · <b>分界</b> 53.1°</p>
+      </div>
+      <div class="cell"><svg class="ic s128" viewBox="0 19 140 105" role="img" aria-label="现状图标 128px 渲染"><use href="#cur"/></svg></div>
+      <div class="cell"><svg class="ic s64" viewBox="0 19 140 105" role="img" aria-label="现状图标 64px 渲染"><use href="#cur"/></svg></div>
+      <div class="cell"><div class="bar"><svg class="ic s22" viewBox="0 19 140 105" role="img" aria-label="现状图标 22px 高顶栏模拟"><use href="#cur"/></svg></div></div>
+      <div class="cell cell16"><svg class="ic s16" viewBox="0 19 140 105" role="img" aria-label="现状图标缩至 16px 的等比模拟"><use href="#cur"/></svg><div class="cap">等比模拟<br>非 favicon 资产</div></div>
+    </div>
+
+    <div class="row">
+      <div class="label">
+        <div class="code">A</div>
+        <div class="name">疾进（几何升级）</div>
+        <p class="lever">分界 53.1° → <b>56.0°</b>，节奏 <b>54/42/44</b>（橙带最宽，推进起点最平缓），外轮廓六顶点 <b>r=5</b> 圆角、尖角 r=2.5；三符号 2.8 笔画；色值逐字保留。</p>
+        <p class="specs"><b>宽高比 Δ</b> 0% · <b>色偏 Δ</b> 0% · <b>符号</b> 3 · <b>圆角</b> r=5 / 尖角 r=2.5 · <b>节奏</b> 54/42/44 · <b>分界</b> 56.0°</p>
+      </div>
+      <div class="cell"><svg class="ic s128" viewBox="0 19 140 105" role="img" aria-label="候选 A 128px 渲染"><use href="#cand-a"/></svg></div>
+      <div class="cell"><svg class="ic s64" viewBox="0 19 140 105" role="img" aria-label="候选 A 64px 渲染"><use href="#cand-a"/></svg></div>
+      <div class="cell"><div class="bar"><svg class="ic s22" viewBox="0 19 140 105" role="img" aria-label="候选 A 22px 高顶栏模拟"><use href="#cand-a"/></svg></div></div>
+      <div class="cell cell16"><svg class="ic s16" viewBox="0 19 140 105" role="img" aria-label="候选 A 缩至 16px 的等比模拟"><use href="#cand-a"/></svg><div class="cap">等比模拟<br>非 favicon 资产</div></div>
+    </div>
+
+    <div class="row">
+      <div class="label">
+        <div class="code">B</div>
+        <div class="name">锋锐（几何 + 提亮）</div>
+        <p class="lever">A 的几何继续推进：分界 <b>60.1°</b>、节奏 <b>46/42/52</b>、外轮廓 <b>r=6</b>、尖角 r=3；三色统一提亮 <b>+10% 相对明度</b>（#f8a138 / #2cbf77 / #038bd5，ΔS ≤0.2%、色相不变）；三符号 2.8 笔画。</p>
+        <p class="specs"><b>宽高比 Δ</b> 0% · <b>色偏 Δ</b> L +9.8~10.2% / S ≤0.2% · <b>符号</b> 3 · <b>圆角</b> r=6 / 尖角 r=3 · <b>节奏</b> 46/42/52 · <b>分界</b> 60.1°</p>
+      </div>
+      <div class="cell"><svg class="ic s128" viewBox="0 19 140 105" role="img" aria-label="候选 B 128px 渲染"><use href="#cand-b"/></svg></div>
+      <div class="cell"><svg class="ic s64" viewBox="0 19 140 105" role="img" aria-label="候选 B 64px 渲染"><use href="#cand-b"/></svg></div>
+      <div class="cell"><div class="bar"><svg class="ic s22" viewBox="0 19 140 105" role="img" aria-label="候选 B 22px 高顶栏模拟"><use href="#cand-b"/></svg></div></div>
+      <div class="cell cell16"><svg class="ic s16" viewBox="0 19 140 105" role="img" aria-label="候选 B 缩至 16px 的等比模拟"><use href="#cand-b"/></svg><div class="cap">等比模拟<br>非 favicon 资产</div></div>
+    </div>
+
+    <div class="row">
+      <div class="label">
+        <div class="code">C</div>
+        <div class="name">极构（最大跨度）</div>
+        <p class="lever">分界 <b>62.3°</b>、节奏 <b>42/42/56</b>（蓝带约占四成），<b>非对称圆角</b>（左端 r=9、右端 r=3、其余 r=5），三色统一加深 <b>−12% 相对明度</b>（#eb8408 / #23995f / #036fab，ΔS ≤0.4%、色相不变），三符号 3.0 笔画，尖角 r=3。</p>
+        <p class="specs"><b>宽高比 Δ</b> 0% · <b>色偏 Δ</b> L −11.7~−12.1% / S ≤0.4% · <b>符号</b> 3 · <b>圆角</b> 非对称 r=9/5/3 · <b>节奏</b> 42/42/56 · <b>分界</b> 62.3°</p>
+      </div>
+      <div class="cell"><svg class="ic s128" viewBox="0 19 140 105" role="img" aria-label="候选 C 128px 渲染"><use href="#cand-c"/></svg></div>
+      <div class="cell"><svg class="ic s64" viewBox="0 19 140 105" role="img" aria-label="候选 C 64px 渲染"><use href="#cand-c"/></svg></div>
+      <div class="cell"><div class="bar"><svg class="ic s22" viewBox="0 19 140 105" role="img" aria-label="候选 C 22px 高顶栏模拟"><use href="#cand-c"/></svg></div></div>
+      <div class="cell cell16"><svg class="ic s16" viewBox="0 19 140 105" role="img" aria-label="候选 C 缩至 16px 的等比模拟"><use href="#cand-c"/></svg><div class="cap">等比模拟<br>非 favicon 资产</div></div>
+    </div>
+  </div>
+
+  <footer>
+    本页为 FR-009 评审用临时产物（MUST NOT 进入 public/、src/ 或站点构建产物；不部署）。四个图标以内联
+    &lt;defs&gt; + &lt;use&gt; 各定义一次；现状图标为创建本页时 public/logo.svg 的内联快照，不运行时引用站点路径。
+    三版候选均为 SVG 1.1 纯矢量、viewBox 0 19 140 105（4:3），无渐变 / 滤镜 / 位图 / 脚本 / 编辑器元数据；
+    三版均通过 SC-001 身份不变量自查（三色三块、顺序橙→绿→蓝、向右；3 个白色符号（文 / 脑 / 笔）；右下尖角保留；色相不变、L/S 偏移 ≤12.1%；宽高比变化 0%）。
+  </footer>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- 现状图标：HEAD 版 public/logo.svg 的逐字快照（仅省略注释） -->
+    <g id="cur">
+      <path fill="#037ec2" d="M119.142 79.505 L110.176 123.319 80.505 89.858 Z" />
+      <path fill="#037ec2" d="M70 19 L110 19 140 59 110 99 70 99 100 59 Z" />
+      <path fill="#28ae6c" d="M30 19 L70 19 100 59 70 99 30 99 60 59 Z" />
+      <path fill="#f7941d" d="M30 19 L60 59 30 99 0 59 Z" />
+      <g fill="#ffffff" transform="translate(19.5 49.5)">
+        <path d="M15.91 7.2h-1.82L10 18h1.82l1-2.7h4.32l1 2.7H20zm-2.39 6.3L15 9.6l1.48 3.9z" />
+        <path fill-rule="evenodd" d="M10.79 11.77L8.48 9.51h0a15.62 15.62 0 0 0 3.4-5.91h2.67V1.8H8.18V0H6.36v1.8H0v1.79h10.15a14.06 14.06 0 0 1-2.88 4.82 14.55 14.55 0 0 1-2.1-3H3.35a16 16 0 0 0 2.71 4.1L1.44 14l1.29 1.3 4.54-4.5 2.83 2.8z" />
+      </g>
+      <g fill="#ffffff" fill-rule="evenodd" transform="translate(64.5 49.5) scale(1 1.028571)">
+        <path d="M18.91 10.63L20 8.75 17.82 5h-3.07l-1.06-1.86H12.5V1.88h1.94l1.06 1.87h1.59L14.9 0h-4.27v5h1.73l.73 1.25h-2.46v2.5h2.26l1.05-1.87h2.81l.72 1.25h-2.8L13.62 10h-2.99v4.38h3.4l-.72 1.25h-2.68v1.87h4.27l3.28-5.62h-2.09l-.73 1.25H12.5v-1.25h2.14l.74-1.25z" />
+        <path d="M1.09 10.63L0 8.75 2.18 5h3.07l1.06-1.86H7.5V1.88H5.56L4.5 3.75H2.91L5.1 0h4.28v5H7.64l-.73 1.25h2.47v2.5H7.11L6.06 6.88H3.25l-.72 1.25h2.8L6.38 10h3v4.38H5.97l.72 1.25h2.69v1.87H5.1l-3.28-5.62h2.09l.73 1.25H7.5v-1.25H5.36l-.74-1.25z" />
+      </g>
+      <path fill="#ffffff" d="M 114.66 54.84 L 120.32 49.22 C 120.49 49.03 120.8 49 120.99 49.18 L 121.82 50.01 L 122.29 49.54 C 122.87 49.04 123.7 49.06 124.36 49.64 C 125 50.38 124.9 51.24 124.49 51.7 L 117.62 58.57 L 115.44 56.39 L 121.25 50.63 L 120.68 50.06 L 116.52 54.21 C 116.53 54.55 116.32 54.85 116.11 55.03 C 115.75 55.3 115.49 55.37 115.17 55.36 Z M 116.79 58.98 L 109.15 66.62 L 108.95 66.41 L 107.24 68.11 C 107.01 68.34 106.71 68.44 106.4 68.38 L 105.21 68.95 C 105.09 69 105 68.99 105.05 68.81 L 105.63 67.6 C 105.58 67.31 105.69 66.98 105.9 66.76 L 107.6 65.06 L 107.39 64.86 L 115.02 57.22 Z" />
+    </g>
+
+    <!-- 候选 A「疾进」：candidates/candidate-a.svg 逐字快照（clipPath id 改为 clip-a 以满足页内唯一） -->
+    <clipPath id="clip-a">
+      <path d="M1.89 61.8 A5 5 0 0 1 1.89 56.2 L25.51 21.2 A5 5 0 0 1 29.66 19 L110.34 19 A5 5 0 0 1 114.49 21.2 L138.11 56.2 A5 5 0 0 1 138.11 61.8 L114.49 96.8 A5 5 0 0 1 110.34 99 L29.66 99 A5 5 0 0 1 25.51 96.8 L1.89 61.8 Z" />
+    </clipPath>
+    <g id="cand-a">
+      <g clip-path="url(#clip-a)">
+        <path fill="#f7941d" d="M27 19 L54 59 27 99 0 59 Z" />
+        <path fill="#28ae6c" d="M27 19 L69 19 L96 59 69 99 27 99 54 59 Z" />
+        <path fill="#037ec2" d="M69 19 L113 19 140 59 113 99 69 99 96 59 Z" />
+      </g>
+      <path fill="#037ec2" d="M117.79 80.55 A2.5 2.5 0 0 1 120.89 83.47 L113.71 118.42 A2.5 2.5 0 0 1 109.39 119.57 L85.78 92.88 A2.5 2.5 0 0 1 87 88.81 L117.79 80.55 Z" />
+      <g fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(27 59)"><path d="M0 -7.91 V-6.81"/> <path d="M-7.18 -3.31 H7.18"/> <path d="M-6.26 0.18 L6.07 7.54"/> <path d="M6.26 0.18 L-6.07 7.54"/></g>
+        <g transform="translate(75 59.99)"><path d="M0 -3.8C-0.76 -5.89 -2.09 -6.84 -3.42 -6.84C-5.32 -7.6 -7.22 -6.65 -8.17 -4.75C-9.12 -3.23 -9.12 -0.57 -8.17 0.95C-7.6 3.23 -5.89 4.94 -3.61 5.13L0 4.75L3.61 5.13C5.89 4.94 7.6 3.23 8.17 0.95C9.12 -0.57 9.12 -3.23 8.17 -4.75C7.22 -6.65 5.32 -7.6 3.42 -6.84C2.09 -6.84 0.76 -5.89 0 -3.8Z"/> <path d="M0 -3.61V0.95"/></g>
+        <g transform="translate(118 59)"><path d="M-7.95 7.83 L-3.18 5.99 L7.94 -5.13 L5.25 -7.82 L-5.87 3.3 Z"/></g>
+      </g>
+    </g>
+
+    <!-- 候选 B「锋锐」：candidates/candidate-b.svg 逐字快照（clipPath id 改为 clip-b 以满足页内唯一） -->
+    <clipPath id="clip-b">
+      <path d="M1.72 61.99 A6 6 0 0 1 1.72 56.01 L21.27 22.01 A6 6 0 0 1 26.47 19 L113.53 19 A6 6 0 0 1 118.73 22.01 L138.28 56.01 A6 6 0 0 1 138.28 61.99 L118.73 95.99 A6 6 0 0 1 113.53 99 L26.47 99 A6 6 0 0 1 21.27 95.99 L1.72 61.99 Z" />
+    </clipPath>
+    <g id="cand-b">
+      <g clip-path="url(#clip-b)">
+        <path fill="#f8a138" d="M23 19 L46 59 23 99 0 59 Z" />
+        <path fill="#2cbf77" d="M23 19 L65 19 L88 59 65 99 23 99 46 59 Z" />
+        <path fill="#038bd5" d="M65 19 L117 19 140 59 117 99 65 99 88 59 Z" />
+      </g>
+      <path fill="#038bd5" d="M118.61 80.76 A3 3 0 0 1 122.32 84.26 L115.51 117.44 A3 3 0 0 1 110.32 118.82 L87.91 93.49 A3 3 0 0 1 89.38 88.6 L118.61 80.76 Z" />
+      <g fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(23 59)"><path d="M0 -7.91 V-6.81"/> <path d="M-7.18 -3.31 H7.18"/> <path d="M-6.26 0.18 L6.07 7.54"/> <path d="M6.26 0.18 L-6.07 7.54"/></g>
+        <g transform="translate(67 59.99)"><path d="M0 -3.8C-0.76 -5.89 -2.09 -6.84 -3.42 -6.84C-5.32 -7.6 -7.22 -6.65 -8.17 -4.75C-9.12 -3.23 -9.12 -0.57 -8.17 0.95C-7.6 3.23 -5.89 4.94 -3.61 5.13L0 4.75L3.61 5.13C5.89 4.94 7.6 3.23 8.17 0.95C9.12 -0.57 9.12 -3.23 8.17 -4.75C7.22 -6.65 5.32 -7.6 3.42 -6.84C2.09 -6.84 0.76 -5.89 0 -3.8Z"/> <path d="M0 -3.61V0.95"/></g>
+        <g transform="translate(114 59)"><path d="M-7.95 7.83 L-3.18 5.99 L7.94 -5.13 L5.25 -7.82 L-5.87 3.3 Z"/></g>
+      </g>
+    </g>
+
+    <!-- 候选 C「极构」：candidates/candidate-c.svg 逐字快照（clipPath id 改为 clip-c 以满足页内唯一） -->
+    <clipPath id="clip-c">
+      <path d="M2.2 63.18 A9 9 0 0 1 2.2 54.82 L19.6 21.68 A5 5 0 0 1 24.02 19 L115.98 19 A5 5 0 0 1 120.4 21.68 L139.27 57.61 A3 3 0 0 1 139.27 60.39 L120.4 96.32 A5 5 0 0 1 115.98 99 L24.02 99 A5 5 0 0 1 19.6 96.32 L2.2 63.18 Z" />
+    </clipPath>
+    <g id="cand-c">
+      <g clip-path="url(#clip-c)">
+        <path fill="#eb8408" d="M21 19 L42 59 21 99 0 59 Z" />
+        <path fill="#23995f" d="M21 19 L63 19 L84 59 63 99 21 99 42 59 Z" />
+        <path fill="#036fab" d="M63 19 L119 19 140 59 119 99 63 99 84 59 Z" />
+      </g>
+      <path fill="#036fab" d="M119.57 80.76 A3 3 0 0 1 123.29 84.26 L116.5 117.43 A3 3 0 0 1 111.32 118.82 L88.91 93.49 A3 3 0 0 1 90.38 88.6 L119.57 80.76 Z" />
+      <g fill="none" stroke="#ffffff" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(21 59)"><path d="M0 -7.91 V-6.81"/> <path d="M-7.18 -3.31 H7.18"/> <path d="M-6.26 0.18 L6.07 7.54"/> <path d="M6.26 0.18 L-6.07 7.54"/></g>
+        <g transform="translate(63 59.99)"><path d="M0 -3.8C-0.76 -5.89 -2.09 -6.84 -3.42 -6.84C-5.32 -7.6 -7.22 -6.65 -8.17 -4.75C-9.12 -3.23 -9.12 -0.57 -8.17 0.95C-7.6 3.23 -5.89 4.94 -3.61 5.13L0 4.75L3.61 5.13C5.89 4.94 7.6 3.23 8.17 0.95C9.12 -0.57 9.12 -3.23 8.17 -4.75C7.22 -6.65 5.32 -7.6 3.42 -6.84C2.09 -6.84 0.76 -5.89 0 -3.8Z"/> <path d="M0 -3.61V0.95"/></g>
+        <g transform="translate(112 59)"><path d="M-7.95 7.83 L-3.18 5.99 L7.94 -5.13 L5.25 -7.82 L-5.87 3.3 Z"/></g>
+      </g>
+    </g>
+  </defs>
+</svg>
+</body>
+</html>
