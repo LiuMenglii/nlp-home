@@ -25,6 +25,10 @@ const { rating } = Astro.props;
     color: #ffffff;
     background: var(--ink-soft);
     white-space: nowrap;
+    /* FR-005：CCF-A / CCF-B / CCF-C 实测最大宽度归一化（box-sizing: border-box 含 padding），
+       保证同类标签跨条目宽度极差 <1px；只改布局宽度，配色与字号不变 */
+    min-inline-size: 59.66px;
+    text-align: center;
   }
 
   .ccf-A {

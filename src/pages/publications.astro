@@ -5,17 +5,43 @@ import SectionHeading from '../components/SectionHeading.astro';
 import PublicationItem from '../components/PublicationItem.astro';
 import site from '../data/site.json';
 
-// 全列表：year 降序分组；组内按标题字母序保证稳定输出
+// 全列表：year 降序（组内顺序统一交给 sortByDate，避免 locale 规则混入）
 const publications = (await getCollection('publications')).sort(
-  (a, b) => b.data.year - a.data.year || a.data.title.localeCompare(b.data.title),
+  (a, b) => b.data.year - a.data.year,
 );
+
+// FR-007：date 降序（空串最小、自然落到组末），同日期按标题字符串字典序升序
+const sortByDate = (
+  a: (typeof publications)[number],
+  b: (typeof publications)[number],
+) => {
+  const da = a.data.date ?? '';
+  const db = b.data.date ?? '';
+  if (da === db) {
+    return a.data.title < b.data.title ? -1 : a.data.title > b.data.title ? 1 : 0;
+  }
+  return da < db ? 1 : -1;
+};
 
 const years = [...new Set(publications.map((p) => p.data.year))].sort(
   (a, b) => b - a,
 );
-const byYear = new Map<number, typeof publications>(
-  years.map((y) => [y, publications.filter((p) => p.data.year === y)]),
-);
+const recentYears = years.filter((y) => y >= 2020);
+const earlier = publications.filter((p) => p.data.year <= 2019);
+
+// 导航与分组共用同一数组：2020+ 每年一组，2019 及以前合并为最后一组
+const groups = recentYears.map((y) => ({
+  key: `year-${y}`,
+  label: String(y),
+  items: publications.filter((p) => p.data.year === y).sort(sortByDate),
+}));
+if (earlier.length > 0) {
+  groups.push({
+    key: 'year-2019-earlier',
+    label: '2019 & Earlier',
+    items: [...earlier].sort(sortByDate),
+  });
+}
 ---
 
 <BaseLayout title={`Publications · ${site.groupName} ${site.navBrand}`}>
@@ -24,21 +50,24 @@ const byYear = new Map<number, typeof publications>(
 
     <nav class="year-nav" aria-label="Jump to year">
       {
-        years.map((y) => (
-          <a class="year-chip" href={`#year-${y}`}>
-            {y}
-            <span class="year-count">{byYear.get(y)!.length}</span>
+        groups.map((g) => (
+          <a class="year-chip" href={`#${g.key}`}>
+            {g.label}
+            <span class="year-count">{g.items.length}</span>
           </a>
         ))
       }
     </nav>
 
     {
-      years.map((y) => (
-        <section class="year-group" id={`year-${y}`} aria-labelledby={`year-${y}-heading`}>
-          <h3 id={`year-${y}-heading`}>{y}</h3>
+      groups.map((g) => (
+        <section class="year-group" id={g.key} aria-labelledby={`${g.key}-heading`}>
+          <h3 id={`${g.key}-heading`}>
+            {g.label}
+            <span class="group-count">({g.items.length})</span>
+          </h3>
           <div class="year-list">
-            {byYear.get(y)!.map((pub) => (
+            {g.items.map((pub) => (
               <PublicationItem pub={pub} />
             ))}
           </div>
@@ -87,5 +116,58 @@ const byYear = new Map<number, typeof publications>(
     margin: 0 0 8px;
     font-size: 1.3rem;
     color: var(--blue-deep);
+  }
+
+  .group-count {
+    display: none;
+    margin-left: 6px;
+  }
+
+  /* FR-008（<768px）：视觉隐藏年份标签墙（DOM 保留），分组标题吸顶定位。
+     top / scroll-margin-top 取各档 .site-header 实测高度：
+     452–767.98px 为 63.39px，325–451.98px 为 93.47px，≤324.98px 为 135.86px。 */
+  @media (max-width: 767.98px) {
+    .year-nav {
+      display: none;
+    }
+
+    .year-group {
+      scroll-margin-top: 71.39px;
+    }
+
+    .year-group h3 {
+      position: sticky;
+      top: 63.39px;
+      z-index: 5; /* 低于 .site-header 的 10 */
+      margin: 0;
+      padding-block: 4px;
+      background: #ffffff;
+      line-height: 26px; /* 1.3rem 字号对应的固定单行行高，计数增宽不增高 */
+      white-space: nowrap;
+    }
+
+    .group-count {
+      display: inline;
+    }
+  }
+
+  @media (max-width: 451.98px) {
+    .year-group {
+      scroll-margin-top: 101.47px;
+    }
+
+    .year-group h3 {
+      top: 93.47px;
+    }
+  }
+
+  @media (max-width: 324.98px) {
+    .year-group {
+      scroll-margin-top: 143.86px;
+    }
+
+    .year-group h3 {
+      top: 135.86px;
+    }
   }
 </style>

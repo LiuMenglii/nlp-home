@@ -8,9 +8,14 @@ interface Props {
 
 const { pub } = Astro.props;
 const { title, venue, year, ccf, url } = pub.data;
+// FR-005：固定双槽——CCF 左槽、LINK 右槽；缺失槽渲染同构隐藏占位保持列线，
+// 两标签皆缺时不渲染标签簇（不留空槽、不留空白区）
+const hasCcf = Boolean(ccf);
+const hasLink = Boolean(url);
+const hasBadges = hasCcf || hasLink;
 ---
 
-<article class="pub-item">
+<article class="pub-item" data-date={pub.data.date ?? ''}>
   <div class="pub-main">
     <span class="pub-title">
       {
@@ -25,25 +30,41 @@ const { title, venue, year, ccf, url } = pub.data;
     </span>
     <span class="pub-venue">{venue}{year ? ` · ${year}` : ''}</span>
   </div>
-  <div class="pub-side">
-    <CCFBadge rating={ccf ?? null} />
-    {
-      url && (
-        <a class="pub-link" href={url} target="_blank" rel="noopener">
-          Link <span aria-hidden="true">↗</span>
-        </a>
-      )
-    }
-  </div>
+  {
+    hasBadges && (
+      <div class="pub-side">
+        <span
+          class:list={['pub-slot', 'pub-slot-ccf', !hasCcf && 'pub-slot--empty']}
+          aria-hidden={hasCcf ? undefined : 'true'}
+        >
+          <CCFBadge rating={hasCcf ? ccf : 'A'} />
+        </span>
+        <span
+          class:list={['pub-slot', 'pub-slot-link', !hasLink && 'pub-slot--empty']}
+          aria-hidden={hasLink ? undefined : 'true'}
+        >
+          {hasLink ? (
+            <a class="pub-link" href={url} target="_blank" rel="noopener">
+              Link <span aria-hidden="true">↗</span>
+            </a>
+          ) : (
+            <span class="pub-link">Link ↗</span>
+          )}
+        </span>
+      </div>
+    )
+  }
 </article>
 
 <style>
+  /* FR-002（≥768px）：单一 flex 容器两栏——文本区（可换行）+ 固定右栏标签簇。
+     外层 nowrap 从结构上杜绝「期刊名换行把标签簇挤到下方」；文本区内部按 max-content
+     宽度判定换行，期刊名不能与标题共行时整体另起一行。 */
   .pub-item {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: baseline;
-    justify-content: space-between;
-    gap: 4px 16px;
+    column-gap: 16px;
     padding: 12px 0;
     border-bottom: 1px solid var(--line);
   }
@@ -53,17 +74,20 @@ const { title, venue, year, ccf, url } = pub.data;
   }
 
   .pub-main {
+    flex: 1 1 0;
+    min-width: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 6px 12px;
-    min-width: 0;
+    column-gap: 12px;
+    row-gap: 6px;
   }
 
   .pub-title {
     font-size: 1.05rem;
     font-weight: 500;
     color: var(--ink);
+    flex: 0 1 auto;
   }
 
   .pub-title a {
@@ -77,16 +101,79 @@ const { title, venue, year, ccf, url } = pub.data;
   .pub-venue {
     color: var(--ink-soft);
     font-size: 1rem;
+    flex: 0 1 auto;
+    min-width: 0;
   }
 
   .pub-side {
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
-    gap: 10px;
+    column-gap: 10px;
+  }
+
+  /* 槽内两个标签以槽中线对齐，消除 baseline 对齐造成的垂直中心偏差（FR-005） */
+  .pub-slot {
+    display: flex;
+    align-items: center;
+  }
+
+  /* 缺失槽占位：保留布局宽度，但不可见、不进入无障碍树（另由 aria-hidden 移出） */
+  .pub-slot--empty {
+    visibility: hidden;
   }
 
   .pub-link {
     font-size: 1rem;
     white-space: nowrap;
+  }
+
+  /* FR-003（576–<768px）：标题独占首行；期刊名与标签簇同处第二行，
+     标签簇按基线对齐期刊名首行、不下坠。用 grid 两列保证换行位置确定
+     （flex 以 flex-basis 判定断行，basis:0 的期刊名会被收进标题行末并塌缩为 0 宽）。 */
+  @media (max-width: 767.98px) {
+    .pub-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: baseline;
+      row-gap: 6px;
+      column-gap: 0;
+    }
+
+    .pub-main {
+      display: contents;
+    }
+
+    .pub-title {
+      grid-column: 1 / -1;
+    }
+
+    .pub-venue {
+      grid-column: 1;
+      grid-row: 2;
+      min-width: 0;
+    }
+
+    .pub-side {
+      grid-column: 2;
+      grid-row: 2;
+      margin-left: 12px;
+    }
+  }
+
+  /* FR-004（<576px）：三行——标题 / 期刊名 / 右对齐标签簇；
+     无标签条目不渲染 .pub-side，故不产生空白第三行。 */
+  @media (max-width: 575.98px) {
+    .pub-title,
+    .pub-venue {
+      grid-column: 1 / -1;
+    }
+
+    .pub-side {
+      grid-column: 1 / -1;
+      grid-row: 3;
+      justify-self: end;
+      align-self: auto;
+    }
   }
 </style>
