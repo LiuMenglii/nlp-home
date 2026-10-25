@@ -1,9 +1,11 @@
 <!--
 Sync Impact Report
 ==================
-Version change: 2.0.0 → 2.1.0 (MINOR：新增原则 VI「无布局破损（不可妥协）」，并给出布局破损的可判定定义)
-Modified principles: 无（I–V 未重命名、未改定义）
-Added sections: Core Principles § VI. 无布局破损（不可妥协）
+Version change: 2.1.0 → 2.1.1 (PATCH：澄清原则 VI 中 `overflow-x: hidden` 禁令的适用边界——禁止页面级
+掩盖，明确组件块内滚动允许)
+Modified principles: VI. 无布局破损（不可妥协）——仅改写 `overflow-x: hidden` 相关判定的措辞与适用范围，
+破损定义 1–5 未变
+Added sections: 无
 Removed sections: 无
 Templates requiring updates: 无（本命令不改动依赖模板）
 Deferred items: 无
@@ -59,7 +61,14 @@ Deferred items: 无
   5. **页面横向溢出**：页面级出现横向滚动，即 `document.documentElement.scrollWidth` 大于
      `window.innerWidth`。
 - 破损判定 MUST 基于真实浏览器渲染，覆盖项目声明的支持视口矩阵；MUST NOT 仅凭静态代码阅读或
-  设计稿推断，MUST NOT 用 `overflow-x: hidden` 掩盖页面横向溢出。
+  设计稿推断。
+- 页面级横向溢出 MUST NOT 通过在页面级容器（`html` / `body` / 页级布局包装层）上设置
+  `overflow-x: hidden`（或 `clip`）来掩盖：裁剪只会藏起缺陷，并使 `scrollWidth` 验收失真；
+  页面是否溢出 MUST 以逐元素 `getBoundingClientRect()` 越界检查为权威判据，MUST NOT 以被裁剪后的
+  `scrollWidth` 单独判定通过。
+- 组件块内的滚动不在上一条禁令范围内，且属明确允许的做法：代码块、宽表格、参考文献块等控件 MAY 在
+  自身容器内使用 `overflow-x: auto` 承载超宽内容。前提是该滚动为需求中已声明的交互、滚动范围仅限
+  块内、MUST NOT 撑宽页面；此类块内滚动 MUST NOT 被用作兜底以掩盖页面级溢出。
 - 布局破损 MUST 按缺陷处理，其修复优先级高于新增功能。
 - 涉及模板、样式或响应式断点的变更 MUST 在合并前按上述口径逐项检查并记录结果。
 
@@ -92,4 +101,4 @@ Deferred items: 无
   PATCH——措辞澄清、笔误修正。
 - 所有变更与审查 MUST 核对本文档的合规性；无法用简单方案解释的复杂度 MUST 在 PR 中给出书面理由。
 
-**Version**: 2.1.0 | **Ratified**: 2026-10-09 | **Last Amended**: 2026-10-23
+**Version**: 2.1.1 | **Ratified**: 2026-10-09 | **Last Amended**: 2026-10-23

@@ -1,0 +1,91 @@
+[
+  {
+    "case": "highlight-unclosed",
+    "exit": 1,
+    "newsWidgetsWarningCount": 0,
+    "diagnostics": [
+      "16:57:49 [ERROR] [glob-loader] Error rendering __t055_highlight-unclosed.md: [news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t055_highlight-unclosed.md:7 highlight 容器未闭合：缺少结尾 `:::`。",
+      "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t055_highlight-unclosed.md:7 highlight 容器未闭合：缺少结尾 `:::`。",
+      "16:57:49 [ERROR] [news-widgets-validation] An unhandled error occurred while running the \"astro:build:start\" hook"
+    ]
+  },
+  {
+    "case": "table-unclosed",
+    "exit": 1,
+    "newsWidgetsWarningCount": 0,
+    "diagnostics": [
+      "16:57:51 [ERROR] [glob-loader] Error rendering __t055_table-unclosed.md: [news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t055_table-unclosed.md:7 table 容器未闭合：缺少结尾 `:::`。",
+      "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t055_table-unclosed.md:7 table 容器未闭合：缺少结尾 `:::`。",
+      "16:57:51 [ERROR] [news-widgets-validation] An unhandled error occurred while running the \"astro:build:start\" hook"
+    ]
+  },
+  {
+    "case": "bibtex-uppercase",
+    "exit": 1,
+    "newsWidgetsWarningCount": 0,
+    "diagnostics": [
+      "16:57:53 [ERROR] [glob-loader] Error rendering __t055_bibtex-uppercase.md: [news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t055_bibtex-uppercase.md:7 代码块语言标记 \"BibTeX\" 无效：BibTeX 引用块必须使用小写 `bibtex`（如 ```bibtex）。",
+      "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t055_bibtex-uppercase.md:7 代码块语言标记 \"BibTeX\" 无效：BibTeX 引用块必须使用小写 `bibtex`（如 ```bibtex）。",
+      "16:57:53 [ERROR] [news-widgets-validation] An unhandled error occurred while running the \"astro:build:start\" hook"
+    ]
+  },
+  {
+    "case": "bibtex-bib",
+    "exit": 1,
+    "newsWidgetsWarningCount": 0,
+    "diagnostics": [
+      "16:57:55 [ERROR] [glob-loader] Error rendering __t055_bibtex-bib.md: [news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t055_bibtex-bib.md:7 代码块语言标记 \"bib\" 无效：BibTeX 引用块必须使用小写 `bibtex`（如 ```bibtex）。",
+      "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t055_bibtex-bib.md:7 代码块语言标记 \"bib\" 无效：BibTeX 引用块必须使用小写 `bibtex`（如 ```bibtex）。",
+      "16:57:55 [ERROR] [news-widgets-validation] An unhandled error occurred while running the \"astro:build:start\" hook"
+    ]
+  },
+  {
+    "case": "highlight-empty",
+    "exit": 0,
+    "newsWidgetsWarningCount": 1,
+    "diagnostics": [
+      "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t055_highlight-empty.md:7 高亮块内容为空，已整块移除。"
+    ]
+  },
+  {
+    "case": "bibtex-empty",
+    "exit": 0,
+    "newsWidgetsWarningCount": 1,
+    "diagnostics": [
+      "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t055_bibtex-empty.md:7 BibTeX 引用块内容为空，已保留空代码块且不生成复制按钮。"
+    ]
+  },
+  {
+    "case": "unknown-container",
+    "exit": 0,
+    "newsWidgetsWarningCount": 1,
+    "diagnostics": [
+      "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t055_unknown-container.md:7 未知容器指令 :::foo 已展开为普通内容。"
+    ]
+  },
+  {
+    "case": "table-trailing-fence",
+    "exit": 0,
+    "newsWidgetsWarningCount": 1,
+    "diagnostics": [
+      "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t055_table-trailing-fence.md:7 表格结尾的 `:::` 被解析进表格末行，已删除；建议在结尾 `:::` 前留一个空行。"
+    ]
+  },
+  {
+    "case": "table-empty",
+    "exit": 0,
+    "newsWidgetsWarningCount": 1,
+    "diagnostics": [
+      "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t055_table-empty.md:7 表格块内没有 Markdown 表格，已移除容器并保留正文。"
+    ]
+  },
+  {
+    "case": "image-missing",
+    "exit": 1,
+    "newsWidgetsWarningCount": 0,
+    "diagnostics": [
+      "16:58:10 [ERROR] [vite] ✗ Build failed in 110ms",
+      "[ImageNotFound] Could not find requested image `__t055_missing.png`. Does it exist?"
+    ]
+  }
+]

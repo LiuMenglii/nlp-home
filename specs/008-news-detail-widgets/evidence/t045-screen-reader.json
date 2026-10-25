@@ -1,0 +1,30 @@
+{
+  "task": "T045/T052",
+  "date": "2026-10-25",
+  "status": "WAIVED",
+  "environment": {
+    "os": "Linux (Ubuntu 26.04 userland), uid 1000",
+    "atSpi": "at-spi2-core 2.60.4 and at-spi2-common installed; /usr/libexec/at-spi-bus-launcher and at-spi2-registryd present",
+    "screenReader": "Orca not installed (`which orca` -> not found)",
+    "speechStack": "speech-dispatcher, spd-say, espeak-ng and espeak not installed; python modules pyatspi and speechd missing",
+    "privileges": "sudo requires interactive authentication (`sudo -n true` fails); cannot install system packages",
+    "display": "no X/Wayland display server or accessibility bus available to the agent; browser verification so far uses headless Chrome/Firefox"
+  },
+  "attempts": [
+    "Checked for Orca, speech-dispatcher, espeak-ng, pyatspi and speechd: all absent.",
+    "Checked for package-install privileges: no passwordless sudo, so Orca and its speech stack cannot be installed.",
+    "Confirmed AT-SPI core binaries exist but no screen reader or speech synthesizer consumes them."
+  ],
+  "notVerified": [
+    "Not executed; waived from acceptance scope.",
+    "copy success announcement is spoken exactly once",
+    "copy failure announcement is spoken exactly once",
+    "status reset produces no announcement",
+    "SVG icons are excluded from live-region announcements",
+    "focus and reading position remain unchanged after copy"
+  ],
+  "statement": "No real screen reader (NVDA, JAWS, VoiceOver, Orca) and no speech output stack could be run in this environment. Per Constitution v2.0.0 this spoken-output acceptance is waived and must not be reported as passed; the accessibility-tree attributes remain as implementation details only.",
+  "followUp": "No follow-up is required for this feature. If the group later reintroduces an accessibility target, run the original checklist with Orca or NVDA and a speech synthesizer.",
+  "disposition": "Not an acceptance requirement. Constitution v2.0.0 (commit e3cf68e) removed the accessibility MUST clause from Principle IV; the project baseline (001/002/004) sets no accessibility compliance target. T045/T052 are closed as waived, not as passed.",
+  "constitutionBasis": "Constitution v2.0.0 commit e3cf68e \"remove a11y MUST from Principle IV\"; v2.1.1 contains no accessibility requirement or acceptance gate."
+}

@@ -1,0 +1,409 @@
+{
+  "browser": "firefox",
+  "version": "158.0.1",
+  "platform": "linux",
+  "env": "Firefox 158.0.1 official linux64 tarball, headless, geckodriver 0.36.0; viewport 500x814 CSS px (Firefox headless enforces a 500px minimum window width; 375px cannot be set); desktop runs use WebDriver element mouse click; CJK font injected from local Noto Sans CJK SC; clipboard read back via navigator.clipboard.readText with dom.events.testing.asyncClipboard",
+  "fontOk": true,
+  "contentLength": 397,
+  "initial": {
+    "cls": "news-bib__copy",
+    "fontCjk": true,
+    "live": "polite",
+    "pageOverflow": 0,
+    "rect": {
+      "height": 32,
+      "right": 453,
+      "width": 32,
+      "x": 421,
+      "y": 391
+    },
+    "status": "",
+    "vh": 814,
+    "vw": 500
+  },
+  "runs": [
+    {
+      "run": 1,
+      "copiedInMs": 5,
+      "clipboard": {
+        "ok": true,
+        "text": "@misc{yang2026rlsd,\n  title         = {{Self-Distilled RLVR}},\n  author        = {Chenxu Yang and Chuanyu Qin and Qingyi Si and Minghui Chen and Naibin Gu and Dingyu Yao and Zheng Lin and Weiping Wang and Jiaqi Wang and Nan Duan},\n  year          = {2026},\n  eprint        = {2604.03128},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.LG},\n  url           = {https://arxiv.org/abs/2604.03128}\n}"
+      },
+      "match": true,
+      "state": {
+        "cls": "news-bib__copy is-copied",
+        "fontCjk": true,
+        "live": "polite",
+        "pageOverflow": 0,
+        "rect": {
+          "height": 32,
+          "right": 453,
+          "width": 32,
+          "x": 421,
+          "y": 391
+        },
+        "status": "已复制",
+        "vh": 814,
+        "vw": 500
+      },
+      "resetInMs": 1894,
+      "resetState": {
+        "status": "",
+        "cls": "news-bib__copy"
+      },
+      "timeout": {
+        "copy": false,
+        "reset": false
+      }
+    },
+    {
+      "run": 2,
+      "copiedInMs": 4,
+      "clipboard": {
+        "ok": true,
+        "text": "@misc{yang2026rlsd,\n  title         = {{Self-Distilled RLVR}},\n  author        = {Chenxu Yang and Chuanyu Qin and Qingyi Si and Minghui Chen and Naibin Gu and Dingyu Yao and Zheng Lin and Weiping Wang and Jiaqi Wang and Nan Duan},\n  year          = {2026},\n  eprint        = {2604.03128},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.LG},\n  url           = {https://arxiv.org/abs/2604.03128}\n}"
+      },
+      "match": true,
+      "state": {
+        "cls": "news-bib__copy is-copied",
+        "fontCjk": true,
+        "live": "polite",
+        "pageOverflow": 0,
+        "rect": {
+          "height": 32,
+          "right": 453,
+          "width": 32,
+          "x": 421,
+          "y": 391
+        },
+        "status": "已复制",
+        "vh": 814,
+        "vw": 500
+      },
+      "resetInMs": 2093,
+      "resetState": {
+        "status": "",
+        "cls": "news-bib__copy"
+      },
+      "timeout": {
+        "copy": false,
+        "reset": false
+      }
+    },
+    {
+      "run": 3,
+      "copiedInMs": 3,
+      "clipboard": {
+        "ok": true,
+        "text": "@misc{yang2026rlsd,\n  title         = {{Self-Distilled RLVR}},\n  author        = {Chenxu Yang and Chuanyu Qin and Qingyi Si and Minghui Chen and Naibin Gu and Dingyu Yao and Zheng Lin and Weiping Wang and Jiaqi Wang and Nan Duan},\n  year          = {2026},\n  eprint        = {2604.03128},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.LG},\n  url           = {https://arxiv.org/abs/2604.03128}\n}"
+      },
+      "match": true,
+      "state": {
+        "cls": "news-bib__copy is-copied",
+        "fontCjk": true,
+        "live": "polite",
+        "pageOverflow": 0,
+        "rect": {
+          "height": 32,
+          "right": 453,
+          "width": 32,
+          "x": 421,
+          "y": 391
+        },
+        "status": "已复制",
+        "vh": 814,
+        "vw": 500
+      },
+      "resetInMs": 1961,
+      "resetState": {
+        "status": "",
+        "cls": "news-bib__copy"
+      },
+      "timeout": {
+        "copy": false,
+        "reset": false
+      }
+    },
+    {
+      "run": 4,
+      "copiedInMs": 4,
+      "clipboard": {
+        "ok": true,
+        "text": "@misc{yang2026rlsd,\n  title         = {{Self-Distilled RLVR}},\n  author        = {Chenxu Yang and Chuanyu Qin and Qingyi Si and Minghui Chen and Naibin Gu and Dingyu Yao and Zheng Lin and Weiping Wang and Jiaqi Wang and Nan Duan},\n  year          = {2026},\n  eprint        = {2604.03128},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.LG},\n  url           = {https://arxiv.org/abs/2604.03128}\n}"
+      },
+      "match": true,
+      "state": {
+        "cls": "news-bib__copy is-copied",
+        "fontCjk": true,
+        "live": "polite",
+        "pageOverflow": 0,
+        "rect": {
+          "height": 32,
+          "right": 453,
+          "width": 32,
+          "x": 421,
+          "y": 391
+        },
+        "status": "已复制",
+        "vh": 814,
+        "vw": 500
+      },
+      "resetInMs": 1968,
+      "resetState": {
+        "status": "",
+        "cls": "news-bib__copy"
+      },
+      "timeout": {
+        "copy": false,
+        "reset": false
+      }
+    },
+    {
+      "run": 5,
+      "copiedInMs": 3,
+      "clipboard": {
+        "ok": true,
+        "text": "@misc{yang2026rlsd,\n  title         = {{Self-Distilled RLVR}},\n  author        = {Chenxu Yang and Chuanyu Qin and Qingyi Si and Minghui Chen and Naibin Gu and Dingyu Yao and Zheng Lin and Weiping Wang and Jiaqi Wang and Nan Duan},\n  year          = {2026},\n  eprint        = {2604.03128},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.LG},\n  url           = {https://arxiv.org/abs/2604.03128}\n}"
+      },
+      "match": true,
+      "state": {
+        "cls": "news-bib__copy is-copied",
+        "fontCjk": true,
+        "live": "polite",
+        "pageOverflow": 0,
+        "rect": {
+          "height": 32,
+          "right": 453,
+          "width": 32,
+          "x": 421,
+          "y": 391
+        },
+        "status": "已复制",
+        "vh": 814,
+        "vw": 500
+      },
+      "resetInMs": 1962,
+      "resetState": {
+        "status": "",
+        "cls": "news-bib__copy"
+      },
+      "timeout": {
+        "copy": false,
+        "reset": false
+      }
+    },
+    {
+      "run": 6,
+      "copiedInMs": 3,
+      "clipboard": {
+        "ok": true,
+        "text": "@misc{yang2026rlsd,\n  title         = {{Self-Distilled RLVR}},\n  author        = {Chenxu Yang and Chuanyu Qin and Qingyi Si and Minghui Chen and Naibin Gu and Dingyu Yao and Zheng Lin and Weiping Wang and Jiaqi Wang and Nan Duan},\n  year          = {2026},\n  eprint        = {2604.03128},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.LG},\n  url           = {https://arxiv.org/abs/2604.03128}\n}"
+      },
+      "match": true,
+      "state": {
+        "cls": "news-bib__copy is-copied",
+        "fontCjk": true,
+        "live": "polite",
+        "pageOverflow": 0,
+        "rect": {
+          "height": 32,
+          "right": 453,
+          "width": 32,
+          "x": 421,
+          "y": 391
+        },
+        "status": "已复制",
+        "vh": 814,
+        "vw": 500
+      },
+      "resetInMs": 1967,
+      "resetState": {
+        "status": "",
+        "cls": "news-bib__copy"
+      },
+      "timeout": {
+        "copy": false,
+        "reset": false
+      }
+    },
+    {
+      "run": 7,
+      "copiedInMs": 3,
+      "clipboard": {
+        "ok": true,
+        "text": "@misc{yang2026rlsd,\n  title         = {{Self-Distilled RLVR}},\n  author        = {Chenxu Yang and Chuanyu Qin and Qingyi Si and Minghui Chen and Naibin Gu and Dingyu Yao and Zheng Lin and Weiping Wang and Jiaqi Wang and Nan Duan},\n  year          = {2026},\n  eprint        = {2604.03128},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.LG},\n  url           = {https://arxiv.org/abs/2604.03128}\n}"
+      },
+      "match": true,
+      "state": {
+        "cls": "news-bib__copy is-copied",
+        "fontCjk": true,
+        "live": "polite",
+        "pageOverflow": 0,
+        "rect": {
+          "height": 32,
+          "right": 453,
+          "width": 32,
+          "x": 421,
+          "y": 391
+        },
+        "status": "已复制",
+        "vh": 814,
+        "vw": 500
+      },
+      "resetInMs": 2138,
+      "resetState": {
+        "status": "",
+        "cls": "news-bib__copy"
+      },
+      "timeout": {
+        "copy": false,
+        "reset": false
+      }
+    },
+    {
+      "run": 8,
+      "copiedInMs": 3,
+      "clipboard": {
+        "ok": true,
+        "text": "@misc{yang2026rlsd,\n  title         = {{Self-Distilled RLVR}},\n  author        = {Chenxu Yang and Chuanyu Qin and Qingyi Si and Minghui Chen and Naibin Gu and Dingyu Yao and Zheng Lin and Weiping Wang and Jiaqi Wang and Nan Duan},\n  year          = {2026},\n  eprint        = {2604.03128},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.LG},\n  url           = {https://arxiv.org/abs/2604.03128}\n}"
+      },
+      "match": true,
+      "state": {
+        "cls": "news-bib__copy is-copied",
+        "fontCjk": true,
+        "live": "polite",
+        "pageOverflow": 0,
+        "rect": {
+          "height": 32,
+          "right": 453,
+          "width": 32,
+          "x": 421,
+          "y": 391
+        },
+        "status": "已复制",
+        "vh": 814,
+        "vw": 500
+      },
+      "resetInMs": 1958,
+      "resetState": {
+        "status": "",
+        "cls": "news-bib__copy"
+      },
+      "timeout": {
+        "copy": false,
+        "reset": false
+      }
+    },
+    {
+      "run": 9,
+      "copiedInMs": 2,
+      "clipboard": {
+        "ok": true,
+        "text": "@misc{yang2026rlsd,\n  title         = {{Self-Distilled RLVR}},\n  author        = {Chenxu Yang and Chuanyu Qin and Qingyi Si and Minghui Chen and Naibin Gu and Dingyu Yao and Zheng Lin and Weiping Wang and Jiaqi Wang and Nan Duan},\n  year          = {2026},\n  eprint        = {2604.03128},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.LG},\n  url           = {https://arxiv.org/abs/2604.03128}\n}"
+      },
+      "match": true,
+      "state": {
+        "cls": "news-bib__copy is-copied",
+        "fontCjk": true,
+        "live": "polite",
+        "pageOverflow": 0,
+        "rect": {
+          "height": 32,
+          "right": 453,
+          "width": 32,
+          "x": 421,
+          "y": 391
+        },
+        "status": "已复制",
+        "vh": 814,
+        "vw": 500
+      },
+      "resetInMs": 1957,
+      "resetState": {
+        "status": "",
+        "cls": "news-bib__copy"
+      },
+      "timeout": {
+        "copy": false,
+        "reset": false
+      }
+    },
+    {
+      "run": 10,
+      "copiedInMs": 3,
+      "clipboard": {
+        "ok": true,
+        "text": "@misc{yang2026rlsd,\n  title         = {{Self-Distilled RLVR}},\n  author        = {Chenxu Yang and Chuanyu Qin and Qingyi Si and Minghui Chen and Naibin Gu and Dingyu Yao and Zheng Lin and Weiping Wang and Jiaqi Wang and Nan Duan},\n  year          = {2026},\n  eprint        = {2604.03128},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.LG},\n  url           = {https://arxiv.org/abs/2604.03128}\n}"
+      },
+      "match": true,
+      "state": {
+        "cls": "news-bib__copy is-copied",
+        "fontCjk": true,
+        "live": "polite",
+        "pageOverflow": 0,
+        "rect": {
+          "height": 32,
+          "right": 453,
+          "width": 32,
+          "x": 421,
+          "y": 391
+        },
+        "status": "已复制",
+        "vh": 814,
+        "vw": 500
+      },
+      "resetInMs": 2168,
+      "resetState": {
+        "status": "",
+        "cls": "news-bib__copy"
+      },
+      "timeout": {
+        "copy": false,
+        "reset": false
+      }
+    }
+  ],
+  "statusAfterAll": {
+    "cls": "news-bib__copy",
+    "fontCjk": true,
+    "live": "polite",
+    "pageOverflow": 0,
+    "rect": {
+      "height": 32,
+      "right": 453,
+      "width": 32,
+      "x": 421,
+      "y": 391
+    },
+    "status": "",
+    "vh": 814,
+    "vw": 500
+  },
+  "rectStable": true,
+  "buttonSize": true,
+  "failure": {
+    "state": {
+      "cls": "news-bib__copy is-error",
+      "fontCjk": true,
+      "live": "polite",
+      "pageOverflow": 0,
+      "rect": {
+        "height": 32,
+        "right": 453,
+        "width": 32,
+        "x": 421,
+        "y": 391
+      },
+      "status": "复制失败，请手动选择",
+      "vh": 814,
+      "vw": 500
+    },
+    "elapsed": 2,
+    "resetInMs": 1904
+  },
+  "screenshots": [
+    "firefox-500-desktop-copied.png",
+    "firefox-500-desktop-failure.png"
+  ],
+  "desktopNote": "桌面鼠标点击 10/10，每次粘贴回读与原文逐字一致；按钮 rect 全程稳定；成功反馈 2–4ms，复位 1863–2134ms；失败注入后显示“复制失败，请手动选择”并约 2s 复位"
+}

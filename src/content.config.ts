@@ -3,6 +3,7 @@ import { z } from 'astro/zod';
 import { glob, file } from 'astro/loaders';
 import { existsSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { containsWidgetSyntax } from './markdown/news-widgets.mjs';
 
 // 路径锚定到本文件所在位置（src/），不受运行时 cwd 影响
 const GALLERY_ASSET_DIR = fileURLToPath(new URL('../public/gallery/', import.meta.url));
@@ -66,6 +67,64 @@ function validateSiteBrand(): void {
 }
 
 validateSiteBrand();
+
+/**
+ * 008 FR-023：新增长文的标题与摘要无法通过 schema 按 entry id 校验
+ * （Astro 不向 schema 暴露 id），故在模块加载期直接扫描该 Markdown 的
+ * frontmatter，任一项违反即抛错中断构建。只作用于本特性新增的文章，
+ * 不改变既有新闻的摘要长度规则。
+ */
+const FEATURED_NEWS_FILE = fileURLToPath(
+  new URL('./content/news/self-taught-rlvr-2026.md', import.meta.url),
+);
+const REFERENCE_ARTICLE_TITLE =
+  '让大模型学会「自己教自己」！京东&中科院信工所连发三篇论文定义Self-Taught RLVR';
+const CJK = /[\u4e00-\u9fff]/g;
+
+function validateFeaturedNews(): void {
+  if (!existsSync(FEATURED_NEWS_FILE)) return;
+
+  const text = readFileSync(FEATURED_NEWS_FILE, 'utf-8');
+  const frontmatter = /^---\r?\n([\s\S]*?)\r?\n---/.exec(text);
+  if (!frontmatter) {
+    throw new Error(`src/content/news/self-taught-rlvr-2026.md 缺少 frontmatter（--- 包裹的头部）`);
+  }
+
+  const fields: Record<string, string> = {};
+  for (const line of frontmatter[1].split(/\r?\n/)) {
+    const match = /^(title|summary):\s*(.*)$/.exec(line);
+    if (!match) continue;
+    fields[match[1]] = match[2].trim().replace(/^(['"])(.*)\1$/, '$2');
+  }
+
+  const title = fields.title ?? '';
+  const summary = fields.summary ?? '';
+  const cjkTitleCount = (title.match(CJK) ?? []).length;
+  const summaryLength = [...summary].length;
+
+  if (cjkTitleCount > 40) {
+    throw new Error(
+      `src/content/news/self-taught-rlvr-2026.md 的 title 含 ${cjkTitleCount} 个 CJK 统一表意文字，超过上限 40 个`,
+    );
+  }
+  if (title.trim() === REFERENCE_ARTICLE_TITLE) {
+    throw new Error(
+      `src/content/news/self-taught-rlvr-2026.md 的 title 不得与参考文章标题相同，请改写为原创标题`,
+    );
+  }
+  if (summaryLength < 80 || summaryLength > 200) {
+    throw new Error(
+      `src/content/news/self-taught-rlvr-2026.md 的 summary 为 ${summaryLength} 个字符（按 code point 计），必须为 80–200 个字符`,
+    );
+  }
+  if (containsWidgetSyntax(summary)) {
+    throw new Error(
+      `src/content/news/self-taught-rlvr-2026.md 的 summary 不得包含 :::highlight、:::table 或 \`\`\`bibtex 控件语法`,
+    );
+  }
+}
+
+validateFeaturedNews();
 
 /**
  * file loader 要求每个数组元素带 id/slug 字段，而维护者数据契约（contracts/data-files.md）
@@ -154,7 +213,12 @@ const news = defineCollection({
   schema: z.object({
     title: z.string().min(1),
     date: z.coerce.date(),
-    summary: z.string().min(1).max(200),
+    summary: z
+      .string()
+      .min(1)
+      .refine((v) => [...v].length <= 200, {
+        message: 'summary 不得超过 200 个字符（按 code point 计）',
+      }),
     cover: z.string().optional(),
   }),
 });

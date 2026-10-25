@@ -1,0 +1,47 @@
+{
+  "task": "T043",
+  "date": "2026-10-25",
+  "environment": "Node 22.22.1, Astro build, headless Linux; temporary files under src/content/news/ removed after the test",
+  "precheck": "astro.config.mjs newsWidgetsValidation: readdir(NEWS_DIR, { recursive: true, withFileTypes: true }) filtered to *.md",
+  "cases": [
+    {
+      "name": "nested unclosed highlight container",
+      "file": "src/content/news/__t043_nested/probe.md",
+      "injection": ":::highlight[未闭合] without closing ::: at file end",
+      "exitCode": 1,
+      "matchesPrecheck": true,
+      "outputExcerpt": "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t043_nested/probe.md:7 highlight 容器未闭合：缺少结尾 `:::`。",
+      "hasFileAndLine": true,
+      "note": "The nested path is reached by the recursive precheck, proving parity with the glob('**/*.md') loader."
+    },
+    {
+      "name": "nested non-lowercase BibTeX fence",
+      "file": "src/content/news/__t043_nested/probe.md",
+      "injection": "```BibTeX fence",
+      "exitCode": 1,
+      "matchesPrecheck": true,
+      "outputExcerpt": "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t043_nested/probe.md:7 代码块语言标记 \"BibTeX\" 无效：BibTeX 引用块必须使用小写 `bibtex`（如 ```bibtex）。",
+      "hasFileAndLine": true
+    },
+    {
+      "name": "nested unknown container (soft warning probe)",
+      "file": "src/content/news/__t043_nested/probe.md",
+      "injection": ":::foo container",
+      "exitCode": 1,
+      "matchesPrecheck": false,
+      "outputExcerpt": "[news-widgets] ...:7 未知容器指令 :::foo 已展开为普通内容。 then [ERROR] [build] Caught error rendering /news/__t043_nested/probe: TypeError: Missing parameter: id",
+      "hasFileAndLine": true,
+      "note": "The widget layer emits only a controlled warning; the build exits 1 later because src/pages/news/[id].astro is a single-segment dynamic route and cannot publish a nested news id such as __t043_nested/probe. Nested news directories are walked by the precheck to match the loader, but are not a supported publishing layout. Soft-warning behavior is therefore verified separately with a top-level file."
+    },
+    {
+      "name": "top-level unknown container (soft warning behavior)",
+      "file": "src/content/news/__t043-soft.md",
+      "injection": ":::foo container",
+      "exitCode": 0,
+      "warningCount": 1,
+      "outputExcerpt": "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t043-soft.md:7 未知容器指令 :::foo 已展开为普通内容。",
+      "note": "Build succeeds, warning appears exactly once, includes file and line."
+    }
+  ],
+  "cleanup": "Both temporary news files and the __t043_nested directory were deleted; the subsequent final build is green."
+}

@@ -1,5 +1,6 @@
 # 构建产物
 dist/
+build/
 
 # 生成的类型
 .astro/
@@ -8,6 +9,7 @@ dist/
 node_modules/
 
 # 日志
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

@@ -54,6 +54,7 @@ summary: "一句话摘要（不超过 200 字符），显示在列表页和主�
 
 - `date` 为发布日期，列表按它倒序排列；主页自动展示最新 5 条。
 - 配图必须与 .md 文件放在同一目录（`src/content/news/`）并用相对路径引用；文件缺失会导致构建失败（防止裂图）。
+- 新闻详情页支持高亮块、BibTeX 引用块与表格块三种控件，完整语法、限制与排错见 [`docs/news-markdown-guide.md`](../../docs/news-markdown-guide.md)。
 
 ### 修改课题组名称 / 品牌信息（site.json）
 

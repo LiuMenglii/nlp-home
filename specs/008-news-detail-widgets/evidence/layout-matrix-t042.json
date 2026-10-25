@@ -1,0 +1,5216 @@
+[
+  {
+    "phase": "matrix",
+    "path": "/news/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 360,
+    "cw": 360,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    },
+    "cardCount": 15
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acceptances-2026/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 360,
+    "cw": 360,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 328,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acl-2023-acceptances/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 375,
+    "cw": 375,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 343,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acl-2024-acceptances/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 375,
+    "cw": 375,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 343,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acl-2025-spc-award/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 375,
+    "cw": 375,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 343,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/award-fengyuchen-2026/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 375,
+    "cw": 375,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 343,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/award-yangzexian-2025/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 375,
+    "cw": 375,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 343,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/emnlp-2022-acceptances/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 375,
+    "cw": 375,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 343,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/emnlp-2023-acceptances/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 375,
+    "cw": 375,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 343,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/homepage-relaunch/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 375,
+    "cw": 375,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 343,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/iie-nlp-founded/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 375,
+    "cw": 375,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 343,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/publications-2025-roundup/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 375,
+    "cw": 375,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 343,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/self-taught-rlvr-2026/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 360,
+    "cw": 360,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 328,
+    "images": [
+      {
+        "src": "rlsd-method.BEt7unul_Z1750IC.webp",
+        "natural": [
+          1790,
+          825
+        ],
+        "rect": {
+          "x": 16,
+          "y": 3271.39,
+          "width": 328,
+          "height": 151.17,
+          "right": 344,
+          "bottom": 3422.56
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "npo-overview.CJ4xIahc_Z2uRYPl.webp",
+        "natural": [
+          1695,
+          664
+        ],
+        "rect": {
+          "x": 16,
+          "y": 5877.98,
+          "width": 328,
+          "height": 128.48,
+          "right": 344,
+          "bottom": 6006.47
+        },
+        "ratioError": 0.0001,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "copd-method.DDSTu-st_Z1jSItp.webp",
+        "natural": [
+          1932,
+          919
+        ],
+        "rect": {
+          "x": 16,
+          "y": 8034.59,
+          "width": 328,
+          "height": 156.02,
+          "right": 344,
+          "bottom": 8190.61
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 3576.3,
+          "width": 326,
+          "height": 45,
+          "right": 343,
+          "bottom": 3621.3
+        },
+        "label": {
+          "x": 27,
+          "y": 3586.06,
+          "width": 43,
+          "height": 24.47,
+          "right": 70,
+          "bottom": 3610.53
+        },
+        "status": {
+          "x": 152.2,
+          "y": 3588.7,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 293,
+          "bottom": 3607.89
+        },
+        "button": {
+          "x": 301,
+          "y": 3582.3,
+          "width": 32,
+          "height": 32,
+          "right": 333,
+          "bottom": 3614.3
+        },
+        "pre": {
+          "x": 17,
+          "y": 3621.3,
+          "width": 326,
+          "height": 250.42,
+          "right": 343,
+          "bottom": 3871.72
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 326,
+          "scroll": 1192
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 6190.44,
+          "width": 326,
+          "height": 45,
+          "right": 343,
+          "bottom": 6235.44
+        },
+        "label": {
+          "x": 27,
+          "y": 6200.2,
+          "width": 43,
+          "height": 24.47,
+          "right": 70,
+          "bottom": 6224.67
+        },
+        "status": {
+          "x": 152.2,
+          "y": 6202.84,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 293,
+          "bottom": 6222.03
+        },
+        "button": {
+          "x": 301,
+          "y": 6196.44,
+          "width": 32,
+          "height": 32,
+          "right": 333,
+          "bottom": 6228.44
+        },
+        "pre": {
+          "x": 17,
+          "y": 6235.44,
+          "width": 326,
+          "height": 250.42,
+          "right": 343,
+          "bottom": 6485.86
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 326,
+          "scroll": 1025
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 8344.34,
+          "width": 326,
+          "height": 45,
+          "right": 343,
+          "bottom": 8389.34
+        },
+        "label": {
+          "x": 27,
+          "y": 8354.11,
+          "width": 43,
+          "height": 24.47,
+          "right": 70,
+          "bottom": 8378.58
+        },
+        "status": {
+          "x": 152.2,
+          "y": 8356.75,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 293,
+          "bottom": 8375.94
+        },
+        "button": {
+          "x": 301,
+          "y": 8350.34,
+          "width": 32,
+          "height": 32,
+          "right": 333,
+          "bottom": 8382.34
+        },
+        "pre": {
+          "x": 17,
+          "y": 8389.34,
+          "width": 326,
+          "height": 250.42,
+          "right": 343,
+          "bottom": 8639.77
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 326,
+          "scroll": 1153
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 248,
+        "scroll": 1382,
+        "tableWidth": 1382,
+        "rect": {
+          "x": 56,
+          "y": 8947.41,
+          "width": 248,
+          "height": 299.41,
+          "right": 304,
+          "bottom": 9246.81
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 16,
+          "y": 1123.36,
+          "width": 328,
+          "height": 341.63,
+          "right": 344,
+          "bottom": 1464.98
+        },
+        "innerOverflow": false,
+        "text": 152
+      },
+      {
+        "rect": {
+          "x": 16,
+          "y": 5529.59,
+          "width": 328,
+          "height": 311.39,
+          "right": 344,
+          "bottom": 5840.98
+        },
+        "innerOverflow": false,
+        "text": 151
+      },
+      {
+        "rect": {
+          "x": 16,
+          "y": 9530.69,
+          "width": 328,
+          "height": 250.92,
+          "right": 344,
+          "bottom": 9781.61
+        },
+        "innerOverflow": false,
+        "text": 122
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 1,
+      "bibs": 3,
+      "highlights": 3
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/teachers-day-2024/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 360,
+    "cw": 360,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 328,
+    "images": [
+      {
+        "src": "teachers-day-2024.D41mgvJy_Z1UHJXl.webp",
+        "natural": [
+          1279,
+          1706
+        ],
+        "rect": {
+          "x": 16,
+          "y": 374.17,
+          "width": 328,
+          "height": 437.5,
+          "right": 344,
+          "bottom": 811.67
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/team-building-2023/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 360,
+    "cw": 360,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 328,
+    "images": [
+      {
+        "src": "team-building-2023.D1KlHRaJ_ZCgyV2.webp",
+        "natural": [
+          1931,
+          1280
+        ],
+        "rect": {
+          "x": 16,
+          "y": 343.94,
+          "width": 328,
+          "height": 217.41,
+          "right": 344,
+          "bottom": 561.34
+        },
+        "ratioError": 0.0001,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/team-building-2024/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 360,
+    "cw": 360,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 328,
+    "images": [
+      {
+        "src": "team-building-2024.X7CafDau_R52HB.webp",
+        "natural": [
+          1706,
+          1279
+        ],
+        "rect": {
+          "x": 16,
+          "y": 374.17,
+          "width": 328,
+          "height": 245.89,
+          "right": 344,
+          "bottom": 620.06
+        },
+        "ratioError": 0.0001,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/__layout-gate/",
+    "requestedWidth": 375,
+    "width": 375,
+    "sw": 360,
+    "cw": 360,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 328,
+    "images": [],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 1359.14,
+          "width": 326,
+          "height": 45,
+          "right": 343,
+          "bottom": 1404.14
+        },
+        "label": {
+          "x": 27,
+          "y": 1368.91,
+          "width": 43,
+          "height": 24.47,
+          "right": 70,
+          "bottom": 1393.38
+        },
+        "status": {
+          "x": 152.2,
+          "y": 1371.55,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 293,
+          "bottom": 1390.73
+        },
+        "button": {
+          "x": 301,
+          "y": 1365.14,
+          "width": 32,
+          "height": 32,
+          "right": 333,
+          "bottom": 1397.14
+        },
+        "pre": {
+          "x": 17,
+          "y": 1404.14,
+          "width": 326,
+          "height": 250.42,
+          "right": 343,
+          "bottom": 1654.56
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 326,
+          "scroll": 1003
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 248,
+        "scroll": 534,
+        "tableWidth": 534,
+        "rect": {
+          "x": 56,
+          "y": 781.56,
+          "width": 248,
+          "height": 299.41,
+          "right": 304,
+          "bottom": 1080.97
+        }
+      },
+      {
+        "client": 248,
+        "scroll": 248,
+        "tableWidth": 248,
+        "rect": {
+          "x": 56,
+          "y": 1132.44,
+          "width": 248,
+          "height": 142.7,
+          "right": 304,
+          "bottom": 1275.14
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 16,
+          "y": 309.67,
+          "width": 328,
+          "height": 358.42,
+          "right": 344,
+          "bottom": 668.09
+        },
+        "innerOverflow": false,
+        "text": 208
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 2,
+      "bibs": 1,
+      "highlights": 1
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 753,
+    "cw": 753,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    },
+    "cardCount": 15
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acceptances-2026/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 768,
+    "cw": 768,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 720,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acl-2023-acceptances/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 768,
+    "cw": 768,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 720,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acl-2024-acceptances/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 768,
+    "cw": 768,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 720,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acl-2025-spc-award/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 768,
+    "cw": 768,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 720,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/award-fengyuchen-2026/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 768,
+    "cw": 768,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 720,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/award-yangzexian-2025/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 768,
+    "cw": 768,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 720,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/emnlp-2022-acceptances/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 768,
+    "cw": 768,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 720,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/emnlp-2023-acceptances/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 768,
+    "cw": 768,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 720,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/homepage-relaunch/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 768,
+    "cw": 768,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 720,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/iie-nlp-founded/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 768,
+    "cw": 768,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 720,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/publications-2025-roundup/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 768,
+    "cw": 768,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 720,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/self-taught-rlvr-2026/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 753,
+    "cw": 753,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 705,
+    "images": [
+      {
+        "src": "rlsd-method.BEt7unul_Z1750IC.webp",
+        "natural": [
+          1790,
+          825
+        ],
+        "rect": {
+          "x": 24,
+          "y": 1750.78,
+          "width": 705,
+          "height": 324.92,
+          "right": 729,
+          "bottom": 2075.7
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "npo-overview.CJ4xIahc_Z2uRYPl.webp",
+        "natural": [
+          1695,
+          664
+        ],
+        "rect": {
+          "x": 24,
+          "y": 3594.09,
+          "width": 705,
+          "height": 276.17,
+          "right": 729,
+          "bottom": 3870.27
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "copd-method.DDSTu-st_Z1jSItp.webp",
+        "natural": [
+          1932,
+          919
+        ],
+        "rect": {
+          "x": 24,
+          "y": 5082.3,
+          "width": 705,
+          "height": 335.34,
+          "right": 729,
+          "bottom": 5417.64
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 25,
+          "y": 2199.2,
+          "width": 703,
+          "height": 45,
+          "right": 728,
+          "bottom": 2244.2
+        },
+        "label": {
+          "x": 35,
+          "y": 2208.97,
+          "width": 43,
+          "height": 24.47,
+          "right": 78,
+          "bottom": 2233.44
+        },
+        "status": {
+          "x": 537.2,
+          "y": 2211.61,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 678,
+          "bottom": 2230.8
+        },
+        "button": {
+          "x": 686,
+          "y": 2205.2,
+          "width": 32,
+          "height": 32,
+          "right": 718,
+          "bottom": 2237.2
+        },
+        "pre": {
+          "x": 25,
+          "y": 2244.2,
+          "width": 703,
+          "height": 250.42,
+          "right": 728,
+          "bottom": 2494.63
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 703,
+          "scroll": 1192
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 25,
+          "y": 3993.77,
+          "width": 703,
+          "height": 45,
+          "right": 728,
+          "bottom": 4038.77
+        },
+        "label": {
+          "x": 35,
+          "y": 4003.53,
+          "width": 43,
+          "height": 24.47,
+          "right": 78,
+          "bottom": 4028
+        },
+        "status": {
+          "x": 537.2,
+          "y": 4006.17,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 678,
+          "bottom": 4025.36
+        },
+        "button": {
+          "x": 686,
+          "y": 3999.77,
+          "width": 32,
+          "height": 32,
+          "right": 718,
+          "bottom": 4031.77
+        },
+        "pre": {
+          "x": 25,
+          "y": 4038.77,
+          "width": 703,
+          "height": 250.42,
+          "right": 728,
+          "bottom": 4289.19
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 703,
+          "scroll": 1025
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 25,
+          "y": 5541.14,
+          "width": 703,
+          "height": 45,
+          "right": 728,
+          "bottom": 5586.14
+        },
+        "label": {
+          "x": 35,
+          "y": 5550.91,
+          "width": 43,
+          "height": 24.47,
+          "right": 78,
+          "bottom": 5575.38
+        },
+        "status": {
+          "x": 537.2,
+          "y": 5553.55,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 678,
+          "bottom": 5572.73
+        },
+        "button": {
+          "x": 686,
+          "y": 5547.14,
+          "width": 32,
+          "height": 32,
+          "right": 718,
+          "bottom": 5579.14
+        },
+        "pre": {
+          "x": 25,
+          "y": 5586.14,
+          "width": 703,
+          "height": 250.42,
+          "right": 728,
+          "bottom": 5836.56
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 703,
+          "scroll": 1153
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 625,
+        "scroll": 1382,
+        "tableWidth": 1382,
+        "rect": {
+          "x": 64,
+          "y": 6053.73,
+          "width": 625,
+          "height": 299.41,
+          "right": 689,
+          "bottom": 6353.14
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 24,
+          "y": 630.48,
+          "width": 705,
+          "height": 190.45,
+          "right": 729,
+          "bottom": 820.94
+        },
+        "innerOverflow": false,
+        "text": 152
+      },
+      {
+        "rect": {
+          "x": 24,
+          "y": 3366.64,
+          "width": 705,
+          "height": 190.45,
+          "right": 729,
+          "bottom": 3557.09
+        },
+        "innerOverflow": false,
+        "text": 151
+      },
+      {
+        "rect": {
+          "x": 24,
+          "y": 6516.08,
+          "width": 705,
+          "height": 160.22,
+          "right": 729,
+          "bottom": 6676.3
+        },
+        "innerOverflow": false,
+        "text": 122
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 1,
+      "bibs": 3,
+      "highlights": 3
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/teachers-day-2024/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 753,
+    "cw": 753,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 705,
+    "images": [
+      {
+        "src": "teachers-day-2024.D41mgvJy_Z1UHJXl.webp",
+        "natural": [
+          1279,
+          1706
+        ],
+        "rect": {
+          "x": 24,
+          "y": 313.86,
+          "width": 705,
+          "height": 940.36,
+          "right": 729,
+          "bottom": 1254.22
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/team-building-2023/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 753,
+    "cw": 753,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 705,
+    "images": [
+      {
+        "src": "team-building-2023.D1KlHRaJ_ZCgyV2.webp",
+        "natural": [
+          1931,
+          1280
+        ],
+        "rect": {
+          "x": 24,
+          "y": 283.63,
+          "width": 705,
+          "height": 467.31,
+          "right": 729,
+          "bottom": 750.94
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/team-building-2024/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 753,
+    "cw": 753,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 705,
+    "images": [
+      {
+        "src": "team-building-2024.X7CafDau_R52HB.webp",
+        "natural": [
+          1706,
+          1279
+        ],
+        "rect": {
+          "x": 24,
+          "y": 313.86,
+          "width": 705,
+          "height": 528.53,
+          "right": 729,
+          "bottom": 842.39
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/__layout-gate/",
+    "requestedWidth": 768,
+    "width": 768,
+    "sw": 753,
+    "cw": 753,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 705,
+    "images": [],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 25,
+          "y": 1193.13,
+          "width": 703,
+          "height": 45,
+          "right": 728,
+          "bottom": 1238.13
+        },
+        "label": {
+          "x": 35,
+          "y": 1202.89,
+          "width": 43,
+          "height": 24.47,
+          "right": 78,
+          "bottom": 1227.36
+        },
+        "status": {
+          "x": 537.2,
+          "y": 1205.53,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 678,
+          "bottom": 1224.72
+        },
+        "button": {
+          "x": 686,
+          "y": 1199.13,
+          "width": 32,
+          "height": 32,
+          "right": 718,
+          "bottom": 1231.13
+        },
+        "pre": {
+          "x": 25,
+          "y": 1238.13,
+          "width": 703,
+          "height": 250.42,
+          "right": 728,
+          "bottom": 1488.55
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 703,
+          "scroll": 1003
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 625,
+        "scroll": 625,
+        "tableWidth": 625,
+        "rect": {
+          "x": 64,
+          "y": 630.55,
+          "width": 625,
+          "height": 284.41,
+          "right": 689,
+          "bottom": 914.95
+        }
+      },
+      {
+        "client": 625,
+        "scroll": 625,
+        "tableWidth": 625,
+        "rect": {
+          "x": 64,
+          "y": 966.42,
+          "width": 625,
+          "height": 142.7,
+          "right": 689,
+          "bottom": 1109.13
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 24,
+          "y": 279.59,
+          "width": 705,
+          "height": 237.48,
+          "right": 729,
+          "bottom": 517.08
+        },
+        "innerOverflow": false,
+        "text": 208
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 2,
+      "bibs": 1,
+      "highlights": 1
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1009,
+    "cw": 1009,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    },
+    "cardCount": 15
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acceptances-2026/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1024,
+    "cw": 1024,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 976,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acl-2023-acceptances/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1024,
+    "cw": 1024,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 976,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acl-2024-acceptances/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1024,
+    "cw": 1024,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 976,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acl-2025-spc-award/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1024,
+    "cw": 1024,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 976,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/award-fengyuchen-2026/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1024,
+    "cw": 1024,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 976,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/award-yangzexian-2025/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1024,
+    "cw": 1024,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 976,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/emnlp-2022-acceptances/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1024,
+    "cw": 1024,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 976,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/emnlp-2023-acceptances/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1024,
+    "cw": 1024,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 976,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/homepage-relaunch/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1024,
+    "cw": 1024,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 976,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/iie-nlp-founded/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1024,
+    "cw": 1024,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 976,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/publications-2025-roundup/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1024,
+    "cw": 1024,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 976,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/self-taught-rlvr-2026/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1009,
+    "cw": 1009,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 961,
+    "images": [
+      {
+        "src": "rlsd-method.BEt7unul_Z1750IC.webp",
+        "natural": [
+          1790,
+          825
+        ],
+        "rect": {
+          "x": 24,
+          "y": 1408.92,
+          "width": 961,
+          "height": 442.91,
+          "right": 985,
+          "bottom": 1851.83
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "npo-overview.CJ4xIahc_Z2uRYPl.webp",
+        "natural": [
+          1695,
+          664
+        ],
+        "rect": {
+          "x": 24,
+          "y": 3128.34,
+          "width": 961,
+          "height": 376.45,
+          "right": 985,
+          "bottom": 3504.8
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "copd-method.DDSTu-st_Z1jSItp.webp",
+        "natural": [
+          1932,
+          919
+        ],
+        "rect": {
+          "x": 24,
+          "y": 4565.66,
+          "width": 961,
+          "height": 457.11,
+          "right": 985,
+          "bottom": 5022.77
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 25,
+          "y": 1945.09,
+          "width": 959,
+          "height": 45,
+          "right": 984,
+          "bottom": 1990.09
+        },
+        "label": {
+          "x": 35,
+          "y": 1954.86,
+          "width": 43,
+          "height": 24.47,
+          "right": 78,
+          "bottom": 1979.33
+        },
+        "status": {
+          "x": 793.2,
+          "y": 1957.5,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 934,
+          "bottom": 1976.69
+        },
+        "button": {
+          "x": 942,
+          "y": 1951.09,
+          "width": 32,
+          "height": 32,
+          "right": 974,
+          "bottom": 1983.09
+        },
+        "pre": {
+          "x": 25,
+          "y": 1990.09,
+          "width": 959,
+          "height": 250.42,
+          "right": 984,
+          "bottom": 2240.52
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 959,
+          "scroll": 1192
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 25,
+          "y": 3628.3,
+          "width": 959,
+          "height": 45,
+          "right": 984,
+          "bottom": 3673.3
+        },
+        "label": {
+          "x": 35,
+          "y": 3638.06,
+          "width": 43,
+          "height": 24.47,
+          "right": 78,
+          "bottom": 3662.53
+        },
+        "status": {
+          "x": 793.2,
+          "y": 3640.7,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 934,
+          "bottom": 3659.89
+        },
+        "button": {
+          "x": 942,
+          "y": 3634.3,
+          "width": 32,
+          "height": 32,
+          "right": 974,
+          "bottom": 3666.3
+        },
+        "pre": {
+          "x": 25,
+          "y": 3673.3,
+          "width": 959,
+          "height": 250.42,
+          "right": 984,
+          "bottom": 3923.72
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 959,
+          "scroll": 1025
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 25,
+          "y": 5116.03,
+          "width": 959,
+          "height": 45,
+          "right": 984,
+          "bottom": 5161.03
+        },
+        "label": {
+          "x": 35,
+          "y": 5125.8,
+          "width": 43,
+          "height": 24.47,
+          "right": 78,
+          "bottom": 5150.27
+        },
+        "status": {
+          "x": 793.2,
+          "y": 5128.44,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 934,
+          "bottom": 5147.63
+        },
+        "button": {
+          "x": 942,
+          "y": 5122.03,
+          "width": 32,
+          "height": 32,
+          "right": 974,
+          "bottom": 5154.03
+        },
+        "pre": {
+          "x": 25,
+          "y": 5161.03,
+          "width": 959,
+          "height": 250.42,
+          "right": 984,
+          "bottom": 5411.45
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 959,
+          "scroll": 1153
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 881,
+        "scroll": 1382,
+        "tableWidth": 1382,
+        "rect": {
+          "x": 64,
+          "y": 5598.39,
+          "width": 881,
+          "height": 299.41,
+          "right": 945,
+          "bottom": 5897.8
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 24,
+          "y": 500.27,
+          "width": 961,
+          "height": 160.22,
+          "right": 985,
+          "bottom": 660.48
+        },
+        "innerOverflow": false,
+        "text": 152
+      },
+      {
+        "rect": {
+          "x": 24,
+          "y": 2931.13,
+          "width": 961,
+          "height": 160.22,
+          "right": 985,
+          "bottom": 3091.34
+        },
+        "innerOverflow": false,
+        "text": 151
+      },
+      {
+        "rect": {
+          "x": 24,
+          "y": 6030.5,
+          "width": 961,
+          "height": 129.98,
+          "right": 985,
+          "bottom": 6160.48
+        },
+        "innerOverflow": false,
+        "text": 122
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 1,
+      "bibs": 3,
+      "highlights": 3
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/teachers-day-2024/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1009,
+    "cw": 1009,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 961,
+    "images": [
+      {
+        "src": "teachers-day-2024.D41mgvJy_Z1UHJXl.webp",
+        "natural": [
+          1279,
+          1706
+        ],
+        "rect": {
+          "x": 24,
+          "y": 283.63,
+          "width": 961,
+          "height": 1281.83,
+          "right": 985,
+          "bottom": 1565.45
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/team-building-2023/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1009,
+    "cw": 1009,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 961,
+    "images": [
+      {
+        "src": "team-building-2023.D1KlHRaJ_ZCgyV2.webp",
+        "natural": [
+          1931,
+          1280
+        ],
+        "rect": {
+          "x": 24,
+          "y": 283.63,
+          "width": 961,
+          "height": 637.02,
+          "right": 985,
+          "bottom": 920.64
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/team-building-2024/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1009,
+    "cw": 1009,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 961,
+    "images": [
+      {
+        "src": "team-building-2024.X7CafDau_R52HB.webp",
+        "natural": [
+          1706,
+          1279
+        ],
+        "rect": {
+          "x": 24,
+          "y": 283.63,
+          "width": 961,
+          "height": 720.45,
+          "right": 985,
+          "bottom": 1004.08
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/__layout-gate/",
+    "requestedWidth": 1024,
+    "width": 1024,
+    "sw": 1009,
+    "cw": 1009,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 961,
+    "images": [],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 25,
+          "y": 1162.89,
+          "width": 959,
+          "height": 45,
+          "right": 984,
+          "bottom": 1207.89
+        },
+        "label": {
+          "x": 35,
+          "y": 1172.66,
+          "width": 43,
+          "height": 24.47,
+          "right": 78,
+          "bottom": 1197.13
+        },
+        "status": {
+          "x": 793.2,
+          "y": 1175.3,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 934,
+          "bottom": 1194.48
+        },
+        "button": {
+          "x": 942,
+          "y": 1168.89,
+          "width": 32,
+          "height": 32,
+          "right": 974,
+          "bottom": 1200.89
+        },
+        "pre": {
+          "x": 25,
+          "y": 1207.89,
+          "width": 959,
+          "height": 250.42,
+          "right": 984,
+          "bottom": 1458.31
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 959,
+          "scroll": 1003
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 881,
+        "scroll": 881,
+        "tableWidth": 881,
+        "rect": {
+          "x": 64,
+          "y": 600.31,
+          "width": 881,
+          "height": 284.41,
+          "right": 945,
+          "bottom": 884.72
+        }
+      },
+      {
+        "client": 881,
+        "scroll": 881,
+        "tableWidth": 881,
+        "rect": {
+          "x": 64,
+          "y": 936.19,
+          "width": 881,
+          "height": 142.7,
+          "right": 945,
+          "bottom": 1078.89
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 24,
+          "y": 279.59,
+          "width": 961,
+          "height": 207.25,
+          "right": 985,
+          "bottom": 486.84
+        },
+        "innerOverflow": false,
+        "text": 208
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 2,
+      "bibs": 1,
+      "highlights": 1
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1265,
+    "cw": 1265,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    },
+    "cardCount": 15
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acceptances-2026/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1280,
+    "cw": 1280,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acl-2023-acceptances/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1280,
+    "cw": 1280,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acl-2024-acceptances/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1280,
+    "cw": 1280,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/acl-2025-spc-award/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1280,
+    "cw": 1280,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/award-fengyuchen-2026/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1280,
+    "cw": 1280,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/award-yangzexian-2025/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1280,
+    "cw": 1280,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/emnlp-2022-acceptances/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1280,
+    "cw": 1280,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/emnlp-2023-acceptances/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1280,
+    "cw": 1280,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/homepage-relaunch/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1280,
+    "cw": 1280,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/iie-nlp-founded/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1280,
+    "cw": 1280,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/publications-2025-roundup/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1280,
+    "cw": 1280,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/self-taught-rlvr-2026/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1265,
+    "cw": 1265,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [
+      {
+        "src": "rlsd-method.BEt7unul_Z1750IC.webp",
+        "natural": [
+          1790,
+          825
+        ],
+        "rect": {
+          "x": 66.5,
+          "y": 1348.45,
+          "width": 1132,
+          "height": 521.72,
+          "right": 1198.5,
+          "bottom": 1870.17
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "npo-overview.CJ4xIahc_Z2uRYPl.webp",
+        "natural": [
+          1695,
+          664
+        ],
+        "rect": {
+          "x": 66.5,
+          "y": 3055.98,
+          "width": 1132,
+          "height": 443.44,
+          "right": 1198.5,
+          "bottom": 3499.42
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "copd-method.DDSTu-st_Z1jSItp.webp",
+        "natural": [
+          1932,
+          919
+        ],
+        "rect": {
+          "x": 66.5,
+          "y": 4484.81,
+          "width": 1132,
+          "height": 538.45,
+          "right": 1198.5,
+          "bottom": 5023.27
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 67.5,
+          "y": 1963.44,
+          "width": 1130,
+          "height": 45,
+          "right": 1197.5,
+          "bottom": 2008.44
+        },
+        "label": {
+          "x": 77.5,
+          "y": 1973.2,
+          "width": 43,
+          "height": 24.47,
+          "right": 120.5,
+          "bottom": 1997.67
+        },
+        "status": {
+          "x": 1006.7,
+          "y": 1975.84,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 1147.5,
+          "bottom": 1995.03
+        },
+        "button": {
+          "x": 1155.5,
+          "y": 1969.44,
+          "width": 32,
+          "height": 32,
+          "right": 1187.5,
+          "bottom": 2001.44
+        },
+        "pre": {
+          "x": 67.5,
+          "y": 2008.44,
+          "width": 1130,
+          "height": 250.42,
+          "right": 1197.5,
+          "bottom": 2258.86
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 1130,
+          "scroll": 1192
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 67.5,
+          "y": 3592.69,
+          "width": 1130,
+          "height": 45,
+          "right": 1197.5,
+          "bottom": 3637.69
+        },
+        "label": {
+          "x": 77.5,
+          "y": 3602.45,
+          "width": 43,
+          "height": 24.47,
+          "right": 120.5,
+          "bottom": 3626.92
+        },
+        "status": {
+          "x": 1006.7,
+          "y": 3605.09,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 1147.5,
+          "bottom": 3624.28
+        },
+        "button": {
+          "x": 1155.5,
+          "y": 3598.69,
+          "width": 32,
+          "height": 32,
+          "right": 1187.5,
+          "bottom": 3630.69
+        },
+        "pre": {
+          "x": 67.5,
+          "y": 3637.69,
+          "width": 1130,
+          "height": 235.42,
+          "right": 1197.5,
+          "bottom": 3873.11
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 1130,
+          "scroll": 1130
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 67.5,
+          "y": 5116.53,
+          "width": 1130,
+          "height": 45,
+          "right": 1197.5,
+          "bottom": 5161.53
+        },
+        "label": {
+          "x": 77.5,
+          "y": 5126.3,
+          "width": 43,
+          "height": 24.47,
+          "right": 120.5,
+          "bottom": 5150.77
+        },
+        "status": {
+          "x": 1006.7,
+          "y": 5128.94,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 1147.5,
+          "bottom": 5148.13
+        },
+        "button": {
+          "x": 1155.5,
+          "y": 5122.53,
+          "width": 32,
+          "height": 32,
+          "right": 1187.5,
+          "bottom": 5154.53
+        },
+        "pre": {
+          "x": 67.5,
+          "y": 5161.53,
+          "width": 1130,
+          "height": 250.42,
+          "right": 1197.5,
+          "bottom": 5411.95
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 1130,
+          "scroll": 1153
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 1052,
+        "scroll": 1382,
+        "tableWidth": 1382,
+        "rect": {
+          "x": 106.5,
+          "y": 5598.89,
+          "width": 1052,
+          "height": 299.41,
+          "right": 1158.5,
+          "bottom": 5898.3
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 66.5,
+          "y": 500.27,
+          "width": 1132,
+          "height": 160.22,
+          "right": 1198.5,
+          "bottom": 660.48
+        },
+        "innerOverflow": false,
+        "text": 152
+      },
+      {
+        "rect": {
+          "x": 66.5,
+          "y": 2889,
+          "width": 1132,
+          "height": 129.98,
+          "right": 1198.5,
+          "bottom": 3018.98
+        },
+        "innerOverflow": false,
+        "text": 151
+      },
+      {
+        "rect": {
+          "x": 66.5,
+          "y": 6031,
+          "width": 1132,
+          "height": 129.98,
+          "right": 1198.5,
+          "bottom": 6160.98
+        },
+        "innerOverflow": false,
+        "text": 122
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 1,
+      "bibs": 3,
+      "highlights": 3
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/teachers-day-2024/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1265,
+    "cw": 1265,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [
+      {
+        "src": "teachers-day-2024.D41mgvJy_Z1UHJXl.webp",
+        "natural": [
+          1279,
+          1706
+        ],
+        "rect": {
+          "x": 66.5,
+          "y": 283.63,
+          "width": 1132,
+          "height": 1509.92,
+          "right": 1198.5,
+          "bottom": 1793.55
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/team-building-2023/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1265,
+    "cw": 1265,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [
+      {
+        "src": "team-building-2023.D1KlHRaJ_ZCgyV2.webp",
+        "natural": [
+          1931,
+          1280
+        ],
+        "rect": {
+          "x": 66.5,
+          "y": 283.63,
+          "width": 1132,
+          "height": 750.36,
+          "right": 1198.5,
+          "bottom": 1033.98
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/team-building-2024/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1265,
+    "cw": 1265,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [
+      {
+        "src": "team-building-2024.X7CafDau_R52HB.webp",
+        "natural": [
+          1706,
+          1279
+        ],
+        "rect": {
+          "x": 66.5,
+          "y": 283.63,
+          "width": 1132,
+          "height": 848.66,
+          "right": 1198.5,
+          "bottom": 1132.28
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [],
+    "tables": [],
+    "highlights": [],
+    "widgetCss": false,
+    "fontCjk": true,
+    "counts": {
+      "figures": 0,
+      "bibs": 0,
+      "highlights": 0
+    }
+  },
+  {
+    "phase": "matrix",
+    "path": "/news/__layout-gate/",
+    "requestedWidth": 1280,
+    "width": 1280,
+    "sw": 1265,
+    "cw": 1265,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 67.5,
+          "y": 1162.89,
+          "width": 1130,
+          "height": 45,
+          "right": 1197.5,
+          "bottom": 1207.89
+        },
+        "label": {
+          "x": 77.5,
+          "y": 1172.66,
+          "width": 43,
+          "height": 24.47,
+          "right": 120.5,
+          "bottom": 1197.13
+        },
+        "status": {
+          "x": 1006.7,
+          "y": 1175.3,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 1147.5,
+          "bottom": 1194.48
+        },
+        "button": {
+          "x": 1155.5,
+          "y": 1168.89,
+          "width": 32,
+          "height": 32,
+          "right": 1187.5,
+          "bottom": 1200.89
+        },
+        "pre": {
+          "x": 67.5,
+          "y": 1207.89,
+          "width": 1130,
+          "height": 235.42,
+          "right": 1197.5,
+          "bottom": 1443.31
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 1130,
+          "scroll": 1130
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 1052,
+        "scroll": 1052,
+        "tableWidth": 1052,
+        "rect": {
+          "x": 106.5,
+          "y": 600.31,
+          "width": 1052,
+          "height": 284.41,
+          "right": 1158.5,
+          "bottom": 884.72
+        }
+      },
+      {
+        "client": 1052,
+        "scroll": 1052,
+        "tableWidth": 1052,
+        "rect": {
+          "x": 106.5,
+          "y": 936.19,
+          "width": 1052,
+          "height": 142.7,
+          "right": 1158.5,
+          "bottom": 1078.89
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 66.5,
+          "y": 279.59,
+          "width": 1132,
+          "height": 207.25,
+          "right": 1198.5,
+          "bottom": 486.84
+        },
+        "innerOverflow": false,
+        "text": 208
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 2,
+      "bibs": 1,
+      "highlights": 1
+    }
+  },
+  {
+    "phase": "article-special",
+    "path": "/news/self-taught-rlvr-2026/",
+    "requestedWidth": 320,
+    "scale": 1,
+    "width": 320,
+    "sw": 305,
+    "cw": 305,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 273,
+    "images": [
+      {
+        "src": "rlsd-method.BEt7unul_Z1750IC.webp",
+        "natural": [
+          1790,
+          825
+        ],
+        "rect": {
+          "x": 16,
+          "y": 3806.81,
+          "width": 273,
+          "height": 125.81,
+          "right": 289,
+          "bottom": 3932.63
+        },
+        "ratioError": 0.0001,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "npo-overview.CJ4xIahc_Z2uRYPl.webp",
+        "natural": [
+          1695,
+          664
+        ],
+        "rect": {
+          "x": 16,
+          "y": 6720.63,
+          "width": 273,
+          "height": 106.94,
+          "right": 289,
+          "bottom": 6827.56
+        },
+        "ratioError": 0.0001,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "copd-method.DDSTu-st_Z1jSItp.webp",
+        "natural": [
+          1932,
+          919
+        ],
+        "rect": {
+          "x": 16,
+          "y": 9218.5,
+          "width": 273,
+          "height": 129.84,
+          "right": 289,
+          "bottom": 9348.34
+        },
+        "ratioError": 0.0001,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 4086.36,
+          "width": 271,
+          "height": 45,
+          "right": 288,
+          "bottom": 4131.36
+        },
+        "label": {
+          "x": 27,
+          "y": 4096.13,
+          "width": 43,
+          "height": 24.47,
+          "right": 70,
+          "bottom": 4120.59
+        },
+        "status": {
+          "x": 97.2,
+          "y": 4098.77,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 238,
+          "bottom": 4117.95
+        },
+        "button": {
+          "x": 246,
+          "y": 4092.36,
+          "width": 32,
+          "height": 32,
+          "right": 278,
+          "bottom": 4124.36
+        },
+        "pre": {
+          "x": 17,
+          "y": 4131.36,
+          "width": 271,
+          "height": 250.42,
+          "right": 288,
+          "bottom": 4381.78
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 271,
+          "scroll": 1192
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 7041.77,
+          "width": 271,
+          "height": 45,
+          "right": 288,
+          "bottom": 7086.77
+        },
+        "label": {
+          "x": 27,
+          "y": 7051.53,
+          "width": 43,
+          "height": 24.47,
+          "right": 70,
+          "bottom": 7076
+        },
+        "status": {
+          "x": 97.2,
+          "y": 7054.17,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 238,
+          "bottom": 7073.36
+        },
+        "button": {
+          "x": 246,
+          "y": 7047.77,
+          "width": 32,
+          "height": 32,
+          "right": 278,
+          "bottom": 7079.77
+        },
+        "pre": {
+          "x": 17,
+          "y": 7086.77,
+          "width": 271,
+          "height": 250.42,
+          "right": 288,
+          "bottom": 7337.19
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 271,
+          "scroll": 1025
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 9532.31,
+          "width": 271,
+          "height": 45,
+          "right": 288,
+          "bottom": 9577.31
+        },
+        "label": {
+          "x": 27,
+          "y": 9542.08,
+          "width": 43,
+          "height": 24.47,
+          "right": 70,
+          "bottom": 9566.55
+        },
+        "status": {
+          "x": 97.2,
+          "y": 9544.72,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 238,
+          "bottom": 9563.91
+        },
+        "button": {
+          "x": 246,
+          "y": 9538.31,
+          "width": 32,
+          "height": 32,
+          "right": 278,
+          "bottom": 9570.31
+        },
+        "pre": {
+          "x": 17,
+          "y": 9577.31,
+          "width": 271,
+          "height": 250.42,
+          "right": 288,
+          "bottom": 9827.73
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 271,
+          "scroll": 1153
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 193,
+        "scroll": 1382,
+        "tableWidth": 1382,
+        "rect": {
+          "x": 56,
+          "y": 10165.61,
+          "width": 193,
+          "height": 299.41,
+          "right": 249,
+          "bottom": 10465.02
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 16,
+          "y": 1295.97,
+          "width": 273,
+          "height": 371.86,
+          "right": 289,
+          "bottom": 1667.83
+        },
+        "innerOverflow": false,
+        "text": 152
+      },
+      {
+        "rect": {
+          "x": 16,
+          "y": 6311.77,
+          "width": 273,
+          "height": 371.86,
+          "right": 289,
+          "bottom": 6683.63
+        },
+        "innerOverflow": false,
+        "text": 151
+      },
+      {
+        "rect": {
+          "x": 16,
+          "y": 10779.13,
+          "width": 273,
+          "height": 311.39,
+          "right": 289,
+          "bottom": 11090.52
+        },
+        "innerOverflow": false,
+        "text": 122
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 1,
+      "bibs": 3,
+      "highlights": 3
+    }
+  },
+  {
+    "phase": "article-special",
+    "path": "/news/self-taught-rlvr-2026/",
+    "requestedWidth": 375,
+    "scale": 1,
+    "width": 375,
+    "sw": 360,
+    "cw": 360,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 328,
+    "images": [
+      {
+        "src": "rlsd-method.BEt7unul_Z1750IC.webp",
+        "natural": [
+          1790,
+          825
+        ],
+        "rect": {
+          "x": 16,
+          "y": 3271.39,
+          "width": 328,
+          "height": 151.17,
+          "right": 344,
+          "bottom": 3422.56
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "npo-overview.CJ4xIahc_Z2uRYPl.webp",
+        "natural": [
+          1695,
+          664
+        ],
+        "rect": {
+          "x": 16,
+          "y": 5877.98,
+          "width": 328,
+          "height": 128.48,
+          "right": 344,
+          "bottom": 6006.47
+        },
+        "ratioError": 0.0001,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "copd-method.DDSTu-st_Z1jSItp.webp",
+        "natural": [
+          1932,
+          919
+        ],
+        "rect": {
+          "x": 16,
+          "y": 8034.59,
+          "width": 328,
+          "height": 156.02,
+          "right": 344,
+          "bottom": 8190.61
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 3576.3,
+          "width": 326,
+          "height": 45,
+          "right": 343,
+          "bottom": 3621.3
+        },
+        "label": {
+          "x": 27,
+          "y": 3586.06,
+          "width": 43,
+          "height": 24.47,
+          "right": 70,
+          "bottom": 3610.53
+        },
+        "status": {
+          "x": 152.2,
+          "y": 3588.7,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 293,
+          "bottom": 3607.89
+        },
+        "button": {
+          "x": 301,
+          "y": 3582.3,
+          "width": 32,
+          "height": 32,
+          "right": 333,
+          "bottom": 3614.3
+        },
+        "pre": {
+          "x": 17,
+          "y": 3621.3,
+          "width": 326,
+          "height": 250.42,
+          "right": 343,
+          "bottom": 3871.72
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 326,
+          "scroll": 1192
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 6190.44,
+          "width": 326,
+          "height": 45,
+          "right": 343,
+          "bottom": 6235.44
+        },
+        "label": {
+          "x": 27,
+          "y": 6200.2,
+          "width": 43,
+          "height": 24.47,
+          "right": 70,
+          "bottom": 6224.67
+        },
+        "status": {
+          "x": 152.2,
+          "y": 6202.84,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 293,
+          "bottom": 6222.03
+        },
+        "button": {
+          "x": 301,
+          "y": 6196.44,
+          "width": 32,
+          "height": 32,
+          "right": 333,
+          "bottom": 6228.44
+        },
+        "pre": {
+          "x": 17,
+          "y": 6235.44,
+          "width": 326,
+          "height": 250.42,
+          "right": 343,
+          "bottom": 6485.86
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 326,
+          "scroll": 1025
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 8344.34,
+          "width": 326,
+          "height": 45,
+          "right": 343,
+          "bottom": 8389.34
+        },
+        "label": {
+          "x": 27,
+          "y": 8354.11,
+          "width": 43,
+          "height": 24.47,
+          "right": 70,
+          "bottom": 8378.58
+        },
+        "status": {
+          "x": 152.2,
+          "y": 8356.75,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 293,
+          "bottom": 8375.94
+        },
+        "button": {
+          "x": 301,
+          "y": 8350.34,
+          "width": 32,
+          "height": 32,
+          "right": 333,
+          "bottom": 8382.34
+        },
+        "pre": {
+          "x": 17,
+          "y": 8389.34,
+          "width": 326,
+          "height": 250.42,
+          "right": 343,
+          "bottom": 8639.77
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 326,
+          "scroll": 1153
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 248,
+        "scroll": 1382,
+        "tableWidth": 1382,
+        "rect": {
+          "x": 56,
+          "y": 8947.41,
+          "width": 248,
+          "height": 299.41,
+          "right": 304,
+          "bottom": 9246.81
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 16,
+          "y": 1123.36,
+          "width": 328,
+          "height": 341.63,
+          "right": 344,
+          "bottom": 1464.98
+        },
+        "innerOverflow": false,
+        "text": 152
+      },
+      {
+        "rect": {
+          "x": 16,
+          "y": 5529.59,
+          "width": 328,
+          "height": 311.39,
+          "right": 344,
+          "bottom": 5840.98
+        },
+        "innerOverflow": false,
+        "text": 151
+      },
+      {
+        "rect": {
+          "x": 16,
+          "y": 9530.69,
+          "width": 328,
+          "height": 250.92,
+          "right": 344,
+          "bottom": 9781.61
+        },
+        "innerOverflow": false,
+        "text": 122
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 1,
+      "bibs": 3,
+      "highlights": 3
+    }
+  },
+  {
+    "phase": "article-special",
+    "path": "/news/self-taught-rlvr-2026/",
+    "requestedWidth": 320,
+    "scale": 2,
+    "width": 320,
+    "sw": 305,
+    "cw": 305,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 273,
+    "images": [
+      {
+        "src": "rlsd-method.BEt7unul_Z1750IC.webp",
+        "natural": [
+          1790,
+          825
+        ],
+        "rect": {
+          "x": 16,
+          "y": 14456.66,
+          "width": 273,
+          "height": 125.81,
+          "right": 289,
+          "bottom": 14582.47
+        },
+        "ratioError": 0.0001,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "npo-overview.CJ4xIahc_Z2uRYPl.webp",
+        "natural": [
+          1695,
+          664
+        ],
+        "rect": {
+          "x": 16,
+          "y": 24794.19,
+          "width": 273,
+          "height": 106.94,
+          "right": 289,
+          "bottom": 24901.13
+        },
+        "ratioError": 0.0001,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "copd-method.DDSTu-st_Z1jSItp.webp",
+        "natural": [
+          1932,
+          919
+        ],
+        "rect": {
+          "x": 16,
+          "y": 33592.06,
+          "width": 273,
+          "height": 129.84,
+          "right": 289,
+          "bottom": 33721.91
+        },
+        "ratioError": 0.0001,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 15054.34,
+          "width": 271,
+          "height": 108.34,
+          "right": 288,
+          "bottom": 15162.69
+        },
+        "label": {
+          "x": 27,
+          "y": 15060.34,
+          "width": 85,
+          "height": 48.95,
+          "right": 112,
+          "bottom": 15109.3
+        },
+        "status": {
+          "x": 27,
+          "y": 15117.3,
+          "width": 211,
+          "height": 38.39,
+          "right": 238,
+          "bottom": 15155.69
+        },
+        "button": {
+          "x": 246,
+          "y": 15117.3,
+          "width": 32,
+          "height": 32,
+          "right": 278,
+          "bottom": 15149.3
+        },
+        "pre": {
+          "x": 17,
+          "y": 15162.69,
+          "width": 271,
+          "height": 457.56,
+          "right": 288,
+          "bottom": 15620.25
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 271,
+          "scroll": 2322
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 25614.88,
+          "width": 271,
+          "height": 108.34,
+          "right": 288,
+          "bottom": 25723.22
+        },
+        "label": {
+          "x": 27,
+          "y": 25620.88,
+          "width": 85,
+          "height": 48.95,
+          "right": 112,
+          "bottom": 25669.83
+        },
+        "status": {
+          "x": 27,
+          "y": 25677.83,
+          "width": 211,
+          "height": 38.39,
+          "right": 238,
+          "bottom": 25716.22
+        },
+        "button": {
+          "x": 246,
+          "y": 25677.83,
+          "width": 32,
+          "height": 32,
+          "right": 278,
+          "bottom": 25709.83
+        },
+        "pre": {
+          "x": 17,
+          "y": 25723.22,
+          "width": 271,
+          "height": 457.56,
+          "right": 288,
+          "bottom": 26180.78
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 271,
+          "scroll": 1992
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 34314.72,
+          "width": 271,
+          "height": 108.34,
+          "right": 288,
+          "bottom": 34423.06
+        },
+        "label": {
+          "x": 27,
+          "y": 34320.72,
+          "width": 85,
+          "height": 48.95,
+          "right": 112,
+          "bottom": 34369.67
+        },
+        "status": {
+          "x": 27,
+          "y": 34377.67,
+          "width": 211,
+          "height": 38.39,
+          "right": 238,
+          "bottom": 34416.06
+        },
+        "button": {
+          "x": 246,
+          "y": 34377.67,
+          "width": 32,
+          "height": 32,
+          "right": 278,
+          "bottom": 34409.67
+        },
+        "pre": {
+          "x": 17,
+          "y": 34423.06,
+          "width": 271,
+          "height": 457.56,
+          "right": 288,
+          "bottom": 34880.63
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 271,
+          "scroll": 2245
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 193,
+        "scroll": 2664,
+        "tableWidth": 2664,
+        "rect": {
+          "x": 56,
+          "y": 35998.69,
+          "width": 193,
+          "height": 480.81,
+          "right": 249,
+          "bottom": 36479.5
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 16,
+          "y": 4574.91,
+          "width": 273,
+          "height": 1470.38,
+          "right": 289,
+          "bottom": 6045.28
+        },
+        "innerOverflow": false,
+        "text": 152
+      },
+      {
+        "rect": {
+          "x": 16,
+          "y": 23326.28,
+          "width": 273,
+          "height": 1409.91,
+          "right": 289,
+          "bottom": 24736.19
+        },
+        "innerOverflow": false,
+        "text": 151
+      },
+      {
+        "rect": {
+          "x": 16,
+          "y": 37651.94,
+          "width": 273,
+          "height": 1168.03,
+          "right": 289,
+          "bottom": 38819.97
+        },
+        "innerOverflow": false,
+        "text": 122
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 1,
+      "bibs": 3,
+      "highlights": 3
+    }
+  },
+  {
+    "phase": "article-special",
+    "path": "/news/self-taught-rlvr-2026/",
+    "requestedWidth": 375,
+    "scale": 2,
+    "width": 375,
+    "sw": 360,
+    "cw": 360,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 328,
+    "images": [
+      {
+        "src": "rlsd-method.BEt7unul_Z1750IC.webp",
+        "natural": [
+          1790,
+          825
+        ],
+        "rect": {
+          "x": 16,
+          "y": 12173.86,
+          "width": 328,
+          "height": 151.17,
+          "right": 344,
+          "bottom": 12325.03
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "npo-overview.CJ4xIahc_Z2uRYPl.webp",
+        "natural": [
+          1695,
+          664
+        ],
+        "rect": {
+          "x": 16,
+          "y": 21387.84,
+          "width": 328,
+          "height": 128.48,
+          "right": 344,
+          "bottom": 21516.33
+        },
+        "ratioError": 0.0001,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "copd-method.DDSTu-st_Z1jSItp.webp",
+        "natural": [
+          1932,
+          919
+        ],
+        "rect": {
+          "x": 16,
+          "y": 28937.42,
+          "width": 328,
+          "height": 156.02,
+          "right": 344,
+          "bottom": 29093.44
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 12796.91,
+          "width": 326,
+          "height": 108.34,
+          "right": 343,
+          "bottom": 12905.25
+        },
+        "label": {
+          "x": 27,
+          "y": 12802.91,
+          "width": 85,
+          "height": 48.95,
+          "right": 112,
+          "bottom": 12851.86
+        },
+        "status": {
+          "x": 27,
+          "y": 12859.86,
+          "width": 266,
+          "height": 38.39,
+          "right": 293,
+          "bottom": 12898.25
+        },
+        "button": {
+          "x": 301,
+          "y": 12859.86,
+          "width": 32,
+          "height": 32,
+          "right": 333,
+          "bottom": 12891.86
+        },
+        "pre": {
+          "x": 17,
+          "y": 12905.25,
+          "width": 326,
+          "height": 457.56,
+          "right": 343,
+          "bottom": 13362.81
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 326,
+          "scroll": 2322
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 22109.14,
+          "width": 326,
+          "height": 108.34,
+          "right": 343,
+          "bottom": 22217.48
+        },
+        "label": {
+          "x": 27,
+          "y": 22115.14,
+          "width": 85,
+          "height": 48.95,
+          "right": 112,
+          "bottom": 22164.09
+        },
+        "status": {
+          "x": 27,
+          "y": 22172.09,
+          "width": 266,
+          "height": 38.39,
+          "right": 293,
+          "bottom": 22210.48
+        },
+        "button": {
+          "x": 301,
+          "y": 22172.09,
+          "width": 32,
+          "height": 32,
+          "right": 333,
+          "bottom": 22204.09
+        },
+        "pre": {
+          "x": 17,
+          "y": 22217.48,
+          "width": 326,
+          "height": 457.56,
+          "right": 343,
+          "bottom": 22675.05
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 326,
+          "scroll": 1992
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 29565.31,
+          "width": 326,
+          "height": 108.34,
+          "right": 343,
+          "bottom": 29673.66
+        },
+        "label": {
+          "x": 27,
+          "y": 29571.31,
+          "width": 85,
+          "height": 48.95,
+          "right": 112,
+          "bottom": 29620.27
+        },
+        "status": {
+          "x": 27,
+          "y": 29628.27,
+          "width": 266,
+          "height": 38.39,
+          "right": 293,
+          "bottom": 29666.66
+        },
+        "button": {
+          "x": 301,
+          "y": 29628.27,
+          "width": 32,
+          "height": 32,
+          "right": 333,
+          "bottom": 29660.27
+        },
+        "pre": {
+          "x": 17,
+          "y": 29673.66,
+          "width": 326,
+          "height": 457.56,
+          "right": 343,
+          "bottom": 30131.22
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 326,
+          "scroll": 2245
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 248,
+        "scroll": 2664,
+        "tableWidth": 2664,
+        "rect": {
+          "x": 56,
+          "y": 31128.81,
+          "width": 248,
+          "height": 480.81,
+          "right": 304,
+          "bottom": 31609.63
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 16,
+          "y": 3924.77,
+          "width": 328,
+          "height": 1168.03,
+          "right": 344,
+          "bottom": 5092.8
+        },
+        "innerOverflow": false,
+        "text": 152
+      },
+      {
+        "rect": {
+          "x": 16,
+          "y": 20161.81,
+          "width": 328,
+          "height": 1168.03,
+          "right": 344,
+          "bottom": 21329.84
+        },
+        "innerOverflow": false,
+        "text": 151
+      },
+      {
+        "rect": {
+          "x": 16,
+          "y": 32661.13,
+          "width": 328,
+          "height": 926.16,
+          "right": 344,
+          "bottom": 33587.28
+        },
+        "innerOverflow": false,
+        "text": 122
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 1,
+      "bibs": 3,
+      "highlights": 3
+    }
+  },
+  {
+    "phase": "article-special",
+    "path": "/news/self-taught-rlvr-2026/",
+    "requestedWidth": 1280,
+    "scale": 2,
+    "width": 1280,
+    "sw": 1265,
+    "cw": 1265,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [
+      {
+        "src": "rlsd-method.BEt7unul_Z1750IC.webp",
+        "natural": [
+          1790,
+          825
+        ],
+        "rect": {
+          "x": 66.5,
+          "y": 3890.69,
+          "width": 1132,
+          "height": 521.72,
+          "right": 1198.5,
+          "bottom": 4412.41
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "npo-overview.CJ4xIahc_Z2uRYPl.webp",
+        "natural": [
+          1695,
+          664
+        ],
+        "rect": {
+          "x": 66.5,
+          "y": 7578.2,
+          "width": 1132,
+          "height": 443.44,
+          "right": 1198.5,
+          "bottom": 8021.64
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      },
+      {
+        "src": "copd-method.DDSTu-st_Z1jSItp.webp",
+        "natural": [
+          1932,
+          919
+        ],
+        "rect": {
+          "x": 66.5,
+          "y": 10681.19,
+          "width": 1132,
+          "height": 538.45,
+          "right": 1198.5,
+          "bottom": 11219.64
+        },
+        "ratioError": 0,
+        "widthOfContent": 1,
+        "complete": true
+      }
+    ],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 67.5,
+          "y": 4642.41,
+          "width": 1130,
+          "height": 61.95,
+          "right": 1197.5,
+          "bottom": 4704.36
+        },
+        "label": {
+          "x": 77.5,
+          "y": 4648.41,
+          "width": 85,
+          "height": 48.95,
+          "right": 162.5,
+          "bottom": 4697.36
+        },
+        "status": {
+          "x": 865.91,
+          "y": 4653.69,
+          "width": 281.59,
+          "height": 38.39,
+          "right": 1147.5,
+          "bottom": 4692.08
+        },
+        "button": {
+          "x": 1155.5,
+          "y": 4648.41,
+          "width": 32,
+          "height": 32,
+          "right": 1187.5,
+          "bottom": 4680.41
+        },
+        "pre": {
+          "x": 67.5,
+          "y": 4704.36,
+          "width": 1130,
+          "height": 457.56,
+          "right": 1197.5,
+          "bottom": 5161.92
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 1130,
+          "scroll": 2322
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 67.5,
+          "y": 8251.64,
+          "width": 1130,
+          "height": 61.95,
+          "right": 1197.5,
+          "bottom": 8313.59
+        },
+        "label": {
+          "x": 77.5,
+          "y": 8257.64,
+          "width": 85,
+          "height": 48.95,
+          "right": 162.5,
+          "bottom": 8306.59
+        },
+        "status": {
+          "x": 865.91,
+          "y": 8262.92,
+          "width": 281.59,
+          "height": 38.39,
+          "right": 1147.5,
+          "bottom": 8301.31
+        },
+        "button": {
+          "x": 1155.5,
+          "y": 8257.64,
+          "width": 32,
+          "height": 32,
+          "right": 1187.5,
+          "bottom": 8289.64
+        },
+        "pre": {
+          "x": 67.5,
+          "y": 8313.59,
+          "width": 1130,
+          "height": 457.56,
+          "right": 1197.5,
+          "bottom": 8771.16
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 1130,
+          "scroll": 1992
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      },
+      {
+        "toolbar": {
+          "x": 67.5,
+          "y": 11449.64,
+          "width": 1130,
+          "height": 61.95,
+          "right": 1197.5,
+          "bottom": 11511.59
+        },
+        "label": {
+          "x": 77.5,
+          "y": 11455.64,
+          "width": 85,
+          "height": 48.95,
+          "right": 162.5,
+          "bottom": 11504.59
+        },
+        "status": {
+          "x": 865.91,
+          "y": 11460.92,
+          "width": 281.59,
+          "height": 38.39,
+          "right": 1147.5,
+          "bottom": 11499.31
+        },
+        "button": {
+          "x": 1155.5,
+          "y": 11455.64,
+          "width": 32,
+          "height": 32,
+          "right": 1187.5,
+          "bottom": 11487.64
+        },
+        "pre": {
+          "x": 67.5,
+          "y": 11511.59,
+          "width": 1130,
+          "height": 457.56,
+          "right": 1197.5,
+          "bottom": 11969.16
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 1130,
+          "scroll": 2245
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 1052,
+        "scroll": 2664,
+        "tableWidth": 2664,
+        "rect": {
+          "x": 106.5,
+          "y": 12374.52,
+          "width": 1052,
+          "height": 480.81,
+          "right": 1158.5,
+          "bottom": 12855.33
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 66.5,
+          "y": 1310.81,
+          "width": 1132,
+          "height": 395.38,
+          "right": 1198.5,
+          "bottom": 1706.19
+        },
+        "innerOverflow": false,
+        "text": 152
+      },
+      {
+        "rect": {
+          "x": 66.5,
+          "y": 7185.3,
+          "width": 1132,
+          "height": 334.91,
+          "right": 1198.5,
+          "bottom": 7520.2
+        },
+        "innerOverflow": false,
+        "text": 151
+      },
+      {
+        "rect": {
+          "x": 66.5,
+          "y": 13241.67,
+          "width": 1132,
+          "height": 334.91,
+          "right": 1198.5,
+          "bottom": 13576.58
+        },
+        "innerOverflow": false,
+        "text": 122
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 1,
+      "bibs": 3,
+      "highlights": 3
+    }
+  },
+  {
+    "phase": "temp-news",
+    "path": "/news/__layout-gate/",
+    "requestedWidth": 375,
+    "scale": 1,
+    "width": 375,
+    "sw": 360,
+    "cw": 360,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 328,
+    "images": [],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 1359.14,
+          "width": 326,
+          "height": 45,
+          "right": 343,
+          "bottom": 1404.14
+        },
+        "label": {
+          "x": 27,
+          "y": 1368.91,
+          "width": 43,
+          "height": 24.47,
+          "right": 70,
+          "bottom": 1393.38
+        },
+        "status": {
+          "x": 152.2,
+          "y": 1371.55,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 293,
+          "bottom": 1390.73
+        },
+        "button": {
+          "x": 301,
+          "y": 1365.14,
+          "width": 32,
+          "height": 32,
+          "right": 333,
+          "bottom": 1397.14
+        },
+        "pre": {
+          "x": 17,
+          "y": 1404.14,
+          "width": 326,
+          "height": 250.42,
+          "right": 343,
+          "bottom": 1654.56
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 326,
+          "scroll": 1003
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 248,
+        "scroll": 534,
+        "tableWidth": 534,
+        "rect": {
+          "x": 56,
+          "y": 781.56,
+          "width": 248,
+          "height": 299.41,
+          "right": 304,
+          "bottom": 1080.97
+        }
+      },
+      {
+        "client": 248,
+        "scroll": 248,
+        "tableWidth": 248,
+        "rect": {
+          "x": 56,
+          "y": 1132.44,
+          "width": 248,
+          "height": 142.7,
+          "right": 304,
+          "bottom": 1275.14
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 16,
+          "y": 309.67,
+          "width": 328,
+          "height": 358.42,
+          "right": 344,
+          "bottom": 668.09
+        },
+        "innerOverflow": false,
+        "text": 208
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 2,
+      "bibs": 1,
+      "highlights": 1
+    }
+  },
+  {
+    "phase": "temp-news",
+    "path": "/news/__layout-gate/",
+    "requestedWidth": 320,
+    "scale": 2,
+    "width": 320,
+    "sw": 305,
+    "cw": 305,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 273,
+    "images": [],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 17,
+          "y": 3410.52,
+          "width": 271,
+          "height": 108.34,
+          "right": 288,
+          "bottom": 3518.86
+        },
+        "label": {
+          "x": 27,
+          "y": 3416.52,
+          "width": 85,
+          "height": 48.95,
+          "right": 112,
+          "bottom": 3465.47
+        },
+        "status": {
+          "x": 27,
+          "y": 3473.47,
+          "width": 211,
+          "height": 38.39,
+          "right": 238,
+          "bottom": 3511.86
+        },
+        "button": {
+          "x": 246,
+          "y": 3473.47,
+          "width": 32,
+          "height": 32,
+          "right": 278,
+          "bottom": 3505.47
+        },
+        "pre": {
+          "x": 17,
+          "y": 3518.86,
+          "width": 271,
+          "height": 457.56,
+          "right": 288,
+          "bottom": 3976.42
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 271,
+          "scroll": 1960
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 193,
+        "scroll": 942,
+        "tableWidth": 942,
+        "rect": {
+          "x": 56,
+          "y": 2379.34,
+          "width": 193,
+          "height": 480.81,
+          "right": 249,
+          "bottom": 2860.16
+        }
+      },
+      {
+        "client": 193,
+        "scroll": 221,
+        "tableWidth": 221,
+        "rect": {
+          "x": 56,
+          "y": 2957.11,
+          "width": 193,
+          "height": 248.41,
+          "right": 249,
+          "bottom": 3205.52
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 16,
+          "y": 748.41,
+          "width": 273,
+          "height": 1383.03,
+          "right": 289,
+          "bottom": 2131.44
+        },
+        "innerOverflow": false,
+        "text": 208
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 2,
+      "bibs": 1,
+      "highlights": 1
+    }
+  },
+  {
+    "phase": "temp-news",
+    "path": "/news/__layout-gate/",
+    "requestedWidth": 1280,
+    "scale": 1,
+    "width": 1280,
+    "sw": 1265,
+    "cw": 1265,
+    "overflow": 0,
+    "offenders": [],
+    "offenderCount": 0,
+    "clipped": [],
+    "contentWidth": 1132,
+    "images": [],
+    "bibs": [
+      {
+        "toolbar": {
+          "x": 67.5,
+          "y": 1162.89,
+          "width": 1130,
+          "height": 45,
+          "right": 1197.5,
+          "bottom": 1207.89
+        },
+        "label": {
+          "x": 77.5,
+          "y": 1172.66,
+          "width": 43,
+          "height": 24.47,
+          "right": 120.5,
+          "bottom": 1197.13
+        },
+        "status": {
+          "x": 1006.7,
+          "y": 1175.3,
+          "width": 140.8,
+          "height": 19.19,
+          "right": 1147.5,
+          "bottom": 1194.48
+        },
+        "button": {
+          "x": 1155.5,
+          "y": 1168.89,
+          "width": 32,
+          "height": 32,
+          "right": 1187.5,
+          "bottom": 1200.89
+        },
+        "pre": {
+          "x": 67.5,
+          "y": 1207.89,
+          "width": 1130,
+          "height": 235.42,
+          "right": 1197.5,
+          "bottom": 1443.31
+        },
+        "button32": true,
+        "overlaps": {
+          "labelButton": false,
+          "labelStatus": false,
+          "buttonStatus": false,
+          "toolbarPre": false
+        },
+        "preScroll": {
+          "client": 1130,
+          "scroll": 1130
+        },
+        "toolbarClipped": false,
+        "statusClipped": false,
+        "pageOverflow": 0
+      }
+    ],
+    "tables": [
+      {
+        "client": 1052,
+        "scroll": 1052,
+        "tableWidth": 1052,
+        "rect": {
+          "x": 106.5,
+          "y": 600.31,
+          "width": 1052,
+          "height": 284.41,
+          "right": 1158.5,
+          "bottom": 884.72
+        }
+      },
+      {
+        "client": 1052,
+        "scroll": 1052,
+        "tableWidth": 1052,
+        "rect": {
+          "x": 106.5,
+          "y": 936.19,
+          "width": 1052,
+          "height": 142.7,
+          "right": 1158.5,
+          "bottom": 1078.89
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "rect": {
+          "x": 66.5,
+          "y": 279.59,
+          "width": 1132,
+          "height": 207.25,
+          "right": 1198.5,
+          "bottom": 486.84
+        },
+        "innerOverflow": false,
+        "text": 208
+      }
+    ],
+    "widgetCss": true,
+    "fontCjk": true,
+    "counts": {
+      "figures": 2,
+      "bibs": 1,
+      "highlights": 1
+    }
+  }
+]

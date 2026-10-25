@@ -1,0 +1,142 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../components/BaseLayout.astro';
+import { withBase } from '../../utils';
+import site from '../../data/site.json';
+import newsWidgetsCssUrl from '../../styles/news-widgets.css?url';
+import { hasNewsWidgets } from '../../markdown/news-widgets.mjs';
+
+// rest 参数 `[...id]`：`src/content/news/**/*.md` 的嵌套 id（如 `subdir/probe`）
+// 可直接映射为 `/news/subdir/probe/`，既有单段 id 的 URL 保持不变。
+export async function getStaticPaths() {
+  const news = await getCollection('news');
+  return news.map((entry) => ({
+    params: { id: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, date } = entry.data;
+const dateStr = date.toISOString().slice(0, 10);
+
+// FR-031/032：控件样式仅在真正使用控件语法的详情页加载，
+// 其余详情页不加载控件资源（satteri 已把全局样式内联进文档）。
+const body = typeof entry.body === 'string' ? entry.body : '';
+const hasWidgets = hasNewsWidgets(body);
+---
+
+<BaseLayout title={`${title} · ${site.groupName} ${site.navBrand}`}>
+  <Fragment slot="head">
+    {hasWidgets && <link rel="stylesheet" href={newsWidgetsCssUrl} />}
+  </Fragment>
+  <article class="section news-article">
+    <header>
+      <h1>{title}</h1>
+      <time datetime={date.toISOString()}>{dateStr}</time>
+    </header>
+    <div class="news-body">
+      <Content />
+    </div>
+    <p class="back"><a href={withBase('/news/')}>← All news</a></p>
+  </article>
+  {hasWidgets && (
+  <script is:inline>
+    (() => {
+      const body = document.querySelector('.news-body');
+      if (!body) return;
+      const timers = new WeakMap();
+      const tokens = new WeakMap();
+      const buttons = body.querySelectorAll('button.news-bib__copy');
+      for (const button of buttons) button.hidden = false;
+
+      body.addEventListener('click', (event) => {
+        const button = event.target.closest('button.news-bib__copy');
+        if (!button || !body.contains(button)) return;
+        const block = button.closest('.news-bib');
+        const code = block && block.querySelector('pre code');
+        if (!code) return;
+        const status = block.querySelector('.news-bib__status');
+        const text = code.textContent.replace(/\n$/, '');
+
+        // 新操作开始即作废旧操作：清除旧 timer，并递增操作 token，
+        // 旧 Promise 的 settle 不得覆盖新状态或提前复位。
+        const previous = timers.get(button);
+        if (previous) clearTimeout(previous);
+        timers.delete(button);
+        const token = (tokens.get(button) || 0) + 1;
+        tokens.set(button, token);
+
+        const finish = (ok) => {
+          if (tokens.get(button) !== token) return;
+          button.classList.remove('is-copied', 'is-error');
+          button.classList.add(ok ? 'is-copied' : 'is-error');
+          if (status) status.textContent = ok ? '已复制' : '复制失败，请手动选择';
+          timers.set(
+            button,
+            setTimeout(() => {
+              if (tokens.get(button) !== token) return;
+              button.classList.remove('is-copied', 'is-error');
+              if (status) status.textContent = '';
+              timers.delete(button);
+            }, 2000),
+          );
+        };
+
+        try {
+          navigator.clipboard.writeText(text).then(
+            () => finish(true),
+            () => finish(false),
+          );
+        } catch {
+          finish(false);
+        }
+      });
+    })();
+  </script>
+  )}
+</BaseLayout>
+
+<style>
+  header {
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    margin: 0 0 8px;
+    font-size: 1.9rem;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  time {
+    color: var(--ink-soft);
+    font-size: 1rem;
+  }
+
+  .news-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--ink);
+  }
+
+  .news-body :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+
+  .news-body :global(h2) {
+    margin-top: 32px;
+  }
+
+  .back {
+    margin-top: 40px;
+  }
+
+  .back a {
+    color: var(--blue-deep);
+  }
+</style>

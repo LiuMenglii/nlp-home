@@ -1,0 +1,121 @@
+{
+  "baselineSource": "git archive HEAD (d97f4fe, 2026-10-23 15:08) + T028 的 src/styles/global.css（移除 body overflow-x:hidden），隔离目录 /tmp/t054-baseline",
+  "baselineBuild": {
+    "exit": 0,
+    "pages": 18,
+    "warningLines": 0
+  },
+  "currentBuild": {
+    "exit": 0,
+    "pages": 19,
+    "warningLines": 0
+  },
+  "excluded": [
+    "self-taught-rlvr-2026（新增文章）",
+    "news/index.html（列表页）"
+  ],
+  "rawSha256Match": 0,
+  "normalizedMatch": 14,
+  "total": 14,
+  "differenceCause": "T050 将 src/pages/news/[id].astro 重命名为 src/pages/news/[...id].astro，Astro 为路由组件生成的 scoped 样式 id 由 eefyg22u 变为 x34khjk5；仅该 id 及其在 <style> 中的选择器不同，其余字节一致，其他组件 scoped id 未变。",
+  "rows": [
+    {
+      "slug": "acceptances-2026",
+      "baselineRawSha256": "09c50bf8471e7573ed3c0ca333fab4fd720dc441f95aeb5aa35068c7a186edb2",
+      "currentRawSha256": "76b9750c5de36e29e5a768723ba07f34b13d4b4ed94d6631973854090b3b75f9",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    },
+    {
+      "slug": "acl-2023-acceptances",
+      "baselineRawSha256": "ee0a93495ca40e7cc734e8140cda8ef982c38da0a50e31a445b1407f8f0e5b93",
+      "currentRawSha256": "864f2096b56cd30ba52cfb68aeba026562c1582edeecc310bb22c4331d827e7f",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    },
+    {
+      "slug": "acl-2024-acceptances",
+      "baselineRawSha256": "a8a10382f57252bce3e326dbe325524e2cfb3a6c20b241c4247682daadaf33e9",
+      "currentRawSha256": "a8bfbf7159ccd04ceda43dc6fa8122f67e2516a2917a9edbb7d5c26333931eda",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    },
+    {
+      "slug": "acl-2025-spc-award",
+      "baselineRawSha256": "1a45af69065ac45c9449dd71a27596ff2a2939d14bfdd54750a493d4ec338df4",
+      "currentRawSha256": "0b6130385ddad7ee4e131635410829c1f541c114e84f60ecbea7a2ad090e9c94",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    },
+    {
+      "slug": "award-fengyuchen-2026",
+      "baselineRawSha256": "0a27401c9f16aa2d6e5a5783e574320086e43d6d64197e01f5f58d30cbe4afce",
+      "currentRawSha256": "f581ed6b98f370d9fde803e9f80b2234cdcecfcd0fb8d41e5f564a72be86d8e9",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    },
+    {
+      "slug": "award-yangzexian-2025",
+      "baselineRawSha256": "5684fb08ace661b30de318ea4dccc7fbb8e7b5c71479571a58063beab9cfb79a",
+      "currentRawSha256": "e12862bdb9e8fdd79307b6bd0d80614c2b74e558229fa6c0578c69d7d682513a",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    },
+    {
+      "slug": "emnlp-2022-acceptances",
+      "baselineRawSha256": "4156e5c6885bc49bca13b5451dbfc8eb66329cc7e6858452c5659ad5ef548c8f",
+      "currentRawSha256": "f0b77835b284b191ca64fece1d013769143f03c0156078a67da3613d57e5ca7b",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    },
+    {
+      "slug": "emnlp-2023-acceptances",
+      "baselineRawSha256": "10cfd5808a594c2d5c92cad75e0959f04ee056ce94ed58f2896b1f70c4d22b32",
+      "currentRawSha256": "e1f4d6a13ff039253c32bfb03e24612be8ec7223d557ec5ad9218044da0e6ff7",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    },
+    {
+      "slug": "homepage-relaunch",
+      "baselineRawSha256": "71f2925678ca81afd7167910ba055c2c6a9a00bacfd1d3f834068557fc8a68b1",
+      "currentRawSha256": "d988fd85c5174b3d9b10fc8fcb97755759060ffd60cb0648c005e465206e5db5",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    },
+    {
+      "slug": "iie-nlp-founded",
+      "baselineRawSha256": "eca8aa5f8be55f8d7812e15ef0f22eec700012e8fa25b494f38c2fa3cbc85745",
+      "currentRawSha256": "b5267fefe90fd65d519d384cb067f96a4ee1d9a7bca78c05ac13c81bba78c9e6",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    },
+    {
+      "slug": "publications-2025-roundup",
+      "baselineRawSha256": "a348176594448f5c4a30306479fcc03acba246766a9c5f778e0860edb5fd10e0",
+      "currentRawSha256": "53f240aa82c0105835d4bbf1be4f73047c7c644aa78f5f88517d5dea38d3aa33",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    },
+    {
+      "slug": "teachers-day-2024",
+      "baselineRawSha256": "1bea9a7e48208526cda38ef53fbae9b9403e4f881d8472af0afdcd7bf669d65f",
+      "currentRawSha256": "85d7a4dcaa17b789f23931c18f714b1b5032b0f5895db83ae87d949813af065c",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    },
+    {
+      "slug": "team-building-2023",
+      "baselineRawSha256": "cf937d0af823b42e4e25dda704d0e5f4e4fa5e0fe843c7c3175485487b6062bf",
+      "currentRawSha256": "12d9dcfac2cbd7b0086b5de74e6356f9f66a95266065f79478eeea645f050e2a",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    },
+    {
+      "slug": "team-building-2024",
+      "baselineRawSha256": "4ff170162188f37b1fc882cccc9abaf3be85ed522df863bbf3520a2e90754139",
+      "currentRawSha256": "5d47c7e6e6b24cf14e4c00cb61e84d65475c6511c60c9fd06737f4cf40d9446e",
+      "rawMatch": false,
+      "matchAfterRouteScopeNormalization": true
+    }
+  ]
+}

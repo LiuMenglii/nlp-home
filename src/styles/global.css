@@ -38,7 +38,6 @@ body {
   line-height: 1.65;
   color: var(--ink);
   background: #ffffff;
-  overflow-x: hidden; /* 流式自适应，无横向溢出（FR-014） */
 }
 
 /* ---------- 布局容器 ---------- */

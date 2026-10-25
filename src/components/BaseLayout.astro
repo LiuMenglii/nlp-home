@@ -23,6 +23,7 @@ const {
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href={withBase(site.favicon)} />
     <title>{title}</title>
+    <slot name="head" />
   </head>
   <body>
     <Navbar />

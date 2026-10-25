@@ -1,0 +1,247 @@
+/* ============================================================
+   新闻详情页重点控件样式（specs/008-news-detail-widgets）
+   仅在 /news/<id>/ 详情页加载；全部选择器限定在 .news-body 内。
+   ============================================================ */
+
+/* ---------- 高亮块 ---------- */
+
+.news-body .news-highlight {
+  background: var(--sky);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-block: 1.25em;
+  overflow-wrap: anywhere;
+}
+
+.news-body .news-highlight__title {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.news-body .news-highlight > :last-child {
+  margin-bottom: 0;
+}
+
+.news-body .news-highlight code {
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.news-body .news-highlight pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.news-body .news-highlight pre code {
+  padding: 0;
+  background: none;
+}
+
+.news-body .news-highlight blockquote {
+  margin: 0 0 1em;
+  padding-left: 12px;
+  border-left: 2px solid var(--line);
+  color: var(--ink-soft);
+}
+
+.news-body .news-highlight table {
+  border-collapse: collapse;
+}
+
+.news-body .news-highlight th,
+.news-body .news-highlight td {
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+}
+
+/* ---------- BibTeX 引用块 ---------- */
+
+.news-body .news-bib {
+  position: relative;
+  min-width: 0;
+  max-width: 100%;
+  margin-block: 1.25em;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--sky-soft);
+}
+
+.news-body .news-bib__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--line);
+  background: var(--sky);
+}
+
+.news-body .news-bib__label {
+  margin-right: auto;
+  min-width: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  overflow-wrap: anywhere;
+}
+
+.news-body .news-bib__copy {
+  position: relative;
+  order: 2;
+  display: inline-flex;
+  flex: 0 0 32px;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+/* 作者样式不得覆盖 hidden：无 JS 时按钮必须保持隐藏 */
+.news-body .news-bib__copy[hidden] {
+  display: none !important;
+}
+
+.news-body .news-bib__copy:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* RA-01：复制按钮与表格滚动容器使用外置焦点环 */
+.news-body .news-bib__copy:focus-visible,
+.news-body .news-table__scroll:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* pre 的焦点环向块内绘制，避免被 .news-bib 的 overflow:hidden 裁掉四边 */
+.news-body .news-bib pre:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: -4px;
+}
+
+.news-body .news-bib__icon {
+  position: absolute;
+  inset: 0;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  display: none;
+}
+
+.news-body .news-bib__icon--copy {
+  display: block;
+}
+
+.news-body .news-bib__copy.is-copied .news-bib__icon--copy,
+.news-body .news-bib__copy.is-error .news-bib__icon--copy {
+  display: none;
+}
+
+.news-body .news-bib__copy.is-copied .news-bib__icon--success {
+  display: block;
+  color: #1a7f37;
+}
+
+.news-body .news-bib__copy.is-error .news-bib__icon--error {
+  display: block;
+  color: #b42318;
+}
+
+/* DOM 保持 label → button → status；视觉顺序为 label → status → button。
+   状态区使用固定 flex-basis，文案变化不改变按钮位置；狭窄或 200% 文字
+   缩放下允许收缩与换行，按钮始终在工具栏右端且保持 32×32 CSS px。 */
+.news-body .news-bib__status {
+  order: 1;
+  flex: 0 1 min(11em, calc(100% - 40px));
+  min-width: 0;
+  min-height: 1.5em;
+  font-size: 0.8rem;
+  line-height: 1.5em;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: right;
+  color: var(--ink-soft);
+}
+
+.news-body .news-bib pre {
+  max-width: 100%;
+  margin: 0;
+  padding: 14px 16px;
+  overflow-x: auto;
+  background: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.news-body .news-bib pre code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+  white-space: pre;
+}
+
+/* ---------- 表格块 ---------- */
+
+.news-body .news-table {
+  margin-block: 1.25em;
+}
+
+.news-body .news-table__caption {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.news-body .news-table__scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.news-body .news-table table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+}
+
+.news-body .news-table th,
+.news-body .news-table td {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  white-space: normal;
+  text-align: left;
+  vertical-align: top;
+}
+
+.news-body .news-table thead th {
+  background: var(--sky);
+  font-weight: 600;
+}
+
+/* ---------- 200% 文字缩放：长令牌折行 ---------- */
+
+/* 公式、arXiv 链接与页脚邮箱在 200% 文字缩放下无自然断点，
+   仅在需要时折行，普通字号不改变现有排版（SC-007、FR-033）。 */
+.news-body,
+.news-body a,
+.footer-contact a {
+  overflow-wrap: anywhere;
+}

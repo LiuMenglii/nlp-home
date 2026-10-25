@@ -1,0 +1,15 @@
+{
+  "title": "课题组三篇 Self-Taught RLVR 论文解读：从看见答案到自己教自己",
+  "titleCjkCount": 20,
+  "summary": "三篇由课题组同学与老师完成、与京东研究者合作的论文，分别用看见答案的自己、短暂未来后的自己、走另一条路的自己作为教师信号，探索模型如何在 RLVR 中自己教自己。本文逐篇解读其问题、方法与结论，并横向比较三条路径的代价与适用阶段。",
+  "summaryCodePoints": 115,
+  "bodyCjkCount": 3654,
+  "bibtexBlocks": 3,
+  "highlightBlocks": 3,
+  "tableBlocks": 1,
+  "images": 3,
+  "bibtexTool": "BibTeX 0.99e (TeX Live 2026), kpathsea 6.4.2, plain.bst",
+  "bibtexParseExit": 0,
+  "bibtexEntries": 3,
+  "bibtexParseLog": "This is BibTeX, Version 0.99e (TeX Live 2026); Database file #1: refs.bib; exit 0"
+}

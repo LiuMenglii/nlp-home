@@ -1,0 +1,560 @@
+{
+  "keyboard": [
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 16,
+        "y": 42.1,
+        "width": 50,
+        "height": 38.4
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 86,
+        "y": 42.1,
+        "width": 45,
+        "height": 38.4
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 151,
+        "y": 42.1,
+        "width": 46,
+        "height": 38.4
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 217,
+        "y": 42.1,
+        "width": 97,
+        "height": 38.4
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 33,
+        "y": 438.2,
+        "width": 149,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 96,
+        "y": 438,
+        "width": 100,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 16,
+        "y": 827.6,
+        "width": 328,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 33,
+        "y": 437.8,
+        "width": 131,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 181,
+        "y": 437.8,
+        "width": 72,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "BUTTON",
+      "cls": "news-bib__copy",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 301,
+        "y": 523.3,
+        "width": 32,
+        "height": 32
+      },
+      "inView": true
+    },
+    {
+      "tag": "PRE",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "-4px",
+      "rect": {
+        "x": 17,
+        "y": 562.3,
+        "width": 326,
+        "height": 250.4
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 33,
+        "y": 743.2,
+        "width": 149,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 195,
+        "y": 438.4,
+        "width": 86,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 16,
+        "y": 500.5,
+        "width": 328,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 33,
+        "y": 608,
+        "width": 149,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 199,
+        "y": 608,
+        "width": 72,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "BUTTON",
+      "cls": "news-bib__copy",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 301,
+        "y": 693.4,
+        "width": 32,
+        "height": 32
+      },
+      "inView": true
+    },
+    {
+      "tag": "PRE",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "-4px",
+      "rect": {
+        "x": 17,
+        "y": 664.4,
+        "width": 326,
+        "height": 250.4
+      },
+      "inView": false
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 33,
+        "y": 713.1,
+        "width": 149,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 229,
+        "y": 437.6,
+        "width": 86,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 16,
+        "y": 650.6,
+        "width": 328,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 33,
+        "y": 727.9,
+        "width": 149,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 199,
+        "y": 727.9,
+        "width": 72,
+        "height": 24
+      },
+      "inView": true
+    },
+    {
+      "tag": "BUTTON",
+      "cls": "news-bib__copy",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 301,
+        "y": 813.3,
+        "width": 32,
+        "height": 32
+      },
+      "inView": true
+    },
+    {
+      "tag": "PRE",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "-4px",
+      "rect": {
+        "x": 17,
+        "y": 664.3,
+        "width": 326,
+        "height": 250.4
+      },
+      "inView": false
+    },
+    {
+      "tag": "DIV",
+      "cls": "news-table__scroll",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 56,
+        "y": 615.4,
+        "width": 248,
+        "height": 299.4
+      },
+      "inView": false
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 16,
+        "y": 611.3,
+        "width": 90,
+        "height": 26
+      },
+      "inView": true
+    },
+    {
+      "tag": "A",
+      "cls": "",
+      "visible": true,
+      "outline": "solid 2px rgb(27, 120, 191)",
+      "offset": "2px",
+      "rect": {
+        "x": 77,
+        "y": 837.8,
+        "width": 131,
+        "height": 22
+      },
+      "inView": true
+    },
+    {
+      "tag": "BODY",
+      "cls": "",
+      "visible": false,
+      "outline": "none 3px rgb(16, 43, 78)",
+      "offset": "0px",
+      "rect": {
+        "x": 0,
+        "y": -10350,
+        "width": 360,
+        "height": 11249.9
+      },
+      "inView": false
+    }
+  ],
+  "copyStates": {
+    "idle": {
+      "rect": {
+        "x": 301,
+        "y": 434.3,
+        "width": 32,
+        "height": 32
+      },
+      "cls": "news-bib__copy",
+      "hidden": false,
+      "status": "",
+      "live": "polite",
+      "visibleIcons": [
+        "news-bib__icon news-bib__icon--copy"
+      ],
+      "icons": [
+        {
+          "cls": "news-bib__icon news-bib__icon--copy",
+          "display": "block",
+          "aria": "true"
+        },
+        {
+          "cls": "news-bib__icon news-bib__icon--success",
+          "display": "none",
+          "aria": "true"
+        },
+        {
+          "cls": "news-bib__icon news-bib__icon--error",
+          "display": "none",
+          "aria": "true"
+        }
+      ]
+    },
+    "copied": {
+      "rect": {
+        "x": 301,
+        "y": 434.3,
+        "width": 32,
+        "height": 32
+      },
+      "cls": "news-bib__copy is-copied",
+      "hidden": false,
+      "status": "已复制",
+      "live": "polite",
+      "visibleIcons": [
+        "news-bib__icon news-bib__icon--success"
+      ],
+      "icons": [
+        {
+          "cls": "news-bib__icon news-bib__icon--copy",
+          "display": "none",
+          "aria": "true"
+        },
+        {
+          "cls": "news-bib__icon news-bib__icon--success",
+          "display": "block",
+          "aria": "true"
+        },
+        {
+          "cls": "news-bib__icon news-bib__icon--error",
+          "display": "none",
+          "aria": "true"
+        }
+      ]
+    },
+    "error": {
+      "rect": {
+        "x": 301,
+        "y": 434.3,
+        "width": 32,
+        "height": 32
+      },
+      "cls": "news-bib__copy is-error",
+      "hidden": false,
+      "status": "复制失败，请手动选择",
+      "live": "polite",
+      "visibleIcons": [
+        "news-bib__icon news-bib__icon--error"
+      ],
+      "icons": [
+        {
+          "cls": "news-bib__icon news-bib__icon--copy",
+          "display": "none",
+          "aria": "true"
+        },
+        {
+          "cls": "news-bib__icon news-bib__icon--success",
+          "display": "none",
+          "aria": "true"
+        },
+        {
+          "cls": "news-bib__icon news-bib__icon--error",
+          "display": "block",
+          "aria": "true"
+        }
+      ]
+    },
+    "reset": {
+      "rect": {
+        "x": 301,
+        "y": 434.3,
+        "width": 32,
+        "height": 32
+      },
+      "cls": "news-bib__copy",
+      "hidden": false,
+      "status": "",
+      "live": "polite",
+      "visibleIcons": [
+        "news-bib__icon news-bib__icon--copy"
+      ],
+      "icons": [
+        {
+          "cls": "news-bib__icon news-bib__icon--copy",
+          "display": "block",
+          "aria": "true"
+        },
+        {
+          "cls": "news-bib__icon news-bib__icon--success",
+          "display": "none",
+          "aria": "true"
+        },
+        {
+          "cls": "news-bib__icon news-bib__icon--error",
+          "display": "none",
+          "aria": "true"
+        }
+      ]
+    }
+  },
+  "tableKeyboard": {
+    "setup": {
+      "visible": true,
+      "outline": "rgb(27, 120, 191) solid 2px",
+      "rect": {
+        "x": 56,
+        "y": 300.3,
+        "w": 248,
+        "h": 299.4
+      },
+      "before": 0,
+      "max": 819
+    },
+    "after": {
+      "scrollLeft": 80,
+      "max": 819,
+      "inView": true
+    },
+    "note": "375px 下表格容器在视口内聚焦后连按 2 次 ArrowRight；平滑滚动 600ms 后 scrollLeft 0→80（最大 819）；焦点保持在容器上；截图 article-375-table-focus.png / article-375-table-scrolled.png"
+  }
+}

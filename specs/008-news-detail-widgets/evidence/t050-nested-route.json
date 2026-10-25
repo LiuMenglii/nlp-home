@@ -1,0 +1,39 @@
+{
+  "route": "src/pages/news/[...id].astro",
+  "nestedSoftWarning": {
+    "fixture": "src/content/news/__t050_nested/probe.md（构建后删除）",
+    "exit": 0,
+    "newsWidgetsWarnings": [
+      "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t050_nested/probe.md:18 未知容器指令 :::foo 已展开为普通内容。"
+    ],
+    "output": "dist/news/__t050_nested/probe/index.html",
+    "widgetCssLoaded": true,
+    "copyScriptPresent": true
+  },
+  "nestedHardError": {
+    "fixture": "同一嵌套文件删除表格结尾 :::",
+    "exit": 1,
+    "error": "[news-widgets] /home/photon/workspace/nlp-home-008/src/content/news/__t050_nested/probe.md:22 table 容器未闭合：缺少结尾 `:::`。"
+  },
+  "detailUrls": [
+    "acceptances-2026",
+    "acl-2023-acceptances",
+    "acl-2024-acceptances",
+    "acl-2025-spc-award",
+    "award-fengyuchen-2026",
+    "award-yangzexian-2025",
+    "emnlp-2022-acceptances",
+    "emnlp-2023-acceptances",
+    "homepage-relaunch",
+    "iie-nlp-founded",
+    "publications-2025-roundup",
+    "self-taught-rlvr-2026",
+    "teachers-day-2024",
+    "team-building-2023",
+    "team-building-2024"
+  ],
+  "detailUrlCount": 15,
+  "inlineScriptUtf8Bytes": 1957,
+  "inlineScriptLimit": 5120,
+  "inlineScriptWithinLimit": true
+}
