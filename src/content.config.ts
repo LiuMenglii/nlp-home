@@ -245,19 +245,36 @@ const publications = defineCollection({
           { message: 'date 必须是合法日历日期（如 2026-02-30 不合法）' },
         )
         .optional(),
-      ccf: z.enum(['A', 'B', 'C']).optional().nullable(),
+      // FR-018：ccf 缺省必须省略字段，拒绝 null（不再允许 .nullable()）
+      ccf: z.enum(['A', 'B', 'C']).optional(),
       url: httpsUrl,
       featured: z.boolean().optional().default(false),
       authors: z.array(z.string()).optional(),
       ...jsonParseErrorField,
     })
     .superRefine((pub, ctx) => {
-      // FR-011：有链接的条目 MUST 有 date，无链接条目 MUST 留空（仅允许缺省）
+      // FR-007 / FR-018：url 缺省时必须省略字段，不得写 JSON null
+      if (pub.url === null) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['url'],
+          message: `条目 "${pub.title}" 的 url 缺省必须省略字段，不得为 null`,
+        });
+      }
+      // FR-011：有链接的条目 MUST 有 date
       if (pub.url && !pub.date) {
         ctx.addIssue({
           code: 'custom',
           path: ['date'],
           message: `有 url 的条目 "${pub.title}" 必须填写 date（YYYY-MM-DD）`,
+        });
+      }
+      // FR-007：无链接的条目 MUST 不保留 date（反向配对，移除链接须同步移除日期）
+      if (!pub.url && pub.date) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['date'],
+          message: `无 url 的条目 "${pub.title}" 不得保留 date，移除链接时须同步删除 date`,
         });
       }
     }),

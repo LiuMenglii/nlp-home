@@ -8,11 +8,9 @@ interface Props {
 
 const { pub } = Astro.props;
 const { title, venue, year, ccf, url } = pub.data;
-// FR-005：固定双槽——CCF 左槽、LINK 右槽；缺失槽渲染同构隐藏占位保持列线，
-// 两标签皆缺时不渲染标签簇（不留空槽、不留空白区）
-const hasCcf = Boolean(ccf);
-const hasLink = Boolean(url);
-const hasBadges = hasCcf || hasLink;
+// FR-005：固定双槽——CCF 左槽、LINK 右槽；缺失槽由 CSS min-inline-size 预留宽度，
+// 槽内不渲染任何内容；两标签皆缺时不渲染标签簇（不留空槽、不留空白区）
+const hasBadges = Boolean(ccf) || Boolean(url);
 ---
 
 <article class="pub-item" data-date={pub.data.date ?? ''}>
@@ -33,22 +31,14 @@ const hasBadges = hasCcf || hasLink;
   {
     hasBadges && (
       <div class="pub-side">
-        <span
-          class:list={['pub-slot', 'pub-slot-ccf', !hasCcf && 'pub-slot--empty']}
-          aria-hidden={hasCcf ? undefined : 'true'}
-        >
-          <CCFBadge rating={hasCcf ? ccf : 'A'} />
+        <span class="pub-slot pub-slot-ccf">
+          {ccf && <CCFBadge rating={ccf} />}
         </span>
-        <span
-          class:list={['pub-slot', 'pub-slot-link', !hasLink && 'pub-slot--empty']}
-          aria-hidden={hasLink ? undefined : 'true'}
-        >
-          {hasLink ? (
+        <span class="pub-slot pub-slot-link">
+          {url && (
             <a class="pub-link" href={url} target="_blank" rel="noopener">
               Link <span aria-hidden="true">↗</span>
             </a>
-          ) : (
-            <span class="pub-link">Link ↗</span>
           )}
         </span>
       </div>
@@ -108,7 +98,10 @@ const hasBadges = hasCcf || hasLink;
   .pub-side {
     flex: 0 0 auto;
     display: flex;
-    align-items: center;
+    /* 视觉顺序保持 CCF 左 / LINK 右；基线始终取自 LINK 槽（order 1），
+       避免空 CCF 槽以合成基线参与对齐导致 LINK-only 条目下坠 */
+    flex-direction: row-reverse;
+    align-items: baseline;
     column-gap: 10px;
   }
 
@@ -116,15 +109,26 @@ const hasBadges = hasCcf || hasLink;
   .pub-slot {
     display: flex;
     align-items: center;
+    /* 两槽统一最小高度（实测满槽高度 24.44px），保证有无标签时空槽不改变行高 */
+    min-block-size: 24.44px;
   }
 
-  /* 缺失槽占位：保留布局宽度，但不可见、不进入无障碍树（另由 aria-hidden 移出） */
-  .pub-slot--empty {
-    visibility: hidden;
+  /* 缺失槽由固定宽度预留空间，槽内不渲染任何假标签（FR-005 / R5） */
+  .pub-slot-ccf {
+    order: 2;
+    min-inline-size: 59.66px;
+  }
+
+  .pub-slot-link {
+    order: 1;
+    min-inline-size: 45px;
+    justify-content: flex-end;
   }
 
   .pub-link {
     font-size: 1rem;
+    /* 与 CCFBadge 行盒一致（0.85rem × 1.65），使 LINK-only 簇与带徽标簇基线一致 */
+    line-height: 22.44px;
     white-space: nowrap;
   }
 

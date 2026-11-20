@@ -5,7 +5,7 @@
     "year": 2026,
     "date": "2025-08-26",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2508.18651"
+    "url": "https://doi.org/10.1609/aaai.v40i40.40719"
   },
   {
     "title": "Test-time Prompt Intervention",
@@ -13,7 +13,7 @@
     "year": 2026,
     "date": "2025-08-04",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2508.02511"
+    "url": "https://doi.org/10.1609/aaai.v40i40.40718"
   },
   {
     "title": "VecInfer: Efficient LLM Inference with Low-Bit KV Cache via Outlier-Suppressed Vector Quantization",
@@ -22,7 +22,7 @@
     "date": "2025-10-07",
     "ccf": "A",
     "featured": true,
-    "url": "https://arxiv.org/abs/2510.06175"
+    "url": "https://doi.org/10.18653/v1/2026.acl-long.1454"
   },
   {
     "title": "Blink: Dynamic Visual Token Resolution for Enhanced Multimodal Understanding",
@@ -31,40 +31,45 @@
     "date": "2025-12-11",
     "ccf": "A",
     "featured": true,
-    "url": "https://arxiv.org/abs/2512.10548"
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Feng_Blink_Dynamic_Visual_Token_Resolution_for_Enhanced_Multimodal_Understanding_CVPR_2026_paper.html"
   },
   {
     "title": "Advantageous Parameter Expansion Training Makes Better Large Language Models",
     "venue": "EMNLP",
     "year": 2026,
     "date": "2025-05-30",
-    "url": "https://arxiv.org/abs/2505.24241"
+    "url": "https://doi.org/10.18653/2026.emnlp-main.386",
+    "ccf": "B"
   },
   {
     "title": "Mindscape-Aware Retrieval Augmented Generation for Improved Long Context Understanding",
     "venue": "EMNLP",
     "year": 2026,
     "date": "2025-12-19",
-    "url": "https://arxiv.org/abs/2512.17220"
+    "url": "https://doi.org/10.18653/2026.emnlp-main.1594",
+    "ccf": "B"
   },
   {
     "title": "Query-focused and Memory-aware Reranker for Long Context Processing",
     "venue": "EMNLP",
     "year": 2026,
     "date": "2026-02-12",
-    "url": "https://arxiv.org/abs/2602.12192"
+    "url": "https://doi.org/10.18653/2026.emnlp-main.1607",
+    "ccf": "B"
   },
   {
     "title": "CoRe-MoE: Compact Reusable MoE for Continual Multimodal Instruction Tuning",
     "venue": "Findings of EMNLP",
     "year": 2026,
     "date": "2026-08-28",
-    "url": "https://arxiv.org/abs/2608.27867"
+    "url": "https://doi.org/10.18653/2026.findings-emnlp.790"
   },
   {
     "title": "IRIS: Iterative Refinement of Internal States for Safer Language Models",
     "venue": "Findings of EMNLP",
-    "year": 2026
+    "year": 2026,
+    "url": "https://doi.org/10.18653/2026.findings-emnlp.912",
+    "date": "2026-10-01"
   },
   {
     "title": "Dynamic Early Exit in Reasoning Models",
@@ -88,28 +93,32 @@
     "venue": "IJCAI",
     "year": 2026,
     "date": "2026-08-25",
-    "url": "https://arxiv.org/abs/2608.24010"
+    "url": "https://doi.org/10.24963/ijcai.2026/239",
+    "ccf": "B"
   },
   {
     "title": "Causal Path Alignment: Anchoring the Optimization Trajectory for Controllable In-Parameter Knowledge Editing",
     "venue": "IJCAI",
     "year": 2026,
     "date": "2025-06-04",
-    "url": "https://arxiv.org/abs/2506.04042"
+    "url": "https://doi.org/10.24963/ijcai.2026/655",
+    "ccf": "B"
   },
   {
     "title": "Online Self-Calibration Against Hallucination in Vision-Language Models",
     "venue": "IJCAI",
     "year": 2026,
     "date": "2026-05-01",
-    "url": "https://arxiv.org/abs/2605.00323"
+    "url": "https://doi.org/10.24963/ijcai.2026/111",
+    "ccf": "B"
   },
   {
     "title": "System 1&2 Synergy via Dynamic Model Interpolation",
     "venue": "IJCAI",
     "year": 2026,
     "date": "2026-01-29",
-    "url": "https://arxiv.org/abs/2601.21414"
+    "url": "https://doi.org/10.24963/ijcai.2026/668",
+    "ccf": "B"
   },
   {
     "title": "Co-Evolving Policy Distillation",
@@ -141,7 +150,7 @@
     "year": 2026,
     "date": "2026-01-22",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2601.15820"
+    "url": "https://doi.org/10.1145/3805712.3809648"
   },
   {
     "title": "LWGR: Lagrangian-Constrained Personalized World Knowledge for Generative Recommendation",
@@ -149,7 +158,7 @@
     "year": 2026,
     "date": "2026-04-16",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2605.18771"
+    "url": "https://doi.org/10.1145/3805712.3809677"
   },
   {
     "title": "Multimodal Hypothetical Summary for Retrieval-based Multi-image Question Answering",
@@ -157,7 +166,7 @@
     "year": 2025,
     "date": "2024-12-19",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2412.14880"
+    "url": "https://doi.org/10.1609/aaai.v39i5.32513"
   },
   {
     "title": "Relation Also Knows: Rethinking the Recall and Editing of Factual Associations in Auto-Regressive Transformer Language Models",
@@ -165,7 +174,7 @@
     "year": 2025,
     "date": "2024-08-27",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2408.15091"
+    "url": "https://doi.org/10.1609/aaai.v39i23.34646"
   },
   {
     "title": "Trust-GRS: A Trustworthy Training Framework for Graph Neural Network Based Recommender Systems against Shilling Attacks",
@@ -182,7 +191,7 @@
     "date": "2025-06-07",
     "ccf": "A",
     "featured": true,
-    "url": "https://arxiv.org/abs/2506.06844"
+    "url": "https://doi.org/10.18653/v1/2025.acl-long.719"
   },
   {
     "title": "BeamLoRA: Beam-Constraint Low-Rank Adaptation",
@@ -190,7 +199,7 @@
     "year": 2025,
     "date": "2025-02-19",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2502.13604"
+    "url": "https://doi.org/10.18653/v1/2025.acl-long.582"
   },
   {
     "title": "DIVE into MoE: Diversity-Enhanced Reconstruction of Large Language Models from Dense into Mixture-of-Experts",
@@ -198,7 +207,7 @@
     "year": 2025,
     "date": "2025-06-11",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2506.09351"
+    "url": "https://doi.org/10.18653/v1/2025.acl-long.951"
   },
   {
     "title": "PIG: Privacy Jailbreak Attack on LLMs via Gradient-based Iterative In-Context Optimization",
@@ -206,7 +215,7 @@
     "year": 2025,
     "date": "2025-05-15",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2505.09921"
+    "url": "https://doi.org/10.18653/v1/2025.acl-long.475"
   },
   {
     "title": "Mitigating the Evolving Semantic Entanglement in Continual Learning of Vision-Language Models",
@@ -221,48 +230,54 @@
     "venue": "COLING",
     "year": 2025,
     "date": "2023-11-26",
-    "url": "https://arxiv.org/abs/2311.15316"
+    "url": "https://aclanthology.org/2025.coling-main.10/",
+    "ccf": "B"
   },
   {
     "title": "NeuS-PIR: Learning Relightable Neural Surface using Pre-Integrated Rendering",
     "venue": "CVMJ",
     "year": 2025,
     "date": "2023-06-13",
-    "url": "https://arxiv.org/abs/2306.07632"
+    "url": "https://doi.org/10.26599/cvm.2025.9450493",
+    "ccf": "C"
   },
   {
     "title": "CBP-Tuning: Efficient Local Customization for Black-box Large Language Models",
     "venue": "EMNLP",
     "year": 2025,
     "date": "2025-09-15",
-    "url": "https://arxiv.org/abs/2509.12112"
+    "url": "https://doi.org/10.18653/v1/2025.emnlp-main.991",
+    "ccf": "B"
   },
   {
     "title": "Weights-Rotated Preference Optimization for Large Language Models",
     "venue": "EMNLP",
     "year": 2025,
     "date": "2025-08-25",
-    "url": "https://arxiv.org/abs/2508.17637"
+    "url": "https://doi.org/10.18653/v1/2025.emnlp-main.1329",
+    "ccf": "B"
   },
   {
     "title": "TableDreamer: Progressive and Weakness-guided Data Synthesis from Scratch for Table Instruction Tuning",
     "venue": "Findings of ACL",
     "year": 2025,
     "date": "2025-06-10",
-    "url": "https://arxiv.org/abs/2506.08646"
+    "url": "https://doi.org/10.18653/v1/2025.findings-acl.381"
   },
   {
     "title": "TailorKV: A Hybrid Framework for Long-Context Inference via Tailored KV Cache Optimization",
     "venue": "Findings of ACL",
     "year": 2025,
     "date": "2025-05-26",
-    "url": "https://arxiv.org/abs/2505.19586"
+    "url": "https://doi.org/10.18653/v1/2025.findings-acl.1043"
   },
   {
     "title": "AutoPrompt: Automated Red-Teaming of Text-to-Image Models via LLM-Diven Adversarial Prompts",
     "venue": "ICCV",
     "year": 2025,
-    "ccf": "A"
+    "ccf": "A",
+    "url": "https://doi.org/10.1109/iccv51701.2025.01631",
+    "date": "2025-10-19"
   },
   {
     "title": "TextSafety: Visual Text Vanishing via Hierarchical Context-Aware Interaction Reconstruction",
@@ -293,7 +308,8 @@
     "venue": "Knowledge-Based Systems",
     "year": 2025,
     "date": "2025-06-01",
-    "url": "https://doi.org/10.1016/j.knosys.2025.113520"
+    "url": "https://doi.org/10.1016/j.knosys.2025.113520",
+    "ccf": "C"
   },
   {
     "title": "NeedleInATable: Exploring Long-Context Capability of Large Language Models towards Long-Structured Tables",
@@ -302,7 +318,7 @@
     "date": "2025-04-09",
     "ccf": "A",
     "featured": true,
-    "url": "https://arxiv.org/abs/2504.06560"
+    "url": "https://doi.org/10.52202/085713-4121"
   },
   {
     "title": "Incorporating Communication Style and Interaction of Speakers for Sarcasm Explanation in Dialogue",
@@ -335,7 +351,7 @@
     "date": "2023-12-20",
     "ccf": "A",
     "featured": true,
-    "url": "https://arxiv.org/abs/2401.09442"
+    "url": "https://doi.org/10.1609/aaai.v38i17.29816"
   },
   {
     "title": "Pairwise-Label-Based Deep Incremental Hashing with Simultaneous Code Expansion",
@@ -352,7 +368,7 @@
     "date": "2024-06-12",
     "ccf": "A",
     "featured": true,
-    "url": "https://arxiv.org/abs/2406.08100"
+    "url": "https://doi.org/10.18653/v1/2024.acl-long.493"
   },
   {
     "title": "Disrupting Diffusion: Token-Level Attention Erasure Attack against Diffusion-based Customization",
@@ -360,7 +376,7 @@
     "year": 2024,
     "date": "2024-05-31",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2405.20584"
+    "url": "https://doi.org/10.1145/3664647.3681243"
   },
   {
     "title": "Towards Flexible Evaluation for Generative Visual Question Answering",
@@ -368,14 +384,15 @@
     "year": 2024,
     "date": "2024-08-01",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2408.00300"
+    "url": "https://doi.org/10.1145/3664647.3681400"
   },
   {
     "title": "Central similarity consistency hashing for asymmetric image retrieval",
     "venue": "CVMJ",
     "year": 2024,
     "date": "2024-08-01",
-    "url": "https://doi.org/10.1007/s41095-024-0428-y"
+    "url": "https://doi.org/10.1007/s41095-024-0428-y",
+    "ccf": "C"
   },
   {
     "title": "A Pedestrian is Worth One Prompt: Towards Language Guidance Person Re-Identification",
@@ -392,7 +409,7 @@
     "year": 2024,
     "date": "2024-07-11",
     "ccf": "B",
-    "url": "https://arxiv.org/abs/2407.08127"
+    "url": "https://doi.org/10.1007/978-3-031-72764-1_17"
   },
   {
     "title": "Light-PEFT: Lightening Parameter-Efficient Fine-Tuning via Early Pruning",
@@ -400,13 +417,15 @@
     "year": 2024,
     "date": "2024-06-06",
     "featured": true,
-    "url": "https://arxiv.org/abs/2406.03792"
+    "url": "https://doi.org/10.18653/v1/2024.findings-acl.447"
   },
   {
     "title": "Pruning Large Language Models to Intra-module Low-rank Structure with Transitional Activations",
     "venue": "Findings of ACL",
     "year": 2024,
-    "featured": true
+    "featured": true,
+    "url": "https://doi.org/10.18653/v1/2024.findings-acl.582",
+    "date": "2024-08-01"
   },
   {
     "title": "Towards One-to-Many Visual Question Answering",
@@ -420,21 +439,24 @@
     "venue": "ICME",
     "year": 2024,
     "date": "2024-07-15",
-    "url": "https://doi.org/10.1109/icme57554.2024.10688271"
+    "url": "https://doi.org/10.1109/icme57554.2024.10688271",
+    "ccf": "B"
   },
   {
     "title": "Privacy-Preserving Replay and Adaptive Relation Distillation for Camera Incremental Person Re-Identification. ICME",
     "venue": "ICME",
     "year": 2024,
     "date": "2024-07-15",
-    "url": "https://doi.org/10.1109/icme57554.2024.10687929"
+    "url": "https://doi.org/10.1109/icme57554.2024.10687929",
+    "ccf": "B"
   },
   {
     "title": "SD4Privacy: Exploiting Stable Diffusion for Protecting Facial Privacy",
     "venue": "ICME",
     "year": 2024,
     "date": "2024-07-15",
-    "url": "https://doi.org/10.1109/icme57554.2024.10688292"
+    "url": "https://doi.org/10.1109/icme57554.2024.10688292",
+    "ccf": "B"
   },
   {
     "title": "From Data to Optimization: Data-Free Deep Incremental Hashing with Data Disambiguation and Adaptive Proxies",
@@ -450,7 +472,7 @@
     "year": 2023,
     "date": "2024-01-01",
     "ccf": "A",
-    "url": "https://doi.org/10.12677/csa.2024.1411213"
+    "url": "https://doi.org/10.7544/issn1000-1239.202220340"
   },
   {
     "title": "A Gradient Control Method for Backdoor Attacks on Parameter-Efficient Tuning",
@@ -466,7 +488,7 @@
     "year": 2023,
     "date": "2023-05-10",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2305.06407"
+    "url": "https://doi.org/10.18653/v1/2023.acl-long.614"
   },
   {
     "title": "DiffusEmp: A Diffusion Model-Based Framework with Multi-Grained Control for Empathetic Response Generation",
@@ -474,7 +496,7 @@
     "year": 2023,
     "date": "2023-06-02",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2306.01657"
+    "url": "https://doi.org/10.18653/v1/2023.acl-long.158"
   },
   {
     "title": "Divide, Conquer, and Combine: Mixture of Semantic-Independent Experts for Zero-Shot Dialogue State Tracking",
@@ -482,7 +504,7 @@
     "year": 2023,
     "date": "2023-06-01",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2306.00434"
+    "url": "https://doi.org/10.18653/v1/2023.acl-long.114"
   },
   {
     "title": "IM-TQA: A Chinese Table Question Answering Dataset with Implicit and Multi-type Table Structures",
@@ -506,7 +528,7 @@
     "year": 2023,
     "date": "2022-10-17",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2210.08710"
+    "url": "https://doi.org/10.1145/3581783.3612294"
   },
   {
     "title": "Dual Alignment Unsupervised Domain Adaptation for Video-Text Retrieval",
@@ -521,14 +543,16 @@
     "venue": "EMNLP",
     "year": 2023,
     "date": "2022-10-26",
-    "url": "https://arxiv.org/abs/2210.14558"
+    "url": "https://doi.org/10.18653/v1/2023.emnlp-main.34",
+    "ccf": "B"
   },
   {
     "title": "Multi-level Adaptive Contrastive Learning for Knowledge Internalization in Dialogue Generation",
     "venue": "EMNLP",
     "year": 2023,
     "date": "2023-10-13",
-    "url": "https://arxiv.org/abs/2310.08943"
+    "url": "https://doi.org/10.18653/v1/2023.emnlp-main.497",
+    "ccf": "B"
   },
   {
     "title": "Maximum Entropy Loss, the Silver Bullet Targeting Backdoor Attacks in Pre-trained Language Models",
@@ -542,14 +566,14 @@
     "venue": "Findings of ACL",
     "year": 2023,
     "date": "2022-10-26",
-    "url": "https://arxiv.org/abs/2210.14456"
+    "url": "https://doi.org/10.18653/v1/2023.findings-acl.306"
   },
   {
     "title": "An Empirical Study of Instruction-tuning Large Language Models in Chinese",
     "venue": "Findings of EMNLP",
     "year": 2023,
     "date": "2023-10-11",
-    "url": "https://arxiv.org/abs/2310.07328"
+    "url": "https://doi.org/10.18653/v1/2023.findings-emnlp.269"
   },
   {
     "title": "Chain-of-Thought Reasoning in Tabular Language Models",
@@ -563,14 +587,16 @@
     "venue": "ICASSP",
     "year": 2023,
     "date": "2023-06-04",
-    "url": "https://doi.org/10.1109/icassp49357.2023.10094672"
+    "url": "https://doi.org/10.1109/icassp49357.2023.10094672",
+    "ccf": "B"
   },
   {
     "title": "Towards Polymorphic Adversarial Examples Generation for Short Text",
     "venue": "ICASSP",
     "year": 2023,
     "date": "2023-06-04",
-    "url": "https://doi.org/10.1109/icassp49357.2023.10095612"
+    "url": "https://doi.org/10.1109/icassp49357.2023.10095612",
+    "ccf": "B"
   },
   {
     "title": "AREA: Adaptive Reweighting via Effective Area for Long-Tailed Classification",
@@ -602,7 +628,7 @@
     "year": 2022,
     "date": "2021-12-15",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2112.07928"
+    "url": "https://doi.org/10.1609/aaai.v36i1.19912"
   },
   {
     "title": "Neural Label Search for Zero-Shot Multi-Lingual Extractive Summarization",
@@ -610,7 +636,7 @@
     "year": 2022,
     "date": "2022-04-28",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2204.13512"
+    "url": "https://doi.org/10.18653/v1/2022.acl-long.42"
   },
   {
     "title": "Attack is the Best Defense: Towards Preemptive-Protection Person Re-Identification",
@@ -647,64 +673,79 @@
   {
     "title": "CLIO: Role-interactive Multi-event Head Attention Network for Document-level Event Extraction",
     "venue": "COLING",
-    "year": 2022
+    "year": 2022,
+    "ccf": "B",
+    "url": "https://aclanthology.org/2022.coling-1.221/",
+    "date": "2022-10-01"
   },
   {
     "title": "Slot Dependency Modeling for Zero-Shot Cross-Domain Dialogue State Tracking",
     "venue": "COLING",
-    "year": 2022
+    "year": 2022,
+    "ccf": "B",
+    "url": "https://aclanthology.org/2022.coling-1.42/",
+    "date": "2022-10-01"
   },
   {
     "title": "TAKE: Topic-shift Aware Knowledge sElection for Dialogue Generation",
     "venue": "COLING",
-    "year": 2022
+    "year": 2022,
+    "ccf": "B",
+    "url": "https://aclanthology.org/2022.coling-1.20/",
+    "date": "2022-10-01"
   },
   {
     "title": "Target Really Matters: Target-aware Contrastive Learning and Consistency Regularization for Few-shot Stance Detection",
     "venue": "COLING",
-    "year": 2022
+    "year": 2022,
+    "ccf": "B",
+    "url": "https://aclanthology.org/2022.coling-1.605/",
+    "date": "2022-10-01"
   },
   {
     "title": "COST-EFF: Collaborative Optimization of Spatial and Temporal Efficiency with Slenderized Multi-exit Language Models",
     "venue": "EMNLP",
     "year": 2022,
     "date": "2022-10-27",
-    "url": "https://arxiv.org/abs/2210.15523"
+    "url": "https://doi.org/10.18653/v1/2022.emnlp-main.112",
+    "ccf": "B"
   },
   {
     "title": "Empathetic Dialogue Generation via Sensitive Emotion Recognition and Sensible Knowledge Selection",
     "venue": "Findings of EMNLP",
     "year": 2022,
     "date": "2022-10-21",
-    "url": "https://arxiv.org/abs/2210.11715"
+    "url": "https://doi.org/10.18653/v1/2022.findings-emnlp.340"
   },
   {
     "title": "Language Prior Is Not the Only Shortcut: A Benchmark for Shortcut Learning in VQA",
     "venue": "Findings of EMNLP",
     "year": 2022,
     "date": "2022-10-10",
-    "url": "https://arxiv.org/abs/2210.04692"
+    "url": "https://doi.org/10.18653/v1/2022.findings-emnlp.271"
   },
   {
     "title": "Towards Robust Visual Question Answering: Making the Most of Biased Samples via Contrastive Learning",
     "venue": "Findings of EMNLP",
     "year": 2022,
     "date": "2022-10-10",
-    "url": "https://arxiv.org/abs/2210.04563"
+    "url": "https://doi.org/10.18653/v1/2022.findings-emnlp.495"
   },
   {
     "title": "Connecting Targets via Latent Topics and Contrastive Learning: A Unified Framework for Robust Zero-shot and Few-shot Stance Detection",
     "venue": "ICASSP",
     "year": 2022,
     "date": "2022-05-23",
-    "url": "https://doi.org/10.1109/icassp43922.2022.9746739"
+    "url": "https://doi.org/10.1109/icassp43922.2022.9746739",
+    "ccf": "B"
   },
   {
     "title": "Cross-Target Stance Detection via Refined Meta-Learning",
     "venue": "ICASSP",
     "year": 2022,
     "date": "2022-05-23",
-    "url": "https://doi.org/10.1109/icassp43922.2022.9746302"
+    "url": "https://doi.org/10.1109/icassp43922.2022.9746302",
+    "ccf": "B"
   },
   {
     "title": "Deep Piecewise Hashing for Efficient Hamming Space Retrieval",
@@ -720,14 +761,15 @@
     "year": 2022,
     "date": "2022-05-02",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2205.00759"
+    "url": "https://doi.org/10.24963/ijcai.2022/584"
   },
   {
     "title": "Learning to Win Lottery Tickets in BERT Transfer via Task-agnostic Mask Training",
     "venue": "NAACL",
     "year": 2022,
     "date": "2022-04-24",
-    "url": "https://arxiv.org/abs/2204.11218"
+    "url": "https://doi.org/10.18653/v1/2022.naacl-main.428",
+    "ccf": "B"
   },
   {
     "title": "A Win-win Deal: Towards Sparse and Robust Pre-trained Language Models",
@@ -735,7 +777,7 @@
     "year": 2022,
     "date": "2022-10-11",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2210.05211"
+    "url": "https://doi.org/10.52202/068431-1395"
   },
   {
     "title": "Deep Uncoupled Discrete Hashing via Similarity Matrix Decomposition",
@@ -751,7 +793,7 @@
     "year": 2021,
     "date": "2021-03-21",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2103.11367"
+    "url": "https://doi.org/10.1609/aaai.v35i10.17056"
   },
   {
     "title": "Check It Again: Progressive Visual Question Answering via Visual Entailment",
@@ -759,7 +801,7 @@
     "year": 2021,
     "date": "2021-06-08",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2106.04605"
+    "url": "https://doi.org/10.18653/v1/2021.acl-long.317"
   },
   {
     "title": "Marginal Utility Diminishes: Exploring the Minimum Knowledge for BERT Knowledge Distillation",
@@ -767,7 +809,7 @@
     "year": 2021,
     "date": "2021-06-10",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2106.05691"
+    "url": "https://doi.org/10.18653/v1/2021.acl-long.228"
   },
   {
     "title": "Mask is All You Need: Rethinking Mask R-CNN for Dense and Arbitrary-Shaped Scene Text Detection",
@@ -775,20 +817,22 @@
     "year": 2021,
     "date": "2021-09-08",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2109.03426"
+    "url": "https://doi.org/10.1145/3474085.3475178"
   },
   {
     "title": "MACROBERT: Maximizing Certified Region of BERT to Adversarial Word Substitutions",
     "venue": "DASFAA",
     "year": 2021,
     "date": "2021-01-01",
-    "url": "https://doi.org/10.1007/978-3-030-73197-7_16"
+    "url": "https://doi.org/10.1007/978-3-030-73197-7_16",
+    "ccf": "B"
   },
   {
     "title": "Enhanching Zero-shot and Few-shot Stance Detection with Commonsense Knowledge Graph",
     "venue": "Findings of ACL",
     "year": 2021,
-    "ccf": "A"
+    "url": "https://doi.org/10.18653/v1/2021.findings-acl.278",
+    "date": "2021-08-01"
   },
   {
     "title": "Past, Present, and Future: Conversational Emotion Recognition through Structural Modeling of Psychological Knowledge",
@@ -800,20 +844,26 @@
   {
     "title": "Addressing Extraction and Generation Separately:  Key phrase Prediction with Pre-trained Language Models",
     "venue": "IEEE Transactions on Audio, Speech and Language Processing",
-    "year": 2021
+    "year": 2021,
+    "ccf": "B",
+    "url": "https://doi.org/10.1109/taslp.2021.3120587",
+    "date": "2021-10-16"
   },
   {
     "title": "Sarcasm Detection with Commonsense Knowledge",
     "venue": "IEEE Transactions on Audio, Speech and Language Processing",
     "year": 2021,
     "date": "2021-01-01",
-    "url": "https://doi.org/10.1109/taslp.2021.3120601"
+    "url": "https://doi.org/10.1109/taslp.2021.3120601",
+    "ccf": "B"
   },
   {
     "title": "Learning Class-Transductive Intent Representations for Zero-shot IntentDetection",
     "venue": "IJCAI",
     "year": 2021,
-    "ccf": "A"
+    "ccf": "A",
+    "url": "https://doi.org/10.24963/ijcai.2021/540",
+    "date": "2021-08-01"
   },
   {
     "title": "Rescuing Deep Hashing from Dead Bits Problem",
@@ -821,7 +871,7 @@
     "year": 2021,
     "date": "2021-02-01",
     "ccf": "A",
-    "url": "https://arxiv.org/abs/2102.00648"
+    "url": "https://doi.org/10.24963/ijcai.2021/185"
   },
   {
     "title": "Binary Neural Network Hashing for Image Retrieval",
@@ -836,7 +886,8 @@
     "venue": "信息安全学报",
     "year": 2020,
     "date": "2020-01-01",
-    "url": "https://doi.org/10.12677/sg.2020.106034"
+    "ccf": "B",
+    "url": "https://doi.org/10.19363/J.cnki.cn10-1380/tn.2020.01.03"
   },
   {
     "title": "Joint Character-Level Word Embedding and Adversarial Stability Training to Defend Adversarial Text",
@@ -867,7 +918,8 @@
     "venue": "ECAI",
     "year": 2020,
     "date": "2020-01-01",
-    "url": "https://doi.org/10.3233/faia200337"
+    "url": "https://doi.org/10.3233/faia200337",
+    "ccf": "B"
   },
   {
     "title": "Modeling Intra and Inter-modality Incongruity for Multi-Modal Sarcasm Detection",
@@ -897,7 +949,8 @@
     "venue": "CIKM",
     "year": 2019,
     "date": "2019-11-03",
-    "url": "https://doi.org/10.1145/3357384.3358102"
+    "url": "https://doi.org/10.1145/3357384.3358102",
+    "ccf": "B"
   },
   {
     "title": "Deep Incremental Hashing Network for Efficient Image Retrieval",
@@ -912,7 +965,8 @@
     "venue": "EMNLP",
     "year": 2019,
     "date": "2019-11-01",
-    "url": "https://doi.org/10.1561/9781601980533"
+    "url": "https://doi.org/10.18653/v1/D19-1245",
+    "ccf": "B"
   },
   {
     "title": "文本情绪分析综述",
@@ -920,7 +974,7 @@
     "year": 2018,
     "date": "2018-01-01",
     "ccf": "A",
-    "url": "https://doi.org/10.70693/rwsk.v1i4.935"
+    "url": "https://doi.org/10.7544/issn1000-1239.2018.20170055"
   },
   {
     "title": "Learning Sentiment-Specific Word Embedding via Global Sentiment Representation",
@@ -960,14 +1014,15 @@
     "year": 2016,
     "date": "2016-01-01",
     "ccf": "A",
-    "url": "https://doi.org/10.12677/orf.2014.41003"
+    "url": "https://doi.org/10.11897/SP.J.1016.2016.00169"
   },
   {
     "title": "An Unsupervised Cross-Lingual Topic Model Framework for Sentiment Classification,",
     "venue": "IEEE/ACM Transactions on Audio, Speech and Language Processing",
     "year": 2016,
     "date": "2016-03-01",
-    "url": "https://doi.org/10.1109/taslp.2015.2512041"
+    "url": "https://doi.org/10.1109/taslp.2015.2512041",
+    "ccf": "B"
   },
   {
     "title": "A Word Vector and Matrix Factorization Based Method for Opinion Lexicon Extraction",
@@ -981,34 +1036,39 @@
     "venue": "CIKM",
     "year": 2014,
     "date": "2014-11-03",
-    "url": "https://doi.org/10.1145/2661829.2662019"
+    "url": "https://doi.org/10.1145/2661829.2662019",
+    "ccf": "B"
   },
   {
     "title": "Effective and efficient?bilingual sentiment lexicon extraction using collocation alignment",
     "venue": "CIKM",
     "year": 2012,
     "date": "2012-10-29",
-    "url": "https://doi.org/10.1145/2396761.2398469"
+    "url": "https://doi.org/10.1145/2396761.2398469",
+    "ccf": "B"
   },
   {
     "title": "Towards jointly extracting aspects and aspect-specific sentiment knowledge",
     "venue": "CIKM",
     "year": 2012,
     "date": "2012-10-29",
-    "url": "https://doi.org/10.1145/2396761.2398539"
+    "url": "https://doi.org/10.1145/2396761.2398539",
+    "ccf": "B"
   },
   {
     "title": "Find me opinion sources in blogosphere: a unified framework for opinionated blog feed retrieval",
     "venue": "WSDM",
     "year": 2012,
     "date": "2012-02-08",
-    "url": "https://doi.org/10.1145/2124295.2124366"
+    "url": "https://doi.org/10.1145/2124295.2124366",
+    "ccf": "B"
   },
   {
     "title": "Language-independent sentiment classification using three common words",
     "venue": "CIKM",
     "year": 2011,
     "date": "2011-10-24",
-    "url": "https://doi.org/10.1145/2063576.2063727"
+    "url": "https://doi.org/10.1145/2063576.2063727",
+    "ccf": "B"
   }
 ]
