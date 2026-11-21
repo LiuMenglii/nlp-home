@@ -1,36 +1,5 @@
 [
   {
-    "name": "李江楠",
-    "level": "phd",
-    "grade": null,
-    "url": null,
-    "github": "https://github.com/LeqsNaN",
-    "note": null
-  },
-  {
-    "name": "张瀚文",
-    "level": "phd",
-    "grade": "2020",
-    "url": null,
-    "github": "https://github.com/Heaven-zhw",
-    "note": null
-  },
-  {
-    "name": "季慧山",
-    "level": "phd",
-    "grade": "2021",
-    "url": null,
-    "note": null
-  },
-  {
-    "name": "郑明钰",
-    "level": "phd",
-    "grade": "2021",
-    "url": null,
-    "github": "https://github.com/SpursGoZmy",
-    "note": null
-  },
-  {
     "name": "杨晨旭",
     "level": "phd",
     "grade": "2022",
@@ -40,7 +9,7 @@
   {
     "name": "刘曦雨",
     "level": "phd",
-    "grade": null,
+    "grade": "2022",
     "url": null,
     "scholar": "https://scholar.google.com/citations?user=94lNc6oAAAAJ&hl=zh-CN",
     "note": null
@@ -60,11 +29,186 @@
     "note": null
   },
   {
-    "name": "刘正宵",
-    "level": "phd",
-    "grade": null,
+    "name": "刘梦犁",
+    "level": "master",
+    "grade": "2026",
     "url": null,
-    "github": "https://github.com/jluliuzx",
+    "github": null,
+    "note": null
+  },
+  {
+    "name": "张蓬月",
+    "level": "master",
+    "grade": "2026",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "顾树焕",
+    "level": "master",
+    "grade": "2026",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "温泽林",
+    "level": "master",
+    "grade": "2026",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "李佳睿",
+    "level": "master",
+    "grade": "2026",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "毛乐平",
+    "level": "master",
+    "grade": "2026",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "沈斌",
+    "level": "phd",
+    "grade": "2026",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "冀焕翔",
+    "level": "phd",
+    "grade": "2026",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "陈翔楠",
+    "level": "phd",
+    "grade": "2026",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "邱明阳",
+    "level": "phd",
+    "grade": "2026",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "牟凌宇",
+    "level": "phd",
+    "grade": "2021",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "周俊豪",
+    "level": "phd",
+    "grade": "2022",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "赵语林",
+    "level": "phd",
+    "grade": "2023",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "汪嘉",
+    "level": "phd",
+    "grade": "2023",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "朱祉同",
+    "level": "master",
+    "grade": "2024",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "张蓓泽",
+    "level": "master",
+    "grade": "2024",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "叶振雷",
+    "level": "master",
+    "grade": "2024",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "秦川于",
+    "level": "phd",
+    "grade": "2024",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "佟政阳",
+    "level": "phd",
+    "grade": "2024",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "朱哲良",
+    "level": "phd",
+    "grade": "2024",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "姚丁钰",
+    "level": "phd",
+    "grade": "2025",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "王娅彤",
+    "level": "phd",
+    "grade": "2025",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "彭诗忠",
+    "level": "phd",
+    "grade": "2025",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "艾明旭",
+    "level": "master",
+    "grade": "2025",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "刘润泽",
+    "level": "master",
+    "grade": "2025",
+    "url": null,
+    "note": null
+  },
+  {
+    "name": "冯宇辰",
+    "level": "phd",
+    "grade": "2026",
+    "url": null,
     "note": null
   }
 ]
