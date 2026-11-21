@@ -16,6 +16,16 @@ const byLevel = (level: 'phd' | 'master') =>
 const phd = byLevel('phd');
 const master = byLevel('master');
 
+// 010 FR-003：PhD 名单按 ceil(n/2) 切分为左右两栏；n=1 单栏单条，不生成空栏。
+// 切分不改变 byLevel 的排序结果（grade 降序 → 无年级最后 → 稳定序）。
+const phdColumns =
+  phd.length > 1
+    ? [phd.slice(0, Math.ceil(phd.length / 2)), phd.slice(Math.ceil(phd.length / 2))]
+    : phd.length === 1
+      ? [phd]
+      : [];
+const phdSingle = phd.length <= 1;
+
 // 007 FR-012：每人至多一个链接标签，按 url → github → scholar 取第一个非空字段
 const linkOf = (s: CollectionEntry<'students'>) =>
   s.data.url
@@ -32,23 +42,27 @@ const linkOf = (s: CollectionEntry<'students'>) =>
     phd.length > 0 ? (
       <div class="student-group">
         <h3>PhD Candidates</h3>
-        <ul>
-          {phd.map((s) => {
-            const link = linkOf(s);
-            return (
-              <li>
-                <span class="student-name">{s.data.name}</span>
-                {link && (
-                  <a class="member-link" href={link.href} target="_blank" rel="noopener">
-                    {link.label} <span aria-hidden="true">↗</span>
-                  </a>
-                )}
-                {s.data.grade && <span class="grade">Since {s.data.grade}</span>}
-                {s.data.note && <span class="note">{s.data.note}</span>}
-              </li>
-            );
-          })}
-        </ul>
+        <div class:list={['phd-columns', { 'is-single': phdSingle }]}>
+          {phdColumns.map((column) => (
+            <ul>
+              {column.map((s) => {
+                const link = linkOf(s);
+                return (
+                  <li>
+                    <span class="student-name">{s.data.name}</span>
+                    {s.data.grade && <span class="grade">Since {s.data.grade}</span>}
+                    {link && (
+                      <a class="member-link" href={link.href} target="_blank" rel="noopener">
+                        {link.label} <span aria-hidden="true">↗</span>
+                      </a>
+                    )}
+                    {s.data.note && <span class="note">{s.data.note}</span>}
+                  </li>
+                );
+              })}
+            </ul>
+          ))}
+        </div>
       </div>
     ) : (
       <div class="student-group">
@@ -173,5 +187,125 @@ const linkOf = (s: CollectionEntry<'students'>) =>
 
   .empty {
     color: var(--ink-soft);
+  }
+
+  /* 010 FR-001～FR-003：PhD 名单两栏包装层；基础态单列整宽，≥768px 切换两栏 */
+  .phd-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .phd-columns ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 单栏陈列时两个 ul 连成一条连续列表，第二个列表首行不重复顶部分隔线 */
+  .phd-columns ul + ul li:first-child {
+    border-top: 0;
+  }
+
+  /* 超长姓名（含无空格拉丁串）在槽内换行，不越入相邻槽位 */
+  .phd-columns .student-name {
+    overflow-wrap: break-word;
+  }
+
+  /* 010 FR-001～FR-003：≥768px 两栏等宽、栏距 32px、两列顶线一致；
+     与教师名片单列断点（767.98px）同阈值 */
+  @media (min-width: 768px) {
+    .phd-columns {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 32px;
+      align-items: start;
+    }
+
+    .phd-columns ul + ul li:first-child {
+      border-top: 1px solid var(--line);
+    }
+
+    /* n=1 时回到单列整宽，不产生空栏 */
+    .phd-columns.is-single {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* 010 FR-004～FR-006：行内三槽固定轨道（姓名 4em / Since 5em / 链接弹性），
+       Since 左缘逐行锁死，链接当行右缘贴齐栏右缘（扣除 24px 内距）；
+       缺失槽位不渲染元素，链接仍由显式 grid-column: 3 定位 */
+    .phd-columns li {
+      display: grid;
+      grid-template-columns: 4em 5em minmax(0, 1fr);
+      column-gap: 8px;
+      padding: 8px 24px;
+    }
+
+    .phd-columns .student-name {
+      grid-column: 1;
+    }
+
+    .phd-columns .grade {
+      grid-column: 2;
+      margin-left: 0;
+    }
+
+    .phd-columns .member-link {
+      grid-column: 3;
+      justify-self: end;
+      text-align: right;
+    }
+
+    .phd-columns .note {
+      grid-column: 1 / -1;
+    }
+  }
+
+  /* 010 FR-009：480–767px 单栏横向三槽（以 .phd-columns 限定，基线 flex 规则供 Master's 使用）；
+     姓名 4em / Since 5em 左对齐 / 链接 margin-left:auto 贴行右缘 */
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    .phd-columns li {
+      column-gap: 8px;
+    }
+
+    .phd-columns .student-name {
+      flex: 0 0 4em;
+    }
+
+    .phd-columns .grade {
+      flex: 0 0 5em;
+      margin-left: 0;
+    }
+
+    .phd-columns .member-link {
+      flex: 0 0 auto;
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .phd-columns .note {
+      flex: 0 0 100%;
+    }
+  }
+
+  /* 010 FR-009：<480px 单栏竖排——第 1 行姓名 + Since 右对齐；
+     第 2 行链接独占整行、左缘与姓名左缘对齐（备注位于链接之前） */
+  @media (max-width: 479.98px) {
+    .phd-columns .student-name {
+      flex: 0 0 auto;
+    }
+
+    .phd-columns .grade {
+      margin-left: auto;
+    }
+
+    .phd-columns .member-link {
+      order: 9;
+      flex: 0 0 100%;
+      margin-left: 0;
+      text-align: left;
+    }
+
+    .phd-columns .note {
+      flex: 0 0 100%;
+    }
   }
 </style>
