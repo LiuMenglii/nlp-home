@@ -1,5 +1,11 @@
 [
   {
+    "name": "牟凌宇",
+    "level": "phd",
+    "grade": "2021",
+    "url": null
+  },
+  {
     "name": "杨晨旭",
     "level": "phd",
     "grade": "2022",
@@ -23,6 +29,120 @@
     "level": "phd",
     "grade": "2022",
     "url": "https://qdcassie-li.github.io/"
+  },
+  {
+    "name": "周俊豪",
+    "level": "phd",
+    "grade": "2022",
+    "url": null
+  },
+  {
+    "name": "赵语林",
+    "level": "phd",
+    "grade": "2023",
+    "url": null
+  },
+  {
+    "name": "汪嘉",
+    "level": "phd",
+    "grade": "2023",
+    "url": null
+  },
+  {
+    "name": "秦川于",
+    "level": "phd",
+    "grade": "2024",
+    "url": null
+  },
+  {
+    "name": "佟政阳",
+    "level": "phd",
+    "grade": "2024",
+    "url": null
+  },
+  {
+    "name": "朱哲良",
+    "level": "phd",
+    "grade": "2024",
+    "url": null
+  },
+  {
+    "name": "朱祉同",
+    "level": "master",
+    "grade": "2024",
+    "url": null
+  },
+  {
+    "name": "张蓓泽",
+    "level": "master",
+    "grade": "2024",
+    "url": null
+  },
+  {
+    "name": "叶振雷",
+    "level": "master",
+    "grade": "2024",
+    "url": null
+  },
+  {
+    "name": "姚丁钰",
+    "level": "phd",
+    "grade": "2025",
+    "url": null
+  },
+  {
+    "name": "王娅彤",
+    "level": "phd",
+    "grade": "2025",
+    "url": null
+  },
+  {
+    "name": "彭诗忠",
+    "level": "phd",
+    "grade": "2025",
+    "url": null
+  },
+  {
+    "name": "艾明旭",
+    "level": "master",
+    "grade": "2025",
+    "url": null
+  },
+  {
+    "name": "刘润泽",
+    "level": "master",
+    "grade": "2025",
+    "url": null
+  },
+  {
+    "name": "沈斌",
+    "level": "phd",
+    "grade": "2026",
+    "url": null
+  },
+  {
+    "name": "冀焕翔",
+    "level": "phd",
+    "grade": "2026",
+    "url": null
+  },
+  {
+    "name": "陈翔楠",
+    "level": "phd",
+    "grade": "2026",
+    "url": null
+  },
+  {
+    "name": "邱明阳",
+    "level": "phd",
+    "grade": "2026",
+    "url": null
+  },
+  {
+    "name": "冯宇辰",
+    "level": "phd",
+    "grade": "2026",
+    "url": null
   },
   {
     "name": "刘梦犁",
@@ -58,126 +178,6 @@
   {
     "name": "毛乐平",
     "level": "master",
-    "grade": "2026",
-    "url": null
-  },
-  {
-    "name": "沈斌",
-    "level": "phd",
-    "grade": "2026",
-    "url": null
-  },
-  {
-    "name": "冀焕翔",
-    "level": "phd",
-    "grade": "2026",
-    "url": null
-  },
-  {
-    "name": "陈翔楠",
-    "level": "phd",
-    "grade": "2026",
-    "url": null
-  },
-  {
-    "name": "邱明阳",
-    "level": "phd",
-    "grade": "2026",
-    "url": null
-  },
-  {
-    "name": "牟凌宇",
-    "level": "phd",
-    "grade": "2021",
-    "url": null
-  },
-  {
-    "name": "周俊豪",
-    "level": "phd",
-    "grade": "2022",
-    "url": null
-  },
-  {
-    "name": "赵语林",
-    "level": "phd",
-    "grade": "2023",
-    "url": null
-  },
-  {
-    "name": "汪嘉",
-    "level": "phd",
-    "grade": "2023",
-    "url": null
-  },
-  {
-    "name": "朱祉同",
-    "level": "master",
-    "grade": "2024",
-    "url": null
-  },
-  {
-    "name": "张蓓泽",
-    "level": "master",
-    "grade": "2024",
-    "url": null
-  },
-  {
-    "name": "叶振雷",
-    "level": "master",
-    "grade": "2024",
-    "url": null
-  },
-  {
-    "name": "秦川于",
-    "level": "phd",
-    "grade": "2024",
-    "url": null
-  },
-  {
-    "name": "佟政阳",
-    "level": "phd",
-    "grade": "2024",
-    "url": null
-  },
-  {
-    "name": "朱哲良",
-    "level": "phd",
-    "grade": "2024",
-    "url": null
-  },
-  {
-    "name": "姚丁钰",
-    "level": "phd",
-    "grade": "2025",
-    "url": null
-  },
-  {
-    "name": "王娅彤",
-    "level": "phd",
-    "grade": "2025",
-    "url": null
-  },
-  {
-    "name": "彭诗忠",
-    "level": "phd",
-    "grade": "2025",
-    "url": null
-  },
-  {
-    "name": "艾明旭",
-    "level": "master",
-    "grade": "2025",
-    "url": null
-  },
-  {
-    "name": "刘润泽",
-    "level": "master",
-    "grade": "2025",
-    "url": null
-  },
-  {
-    "name": "冯宇辰",
-    "level": "phd",
     "grade": "2026",
     "url": null
   }
