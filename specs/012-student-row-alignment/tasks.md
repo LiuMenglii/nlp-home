@@ -191,3 +191,10 @@ Task: "T012 npm run check && npm run build 并核对 git diff 范围"
 - 不新增测试文件；验收判据以 [契约 §7](./contracts/student-row-alignment.md) 的测量口径为准
 - 证据文件 `specs/012-student-row-alignment/evidence/layout-verification.md` 随实现逐步追加，最终在 T014 汇总
 - 任一测量未达容差（±1px、`g ≥ 8px`、单行）即按缺陷处理，MUST NOT 用 `overflow-x: hidden`、缩小字号或隐藏内容掩盖
+
+---
+
+## Phase 8: Convergence
+
+- [X] T018 **CRITICAL** 补齐 012 的 PR 合并门禁：把本地未推送的验收记录提交 `91c11a3` 推送到特性分支 `012-student-row-alignment` 并创建 PR，确认 CI（`astro check` + build + Pages deploy）通过后合并；在 `specs/012-student-row-alignment/evidence/layout-verification.md` 记录 PR 编号 / 链接、合并方式与 CI 结果，并如实记录样式提交 `d4cf7d3` 已直接推送 `main`、未经 PR 的偏离及维护者确认；MUST NOT force-push 或改写已有历史 per SC-006 / 宪法「维护工作流」 (contradicts)
+- [X] T019 推送并核对最终验收证据：`origin/main` 目前为 `d4cf7d3`，本地 `91c11a3` 不在远程；在 T018 合并后确认远程 `main` 包含该提交与 `evidence/layout-verification.md` 最新内容，等待 GitHub Pages 重新部署后复核线上 Team 页（30 行 / 30 个 Since / 4 个链接、轨道 `63/90/117`、无页面横向溢出），并把结果追加到证据文件 per SC-006 (partial)
