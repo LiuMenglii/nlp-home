@@ -238,5 +238,6 @@ feat(team): 012 在读学生行三列固定与链接右对齐
 - **PR 门禁偏离（维护者已确认）**：012 的样式提交 `d4cf7d3` 于 2026-11-22 直接推送到 `main`（CI run 45003902876，event=`push`），GitHub 仓库中不存在 012 的 PR（仅有 PR #1–#5）。在不改写既有远程历史、不 force-push 的前提下无法补走 PR；维护者确认采用「记录偏离、不回滚」的处理方式。后续涉及模板 / 样式 / 构建配置的变更仍 MUST 通过 PR。
 - **最终证据推送**：本地提交 `91c11a3`（最终验收记录）与本次收敛补记推送到 `origin/main`，远程 `main` 包含本文件最新内容。
 - **伴随数据调整（本特性范围外）**：维护者同时调整 `src/data/students.json` 的记录顺序；逐条比对为 0 新增、0 删除、0 字段改写，PhD 19 / Master's 11 与 4 个链接不变，行内几何与上述验收数字不受影响。
+- **部署复验**：push 后 GitHub Actions run [45011538403](https://github.com/LiuMenglii/nlp-home/actions/runs/45011538403)（head `cf1935e`）的 `build` 与 `deploy` 均成功；线上 Team 页复核为 30 条记录 / 30 个 Since / 4 个链接，新数据行序已生效（PhD 首条为「牟凌宇」）；样式表仍为 `team.C0IYrZB-.css`（与已验收版本同一文件，含 `grid-template-columns:3.5em 5em 6.5em`），行内几何与横向溢出结论不变。
 
 
