@@ -194,8 +194,9 @@ const linkOf = (s: CollectionEntry<'students'>) =>
     margin-left: auto;
   }
 
-  /* 007 FR-019：视口 <480px 堆叠态——姓名恢复自适应宽度，标签独占一行并左对齐；
-     DOM 顺序不变，标签以 order 后置，行序为「姓名与年级 → 备注 → 标签」 */
+  /* 007 FR-019：视口 <480px 堆叠态——姓名恢复自适应宽度，标签独占一行；
+     DOM 顺序不变，标签以 order 后置，行序为「姓名与年级 → 备注 → 标签」。
+     012 FR-005：链接文字改为右对齐（与第 1 行 Since 同贴行右缘） */
   @media (max-width: 479.98px) {
     .student-name {
       flex: 0 0 auto;
@@ -204,7 +205,7 @@ const linkOf = (s: CollectionEntry<'students'>) =>
     .member-link {
       order: 9;
       flex: 0 0 100%;
-      text-align: left;
+      text-align: right;
     }
   }
 
@@ -259,17 +260,21 @@ const linkOf = (s: CollectionEntry<'students'>) =>
     .master-columns.is-single {
       grid-template-columns: minmax(0, 1fr);
     }
+  }
 
-    /* 010 FR-004～FR-006 / 011 FR-005：行内三槽（姓名弹性 / Since 固定槽 / 链接按内容），
-       姓名列吸收多余宽度并带动 Since 右移，Since 左缘逐行锁死，
-       链接当行右缘贴齐栏右缘（扣除 24px 内距）；
-       缺失槽位不渲染元素，链接仍由显式 grid-column: 3 定位 */
+  /* 012 FR-001～FR-003 / FR-011：≥480px 行内三列固定网格（PhD 与 Master's 共用一组声明）。
+     姓名 3.5em（63px）/ Since 5em（90px）/ 链接 6.5em（117px），与内容、视口宽窄无关；
+     column-gap: 0 + justify-content: space-between 把余量等分为两个列间空白，
+     即每侧 g = (W − 270px) / 2，姓名贴行内容左缘、链接贴行右缘。
+     5em 由 T007 在验收浏览器实测 Since 文字宽 85.58px ≤ 90px 判定；
+     固定列宽下不再需要 011 的碰撞夹取与按视口左移逻辑。 */
+  @media (min-width: 480px) {
     .phd-columns li,
     .master-columns li {
       display: grid;
-      grid-template-columns: minmax(4em, 1fr) 5.5em auto;
-      column-gap: 8px;
-      padding: 8px 24px;
+      grid-template-columns: 3.5em 5em 6.5em;
+      column-gap: 0;
+      justify-content: space-between;
     }
 
     .phd-columns .student-name,
@@ -277,10 +282,13 @@ const linkOf = (s: CollectionEntry<'students'>) =>
       grid-column: 1;
     }
 
+    /* margin-left: 0 覆盖基线 auto，否则自动外边距吞掉列内余量、破坏列内居中 */
     .phd-columns .grade,
     .master-columns .grade {
       grid-column: 2;
+      justify-self: center;
       margin-left: 0;
+      white-space: nowrap;
     }
 
     .phd-columns .member-link,
@@ -288,38 +296,12 @@ const linkOf = (s: CollectionEntry<'students'>) =>
       grid-column: 3;
       justify-self: end;
       text-align: right;
-    }
-  }
-
-  /* 010 FR-009 / 011 FR-005：480–767px 单栏横向三槽（PhD 与 Master's 共用）；
-     姓名弹性吸收余量（最小 4em）、Since 固定 5.5em 随视口右移、链接 margin-left:auto 贴行右缘 */
-  @media (min-width: 480px) and (max-width: 767.98px) {
-    .phd-columns li,
-    .master-columns li {
-      column-gap: 8px;
-    }
-
-    .phd-columns .student-name,
-    .master-columns .student-name {
-      flex: 1 1 4em;
-    }
-
-    .phd-columns .grade,
-    .master-columns .grade {
-      flex: 0 0 5.5em;
-      margin-left: 0;
-    }
-
-    .phd-columns .member-link,
-    .master-columns .member-link {
-      flex: 0 0 auto;
-      margin-left: auto;
-      text-align: right;
+      white-space: nowrap;
     }
   }
 
   /* 010 FR-009 / 011：<480px 单栏竖排——第 1 行姓名 + Since 右对齐；
-     第 2 行链接独占整行、左缘与姓名左缘对齐 */
+     第 2 行链接独占整行、文字右对齐（012 FR-005） */
   @media (max-width: 479.98px) {
     .phd-columns .student-name,
     .master-columns .student-name {
@@ -336,7 +318,7 @@ const linkOf = (s: CollectionEntry<'students'>) =>
       order: 9;
       flex: 0 0 100%;
       margin-left: 0;
-      text-align: left;
+      text-align: right;
     }
 
   }

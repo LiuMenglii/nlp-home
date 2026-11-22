@@ -81,17 +81,17 @@ x − m = (N − L)/2 = (63 − 117)/2 = −27px
 | Since | 5em = 90px 或 5.5em = 99px | Windows/Segoe UI 约 85px；Linux Arial→Liberation Sans 实测字宽 **90.07px**；Ubuntu Sans 87.12px；DejaVu Sans 100.34px | 5em 下 −0.07 ~ +5px；5.5em 下 9px | **5em 在本 Linux 环境处于临界之外**，按 FR-011 应取 5.5em；实现期以验收浏览器实测为准 |
 | 链接 | 6.5em = 117px | `Homepage ↗` Segoe UI 107–110px；Liberation Sans 93.06px + 箭头回退 15.08px ≈ 108.1px；011 evidence 记录 Linux 回退 114px | 3–9px | 单行可容纳（D2） |
 
-- **Since 5em 判定（FR-011 / S1）**：plan 期以 fontTools 读取本机字体度量，`Since 2021`–`Since 2026` 在 18px 下的文本宽：Liberation Sans **90.07px**、Ubuntu Sans 87.12px、DejaVu Sans 100.34px。站点字体栈在 Arial 之前没有本机可用的 Inter / Segoe UI / Roboto，Chromium 通常把 Arial 映射到 Liberation Sans——该度量已超过 5em（90px），因此**本验收环境预期切换 5.5em**。实现第一步 MUST 在验收浏览器逐条测量 30 个 `.grade` 的 `getBoundingClientRect().width` 取最大值；>90px 则把 PhD 与 Master's 的 Since 列同时改为 5.5em 并复测，仍超宽按缺陷停止（MUST NOT 折行、缩字号或截断）。
+- **Since 5em 判定（FR-011 / S1）**：plan 期以 fontTools 读取本机字体度量，`Since 2021`–`Since 2026` 在 18px 下的文本宽：Liberation Sans **90.07px**、Ubuntu Sans 87.12px、DejaVu Sans 100.34px。站点字体栈在 Arial 之前没有本机可用的 Inter / Segoe UI / Roboto，Chromium 通常把 Arial 映射到 Liberation Sans——该度量已超过 5em（90px），因此**本验收环境预期切换 5.5em**。T004 先按 5em 实现；T007 在实现后用 `document.createRange()` 逐条量 30 个 `.grade` 的文字范围宽度取最大值（MUST NOT 用元素盒宽；改样式前元素盒恒为 5.5em / 99px），>90px 则把 PhD 与 Master's 的 Since 列同时改为 5.5em 并复测，仍超宽按缺陷停止（MUST NOT 折行、缩字号或截断）。
 - **5.5em 时的 768px 闭合**：63 + 99 + 117 = 279px，行内容区 296px，两侧空白各 8.5px；仍 ≥8px，满足 FR-004。
-- **链接单行**：链接列 117px 覆盖现有全部 4 个标签（Homepage / GitHub / Scholar）；若未来标签宽于 117px，按缺陷上报，不折行、不缩字号、不隐藏（FR-003 / S2 同类口径）。
+- **链接单行**：链接列 117px 覆盖现有全部 4 个标签（Homepage / GitHub / Scholar），标签宽度 MUST ≤117px；若未来标签宽于 117px，按缺陷上报，不折行、不缩字号、不隐藏（FR-003 / S2 同类口径）。
 - **页面不溢出**：三列与空白完全落在行内容区内，`li.scrollWidth == li.clientWidth`；无页面横向滚动。
 
 ## R4 480–767px 单栏横向与 <480px 竖排
 
 **Decision**:
 
-- 480–767px：与 ≥768px 使用**同一组**固定三列声明（同一 `@media (min-width: 480px)` 块），不保留独立的 flex 行内规则。单栏行内容区 385–671px，两侧空白 53–200.5px（5.5em），Since 中心同样比行中点偏左 27px（固定列宽的必然结果，不是单栏特例）。
-- <480px：保留既有 flex 竖排——第 1 行姓名居左、Since `margin-left: auto` 右对齐；第 2 行链接 `order: 9; flex: 0 0 100%`，仅把 `text-align` 由 `left` 改为 `right`，使链接右缘与 Since 右缘同线（行内容区右缘）。
+- 480–767px：与 ≥768px 使用**同一组**固定三列声明（同一 `@media (min-width: 480px)` 块），不保留独立的 flex 行内规则。单栏行内容区 385–671px，两侧空白 53–200.5px（5.5em），Since 中心同样比行内容区中点偏左 27px（固定列宽的必然结果，不是单栏特例）。
+- <480px：保留既有 flex 竖排——第 1 行姓名居左、Since `margin-left: auto` 右对齐；第 2 行链接 `order: 9; flex: 0 0 100%`，仅把 `text-align` 由 `left` 改为 `right`，使链接文字右缘与 Since 右缘同线（行内容区右缘）。链接元素占满整行，验收 MUST 量文字范围，不以元素盒右缘代替。
 
 **Rationale**: 统一 ≥480px 的几何可避免“单栏横向仍用旧右移规则”造成 Since 位置随视口漂移，也减少一套重复声明；竖排两行形态、DOM 顺序与无链接不渲染第 2 行的规则不变（FR-005）。
 
@@ -115,10 +115,11 @@ x − m = (N − L)/2 = (63 − 117)/2 = −27px
 1. **列宽**：`getComputedStyle(li).gridTemplateColumns` 解析为三个像素值，期望 `63px 90px 117px`（5em）或 `63px 99px 117px`（5.5em），同组所有行一致。
 2. **等隙**：由 `N`、`S`、`L`、`W` 计算 `g = (W − N − S − L)/2`，并验证 Since 中心 = `N + g + S/2`；等价的可测量判据是 `sinceCenter − W/2 = −27px（±1px）`。
 3. **同线**：同栏所有行 Since 中心极差 ≤1px；有链接行与无链接行一致。
-4. **贴边**：链接右缘与行内容区右缘偏差 ≤1px；姓名左缘与行内容区左缘偏差 ≤1px；链接单行（高度 ≈29.7px）。
+4. **贴边**：链接文字范围右缘与行内容区右缘偏差 ≤1px；链接文字范围宽度 ≤117px；姓名左缘与行内容区左缘偏差 ≤1px；链接单行（高度 ≈29.7px）。
 5. **列间空白**：`g ≥ 8px`；用 `sinceCenter ± S/2` 与 `contentLeft + N` / `contentRight − L` 复核两侧空白差 ≤1px。
-6. **竖排**：<480px 链接位于第 2 行且右缘偏差 ≤1px；无链接只有 1 行。
-7. **破损与计数**：逐元素越界、`documentElement.scrollWidth − innerWidth = 0`；30 条记录、30 个 Since、4 个链接、两栏 10+9 / 6+5。
+6. **竖排**：<480px 链接文字位于第 2 行且文字右缘偏差 ≤1px；无链接只有 1 行；不以占满整行的链接元素盒右缘判定。
+7. **破损与计数**：逐元素越界；页面横向溢出的失败判据为 `documentElement.scrollWidth > innerWidth`（不用差值等于 0 判定）；30 条记录、30 个 Since、4 个链接、两栏 10+9 / 6+5。
+8. **结构**：767px 两栏容器为 1 轨；768px 为 2 轨且 `column-gap` 为 32px。
 
 现有 4 条 PhD 链接（3 Homepage + 1 Scholar）覆盖“有链接行”；Master's 11 行全部无链接，覆盖“空链接列保留”与同线。无需临时注入链接。
 
