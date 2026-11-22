@@ -127,6 +127,71 @@ function validateFeaturedNews(): void {
 validateFeaturedNews();
 
 /**
+ * 013 FR-009：students.json 的 directions 契约需要定位到文件、学生姓名与项序号，
+ * 而 schema 错误只暴露 entry id，故在模块加载期直接读取原始数组校验。
+ * 缺失、非数组、空数组、含非字符串 / 空 / 纯空白项均抛错中断构建；
+ * 不新增入学年份残留检测（评审决定：由数据清理与检索保证）。
+ */
+const STUDENTS_DATA_FILE = fileURLToPath(new URL('./data/students.json', import.meta.url));
+
+function validateStudentsData(): void {
+  let rawStudents: unknown;
+  try {
+    rawStudents = JSON.parse(readFileSync(STUDENTS_DATA_FILE, 'utf-8'));
+  } catch (e) {
+    throw new Error(
+      `src/data/students.json 无法读取或不是合法 JSON：${(e as Error).message}`,
+    );
+  }
+
+  if (!Array.isArray(rawStudents)) {
+    throw new Error(
+      `src/data/students.json 顶层必须是数组，实际为 ${rawStudents === null ? 'null' : typeof rawStudents}`,
+    );
+  }
+
+  rawStudents.forEach((student, index) => {
+    const record =
+      student && typeof student === 'object' && !Array.isArray(student)
+        ? (student as Record<string, unknown>)
+        : {};
+    const name =
+      typeof record.name === 'string' && record.name.trim().length > 0
+        ? record.name
+        : `第 ${index + 1} 条记录`;
+
+    if (!('directions' in record)) {
+      throw new Error(
+        `src/data/students.json 学生「${name}」缺少 directions 字段——请提供至少 1 项研究方向字符串`,
+      );
+    }
+
+    const directions = record.directions;
+    if (!Array.isArray(directions)) {
+      throw new Error(
+        `src/data/students.json 学生「${name}」的 directions 必须是字符串数组，实际为 ${directions === null ? 'null' : typeof directions}`,
+      );
+    }
+
+    if (directions.length === 0) {
+      throw new Error(
+        `src/data/students.json 学生「${name}」的 directions 至少需要 1 项，不能为空数组`,
+      );
+    }
+
+    directions.forEach((direction, itemIndex) => {
+      if (typeof direction !== 'string' || direction.trim().length === 0) {
+        throw new Error(
+          `src/data/students.json 学生「${name}」的 directions[${itemIndex}] 必须是非空字符串（不能为空或纯空白），实际为 ${JSON.stringify(direction)}`,
+        );
+      }
+    });
+  });
+}
+
+validateStudentsData();
+
+/**
  * file loader 要求每个数组元素带 id/slug 字段，而维护者数据契约（contracts/data-files.md）
  * 不含 id。这里通过自定义 parser 解析 JSON 数组并自动注入「前缀-序号」形式的 entry id。
  *
@@ -333,7 +398,9 @@ const students = defineCollection({
     .object({
       name: z.string().min(1),
       level: z.enum(['phd', 'master']),
-      grade: z.string().optional().nullable(),
+      // 013 FR-001 / FR-002：以非空研究方向数组取代入学年份字段；
+      // 文件、姓名与项序号级错误由上方 validateStudentsData 提供
+      directions: z.array(z.string().min(1).refine((v) => v.trim().length > 0)).min(1),
       url: httpsUrl,
       github: httpsUrl,
       scholar: httpsUrl,

@@ -7,24 +7,16 @@ interface Props {
 
 const { students } = Astro.props;
 
-// 011 FR-003：按 level 分组，组内按 grade 升序（无年级排最后，同级保持数据文件顺序）
+// 013 FR-004：按 level 分组，组内按数据文件条目顺序（entry id stu-### 升序）展示，
+// 不再按入学年份排序
 const byLevel = (level: 'phd' | 'master') =>
-  students
-    .filter((s) => s.data.level === level)
-    .sort((a, b) => {
-      const gradeA = a.data.grade ?? '';
-      const gradeB = b.data.grade ?? '';
-      if (!gradeA && !gradeB) return 0;
-      if (!gradeA) return 1;
-      if (!gradeB) return -1;
-      return gradeA.localeCompare(gradeB);
-    });
+  students.filter((s) => s.data.level === level).sort((a, b) => a.id.localeCompare(b.id));
 
 const phd = byLevel('phd');
 const master = byLevel('master');
 
 // 010 FR-003：PhD 名单按 ceil(n/2) 切分为左右两栏；n=1 单栏单条，不生成空栏。
-// 切分不改变 byLevel 的排序结果（grade 升序 → 无年级最后 → 稳定序）。
+// 切分不改变 byLevel 的结果（数据文件条目顺序）。
 const phdColumns =
   phd.length > 1
     ? [phd.slice(0, Math.ceil(phd.length / 2)), phd.slice(Math.ceil(phd.length / 2))]
@@ -35,7 +27,7 @@ const phdSingle = phd.length <= 1;
 
 // 011 FR-001～FR-003：Master's 与 PhD 同规则，按 ceil(n/2) 切分为左右两栏；
 // n=1 单栏单条（.is-single），n=0 保留既有占位分支，不生成空栏。
-// 切分不改变 byLevel 的排序结果（grade 升序 → 无年级最后 → 稳定序）。
+// 切分不改变 byLevel 的结果（数据文件条目顺序）。
 const masterColumns =
   master.length > 1
     ? [
@@ -71,7 +63,13 @@ const linkOf = (s: CollectionEntry<'students'>) =>
                 return (
                   <li>
                     <span class="student-name">{s.data.name}</span>
-                    {s.data.grade && <span class="grade">Since {s.data.grade}</span>}
+                    <span class="direction-tags" role="list" aria-label="Research directions">
+                      {s.data.directions.map((direction) => (
+                        <span class="direction-tag" role="listitem">
+                          {direction}
+                        </span>
+                      ))}
+                    </span>
                     {link && (
                       <a class="member-link" href={link.href} target="_blank" rel="noopener">
                         {link.label} <span aria-hidden="true">↗</span>
@@ -104,7 +102,13 @@ const linkOf = (s: CollectionEntry<'students'>) =>
                 return (
                   <li>
                     <span class="student-name">{s.data.name}</span>
-                    {s.data.grade && <span class="grade">Since {s.data.grade}</span>}
+                    <span class="direction-tags" role="list" aria-label="Research directions">
+                      {s.data.directions.map((direction) => (
+                        <span class="direction-tag" role="listitem">
+                          {direction}
+                        </span>
+                      ))}
+                    </span>
                     {link && (
                       <a class="member-link" href={link.href} target="_blank" rel="noopener">
                         {link.label} <span aria-hidden="true">↗</span>
@@ -153,8 +157,8 @@ const linkOf = (s: CollectionEntry<'students'>) =>
     flex-wrap: wrap;
     align-items: baseline;
     gap: 4px 10px;
-    /* 两端分布 + 两侧内收（002 FR-004 / T006）：姓名自分组左缘内收、Since/备注自分组右缘内收；
-       003 FR-007 左右内距自 44px 统一收窄为 24px（左右对称）——与毕业生条目同一固定内距，
+    /* 002 FR-004 / T006：内容自分组左缘内收；
+       003 FR-007 左右内距统一为 24px（左右对称）——与毕业生条目同一固定内距，
        本组件即跨区块列对齐基准（两列表姓名左边缘同线，验收 getBoundingClientRect().left 差值 ≤1px） */
     padding: 8px 24px;
     border-bottom: 1px solid var(--line);
@@ -165,48 +169,43 @@ const linkOf = (s: CollectionEntry<'students'>) =>
     border-top: 1px solid var(--line);
   }
 
-  /* 007 FR-013 / FR-019：姓名纯文本（非链接），固定 5em 轨道（按最多 4 个汉字设计） */
+  /* 013 FR-005：姓名纯文本（非链接）；≥480px 固定 3.5em 列宽（按最多 4 个汉字设计，
+     4 字姓名在列内换行为既定行为），<480px 随内容自适应 */
   .student-name {
-    flex: 0 0 5em;
+    flex: 0 0 auto;
   }
 
-  /* 007 FR-012 / FR-018：唯一链接标签固定在 6.5em 列内居中，
-     沿用站点链接色板（--blue-deep，hover --blue） */
+  /* 013 FR-005 / FR-014：方向标签组位于姓名与链接之间，组内按需换行；
+     role="list" + aria-label 提供「一组研究方向」语义 */
+  .direction-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 6px;
+    align-items: center;
+    min-width: 0;
+  }
+
+  /* 013 FR-006：浅色 chip，与教师卡片 teacher-directions 同一视觉语言；
+     长标签在自身内部换行，不截断、不省略 */
+  .direction-tag {
+    background: var(--sky);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--ink-soft);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
+  /* 007 FR-012 / FR-018：唯一链接标签沿用站点链接色板（--blue-deep，hover --blue） */
   .member-link {
-    flex: 0 0 6.5em;
-    text-align: center;
     color: var(--blue-deep);
   }
 
   .member-link:hover {
     color: var(--blue);
-  }
-
-  .grade {
-    color: var(--ink-soft);
-    /* 011 FR-013：站点根字号为 16px，1rem 只有 16px，故用显式 18px */
-    font-size: 18px;
-  }
-
-  /* 两端分布（FR-004）：姓名居左，Since 推至行内收拢后的右缘；
-     无年级条目仅左侧姓名，行内布局保持整齐 */
-  .grade {
-    margin-left: auto;
-  }
-
-  /* 007 FR-019：视口 <480px 堆叠态——姓名恢复自适应宽度，标签独占一行；
-     DOM 顺序不变，标签以 order 后置，行序为「姓名与年级 → 备注 → 标签」。
-     012 FR-005：链接文字改为右对齐（与第 1 行 Since 同贴行右缘） */
-  @media (max-width: 479.98px) {
-    .student-name {
-      flex: 0 0 auto;
-    }
-
-    .member-link {
-      order: 9;
-      flex: 0 0 100%;
-      text-align: right;
-    }
   }
 
   .empty {
@@ -262,19 +261,16 @@ const linkOf = (s: CollectionEntry<'students'>) =>
     }
   }
 
-  /* 012 FR-001～FR-003 / FR-011：≥480px 行内三列固定网格（PhD 与 Master's 共用一组声明）。
-     姓名 3.5em（63px）/ Since 5em（90px）/ 链接 6.5em（117px），与内容、视口宽窄无关；
-     column-gap: 0 + justify-content: space-between 把余量等分为两个列间空白，
-     即每侧 g = (W − 270px) / 2，姓名贴行内容左缘、链接贴行右缘。
-     5em 由 T007 在验收浏览器实测 Since 文字宽 85.58px ≤ 90px 判定；
-     固定列宽下不再需要 011 的碰撞夹取与按视口左移逻辑。 */
+  /* 013 FR-005～FR-007：≥480px 行内三轨网格（PhD 与 Master's 共用一组声明）。
+     姓名 3.5em（63px）/ 方向标签组 minmax(0, 1fr) / 链接 6.5em（117px），column-gap: 10px；
+     中间列用 minmax(0, 1fr) 保证长标签在列内换行而不撑开行；
+     无链接行不渲染链接元素，但固定第三轨仍保留 6.5em 列宽。 */
   @media (min-width: 480px) {
     .phd-columns li,
     .master-columns li {
       display: grid;
-      grid-template-columns: 3.5em 5em 6.5em;
-      column-gap: 0;
-      justify-content: space-between;
+      grid-template-columns: 3.5em minmax(0, 1fr) 6.5em;
+      column-gap: 10px;
     }
 
     .phd-columns .student-name,
@@ -282,13 +278,9 @@ const linkOf = (s: CollectionEntry<'students'>) =>
       grid-column: 1;
     }
 
-    /* margin-left: 0 覆盖基线 auto，否则自动外边距吞掉列内余量、破坏列内居中 */
-    .phd-columns .grade,
-    .master-columns .grade {
+    .phd-columns .direction-tags,
+    .master-columns .direction-tags {
       grid-column: 2;
-      justify-self: center;
-      margin-left: 0;
-      white-space: nowrap;
     }
 
     .phd-columns .member-link,
@@ -300,26 +292,25 @@ const linkOf = (s: CollectionEntry<'students'>) =>
     }
   }
 
-  /* 010 FR-009 / 011：<480px 单栏竖排——第 1 行姓名 + Since 右对齐；
-     第 2 行链接独占整行、文字右对齐（012 FR-005） */
+  /* 013 FR-008：<480px 单栏竖排——姓名与标签组共享可用行并按需换行，
+     链接独占最后一行、文字右对齐 */
   @media (max-width: 479.98px) {
     .phd-columns .student-name,
     .master-columns .student-name {
       flex: 0 0 auto;
     }
 
-    .phd-columns .grade,
-    .master-columns .grade {
-      margin-left: auto;
+    .phd-columns .direction-tags,
+    .master-columns .direction-tags {
+      flex: 1 1 0;
+      min-width: 0;
     }
 
     .phd-columns .member-link,
     .master-columns .member-link {
       order: 9;
       flex: 0 0 100%;
-      margin-left: 0;
       text-align: right;
     }
-
   }
 </style>
