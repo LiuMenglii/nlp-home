@@ -202,3 +202,35 @@ Result (22 files):
 - 无 011 碰撞夹取残留：`minmax(4em`、`translateX`、按视口左移逻辑在 `src/` 中检索结果为 0。
 - `git diff src/components/StudentGroup.astro` 仅 scoped `<style>` 段变化：模板 frontmatter、DOM、类名、`href` / `target` / `rel` 零改动。
 
+## T016 / T017 提交、推送与线上验收
+
+**本地提交（已完成）**：
+
+```text
+commit d4cf7d36602e39977c77b7b254a984069c5c5363
+Author: Mengli LIU <114163423+LiuMenglii@users.noreply.github.com>
+Commit: Mengli LIU <114163423+LiuMenglii@users.noreply.github.com>
+
+feat(team): 012 在读学生行三列固定与链接右对齐
+
+- ≥480px 行改为 3.5em / 5em / 6.5em 固定三列网格，space-between 等分两侧空白
+- Since 列内居中（5em，实测文字宽 85.58px），链接文字贴行右缘
+- <480px 竖排链接改为右对齐，与第 1 行 Since 同贴右缘
+- 删除 011 的 minmax 侧轨、480–767px flex 行内规则与碰撞夹取逻辑
+- 新增验收证据 specs/012-student-row-alignment/evidence/layout-verification.md
+```
+
+- 作者与提交者均为项目维护者本人；提交信息无 Claude / AI 共同作者尾注。
+- 提交范围：10 个文件（`StudentGroup.astro` + `specs/012-student-row-alignment/` 的 8 个规格文档 + 证据文件），`git status --porcelain` 为空。
+- 本地已通过 `npm run check`（0/0/0）与 `npm run build`（19 页）。
+
+**推送与线上验收（已完成）**：
+
+- 远程分支：`origin/main` = `d4cf7d36602e39977c77b7b254a984069c5c5363`（`git ls-remote origin refs/heads/main` 与本地 HEAD 一致）。
+- CI：workflow run [45003902876](https://github.com/LiuMenglii/nlp-home/actions/runs/45003902876)（head `d4cf7d3`），`build` 与 `deploy` 两个 job 均 `success`，`astro check` 门禁通过并完成 GitHub Pages 部署。
+- 线上检查：`https://liumenglii.github.io/nlp-home/team/`（浏览器视口 innerWidth 944px、页面地址带 `?v=d4cf7d3` 防缓存）——30 行（PhD 19 / Master's 11）、30 个 Since、4 个链接；轨道集合 `63px 90px 117px`；两侧空白均 53.17px；Since 偏移集合 `[-27]`；链接文字右缘差 0、最大宽度 106.11px、单行高 29.7px；`scrollWidth 929 ≤ innerWidth 944`、页面横向溢出 false、越界元素 0；字号 18px / 分组标题 20px。
+- 作者核对：提交作者与提交者均为 `Mengli LIU <114163423+LiuMenglii@users.noreply.github.com>`，提交信息无 Claude / AI 署名。
+
+> 注：证据文件本节的补充记录作为 docs-only 后续提交推送；代码提交 `d4cf7d3` 的 CI 与 Pages 部署结果如上。
+
+

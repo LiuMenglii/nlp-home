@@ -112,8 +112,8 @@ description: "Task list for 012-student-row-alignment"
 
 **Purpose**: 把提交、推送与验收作为独立任务执行，并落实作者身份约束
 
-- [ ] T016 [US3] **提交并推送**：确认 `git status` 仅包含本特性文件；使用仓库配置的项目维护者本人身份（`user.name` / `user.email`）执行 `git add` 与 `git commit`，MUST NOT 添加 Claude / AI 共同作者尾注；运行 `git push` 推送到远程分支，记录 commit hash、远程分支与 `git log -1 --format='%an <%ae>%n%cn <%ce>%n%B'` 输出。结果追加到 `specs/012-student-row-alignment/evidence/layout-verification.md`（SC-006）
-- [ ] T017 [US3] **验收**：按宪法「维护工作流」确认 CI 通过、合并前 `npm run check` + `npm run build` 与十一档布局验收全部通过；合并后等待 GitHub Pages 部署完成并检查线上 Team 页；核对 T016 的提交作者与提交者均仅为项目维护者本人、提交信息无 Claude / AI 署名。结果追加到 `specs/012-student-row-alignment/evidence/layout-verification.md`（SC-006 / 宪法维护工作流）
+- [X] T016 [US3] **提交并推送**：确认 `git status` 仅包含本特性文件；使用仓库配置的项目维护者本人身份（`user.name` / `user.email`）执行 `git add` 与 `git commit`，MUST NOT 添加 Claude / AI 共同作者尾注；运行 `git push` 推送到远程分支，记录 commit hash、远程分支与 `git log -1 --format='%an <%ae>%n%cn <%ce>%n%B'` 输出。结果追加到 `specs/012-student-row-alignment/evidence/layout-verification.md`（SC-006）
+- [X] T017 [US3] **验收**：按宪法「维护工作流」确认 CI 通过、合并前 `npm run check` + `npm run build` 与十一档布局验收全部通过；合并后等待 GitHub Pages 部署完成并检查线上 Team 页；核对 T016 的提交作者与提交者均仅为项目维护者本人、提交信息无 Claude / AI 署名。结果追加到 `specs/012-student-row-alignment/evidence/layout-verification.md`（SC-006 / 宪法维护工作流）
 
 ---
 
