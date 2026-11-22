@@ -337,7 +337,6 @@ const students = defineCollection({
       url: httpsUrl,
       github: httpsUrl,
       scholar: httpsUrl,
-      note: z.string().optional().nullable(),
       ...jsonParseErrorField,
     })
     .superRefine(singleLinkRefiner('src/data/students.json')),
