@@ -76,7 +76,8 @@ summary: "一句话摘要（不超过 200 字符），显示在列表页和主�
 
 ### 成员变动（teachers / students / graduates）
 
-- 教师信息改动 `teachers.json`：`name`、`title`（英文职称）、`advisorRole`（`"phd"` 博导 / `"master"` 硕导）、`directions`（英文研究方向，至少 1 项）、`email`、`homepage`（https 链接或 `null`）、`photo`、`bio`。
+- 教师信息改动 `teachers.json`：`name`、`title`（英文职称）、`advisorRole`（`"phd"` 博导 / `"master"` 硕导）、`directions`（英文研究方向，至少 1 项）、`email`、`ucasProfile`（UCAS 个人资料页，https 链接或 `null`）、`homepage`（教师个人主页，https 链接或 `null`）、`photo`、`bio`。
+- 教师两个链接字段语义不同：`ucasProfile` 只承载国科大（UCAS）个人资料页（如 `https://people.ucas.ac.cn/~xxx`，页面标签为 **UCAS Profile**）；`homepage` 只承载教师本人维护的个人主页（页面标签为 **Homepage**），未配置时写 `null`，**不要**把 UCAS 资料页填进 `homepage`。两字段缺省或 `null` 均合法（不显示对应链接），非 `https://` 链接会让构建失败。
 - 更换老师照片：把图片（建议 JPEG，≤500KB）放入 `public/teachers/`，再更新 `teachers.json` 对应条目的 `photo`（`/teachers/文件名` 路径）；当前为占位图，待课题组提供授权照片后替换。
 - 学生入学/毕业：在 `students.json` 增删条目，字段为 `name`、`level`（`"phd"` / `"master"`）、`directions`（研究方向字符串数组）、`url`（个人主页或机构个人资料页）、`github`（GitHub 主页）、`scholar`（Google Scholar 主页）。
 - `directions` 为**至少 1 项**的字符串数组，每项必须是非空、非纯空白字符串；页面按数组顺序原样渲染为方向标签，不 trim、不去重。缺失、非数组、空数组或含空/空白/非字符串项会让 `npm run build` 失败并指出数据文件、学生姓名、`directions` 与项序号。

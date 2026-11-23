@@ -21,7 +21,8 @@
     "name": "杨晨旭",
     "level": "phd",
     "directions": [
-      "TBD"
+      "Multimodal LLM",
+      "Reinforcement Learning"
     ],
     "url": "https://iie-ycx.github.io/"
   },
@@ -29,7 +30,8 @@
     "name": "刘曦雨",
     "level": "phd",
     "directions": [
-      "TBD"
+      "LLM",
+      "Knowledge Editing"
     ],
     "url": null,
     "scholar": "https://scholar.google.com/citations?user=94lNc6oAAAAJ&hl=zh-CN"
@@ -38,7 +40,8 @@
     "name": "顾佴彬",
     "level": "phd",
     "directions": [
-      "TBD"
+      "Efficient LLM",
+      "Post-Training"
     ],
     "url": "https://gccnlp.github.io/"
   },
@@ -46,7 +49,8 @@
     "name": "李雨晴",
     "level": "phd",
     "directions": [
-      "TBD"
+      "RAG",
+      "Agent Memory"
     ],
     "url": "https://qdcassie-li.github.io/"
   },
@@ -93,7 +97,7 @@
     "name": "佟政阳",
     "level": "phd",
     "directions": [
-      "TBD"
+      "LLM"
     ],
     "url": "https://tzy2003.github.io/"
   },
@@ -257,7 +261,7 @@
     ],
     "url": null,
     "github": null,
-    "scholar": null
+    "scholar": "https://scholar.google.com/citations?user=Fqk9CMkAAAAJ"
   },
   {
     "name": "温泽林",
@@ -267,13 +271,14 @@
     ],
     "url": null,
     "github": null,
-    "scholar": null
+    "scholar": "https://scholar.google.com/citations?user=3gjCYDMAAAAJ"
   },
   {
     "name": "李佳睿",
     "level": "master",
     "directions": [
-      "TBD"
+      "RAG",
+      "Memory"
     ],
     "url": null,
     "github": "https://github.com/Jerry-woodson"

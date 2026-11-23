@@ -356,6 +356,7 @@ const teachers = defineCollection({
       advisorRole: z.enum(['phd', 'master']),
       directions: z.array(z.string()).min(1),
       email: z.email().optional().nullable(),
+      ucasProfile: httpsUrl,
       homepage: httpsUrl,
       photo: z.string().optional().nullable(),
       bio: z.string().optional().nullable(),
