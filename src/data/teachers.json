@@ -5,7 +5,8 @@
     "advisorRole": "phd",
     "directions": ["Natural Language Processing", "Multimodal Analysis"],
     "email": "linzheng@iie.ac.cn",
-    "homepage": "https://people.ucas.ac.cn/~linzheng",
+    "ucasProfile": "https://people.ucas.ac.cn/~linzheng",
+    "homepage": null,
     "photo": "/teachers/lin-zheng.svg",
     "bio": "Professor at IIE, CAS and chair professor at UCAS. Author of two monographs and 100+ CCF-A/B publications, with repeated national first-place finishes in machine reading comprehension and sentiment analysis evaluations (2018/2019/2024/2025)."
   },
@@ -15,7 +16,8 @@
     "advisorRole": "master",
     "directions": ["Natural Language Processing", "Efficient LLM Applications"],
     "email": "fupeng@iie.ac.cn",
-    "homepage": "https://people.ucas.ac.cn/~fupeng",
+    "ucasProfile": "https://people.ucas.ac.cn/~fupeng",
+    "homepage": "https://fupeng.ac.cn/",
     "photo": "/teachers/fu-peng.svg",
     "bio": "Associate Professor at IIE, CAS. 30+ publications in ACL, AAAI, IJCAI, EMNLP, TASLP and ACM MM; first place in the national 'Military Intelligence – Machine Reading' challenge in 2018 and 2019."
   },
@@ -25,7 +27,8 @@
     "advisorRole": "master",
     "directions": ["Computer Vision", "Multimodal Big Data Analysis"],
     "email": "wudayan@iie.ac.cn",
-    "homepage": "https://people.ucas.ac.cn/~dayan",
+    "ucasProfile": "https://people.ucas.ac.cn/~dayan",
+    "homepage": null,
     "photo": "/teachers/wu-dayan.svg",
     "bio": "Associate Professor at IIE, CAS. 30+ publications in CVPR, SIGIR, IJCAI, AAAI, ACM MM, TCSVT and TOMM; recipient of the 2020 First Prize of the Ministry of Education Science and Technology Progress Award."
   },
@@ -35,7 +38,8 @@
     "advisorRole": "master",
     "directions": ["Computer Vision", "Multimodal Retrieval", "Multimodal Generation"],
     "email": "gujingzi@iie.ac.cn",
-    "homepage": "https://people.ucas.ac.cn/~0082145",
+    "ucasProfile": "https://people.ucas.ac.cn/~0082145",
+    "homepage": null,
     "photo": "/teachers/gu-jingzi.svg",
     "bio": "Senior Engineer at IIE, CAS. 20+ publications in CVPR, ACM MM, ECCV, ICME and ICASSP, with multiple granted invention patents."
   }

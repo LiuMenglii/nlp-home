@@ -9,7 +9,7 @@ interface Props {
 }
 
 const { teacher, detailed = false } = Astro.props;
-const { name, title, directions, email, homepage, photo, bio } = teacher.data;
+const { name, title, directions, email, ucasProfile, homepage, photo, bio } = teacher.data;
 ---
 
 <article class:list={['teacher-card', 'card', { 'teacher-card--detailed': detailed }]}>
@@ -38,6 +38,13 @@ const { name, title, directions, email, homepage, photo, bio } = teacher.data;
       detailed && email && (
         <a href={`mailto:${email}`}>
           {email}
+        </a>
+      )
+    }
+    {
+      ucasProfile && (
+        <a href={ucasProfile} target="_blank" rel="noopener">
+          UCAS Profile <span aria-hidden="true">↗</span>
         </a>
       )
     }
@@ -126,6 +133,11 @@ const { name, title, directions, email, homepage, photo, bio } = teacher.data;
     margin-top: auto;
     /* 收缩为内容宽度（消除拉伸至卡片全宽后链接内容右侧的连续空白，FR-004） */
     align-self: flex-start;
+  }
+
+  /* 本特性：两种名片的链接均按整项换行，不在标签内部断行 */
+  .teacher-links a {
+    white-space: nowrap;
   }
 
   @media (max-width: 575.98px) {
