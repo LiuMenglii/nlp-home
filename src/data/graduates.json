@@ -20,12 +20,6 @@
     "year": null
   },
   {
-    "name": "温哲",
-    "destination": "工商银行",
-    "degree": "master",
-    "year": null
-  },
-  {
     "name": "刘源鑫",
     "destination": "北京大学 → 小米mimo",
     "degree": "master",
@@ -39,7 +33,7 @@
     "year": null
   },
   {
-    "name": "刘同学",
+    "name": "刘睿",
     "destination": "蚂蚁金服",
     "degree": "phd",
     "year": null
@@ -69,10 +63,10 @@
     "year": null
   },
   {
-    "name": "申同学",
+    "name": "申博文",
     "destination": "小米mimo",
     "degree": "master",
-    "year": null
+    "year": 2025
   },
   {
     "name": "赵同学",
@@ -81,43 +75,9 @@
     "year": null
   },
   {
-    "name": "郑同学",
-    "destination": "蚂蚁基座大模型",
-    "degree": "phd",
-    "year": null
-  },
-  {
-    "name": "李江楠",
-    "destination": "待补充",
-    "degree": "phd",
-    "year": null,
-    "github": "https://github.com/LeqsNaN"
-  },
-  {
-    "name": "张瀚文",
-    "destination": "待补充",
-    "degree": "phd",
-    "year": null,
-    "github": "https://github.com/Heaven-zhw"
-  },
-  {
-    "name": "季慧山",
-    "destination": "待补充",
-    "degree": "phd",
-    "year": null
-  },
-  {
     "name": "郑明钰",
-    "destination": "待补充",
+    "destination": "蚂蚁百灵大模型",
     "degree": "phd",
-    "year": null,
-    "github": "https://github.com/SpursGoZmy"
-  },
-  {
-    "name": "刘正宵",
-    "destination": "待补充",
-    "degree": "phd",
-    "year": null,
-    "github": "https://github.com/jluliuzx"
+    "year": 2026
   }
 ]
