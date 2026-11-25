@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../components/BaseLayout.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import NewsCard from '../../components/NewsCard.astro';
-import site from '../../data/site.json';
+import site from '../../../content/site.json';
 
 // FR-007：按发布日期倒序
 const news = (await getCollection('news')).sort(

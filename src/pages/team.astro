@@ -4,7 +4,7 @@ import BaseLayout from '../components/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import TeacherCard from '../components/TeacherCard.astro';
 import StudentGroup from '../components/StudentGroup.astro';
-import site from '../data/site.json';
+import site from '../../content/site.json';
 
 const teachers = (await getCollection('teachers')).sort((a, b) =>
   a.id.localeCompare(b.id),

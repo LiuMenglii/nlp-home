@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { withBase } from '../utils';
 
 interface Props {
   teacher: CollectionEntry<'teachers'>;
@@ -17,7 +16,7 @@ const { name, title, directions, email, ucasProfile, homepage, photo, bio } = te
     {photo && (
       <img
         class="teacher-photo"
-        src={withBase(photo)}
+        src={photo.src}
         alt={`${name} photo`}
         width="160"
         height="200"

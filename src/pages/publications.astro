@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../components/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import PublicationItem from '../components/PublicationItem.astro';
-import site from '../data/site.json';
+import site from '../../content/site.json';
 
 // 全列表：year 降序（组内顺序统一交给 sortByDate，避免 locale 规则混入）
 const publications = (await getCollection('publications')).sort(

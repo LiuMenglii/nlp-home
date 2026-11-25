@@ -11,7 +11,7 @@ import {
   newsExternalLinksPlugin,
 } from './src/markdown/news-widgets.mjs';
 
-const NEWS_DIR = new URL('./src/content/news/', import.meta.url);
+const NEWS_DIR = new URL('./content/news/', import.meta.url);
 
 /**
  * 内容层（glob loader）渲染硬错误时只记录日志、不会中断构建，

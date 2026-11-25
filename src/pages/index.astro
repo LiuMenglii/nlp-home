@@ -9,7 +9,7 @@ import TeacherCard from '../components/TeacherCard.astro';
 import PublicationItem from '../components/PublicationItem.astro';
 import Gallery from '../components/Gallery.astro';
 import { withBase } from '../utils';
-import site from '../data/site.json';
+import site from '../../content/site.json';
 
 // 新闻概览：date 倒序前 5 条（空 → 隐藏区块）
 const news = (await getCollection('news')).sort(

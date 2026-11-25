@@ -1,9 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import SectionHeading from './SectionHeading.astro';
-import { withBase } from '../utils';
 
-// 展示顺序 = gallery.json 数组顺序（entry id 按序号生成）
+// 展示顺序 = content/gallery 条目目录顺序（两位数字前缀，按 entry id 字典序）
 const photos = (await getCollection('gallery')).sort((a, b) =>
   a.id.localeCompare(b.id),
 );
@@ -18,12 +17,12 @@ const photos = (await getCollection('gallery')).sort((a, b) =>
           <button
             type="button"
             class="gallery-thumb"
-            data-gallery-src={withBase(`/gallery/${photo.data.src}`)}
+            data-gallery-src={photo.data.image.src}
             data-gallery-caption={photo.data.caption}
             aria-label={`View larger image: ${photo.data.caption}`}
           >
             <img
-              src={withBase(`/gallery/${photo.data.src}`)}
+              src={photo.data.image.src}
               alt={photo.data.caption}
               loading="lazy"
             />

@@ -2,11 +2,11 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../components/BaseLayout.astro';
 import { withBase } from '../../utils';
-import site from '../../data/site.json';
+import site from '../../../content/site.json';
 import newsWidgetsCssUrl from '../../styles/news-widgets.css?url';
 import { hasNewsWidgets } from '../../markdown/news-widgets.mjs';
 
-// rest 参数 `[...id]`：`src/content/news/**/*.md` 的嵌套 id（如 `subdir/probe`）
+// rest 参数 `[...id]`：`content/news/**/*.md` 的嵌套 id（如 `subdir/probe`）
 // 可直接映射为 `/news/subdir/probe/`，既有单段 id 的 URL 保持不变。
 export async function getStaticPaths() {
   const news = await getCollection('news');
